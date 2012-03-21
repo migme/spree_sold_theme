@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head data-hook="inside_head">
+  <%= render 'spree/shared/head' %>
+</head>
+<body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+<div class="navbar navbar-fixed-top" id='sold-topbar'>
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">
+        <%= image_tag('sold_logo.png') %>
+      </a>
+
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li class="active"><a href="#"><%= image_tag('auctions_icon_hover.png') %><br/>Auction</a></li>
+          <li><a href="#"><%= image_tag('sale_icon.png') %><br/>Sale</a></li>
+          <li><a href="#"><%= image_tag('friend_icon.png') %><br>Invite</a></li>
+          <li><a href="#"><%= image_tag('help_icon.png') %><br/>Help</a></li>
+        </ul>
+
+        <ul class="nav pull-right">
+          <li><a href="#"><%= image_tag('cart_icon.png') %><br/>Cart</a></li>
+          <li><a href="#"><h2>200</h2>Tokens</a></li>
+          <li><a href="#"><h2>8</h2>Auctions</a></li>
+          <li class="divider-vertical"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li class="nav-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" id='cover'>
+  <div id="content" data-hook>
+    <%= breadcrumbs(@taxon) %>
+    <%= flash_messages %>
+    <%= yield %>
+  </div>
+</div>
+<div id="footer" data-hook>
+  <div id="footer-left" class='span6' data-hook>
+    <div class='footer-links-block'>
+      <h3>About Us</h3>
+      <ul>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+      </ul>
+    </div>
+    <div class='footer-links-block'>
+      <h3>About Us</h3>
+      <ul>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+        <li>About Sold.sg</li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div id="footer-right" data-hook>
+    asl;dksal;dksal;dks;la
+  </div>
+  <div class="clear"></div>
+  <p><%= t(:powered_by) %> <%= link_to 'Spree', 'http://spreecommerce.com/' %></p>
+</div>
+<%= render 'spree/shared/google_analytics' %>
+</body>
+</html>
