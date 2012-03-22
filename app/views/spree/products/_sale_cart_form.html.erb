@@ -1,0 +1,16 @@
+<div class="add-to-cart">
+  <h3> Sale Price $19.99 </h3>
+  <% if @product.has_stock? || Spree::Config[:allow_backorders] %>
+      <div class="quantity-select">
+        Quantity:
+        <%= number_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"),
+                           1, :class => 'title', :in => 1..@product.on_hand %>
+      </div>
+      <%= button_tag :class => 'btn-warning btn-add-to-card', :id => 'add-to-cart-button' do %>
+          <%= t(:add_to_cart) %>
+      <% end %>
+  <% else %>
+      <%= content_tag('strong', t(:out_of_stock)) %>
+  <% end %>
+  <div class="clear"></div>
+</div>
