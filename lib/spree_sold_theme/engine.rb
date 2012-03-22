@@ -20,8 +20,5 @@ module SpreeSoldTheme
     end
 
     config.to_prepare &method(:activate).to_proc
-    initializer 'spree_sold_theme.setup_assets', :after => :load_config_initializers do
-      require 'less-rails-bootstrap'
-    end
   end
 end

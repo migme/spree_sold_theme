@@ -12,6 +12,11 @@ module SpreeSoldTheme
         inject_into_file "app/assets/stylesheets/admin/all.css", " *= require admin/spree_sold_theme\n", :before => /\*\//, :verbose => true
       end
 
+      def add_gems
+        append_file "Gemfile", "gem 'less-rails-bootstrap'\n"
+        run 'bundle install'
+      end
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_sold_theme'
       end

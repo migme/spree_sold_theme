@@ -1,0 +1,14 @@
+.menu-item(@imageName,@hoverImageName){
+    background: image-url(@imageName) no-repeat center 0;
+    padding-top: 12px;
+    a{ color: @navLinkColor; }
+    &:hover, &.active{
+        background: image-url(@hoverImageName) no-repeat center 0;
+        padding-top: 12px;
+        a, & > a:hover{
+            color: @linkColorHover;
+            background-color: transparent;
+        }
+    }
+
+}
