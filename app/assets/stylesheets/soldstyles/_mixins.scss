@@ -1,7 +1,7 @@
 @mixin menu-item($imageName,$hoverImageName){
     background: image-url($imageName) no-repeat center 0;
     padding-top: 12px;
-    a{ color: $navLinkColor; }
+    a{ color: $linkOnDarkBg; }
     &:hover, &.active{
         background: image-url($hoverImageName) no-repeat center 0;
         padding-top: 12px;
@@ -15,4 +15,10 @@
 @mixin top-bottom-border($borderStyle: 1px dashed $grayDark){
     border-top: $borderStyle;
     border-bottom: $borderStyle;
+}
+
+@mixin page-header-with-dashed(){
+    .ligterText{
+      color: $soldOrange;
+    }
 }

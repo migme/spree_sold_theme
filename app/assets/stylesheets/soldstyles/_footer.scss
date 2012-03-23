@@ -1,0 +1,23 @@
+#footer{
+    width: 100%;
+    background: $black;
+    color: $white;
+    @include box-shadow(0 0 5px #888);
+    font-size: $footer_normal_text_font_size;
+    margin: 0 auto;
+    & > .divider {
+      height: 1px;
+      margin: 15px 20px;
+      overflow: hidden;
+      border-bottom: 1px dashed $grayLight;
+    }
+    #footer_links{
+        .nav > li > a:hover{
+              background-color: transparent;
+              color: $linkColorHover;
+         }
+    }
+    #copyright{
+      text-align: center;
+    }
+}

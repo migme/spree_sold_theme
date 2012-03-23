@@ -1,10 +1,9 @@
 // Set the correct sprite paths
-@import 'override_variables';
+@import 'variables/override_variables';
 @import 'bootstrap';
 @import 'reset';
 @import 'mixins';
 @import 'layout';
-@import 'nav';
+@import 'navigation';
+@import 'footer';
 @import 'product';
-/*@import 'pages/_home';*/
-

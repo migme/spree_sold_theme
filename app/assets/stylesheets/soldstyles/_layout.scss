@@ -1,0 +1,18 @@
+body{
+    margin: 0 auto;
+    width: $pageWith;
+    font-family: $ff_base;
+    color: $body_text_color;
+    line-height: 18px;
+    font-size: $base_font_size;
+    background-color: $layout_background_color;
+}
+#wrapper{
+    margin-top: 10px;
+}
+
+.logo{
+    width: 141px;
+    height: 36px;
+    border: 0;
+}

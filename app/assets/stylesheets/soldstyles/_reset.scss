@@ -1,0 +1,25 @@
+//a:hover{ color: $linkColorHover;}
+//a:hover { color: $linkColorHover !important; }
+
+li{
+  padding: 3px 0;
+}
+a {
+  color: #0088cc;
+  text-decoration: none;
+  &.on-dark-background{
+    color: $linkOnDarkBg;
+  }
+}
+.nav-list .nav-header{
+    font-size: $main_navigation_header_font_size;
+    color: $default_header_color;
+}
+
+
+.nav-list > li > a, .nav-list .nav-header{
+    text-shadow: none;
+    &.no-upper-case{
+      text-transform: none;
+    }
+}

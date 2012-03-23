@@ -15,23 +15,29 @@
        @include menu-item('sale_icon.png', 'sale_icon_hover.png');
     }
     li.friend{
-       @include menu-item('friend_icon.png', 'friend_icon_hover.png');
+     @include menu-item('friend_icon.png', 'friend_icon_hover.png');
     }
     li.help{
      @include menu-item('help_icon.png', 'help_icon_hover.png');
     }
     li.cart{
      @include menu-item('cart_icon.png', 'cart_icon_hover.png');
- }
+    }
 
     li.amount-menu-item{
-      a{
-        font-size: 11px;
-        text-align: center;
-        .amount{
-            font-weight: 600;
-            margin: 0; padding:0; height: 14px;
-            font-size: 18px;
+      padding: 0;
+      & > a {
+        color: $white;
+        position: relative;
+        height: 47px;
+        width: 40px;
+        display: block;
+        & > span{
+          text-align: center;
+          position: absolute;
+          width: 100%;
+          &.amount{ font-weight: 600; font-size: 18px; top: 0;}
+          &.menu-label{ top: 22px; font-size: 11px;}
         }
       }
     }

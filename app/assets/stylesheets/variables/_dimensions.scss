@@ -1,0 +1,5 @@
+$pageWith: 1020px !default;
+$gridColumns:             24;
+$gridColumnWidth:         30px;
+$gridGutterWidth:         10px;
+$gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));

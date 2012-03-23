@@ -1,0 +1,42 @@
+
+$ff_base:       Arial;
+$baseFontFamily: Arial;
+
+$baseFontSize: 14px;
+/*--------------------------------------
+  | Font sizes
+  |--------------------------------------
+  |- Navigation                         
+  |                                    */
+      $header_navigation_font_size:           14px;
+      $horizontal_navigation_font_size:       16px;
+      $main_navigation_header_font_size:      14px;
+      $main_navigation_font_size:             12px;
+/*|------------------------------------
+  |- Product Listing                         
+  |                                  */
+      $product_list_name_font_size:           12px ;
+      $product_list_price_font_size:          16px ;
+      $product_list_header_font_size:         20px ;
+      $product_list_search_font_size:         14px ;
+/*|------------------------------------
+  |- Product Details
+  |                                  */
+      $product_detail_name_font_size:         24px ;
+      $product_detail_description_font_size:  12px ;
+      $product_detail_price_font_size:        20px ;
+      $product_detail_title_font_size:        14px ;
+/*|------------------------------------
+  |- Basic
+  |                                  */
+      $heading_font_size:                     24px ;
+      $sub_heading_font_size:                 14px ;
+      $button_font_size:                      12px ;
+      $input_box_font_size:                   13px ;
+      $base_font_size:                        12px ;
+      
+/* Footer - Navigation Bar*/
+    $footer_header_font_size: 18px ;
+    $footer_sub_header_font_size: 14px ;
+    $footer_normal_text_font_size: 12px ;
+    $footer_text_color: #fff;
