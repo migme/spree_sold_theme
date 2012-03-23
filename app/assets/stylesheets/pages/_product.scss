@@ -1,9 +1,9 @@
 h3.flash-sale-time{
   font-size: 18px;
   font-family: Arial;
-  color: @grayDarker;
+  color: $grayDarker;
   strong {
-    color: @red;
+    color: $red;
   }
 }
 #product-images {
@@ -14,16 +14,16 @@ h3.flash-sale-time{
 }
 #product-description{
     .product-title{
-       color:@grayDark;
+       color:$grayDark;
        border: none;
     }
 }
 
 .product-description-row{
     padding: 3px 0;
-    .top-bottom-border();
+    @include top-bottom-border();
     .normal-price {
-        color: @grayDark;
+        color: $grayDark;
         .strikethrough{
           text-decoration: line-through;
         }
@@ -32,7 +32,7 @@ h3.flash-sale-time{
 
 .add-to-cart{
     h3{
-        color: @logoOrange;
+        color: $logoOrange;
         float: left;
         width:230px;
     }

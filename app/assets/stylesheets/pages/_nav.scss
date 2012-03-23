@@ -1,6 +1,6 @@
 #sold_top_navbar{
-    border-bottom: 2px solid  @logoOrange;
-    width: @pageWith;
+    border-bottom: 2px solid  $logoOrange;
+    width: $pageWith;
     margin: 0 auto;
 }
 .navbar .menu-cover{
@@ -9,20 +9,20 @@
         padding: 10px 10px 3px;
     }
     li.live-auction{
-      .menu-item('auctions_icon.png', 'auctions_icon_hover.png');
+      @include menu-item('auctions_icon.png', 'auctions_icon_hover.png');
     }
     li.sale{
-       .menu-item('sale_icon.png', 'sale_icon_hover.png');
+       @include menu-item('sale_icon.png', 'sale_icon_hover.png');
     }
     li.friend{
-       .menu-item('friend_icon.png', 'friend_icon_hover.png');
+       @include menu-item('friend_icon.png', 'friend_icon_hover.png');
     }
     li.help{
-     .menu-item('help_icon.png', 'help_icon_hover.png');
+     @include menu-item('help_icon.png', 'help_icon_hover.png');
     }
     li.cart{
-     .menu-item('cart_icon.png', 'cart_icon_hover.png');
-    }
+     @include menu-item('cart_icon.png', 'cart_icon_hover.png');
+ }
 
     li.amount-menu-item{
       a{
@@ -37,11 +37,11 @@
     }
 }
 #account_db{
-    @linkColorHover: #000;
-    background: @logoOrange;
+    $linkColorHover: #000;
+    background: $logoOrange;
     vertical-align: baseline;
     height:51px;
     & > a{
-        color: @black;
+        color: $black;
     }
 }
