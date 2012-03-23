@@ -21,10 +21,6 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
   a {
     text-decoration: none;
     color: $link_text_color;
-
-    &:hover {
-      color: darken($link_text_color, 10) !important;
-    }
   }
 
   /*--------------------------------------*/

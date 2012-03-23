@@ -11,6 +11,9 @@
       overflow: hidden;
       border-bottom: 1px dashed $grayLight;
     }
+    li{
+      padding: 3px 0;
+    }
     #footer_links{
         .nav > li > a:hover{
               background-color: transparent;

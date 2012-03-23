@@ -43,11 +43,14 @@
     }
 }
 #account_db{
-    $linkColorHover: #000;
     background: $logoOrange;
     vertical-align: baseline;
     height:51px;
     & > a{
         color: $black;
+        &:hover {
+          color: $white;
+        }
     }
+
 }

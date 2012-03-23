@@ -17,25 +17,33 @@
           <li class="help"><a href="#">Help</a></li>
         </ul>
 
-        <ul class="nav menu-cover pull-right">
-          <li class="cart"><a href="#">Cart</a></li>
-          <li class='amount-menu-item'><a href="#"><span class='amount'>200</span><span class='menu-label'>Tokens</span></a></li>
-          <li class='amount-menu-item'><a href="#"><span class='amount'>8</span><span class='menu-label'>Auctions</span></a></li>
-          <li class="divider-vertical"></li>
-          <li class="dropdown" id='account_db'>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#account_db">
-              QuyDoan
-              <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-            </ul>
-          </li>
-        </ul>
+		<ul class="nav menu-cover pull-right">
+			<li class="cart"><%= link_to "Cart", cart_url %></li>
+			<li class='amount-menu-item'><a href="#"><span class='amount'>200</span><span class='menu-label'>Tokens</span></a></li>
+            <li class='amount-menu-item'><a href="#"><span class='amount'>8</span><span class='menu-label'>Auctions</span></a></li>
+			<li class="divider-vertical"></li>
+			<li class="dropdown" id='account_db'>
+				<% if current_user %>
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#account_db">
+					<%= current_user.email %>
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a href="#">My Page</a></li>
+					<li class="divider"></li>
+					<li><a href="#">My Auctions</a></li>
+					<li class="divider"></li>
+					<li><%= link_to "My Shopping Cart", cart_url %></li>
+					<li class="divider"></li>
+					<li><a href="#">Buy Tokens</a></li>
+					<li class="divider"></li>
+					<li><%= link_to t(:logout), spree.destroy_user_session_path %></li>
+				</ul>
+				<% else %>
+				<%= link_to t(:login), spree.login_path %>
+				<% end %>
+			</li>
+		</ul>
       </div>
     </div>
   </div>
