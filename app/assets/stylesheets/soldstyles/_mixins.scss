@@ -1,24 +1,35 @@
-@mixin menu-item($imageName,$hoverImageName){
-    background: image-url($imageName) no-repeat center 0;
+@mixin menu-item($imageName, $hoverImageName){
+  background: image-url($imageName) no-repeat center 0;
+  padding-top: 12px;
+  a {
+    color: $linkOnDarkBg;
+  }
+  &:hover, &.active {
+    background: image-url($hoverImageName) no-repeat center 0;
     padding-top: 12px;
-    a{ color: $linkOnDarkBg; }
-    &:hover, &.active{
-        background: image-url($hoverImageName) no-repeat center 0;
-        padding-top: 12px;
-        a, & > a:hover{
-            color: $linkColorHover !important;
-            background-color: transparent;
-        }
+    a, & > a:hover {
+      color: $linkColorHover !important;
+      background-color: transparent;
     }
+  }
 }
 
 @mixin top-bottom-border($borderStyle: 1px dashed $grayDark){
-    border-top: $borderStyle;
-    border-bottom: $borderStyle;
+  border-top: $borderStyle;
+  border-bottom: $borderStyle;
 }
 
-@mixin page-header-with-dashed(){
-    .ligterText{
-      color: $soldOrange;
-    }
+@mixin page-header-with-dashed($fontSize: 24px){
+  color: $textColor;
+  font-size: $fontSize;
+  .ligterText {
+    color: $soldOrange;
+  }
+  span.dashed {
+    letter-spacing:$fontSize/6;
+    font-size: $fontSize/2;
+    font-weight: normal;
+    color: $dashedBorder;
+    padding-left: 30px;
+  }
 }

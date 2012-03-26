@@ -1,0 +1,44 @@
+<% @body_id = 'signup' %>
+<div class="container">
+  <h1 class="page_header">
+    <%= raw(t(:join_us)) %>
+    <span class="dashed"><%= "-"*80 %></span>
+  </h1>
+
+  <div class="span12">
+    <%= image_tag('last-sold-iphone.png') %>
+  </div>
+  <div class='span10 offset1'>
+    <%= render :partial => 'spree/shared/error_messages', :locals => {:target => @user} %>
+    <div id="new-customer">
+      <div data-hook="signup">
+        <%= simple_form_for :user, :url => '/update_user_step2', :html => {:class => 'form-inline', :id => 'registration_form'} do |f| %>
+            <%= f.error_notification %>
+            <div data-hook="signup_inside_form">
+              <div class="control-group">
+                <%= f.text_field :first_name, :class => 'input-small', :placeholder => t('simple_form.labels.user.first_name') %>
+                <%= f.text_field :last_name, :class => 'input-small', :placeholder => t('simple_form.labels.user.last_name') %>
+              </div>
+              <%= f.input :address1, :required => false, :label => false, :html => {:class => 'input-large'}, :placeholder => t('simple_form.labels.user.address1') %>
+              <%= f.input :address2, :required => false, :label => false, :html => {:class => 'input-large'}, :placeholder => t('simple_form.labels.user.address2') %>
+              <%= f.input :phone_number, :required => false, :label => false, :html => {:class => 'input-medium'}, :placeholder => t('simple_form.labels.user.phone_number') %>
+              <%= f.input :gender, :as => :select, :collection => [['Male', 1], ['Female', 0]], :label => false %>
+              <%= f.input :date_of_birth, :label => false, :required => false, :placeholder => 'Birth Day' %>
+
+              <div class="important-note span10">
+
+                <h6>IMPORTANT REMINDER:</h6>
+                <ul class="unstyled">
+                  <li>Each bid requires one Token. (One Token = SGD 0.75). Tokens are not refundable.</li>
+                  <li>Tokens used are not returned regardless of the outcome of the auction</li>
+                </ul>
+              </div>
+              <p><%= f.submit t(:next_step), :class => 'btn btn-large btn-warning' %></p>
+            </div>
+        <% end %>
+      </div>
+
+    </div>
+    <div data-hook="login_extras"></div>
+  </div>
+</div>
