@@ -26,3 +26,12 @@ a {
     color: $labelColor;
   }
 }
+
+.controls{
+  select{
+    display: inline-block;
+    width:  auto;
+    padding: 5px 20px 3px 10px;
+    line-height: inherit;
+  }
+}

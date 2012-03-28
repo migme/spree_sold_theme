@@ -66,13 +66,6 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
   }
 
   /*--------------------------------------*/
-  /* Paragraphs
-  /*--------------------------------------*/
-  p {
-    padding: 10px 0;
-  }
-
-  /*--------------------------------------*/
   /* Tables
   /*--------------------------------------*/
   table {
@@ -270,16 +263,6 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
     margin-top: 15px;
   }
 
-  .add-to-cart {
-    margin-top: 15px;
-
-    input[type="number"] {
-      width: 60px;
-      vertical-align: middle;
-      padding: 5px;
-      height: 35px;
-    }
-  }
 
   span.price {
     font-weight: bold;
@@ -803,10 +786,6 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
       width: auto !important;
     }
 
-    input, select {
-      vertical-align: baseline !important;
-    }
-
     figure#logo {
       text-align: center;
     }
@@ -872,11 +851,6 @@ mark {background-color: $link_text_color; color: $layout_background_color; font-
       padding: 0;
       margin: 0;
       width: 50%;
-
-      span {
-        display: block;
-        padding: 10px 20px;
-      }
     }
 
     #shipping_method p label {

@@ -26,4 +26,11 @@ h1.page_header {
   margin-left: 55px;
 }
 
+.greeting-message{
+  h3{
+    font-size: $sectionHeadFontSize;
+    color: $textColor;
+  }
+}
+
 
