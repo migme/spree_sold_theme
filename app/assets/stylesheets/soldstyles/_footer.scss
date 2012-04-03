@@ -13,14 +13,20 @@
     }
     #google_seo li{
       padding: 3px 0;
+      line-height: 16px;
     }
     #footer_links{
+        .nav > li > a {line-height: 16px;}
         .nav > li > a:hover{
               background-color: transparent;
               color: $linkColorHover;
+              line-height: 16px;
          }
     }
     #copyright{
       text-align: center;
     }
+
 }
+
+footer#footer {border-top: 5px solid #F07B05;}
