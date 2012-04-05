@@ -1,15 +1,17 @@
 @mixin menu-item($imageName, $hoverImageName){
   background: image-url($imageName) no-repeat center 0;
-  padding-top: 12px;
+  background-position-y: 5px;
+  padding-top: 18px;
   a {
     color: $linkOnDarkBg;
   }
   &:hover, &.active {
     background: image-url($hoverImageName) no-repeat center 0;
-    padding-top: 12px;
+    background-color: $soldOrange;
+    background-position-y: 5px;
     a, & > a:hover {
-      color: $linkColorHover !important;
-      background-color: transparent;
+      //* color: $linkColorHover !important;    //
+      background: transparent;
     }
   }
 }
@@ -30,6 +32,6 @@
     font-size: $fontSize/2;
     font-weight: normal;
     color: $dashedBorder;
-    padding-left: 30px;
+    padding-left: 20px;
   }
 }
