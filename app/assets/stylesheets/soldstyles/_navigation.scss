@@ -89,10 +89,13 @@ ul.nav.menu-cover.pull-right{
   color: $soldOrange;
   font-size: 11px;
   font-weight: normal;
-  padding-left: 60px;
+  padding-left: 63px;
 }
 
-input.input-medium {margin-top: 3px;}
+input.input-medium {margin-top: 5px;
+  height: 15px;
+  margin-bottom: 0;
+}
 
 //* guest login //
 
@@ -102,7 +105,7 @@ a.btn.btn-guestlogin.btn-mini {
   text-shadow: 0 0px 0px;
   border: #F07B05;
   background-color: #000;
-  margin: 8px 0 0 1px;
+  margin-top: 5px;
 }
 
 a.btn.btn-guestlogin.btn-mini:hover {
@@ -111,14 +114,20 @@ a.btn.btn-guestlogin.btn-mini:hover {
   background-color: #ed1c24;
 }
 
-label.checkbox-login {
-  padding-left: 10px;
-  padding-top: 3px;
-  display: block;
+label.checkbox {padding: 2px 0 0 20px;}
 
-    input.check-login {width: 2px;}
+input[type="checkbox"]{margin: 5px 0;}
 
-
-
-
+input, textarea, select, .uneditable-input {
+  display: inline-block;
+  width: 210px;
+  height: 18px;
+  padding: 2px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #555555;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }

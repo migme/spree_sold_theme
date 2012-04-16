@@ -1,3 +1,6 @@
+//guestlogin//
+.navbar .nav.pull-right {height: 50px;}
+
 
 //.dropdown-eg//
 .dropdown {
@@ -231,5 +234,135 @@ div.flashmain {
       div.fl-tmr {float: right; height: 30px; width:160px; padding: 10px 10px 0 0 ;}
 
       div.product-image {text-align: center;}
+      span.flash-time {font-size:24px; color: red; text-align: right; float: right;}
+}
 
-}       span.flash-time {font-size:24px; color: red; text-align: right; float: right;}
+//privacy policy//
+
+ul.text-list {
+  list-style: none;
+  font-size: 14px;
+  width: 700px;}
+
+.scroll-box {
+  width: 800px;
+  height: 500px;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.txt-orange {
+  color: $soldOrange;
+  font-size: 16px;
+  font-weight: bold;
+
+
+
+}
+span.boldtype {font-weight: bold;}
+span.italic {font-style: italic;}
+
+//security//
+.table {
+  width: 50%;
+
+  th {text-align: right;border: none !important;}
+  td {border: none !important;}
+}
+
+//auctions//
+
+
+
+div#myCarousel.carousel.slide {
+  border: gray thin solid;
+  height:250px;
+  margin:0;
+}
+
+.carousel .item > img {
+  display: block;
+  line-height: 1;
+  height: 250px;
+  width: 950px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 25px;
+  height: 25px;
+  margin-top: -20px;
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 18px;
+  color: white;
+  text-align: center;
+  background: #222;
+  border: 3px solid white;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.auction-container {
+  width: 300px;
+  height: 188px;
+  border: gray thin solid;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 20px;
+
+    .auc-bar {
+      width: 300px;
+      height: 42px;
+      margin-bottom: 2px;
+      background: rgb(69,72,77); /* Old browsers */
+      background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+      background: linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+        .auc-prod{color: white; font-size: 14px; width:180px; padding: 2px 0 0 5px; float: left;}
+        .auc-type {float:right; width: 100px; text-align: right; padding: 5px 3px 0 0 ;}
+        .auc-type img {padding: 0 2px;}
+
+    }
+
+    .auc-img {
+
+      width: 180px;
+      height: 135px;
+      float: left;
+    }
+
+    .auc-box {
+      width: 115px;
+      height: 125px;
+      float: right;
+      text-align: center;
+      padding-top:10px;
+
+        .a-timer {
+          color: red;
+          font-size: 24px;
+        }
+
+        .a-bid {
+          color: $soldOrange;
+          font-size: 18px;
+        }
+
+        .a-user {
+          font-size: 12px;
+        }
+    }
+
+}
