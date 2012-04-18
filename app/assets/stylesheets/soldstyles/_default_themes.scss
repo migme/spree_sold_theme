@@ -208,13 +208,32 @@ div.flashmain {
   width: 950px;
   margin:0 auto;
     .flashmain-left {float: left; margin-left: 20px;}
-    .flashmain-right {float: right; margin-right: 20px;}
+    .flashmain-right {float: right; margin-right: 10px; width: 420px; padding: 0 10px 10px 20px;}
     .flash-img {float:left; margin:0 10px;}
+    span.strikethrough {text-decoration:line-through;}
+
+  .product-price-row {
+    border-top: #f07b05 1px dashed;
+    padding: 10px 10px 0 10px;
+
+      .price-left {float: left;}
+      .sm-icons {float: right;}
+      .control-group{float: right; padding-top: 3px; margin-left: 10px;}
+      .control-label{float: left; margin-right: 5px;}
+      .controls {float: left; padding-right: 40px;}
+
+  }
+  .product-description-row {
+    padding: 10px;
+  }
+  .product-shipping {
+    padding: 10px;
+  }
 }
 
 
 .flash-img{
-  background-color: gray;
+  background-color: #f5f5f5;
   z-index: 1;
   border: thin solid black;
   width: 440px;
@@ -366,3 +385,4 @@ div#myCarousel.carousel.slide {
     }
 
 }
+

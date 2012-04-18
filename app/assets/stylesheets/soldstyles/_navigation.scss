@@ -58,11 +58,10 @@
     margin:0;
 
     & > a{
-        color: $white;
+        color: #999;
 
         &:hover {
           color: $white;
-          background-color:$soldOrange;
           text-decoration: underline;
         }
     }
