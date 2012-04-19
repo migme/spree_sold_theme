@@ -221,6 +221,9 @@ div.flashmain {
       .control-group{float: right; padding-top: 3px; margin-left: 10px;}
       .control-label{float: left; margin-right: 5px;}
       .controls {float: left; padding-right: 40px;}
+      .controls input {display: inline-block;
+        width: auto;
+        line-height: inherit;}
 
   }
   .product-description-row {
