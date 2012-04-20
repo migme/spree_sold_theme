@@ -227,7 +227,7 @@ div.flashmain {
 
   }
   .product-description-row {
-    padding: 10px;
+    padding: 20px 10px 10 px 10px;
   }
   .product-shipping {
     padding: 10px;
@@ -259,43 +259,8 @@ div.flashmain {
       span.flash-time {font-size:24px; color: red; text-align: right; float: right;}
 }
 
-//privacy policy//
 
-ul.text-list {
-  list-style: none;
-  font-size: 14px;
-  width: 700px;}
-
-.scroll-box {
-  width: 800px;
-  height: 500px;
-  overflow: auto;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.txt-orange {
-  color: $soldOrange;
-  font-size: 16px;
-  font-weight: bold;
-
-
-
-}
-span.boldtype {font-weight: bold;}
-span.italic {font-style: italic;}
-
-//security//
-.table {
-  width: 50%;
-
-  th {text-align: right;border: none !important;}
-  td {border: none !important;}
-}
-
-//auctions//
-
-
+//banner//
 
 div#myCarousel.carousel.slide {
   border: gray thin solid;
@@ -331,6 +296,8 @@ div#myCarousel.carousel.slide {
   filter: alpha(opacity=50);
 }
 
+//auction//
+
 .auction-container {
   width: 300px;
   height: 188px;
@@ -351,15 +318,12 @@ div#myCarousel.carousel.slide {
       background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
       background: linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-
         .auc-prod{color: white; font-size: 14px; width:180px; padding: 2px 0 0 5px; float: left;}
         .auc-type {float:right; width: 100px; text-align: right; padding: 5px 3px 0 0 ;}
         .auc-type img {padding: 0 2px;}
-
     }
 
     .auc-img {
-
       width: 180px;
       height: 135px;
       float: left;
@@ -389,3 +353,86 @@ div#myCarousel.carousel.slide {
 
 }
 
+//auction-product//
+.auctionmain-left {float: left;}
+.auctionmain-right {
+  float: right;
+  margin-right: 10px;
+  width: 520px;
+  padding: 0 10px 10px 10px;
+      .prod-name{width: 420px; float: left;}
+}
+
+.auctionmain-right ul li{list-style: none; display: inline; float: right; padding: 10px 2px 5px 2px;}
+
+#auction_details {
+  padding: 10px;
+  width: 300px;
+  border-right: #f07b05 thin dashed;
+  float: left;
+    .adetails-left {float:left;}
+    .adetails-rgt {float:right; text-align: right;}
+    .timer {font-size:48px; text-align:center;margin-top: 30px;}
+    .auc-cta {text-align:center; border-bottom: #f07b05 thin dashed; margin-top: 20px; padding-bottom: 20px; margin-bottom: 20px;}
+    .auc-note {font-size: 11px;line-height: 12px;}
+}
+
+.autobidder_container {
+  width:190px;
+  height: 115px;
+  border-bottom: #f07b05 thin dashed;
+  float: right;
+}
+.input-small {width: 45px; padding:0 2px;}
+.auctionmain-right ul.auto-details {display: inline;text-align: center; font-size: 10px;}
+.auctionmain-right ul.auto-details li { padding: 0; width: 50px;line-height: 11px; float: left; margin-left: 8px; }
+form.auto-well.form-inline {width: 177px;margin-left: 8px; margin-top: 5px; margin-bottom: 5px;}
+.autobidder_container .input-small {width: 45px; margin-right: 6px;}
+.auto-help {float:left; background-color: gray; color: $white; width: 110px; text-align: center;font-size: 11px; margin-left: 10px;}
+.auto-enter {float: right;}
+button.btn.btn-mini.btn-inverse {width: 50px; margin-right: 10px;}
+
+.bid-his {height: 115px;  width:190px; overflow: scroll;
+  border-bottom: #f07b05 thin dashed;
+  float: right;
+  padding-top: 10px;}
+ul.history li {float: left;}
+
+.invite {width:190px; float: right; text-align:center; margin-top: 20px;}
+
+.full-desc {width: 910px; border-top: #f07b05 thin dashed; padding: 20px 20px; }
+
+
+//privacy policy//
+
+ul.text-list {
+  list-style: none;
+  font-size: 14px;
+  width: 700px;}
+
+.scroll-box {
+  width: 800px;
+  height: 500px;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.txt-orange {
+  color: $soldOrange;
+  font-size: 16px;
+  font-weight: bold;
+
+
+
+}
+span.boldtype {font-weight: bold;}
+span.italic {font-style: italic;}
+
+//security//
+.table {
+  width: 50%;
+
+  th {text-align: right;border: none !important;}
+  td {border: none !important;}
+}
