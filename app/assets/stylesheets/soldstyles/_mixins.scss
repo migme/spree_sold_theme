@@ -24,14 +24,15 @@
 @mixin page-header-with-dashed($fontSize: 24px){
   color: $textColor;
   font-size: $fontSize;
-  .ligterText {
+  .lighterText {
     color: $soldOrange;
   }
   span.dashed {
-    letter-spacing:$fontSize/6;
-    font-size: $fontSize/2;
+    letter-spacing: 2px;
+    font-size: 10px;
     font-weight: normal;
     color: $dashedBorder;
     padding-left: 20px;
+    vertical-align: top;
   }
 }

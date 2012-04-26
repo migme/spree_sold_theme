@@ -1,3 +1,10 @@
+body {
+  border-right: gray thin solid;
+  border-left: gray thin solid;
+}
+
+.page-head span.dashed {letter-spacing: 2px; font-size: 10px;}
+
 //guestlogin//
 .navbar .nav.pull-right {height: 50px;}
 
@@ -167,7 +174,6 @@ div.dealcontainer {
     background-color:$soldOrange;
     border-right: dashed thin black;
     float: left;
-
   }
 
   div.dealtxt {
@@ -259,6 +265,60 @@ div.flashmain {
       span.flash-time {font-size:24px; color: red; text-align: right; float: right;}
 }
 
+//shopping cart//
+
+#shop_cart_main {float: left; width: 620px;}
+
+.item-wrap {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: gray thin solid;
+  float: left;
+  width: 615px;
+      .cart-img {float: left;}
+      .cart-details {
+        float:left;
+        border-bottom: gray thin dashed;
+        margin-bottom: 5px;
+        margin-top: 20px;
+        padding-bottom: 5px;
+        width: 435px;
+        height: 85px}
+      .cart-name {font-size: 18px; width: 400px; float: left; line-height: 24px; margin-bottom: 10px;}
+      .close-btn {float: right;}
+      .control-group{padding-top: 3px; margin: 0;}
+      .control-label{float: left; margin-right: 5px;}
+      .controls {float: left; padding-right: 40px;}
+      .controls input {display: inline-block;
+        width: auto;
+        line-height: inherit;}
+      .cart-np {float: right;}
+
+      .cart-details-2 {
+        float:left;
+        width: 435px;
+        padding: 5px 0
+}
+      .cart-timer {color: red; float: left; width: 200px;}
+      .cart-dp {color:$soldOrange; font-size: 18px; float: right;}
+}
+
+.my-order-main {
+  border-left: gray thin dashed;
+  float: right;
+  width:260px;
+  height: 550px;
+  padding:20px;
+      .my-order {color:#333333; font-size: 18px; border-bottom: gray thin dashed; padding-bottom: 10px; margin-bottom: 10px;}
+      .cdetails-left {float:left;}
+      .cdetails-rgt {float:right; text-align: right;}
+      .cart-total {border-top: gray thin dashed;font-size: 18px; margin: 10px 0 20px 0; padding-top:10px; width: 260px;}
+      .total-left{float: left;}
+      .total-rgt{float:right; text-align: right;}
+      .cart-note {font-size: 11px; margin-top: 240px; font-style: italic;}
+}
+
+
 
 //banner//
 
@@ -297,6 +357,25 @@ div#myCarousel.carousel.slide {
 }
 
 //auction//
+
+
+.auc-prev {
+  height:145px;
+  width:1018px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+
+      .auc-box{width: 232px; height: 135px; border-right: gray thin dotted; float: left; padding-left:20px;}
+      .auc-box-4 {width: 232px; height: 135px; float: left; padding-left:20px;}
+        .box-prod{width:230px; margin-bottom: 10px;}
+        .box-prod-left {width: 100px; float: left;}
+        .auc-icon-s{width: 100px; height: 20px; margin-bottom: 10px;}
+        .img-s {width: 80px; height: 60px; margin: 0 10px;}
+        .box-prod-rgt {width: 125px; float: left; text-align: center;}
+}
+
 
 .auction-container {
   width: 300px;
@@ -354,13 +433,15 @@ div#myCarousel.carousel.slide {
 }
 
 //auction-product//
-.auctionmain-left {float: left;}
+.auctionmain-left {float: left; padding-top: 10px;}
 .auctionmain-right {
   float: right;
   margin-right: 10px;
   width: 520px;
   padding: 0 10px 10px 10px;
       .prod-name{width: 420px; float: left;}
+      .product-description-row {margin-top: 10px;}
+      h2.product-title {font-size: 24px; line-height: 28px; color: #333;}
 }
 
 .auctionmain-right ul li{list-style: none; display: inline; float: right; padding: 10px 2px 5px 2px;}
@@ -388,9 +469,9 @@ div#myCarousel.carousel.slide {
 .auctionmain-right ul.auto-details li { padding: 0; width: 50px;line-height: 11px; float: left; margin-left: 8px; }
 form.auto-well.form-inline {width: 177px;margin-left: 8px; margin-top: 5px; margin-bottom: 5px;}
 .autobidder_container .input-small {width: 45px; margin-right: 6px;}
-.auto-help {float:left; background-color: gray; color: $white; width: 110px; text-align: center;font-size: 11px; margin-left: 10px;}
-.auto-enter {float: right;}
-button.btn.btn-mini.btn-inverse {width: 50px; margin-right: 10px;}
+.auto-help {float:left; margin-left: 8px;}
+.auto-enter {float: right; margin-right: 7px;}
+button.btn.btn-mini.btn-inverse {width: 50px; margin-right: 3px;}
 
 .bid-his {height: 115px;  width:190px; overflow: scroll;
   border-bottom: #f07b05 thin dashed;
