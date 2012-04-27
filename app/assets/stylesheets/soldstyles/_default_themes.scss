@@ -463,6 +463,7 @@ div#myCarousel.carousel.slide {
   height: 115px;
   border-bottom: #f07b05 thin dashed;
   float: right;
+  overflow: auto;
 }
 .input-small {width: 45px; padding:0 2px;}
 .auctionmain-right ul.auto-details {display: inline;text-align: center; font-size: 10px;}
