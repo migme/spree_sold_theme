@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.require_path = ['lib']
   s.requirements << 'none'
 
-  s.add_dependency 'sass-rails', '~> 3.1.5'
+  s.add_dependency 'sass-rails', '~> 3.2.3'
   s.add_dependency "bootstrap-sass"
-  s.add_dependency 'spree_core', '~> 1.0.0'
+  s.add_dependency 'spree_core', '~> 1.1.0'
   s.add_dependency 'simple_form'
 end
