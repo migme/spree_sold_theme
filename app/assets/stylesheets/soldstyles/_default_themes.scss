@@ -277,10 +277,20 @@ input#user_last_name.input-large {width: 214px;}
 #token_packs {
   border-top: gray thin dashed;
   border-bottom: gray thin dashed;
-  margin: 10px 0 10px 0;
-  padding: 10px 0 10px 20px;
+  margin: 10px 0 0 0;
+  padding: 10px 0 30px 40px;
 }
-label.checkbox-token {padding: 2px 0 0 20px; display: block;}
+
+.table-tokens thead {background-color: #ffffff;}
+
+.tok-ch {width:20px;}
+.tok-pack {width:130px;}
+.tok-price {width:100px;}
+
+label.checkbox.tokens {margin-bottom: 20px;}
+.tp {color: #f07b05; font-size: 16px;line-height: 20px;}
+.tprice {color: #333333; font-size: 16px;line-height: 20px;}
+
 
 
 //flashsale//
@@ -291,7 +301,7 @@ label.checkbox-token {padding: 2px 0 0 20px; display: block;}
 div.flashmain {
   width: 950px;
   margin:0 auto;
-    .flashmain-left {float: left; margin-left: 20px;}
+    .flashmain-left {float: left; margin-left: 10px;}
     .flashmain-right {float: right; margin-right: 10px; width: 420px; padding: 0 10px 10px 20px;}
     .flash-img {float:left; margin:0 10px;}
     span.strikethrough {text-decoration:line-through;}
@@ -655,3 +665,64 @@ span.italic {font-style: italic;}
 
 //Bid History
 table#history td {font-size: 0.8em !important;}
+
+//contact us//
+.contact-main {width: 900px; border-bottom: gray thin dashed; padding: 0 0 20px 0; margin-bottom: 20px;}
+.contact-copy {color: #333333; font-weight: normal;}
+.contact-copy-sub {color: #333333; font-weight: normal;}
+
+.email-us {width:500px; border-right: gray thin dashed; float: left; padding: 0 20px 0 0;}
+.email-img {float: left; width: 50px; margin-right: 10px;}
+.email-head {float: left; width:420px; margin-bottom: 15px;}
+
+select#select-inq {
+  display: inline-block;
+  width: 215px;
+  padding: 5px 20px 3px 10px;
+  line-height: inherit;
+}
+
+.form-horizontal.contact {padding-left:60px;}
+textarea#textarea_contact.input-xlarge {width: 210px;height: 100px;}
+input.btn.btn-mini.btn-warning.contact {margin:10px 0 0 120px;}
+
+.call-us{float:right; width:350px;}
+.call-img {float:left;margin-right: 10px;}
+.call-head {float:left;margin-bottom: 15px;}
+
+.find-img {float: left;margin-right: 10px;}
+.find-head {float:left;margin-bottom: 10px;}
+
+//ribbon//
+
+.RibbonWrap {
+  position: absolute;
+  top: 89px;
+  left: 10px;
+
+}
+.Ribbon {
+  background-color: #f07b05;
+  color: white;
+  font-size: 18px;
+  height: 32px;
+  line-height: 32px;
+  position: relative;
+  padding: 0 .7em;
+  z-index: 5;
+  font-weight: bold;
+  -moz-box-shadow: 3px 3px 1px rgba(0,0,0,.15);
+  -webkit-box-shadow: 3px 3px 1px rgba(0,0,0,.15);
+  -box-shadow: 3px 3px 1px rgba(0,0,0,.15);
+}
+.triangle {
+  border-width: 5px;
+  border-color: #DD0017 #DD0017 transparent transparent;
+  border-style: solid;
+  position: absolute;
+  z-index: 4;
+  bottom: -10px;
+  left: 0;
+  height: 0;
+  width: 0;
+}
