@@ -24,8 +24,8 @@
 		<ul class="nav menu-cover pull-right">
 				<% if current_user %>
 			<li class="cart"><%= link_to "Cart", cart_url %></li>
-			<li class='amount-menu-item'><a href="#"><span class='amount'>200</span><span class='menu-label'>Tokens</span></a></li>
-            <li class='amount-menu-item'><a href="#"><span class='amount'>8</span><span class='menu-label'>Auctions</span></a></li>
+			<li class='amount-menu-item'><a href="#"><span class='amount' id="user_coin">200</span><span class='menu-label'>Tokens</span></a></li>
+            <li class='amount-menu-item'><a href="#"><span class='amount' id="user_ea">8</span><span class='menu-label'>Auctions</span></a></li>
 			<li class="divider-vertical"></li>
 			<li id="account_db" class="dropdown">
 		            <a href="#account_db" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"> </i><span class="drop-username"> <%= current_user.email %></span>
