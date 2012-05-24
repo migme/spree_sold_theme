@@ -284,8 +284,11 @@ div.dealcontainer {
 .email.optional.control-label{width: 130px; margin-right: 10px;}
 .password.optional.control-label{width: 130px; margin-right: 10px;}
 
-input#user_first_name.input-large {width: 214px;}
-input#user_last_name.input-large {width: 214px;}
+input#user_first_name.input-large, input#user_last_name.input-large {width: 100px;}
+.input-prepend.phone_number{
+  width: 214px;
+}
+input.tel{ width: 176px;}
 .important-note.span10 {margin:15px 0 15px 0;}
 
 #registration_form.form-horizontal label.control-label {
