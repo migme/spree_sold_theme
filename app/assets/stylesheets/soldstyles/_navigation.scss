@@ -1,17 +1,20 @@
 #sold_top_navbar{
-    border-bottom: 3px solid #f07b05;
+    //border-bottom: 3px solid #f07b05;
     width: $pageWith;
-    margin-bottom: 20px;
+   //margin-bottom: 20px;
    .navbar-inner{
      @include border-radius(0);
       padding-top: 0;
    }
-    box-shadow: 0 0 5px #888888;
+    //box-shadow: 0 0 5px #888888;
 }
 .navbar .menu-cover{
     //margin-top: 2px;
     & > li > a {
        padding: 10px 10px 3px;
+    }
+    li.home {
+      @include menu-item('auctions_icon.png', 'auctions_icon.png');  //*'auctions_icon_hover.png');//
     }
     li.live-auction{
       @include menu-item('auctions_icon.png', 'auctions_icon.png');  //*'auctions_icon_hover.png');//
@@ -35,7 +38,7 @@
     }
 
     li.amount-menu-item{
-      padding: 5px 0;
+      padding: 5px 10px 0 0;
       & > a {
         color: #ccc;
         position: relative;
