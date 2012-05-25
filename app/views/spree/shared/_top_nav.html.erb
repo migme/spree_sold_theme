@@ -31,16 +31,14 @@
 		            <a href="#account_db" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"> </i><span class="drop-username"> <%= current_user.email %></span>
 					<b class="caret"></b>
 				</a>
-				<ul class="dropdown-menu">
-	              <li><a href="#">My Auctions</a></li>
-	              <li><%= link_to "My Shopping Cart", cart_url %></li>
-	              <li><a href="#">Checkout</a></li>
-	              <li class="divider"></li>
-	              <li><a href="#">Buy Tokens</a></li>
-	              <li><a href="#">Refer a friend</a></li>
-	              <li class="divider"></li>
-	              <li><%= link_to t(:logout), spree.destroy_user_session_path %></li>
-	            </ul>
+              <ul class="dropdown-menu">
+                <li><a href="#">Auction Information</a></li>
+                <li><a href="#">Account Information</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Purchase Tokens</a></li>
+                <li class="divider"></li>
+                <li><%= link_to t(:logout), spree.destroy_user_session_path %></li>
+              </ul>
 				<% else %>
                    <%= form_for :user, :url => spree.user_session_path do |f| %>
 				      <%= f.email_field :email, :class => 'input-medium', :placeholder => "Email" %>
@@ -57,3 +55,23 @@
     </div>
   </div>
 </nav>
+<% if content_for?(:sub_nav) %>
+      <%= yield :sub_nav %>
+<% else %>
+    <nav class="navbar" id="sold_sub_navbar">
+      <div class="subnavbar">
+        <ul class="subnav">
+          <li><a href="/aboutus">About us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="/testimonials">Testimonials</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/mission">Mission</a></li>
+          <li><a href="/contactus">Contact us</a></li>
+          <% unless current_user %>
+             <li class="register" style="float: right;"><a href="/signup" style="width: 180px; color: #f07b05;">Not a member? Register now!</a></li>
+          <% end %>
+        </ul>
+      </div>
+
+    </nav>
+<% end %>
