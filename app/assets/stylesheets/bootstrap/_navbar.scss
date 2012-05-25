@@ -7,7 +7,7 @@
 
 .navbar {
   overflow: visible;
-  margin-bottom: $baseLineHeight;
+  //margin-bottom: $baseLineHeight;
 }
 
 // Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
@@ -66,7 +66,7 @@
     color: $white;
     margin-top: 7px;
     margin-left: -15px;
-    margin-right: 5px;
+    margin-right: 15px;
   }
   // Plain text in topbar
   .navbar-text {
@@ -215,7 +215,7 @@
 .navbar .divider-vertical {
   height: $navbarHeight;
   width: 1px;
-  margin: 0 9px;
+  //margin: 0 9px;
   overflow: hidden;
   background-color: $navbarBackground;
   border-right: 1px solid $navbarBackgroundHighlight;
