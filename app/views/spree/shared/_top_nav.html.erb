@@ -9,6 +9,7 @@
       <a class="brand" href="#">
         <%= image_tag('soldsg-logo.png', :alt => 'Singapore Shopping Online', :class => 'logo') %>
       </a>
+
       <div class="nav-collapse">
         <ul class="nav menu-cover pull-left">
           <li class="divider-vertical"></li>
@@ -21,42 +22,46 @@
           <li class="help"><a href="#">Help</a></li>
         </ul>
 
-		<ul class="nav menu-cover pull-right">
-				<% if current_user %>
-			<li class="cart"><%= link_to "Cart", cart_url %></li>
-			<li class='amount-menu-item'><a href="#"><span class='amount' id="user_coin">200</span><span class='menu-label'>Tokens</span></a></li>
-            <li class='amount-menu-item'><a href="#"><span class='amount' id="user_ea">8</span><span class='menu-label'>Auctions</span></a></li>
-			<li class="divider-vertical"></li>
-			<li id="account_db" class="dropdown">
-		            <a href="#account_db" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"> </i><span class="drop-username"> <%= current_user.email %></span>
-					<b class="caret"></b>
-				</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Auction Information</a></li>
-                <li><a href="#">Account Information</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Purchase Tokens</a></li>
-                <li class="divider"></li>
-                <li><%= link_to t(:logout), spree.destroy_user_session_path %></li>
-              </ul>
-				<% else %>
-                   <%= form_for :user, :url => spree.user_session_path do |f| %>
-				      <%= f.email_field :email, :class => 'input-medium', :placeholder => "Email" %>
-				      <%= f.password_field :password, :class => 'input-medium', :placeholder => "Password" %>
-				 <%= f.submit t(:login), :class => 'btn btn-guestlogin btn-mini' %>
-					<label class="checkbox">
-				      <%= f.check_box :remember_me %><span class="guestnav-check">Remember me</span>   <a href="#" class="guestnav-forget">Forget Password?</a>
-				    </label>
-				<% end %>
-				<% end %>
-			</li>
-		</ul>
+        <ul class="nav menu-cover pull-right">
+          <% if current_user %>
+              <li class="cart"><%= link_to "Cart", cart_url %></li>
+              <li class='amount-menu-item'>
+                <a href="#"><span class='amount' id="user_coin">200</span><span class='menu-label'>Tokens</span></a>
+              </li>
+              <li class='amount-menu-item'>
+                <a href="#"><span class='amount' id="user_ea">8</span><span class='menu-label'>Auctions</span></a></li>
+              <li class="divider-vertical"></li>
+              <li id="account_db" class="dropdown">
+                <a href="#account_db" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"> </i><span class="drop-username"> <%= current_user.email %></span>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Auction Information</a></li>
+                  <li><a href="#">Account Information</a></li>
+                  <li class="divider"></li>
+                  <li><%=link_to(t(:purchase_tokens), purchase_tokens_url)%></li>
+                  <li class="divider"></li>
+                  <li><%= link_to t(:logout), spree.destroy_user_session_path %></li>
+                </ul>
+          <% else %>
+              <%= form_for :user, :url => spree.user_session_path do |f| %>
+                  <%= f.email_field :email, :class => 'input-medium', :placeholder => "Email" %>
+                  <%= f.password_field :password, :class => 'input-medium', :placeholder => "Password" %>
+                  <%= f.submit t(:login), :class => 'btn btn-guestlogin btn-mini' %>
+                  <label class="checkbox">
+                    <%= f.check_box :remember_me %><span class="guestnav-check">Remember me</span>
+                    <a href="#" class="guestnav-forget">Forget Password?</a>
+                  </label>
+              <% end %>
+          <% end %>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
 </nav>
 <% if content_for?(:sub_nav) %>
-      <%= yield :sub_nav %>
+    <%= yield :sub_nav %>
 <% else %>
     <nav class="navbar" id="sold_sub_navbar">
       <div class="subnavbar">
@@ -68,7 +73,8 @@
           <li><a href="/mission">Mission</a></li>
           <li><a href="/contactus">Contact us</a></li>
           <% unless current_user %>
-             <li class="register" style="float: right;"><a href="/signup" style="width: 180px; color: #f07b05;">Not a member? Register now!</a></li>
+              <li class="register" style="float: right;">
+                <a href="/signup" style="width: 180px; color: #f07b05;">Not a member? Register now!</a></li>
           <% end %>
         </ul>
       </div>
