@@ -296,12 +296,16 @@ input.tel{ width: 176px;}
 .important-note.span10 {margin:15px 0 15px 0;}
 
 #registration_form.form-horizontal label.control-label {
-  color: #333;
+  color: gray;
   width: 125px;
   margin-right: 10px;
 }
 
 .valid-cta {margin: 10px 0 0 10px; border-bottom: gray thin dashed; padding-bottom: 20px;}
+
+.register.control-label {color: #333333; width: 130px;}
+
+
 
 //token purchase//
 
@@ -318,9 +322,16 @@ input.tel{ width: 176px;}
 .tok-pack {width:130px;}
 .tok-price {width:100px;}
 
-label.checkbox.tokens {margin-bottom: 20px;}
+label.radio.tokens {margin-bottom: 20px;}
 .tp {color: #f07b05; font-size: 16px;line-height: 20px;}
 .tprice {color: #333333; font-size: 16px;line-height: 20px;}
+
+#token_confirm {
+  border-top: gray thin dashed;
+  border-bottom: gray thin dashed;
+  margin: 10px 0 20px 0;
+  padding: 20px 0 10px 0;
+}
 
 
 
@@ -388,7 +399,7 @@ div.flashmain {
       }
 
       div.product-image {text-align: center;}
-      span.flash-time {font-size:14px; color:#f07b05;}
+      div.flash-time {font-size:14px; color:#f07b05; border: red thin solid;}
       .fl-time2 {font-size: 14px;}
 }
 
@@ -881,3 +892,53 @@ input.btn.btn-mini.btn-warning.contact {margin:10px 0 0 120px;}
 }
 .comm-content {margin: 0 0 20px;}
 .comm-big {font-size: 16px; font-weight: bold;}
+
+
+//must-know//
+.rules {font-size: 14px;}
+
+//guides//
+.guide-left {float:left; width:200px;}
+.guide-rgt {float:left; width:700px;}
+
+.guide-nav {font-size: 18px; padding:0; margin:0;}
+.guide-nav li {line-height: 30px; list-style: none;text-transform:uppercase;}
+.guide-nav li a {color:#333333;}
+.guide-active {color:$soldOrange;}
+
+.guide-wrap {border-bottom: gray thin dashed; padding:10px 0 20px 0; margin-left:10px;}
+.guide-typewrap {margin: 10px auto; width: 300px;}
+.guide-img {float:left; width: 400px;}
+.guide-content {float: left; width: 280px; margin-top: 30px;font-size: 14px;}
+
+.type-img {float: left;width: 100px;}
+.type-content {float: left;width: 400px}
+
+.guide-pay-img {float:left; width:50px;}
+.guide-pay-content {float: left; width: 600px;font-size: 14px;margin-left: 30px;}
+
+
+//test//
+.flashbar-left {
+  float: left;
+  width: 240px;
+  padding: 5px 0 0 5px;
+}
+
+.flash-prod{
+  height: 40px;
+  font-size: 16px;
+  color:white;
+}
+
+.flash-timer {
+  font-size: 14px;
+  color:#F07B05;
+}
+
+.flashbar-rgt {
+  line-height: 25px;
+  float: right;
+  width:170px;
+  padding: 10px 10px 0 0;
+}
