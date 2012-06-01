@@ -39,7 +39,7 @@
                   <li><a href="#">Auction Information</a></li>
                   <li><a href="#">Account Information</a></li>
                   <li class="divider"></li>
-                  <li><%=link_to(t(:purchase_tokens), purchase_tokens_url)%></li>
+                  <li><%=link_to(t(:purchase_tokens), spree.purchase_tokens_path)%></li>
                   <li class="divider"></li>
                   <li><%= link_to t(:logout), spree.destroy_user_session_path %></li>
                 </ul>
