@@ -371,7 +371,7 @@ div.flashmain {
 }
 .flash-img{
   background-color: #f5f5f5;
-  background-image: url("http://sold.sg.mktg.s3.amazonaws.com/prod-flash.jpg") ;
+  background-image: url("/assets/flashcontainer.jpg") ;
   z-index: 1;
   border: thin solid black;
   width: 440px;
@@ -574,7 +574,9 @@ margin: 0;
     }
 
 }
-
+.blank-auction{
+  background: url('/assets/auctioncontainer.jpg') bottom no-repeat;
+}
 //auction-product//
 .auctionmain-left {float: left; padding-top: 10px;}
 .auctionmain-right {
