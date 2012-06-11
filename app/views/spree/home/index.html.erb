@@ -34,6 +34,12 @@
 <div class="container">
 
   <div class="page-head reg"><span class="lighterText">Live </span>Auctions<span class="dashed">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </span></div>
+  <% if @beginner_auctions %>
+    <div id="beginner">
+      <div class="auction-container beginner"></div>
+    </div>
+    <br class="clearfix">
+  <% end %>
   <div id="auctions"></div>
 </div>
 <div class="container">
@@ -49,6 +55,9 @@
 
     app.flash_sales.reset( <%= @flash_sales.to_json(Spree::FlashSale::JS_JSON_OPTIONS).html_safe -%>);
     app.auctions.reset( <%= @auctions.to_json(Spree::Auction::JS_JSON_OPTIONS).html_safe -%>);
+      <% if @beginner_auctions %>
+        app.beginner_auctions.reset( <%= @beginner_auctions.to_json(Spree::Auction::JS_JSON_OPTIONS).html_safe -%>);
+      <% end %>
     app.start("<%= counter_url %>");
     view = new SoldSpree.Views.Home.IndexView();
     view.render();
