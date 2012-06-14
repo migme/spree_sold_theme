@@ -1,35 +1,36 @@
 <footer id='footer'>
   <div id='google_seo' class="container">
-      <div class='span24'>
+    <div class='span24'>
       <h3>Singapore’s Best Online Entertainment Shopping</h3>
       <ul class='unstyled'>
-      <li>Sold.sg is a premium online entertainment shopping website that offers you the latest, brand new products
-        and
-        services! A great variety of deals are put up for sale daily. These deals include PS3, iPads, iPhones, Wii,
-        digital
-        cameras, tv sets, airline tickets to popular destinations, hotel and spa vouchers and many more at amazing
-        sale
-        prices!
-      </li>
-      <li>How does it work? You start by purchasing Tokens from our site and each Token costs S$0.75. Choose your
-        desired
-        item and use your Tokens to bid. Each bid uses 1 Token and are not refundable. Every time you bid, the bid
-        price
-        increases by S$0.01, S$0.05 or S$0.15 while the auction time increases by 20 seconds. Wait no more and
-        starting
-        bidding now!
-      </li>
-      <li>Sounds tough? Bidding on our site isn’t all that complicated once you get the hang of it. Take your time to
-        explore
-        the website and get yourself familiarized with the process.
-      </li>
-      <li>Why us? If you’re looking for great sales in town, look no more because only we offer you the most amazing
-        deals
-        for bidding! Secure your best deals with us and rest assured that you would get your best online shopping
-        experience. It’s a sale like no other so what you waiting for? Start bidding on Sold.sg now!
-      </li>
-      </div>
-      </div>
+        <li>Sold.sg is a premium online entertainment shopping website that offers you the latest, brand new products
+          and
+          services! A great variety of deals are put up for sale daily. These deals include PS3, iPads, iPhones, Wii,
+          digital
+          cameras, tv sets, airline tickets to popular destinations, hotel and spa vouchers and many more at amazing
+          sale
+          prices!
+        </li>
+        <li>How does it work? You start by purchasing Tokens from our site and each Token costs S$0.75. Choose your
+          desired
+          item and use your Tokens to bid. Each bid uses 1 Token and are not refundable. Every time you bid, the bid
+          price
+          increases by S$0.01, S$0.05 or S$0.15 while the auction time increases by 20 seconds. Wait no more and
+          starting
+          bidding now!
+        </li>
+        <li>Sounds tough? Bidding on our site isn’t all that complicated once you get the hang of it. Take your time to
+          explore
+          the website and get yourself familiarized with the process.
+        </li>
+        <li>Why us? If you’re looking for great sales in town, look no more because only we offer you the most amazing
+          deals
+          for bidding! Secure your best deals with us and rest assured that you would get your best online shopping
+          experience. It’s a sale like no other so what you waiting for? Start bidding on Sold.sg now!
+        </li>
+      </ul>
+    </div>
+  </div>
   </div>
   <div class='divider'></div>
   <div id='footer_links' class="container">
@@ -54,11 +55,19 @@
       </ul>
     </div>
     <div class="span8 offset4 pull-right">
-      <%= image_tag('partners.png')%>
+      <%= image_tag('partners.png') %>
     </div>
   </div>
   <div class='divider'></div>
   <div id='copyright' class="container">
-      Copyright © <%=Date.today.year%> Soldgers Private Limited. All Rights Reserved.
-  </div>      
+    Copyright © <%= Date.today.year %> Soldgers Private Limited. All Rights Reserved.
+  </div>
 </footer>
+
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+    FB.init({
+        appId:'405446656151324', cookie:true,
+        status:true, xfbml:true, oauth:true
+    });
+</script>

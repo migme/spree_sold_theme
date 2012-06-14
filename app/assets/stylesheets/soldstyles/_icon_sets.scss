@@ -1,0 +1,30 @@
+.icon25x25 {
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.facebook25x25 {
+  background: image-url('icon_25x25_fb.png') no-repeat center center;
+  &:hover {
+    background: image-url('icon_25x25_fb_hover.png') no-repeat center center;
+  }
+}
+
+.twitter25x25{
+  background: image-url('icon_25x25_twitter.png') no-repeat center center;
+  &:hover {
+    background: image-url('icon_25x25_twitter_hover.png') no-repeat center center;
+  }
+}
+
+.eye25x25 {
+  background: image-url('icon_25x25_eye.png') no-repeat center center;
+  &:hover {
+    background: image-url('icon_25x25_eye_hover.png') no-repeat center center;
+  }
+}
