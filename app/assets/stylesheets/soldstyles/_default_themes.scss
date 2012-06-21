@@ -59,12 +59,12 @@ ul.subnav li a{ float:left;
   filter: dropshadow(color=white, offx=2, offy=2);
 }
 
-li.notmember   {float: left;
+li.notmember   {
+  float: right;
   width: 180px;
-  color: #CCC;
+  color:#CCC;
   line-height: 27px;
-  text-align: right;
-  margin-left: 395px;}
+  text-align: right;}
 
 li.notmember a{color: #f07b05;}
 
@@ -383,7 +383,7 @@ label.radio.tokens {margin-bottom: 20px;}
 div.flashmain {
   width: 950px;
   margin:0 auto;
-    .flashmain-left {float: left; margin-left: 10px; margin-bottom: 20px;}
+    .flashmain-left {float: left; margin-left: 20px; margin-bottom: 20px;}
     .flashmain-right {float: right; margin-right: 10px; width: 420px; padding: 0 10px 10px 20px;}
     .flash-img {float:left; margin:0 20px 20px 0;}
     span.strikethrough {text-decoration:line-through;}
@@ -403,7 +403,7 @@ div.flashmain {
 
   }
   .product-description-row {
-    padding: 20px 10px 10 px 10px;
+    padding: 20px 10px 10px 10px;
   }
   .product-shipping {
     padding: 10px;
@@ -893,6 +893,8 @@ input.btn.btn-mini.btn-warning.contact {margin:10px 0 0 120px;}
 
 //ribbon//
 
+
+
 .RibbonWrap {
   position: relative;
   left: -10px;
@@ -914,6 +916,38 @@ input.btn.btn-mini.btn-warning.contact {margin:10px 0 0 120px;}
   width: 100px;
 }
 .triangle {
+  border-width: 5px;
+  border-color: #DD0017 #DD0017 transparent transparent;
+  border-style: solid;
+  position: absolute;
+  z-index: 4;
+  bottom: -10px;
+  left: 0;
+  height: 0;
+  width: 0;
+}
+
+.RibbonWrap-shop {
+  position: relative;
+  top: -150px;
+  left: -10px;
+
+}
+.Ribbon-shop {
+  background-color: #f07b05;
+  color: white;
+  font-size: 14px;
+  height: 25px;
+  line-height: 25px;
+  position: relative;
+  padding: 0 .7em;
+  z-index: 5;
+  -moz-box-shadow: 3px 3px 1px rgba(0,0,0,.15);
+  -webkit-box-shadow: 3px 3px 1px rgba(0,0,0,.15);
+  -box-shadow: 3px 3px 1px rgba(0,0,0,.15);
+  width: 95px;
+}
+.triangle-shop {
   border-width: 5px;
   border-color: #DD0017 #DD0017 transparent transparent;
   border-style: solid;
@@ -1120,7 +1154,7 @@ a.btn.btn-small.btn-inverse.disabled.sold {
   background: linear-gradient(top,  rgba(102,102,102,1) 0%,rgba(51,51,51,1) 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#333333',GradientType=0 ); /* IE6-8 */
 
-  border-top: white thin solid;
+  border-top: gray thin solid;
   height: 28px;
   margin: 0;
   padding: 0;
@@ -1203,14 +1237,37 @@ li.copyright   {float: right;
   display: inline;
 }
 
-
-
-
-
-
 li.footer-link-title {font-weight: bold; color: #ffffff; padding-bottom: 10px; text-transform: uppercase; }
-
-
 .footer-links li a {color:#ccc;}
 
+
+//shop//
+
+.shop-main {width: 950px; margin: 0 auto; margin-bottom: 20px;}
+.shop-products {
+  float: left;
+  margin-left: 45px;
+  width: 180px;
+  padding-top: 10px;
+
+      a {color:#333333; font-weight: bold; font-size: 14px; line-height: 10px;}
+}
+
+.shop-img {border: gray thin solid; margin-bottom: 10px; width: 180px; height: 135px;}
+
+.shop-prev {
+  padding: 15px 0 5px 0;
+  width:1020px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);}
+
+div.product-specs .control-group  .controls {
+  padding: 0;
+  margin-right: 15px;
+}
+div.product-specs {padding: 0; width: 410px; }
+div.flashmain .product-price-row .product-specs .control-group {float: left;padding: 0;
+  margin: 0;}
 
