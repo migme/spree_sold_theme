@@ -15,9 +15,9 @@
           <li class="divider-vertical"></li>
           <li class="<%= is_active?("spree/auctions")  %> live-auction"><a href="/auctions">Auctions</a></li>
           <li class="divider-vertical"></li>
-          <li class="<%= is_active?("spree/flash_sales")  %> sale"><a href="/flash_sales">Sales</a></li>
-          <li class="divider-vertical"></li>
           <li class="<%= is_active?("spree/products")  %> shop"><a href="/products">Shop</a></li>
+          <li class="divider-vertical"></li>
+          <li class="<%= is_active?("spree/flash_sales")  %> sale"><a href="/flash_sales">Sales</a></li>
           <li class="divider-vertical"></li>
           <li class="<%= is_active?("spree/invitations")  %> friend"><a href="/invitations">Invite</a></li>
           <li class="divider-vertical"></li>
@@ -71,8 +71,8 @@
           <li><a href="/mission">Mission</a></li>
           <li><a href="/contact-us">Contact us</a></li>
           <% unless current_user %>
-              <li class="register" style="float: right;">
-                <a href="/signup" style="width: 180px; color: #f07b05;">Not a member? Register now!</a></li>
+              <li class="notmember">
+                <a href="/signup">Not a member? Register now!</a></li>
           <% end %>
         </ul>
       </div>
