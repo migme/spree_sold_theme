@@ -13,4 +13,8 @@ Spree::BaseHelper.class_eval do
     end.join("\n").html_safe
   end
 
+  def is_active?(controller)
+    "active" if params[:controller] == controller
+  end
+
 end

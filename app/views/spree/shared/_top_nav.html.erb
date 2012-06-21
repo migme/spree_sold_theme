@@ -13,20 +13,20 @@
       <div class="nav-collapse">
         <ul class="nav menu-cover pull-left">
           <li class="divider-vertical"></li>
-          <li class="active live-auction"><a href="/auctions">Auctions</a></li>
+          <li class="<%= is_active?("spree/auctions")  %> live-auction"><a href="/auctions">Auctions</a></li>
           <li class="divider-vertical"></li>
-          <li class="sale"><a href="/flash_sales">Sales</a></li>
+          <li class="<%= is_active?("spree/flash_sales")  %> sale"><a href="/flash_sales">Sales</a></li>
           <li class="divider-vertical"></li>
-          <li class="shop"><a href="/products">Shop</a></li>
+          <li class="<%= is_active?("spree/products")  %> shop"><a href="/products">Shop</a></li>
           <li class="divider-vertical"></li>
-          <li class="friend"><a href="/invitations">Invite</a></li>
+          <li class="<%= is_active?("spree/invitations")  %> friend"><a href="/invitations">Invite</a></li>
           <li class="divider-vertical"></li>
           <li class="help"><a href="#">Help</a></li>
         </ul>
 
 		<ul class="nav menu-cover pull-right">
 				<% if current_user %>
-			<li class="cart"><%= link_to "Cart", cart_url %></li>
+			<li class="<%= is_active?("spree/invitations")  %> cart"><%= link_to "Cart", cart_url %></li>
 			<li class='amount-menu-item'><a href="#"><span class='amount' id="user_coin">0</span><span class='menu-label'>Tokens</span></a></li>
             <li class='amount-menu-item'><a href="#"><span class='amount' id="user_ea">0</span><span class='menu-label'>Auctions</span></a></li>
 			<li class="divider-vertical"></li>
