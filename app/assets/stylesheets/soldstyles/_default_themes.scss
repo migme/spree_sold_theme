@@ -465,6 +465,14 @@ div.flashmain {
   float: right;
   width:170px;
   padding: 10px 10px 0 0;
+  .flash-login-msg {
+    text-align: right;
+    float: right;
+    color: red;
+    font-size: 12pt;
+    line-height: 45px;
+    font-style: italic;
+  }
 }
 
 //shopping cart//
