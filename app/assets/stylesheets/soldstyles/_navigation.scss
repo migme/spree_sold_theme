@@ -17,7 +17,7 @@
     }
     li.home {
       @include menu-item('auction1.png', 'auction1.png');  //*'auctions_icon_hover.png');//
-      width:60px;
+      //width:60px;
     }
     li.live-auction{
       @include menu-item('auction1.png', 'auction1.png');  //*'auctions_icon_hover.png');//
