@@ -48,7 +48,7 @@
     }
     li.cart{
      @include menu-item('cart1.png', 'cart1.png');  //*'cart_icon_hover.png');  //
-     background-position-y: 8px;
+     background-position-y: 5px;
     }
 
     li.amount-menu-item{

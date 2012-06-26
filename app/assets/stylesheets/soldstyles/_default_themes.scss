@@ -383,7 +383,7 @@ label.radio.tokens {margin-bottom: 20px;}
 div.flashmain {
   width: 950px;
   margin-left: 25px;
-    .flashmain-left {float: left; margin-left: 20px; margin-bottom: 20px;}
+    .flashmain-left {float: left; margin-bottom: 20px;}
     .flashmain-right {float: right; margin-right: 10px; width: 420px; padding: 0 10px 10px 20px;}
     .flash-img {float:left; margin:0 20px 20px 0;}
     span.strikethrough {text-decoration:line-through;}
@@ -465,10 +465,10 @@ div.flashmain {
   float: right;
   width:170px;
   padding: 10px 10px 0 0;
-  .flash-login-msg {
+  span.flash-login-msg {
     text-align: right;
     float: right;
-    color: red;
+    color:red;
     font-size: 12pt;
     line-height: 45px;
     font-style: italic;
@@ -524,6 +524,8 @@ div.flashmain {
       .total-rgt{float:right; text-align: right;}
       .cart-note {font-size: 11px; margin-top: 240px; font-style: italic;}
 }
+
+
 
 //checkout//
 .checkout-process {margin-bottom: 20px;}
@@ -632,7 +634,7 @@ margin: 0;
 
         .a-timer {
           color: red;
-          font-size: 24px;
+          font-size: 22px;
         }
 
         .a-bid {
@@ -642,6 +644,7 @@ margin: 0;
 
         .a-user {
           font-size: 12px;
+          height: 12px;
         }
     }
     .alert.alert-error.bid {
@@ -667,6 +670,80 @@ margin: 0;
 .blank-auction{
   background: url('/assets/auctioncontainer.jpg') bottom no-repeat;
 }
+
+
+//special auctions//
+.auction-container-special {
+  width: 304px;
+  height: 192px;
+  background-color:whiteSmoke;
+  background-image:url("/assets/thematic.jpg");
+  float:left;
+  margin-left: 10px;
+  margin-bottom: 20px;
+
+  .auc-bar {
+    margin: 2px 0 2px 2px;
+    width: 300px;
+    height: 42px;
+    margin-bottom: 2px;
+    .auc-prod{color: white; font-size: 14px; width:180px; padding: 2px 0 0 5px; float: left;}
+    .auc-type {float:right; width: 100px; text-align: right; padding: 5px 3px 0 0 ;}
+    .auc-type img {padding: 0 2px;}
+  }
+
+  .auc-img {
+    padding: 5px 0 0 5px;
+    width: 180px;
+    height: 135px;
+    float: left;
+    img{
+      max-width: 100%;
+      max-height: 100%;
+      margin: 2px 0 0 2px;
+    }
+  }
+  .auc-box {
+    width: 115px;
+    height: 125px;
+    float: right;
+    text-align: center;
+    padding-top:10px;
+
+    .a-timer {
+      color: red;
+      font-size: 22px;
+
+    }
+
+    .a-bid {
+      color: $soldOrange;
+      font-size: 18px;
+    }
+
+    .a-user {
+      font-size: 12px;
+      height: 12px;
+    }
+  }
+  .alert.alert-error.bid {
+    width: 100px;
+    z-index: 20;
+    position: relative;
+    left: 185px;
+    top: -55px;
+    padding: 5px 10px 0px 10px;
+    text-align: center;
+    a{
+      margin-bottom: 5px;
+    }
+  }
+
+
+}
+
+
+
 //auction-product//
 .auctionmain-left {float: left; padding-top: 10px;}
 .auctionmain-right {
@@ -679,6 +756,7 @@ margin: 0;
       h2.product-title {font-size: 24px; line-height: 28px; color: #333;}
 }
 .auctionmain-right ul li{list-style: none; display: inline; float: right; padding: 10px 2px 5px 2px;}
+
 #auction_details {
   padding: 10px;
   width: 300px;
@@ -709,7 +787,7 @@ margin: 0;
   left: 100px;
   top: -75px;
   padding: 5px 10px 5px 10px;
-  text-align: center;;
+  text-align: center;
 }
 .autobidder_container {
   width:190px;
@@ -770,6 +848,25 @@ ul.history li {float: left;}
       .tab-price {width:150px;}
 
 .td-centered {text-align: center;}
+.cta-notif {text-align: center;
+
+    div.info-cta {
+      position: absolute;
+      top: 65px;
+    }
+
+    div.alert.alert-error.bid {
+      width: 70px;
+      z-index: 20;
+      position: relative;
+      top: 0px;
+      padding: 5px 10px 5px 10px;
+
+}
+
+
+}
+
 .watch-time {font-size: 14px; font-weight: bold;}
 .orangetype {color: $soldOrange;}
 
@@ -1052,7 +1149,7 @@ input.btn.btn-mini.btn-warning.contact {margin:10px 0 0 120px;}
 #ethics {
   background: url(http://sold.sg.mktg.s3.amazonaws.com/ethicsbg.jpg) no-repeat top center;
   width: 950px;
-  height: 1141px;
+  height: 1000px;
   margin-top:20px;
   padding-top: 180px
 }
@@ -1278,4 +1375,6 @@ div.product-specs .control-group  .controls {
 div.product-specs {padding: 0; width: 410px; }
 div.flashmain .product-price-row .product-specs .control-group {float: left;padding: 0;
   margin: 0;}
+
+
 
