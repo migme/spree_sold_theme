@@ -86,8 +86,10 @@
     </nav>
 <% end %>
 </div>
-
 <div class="nav-clear"></div>
+<% if content_for?(:below_nav) %>
+    <%= yield :below_nav %>
+<% end %>
 <div id="notifications" class="notifications notification-top">
   <%= flash_messages %>
 </div>
