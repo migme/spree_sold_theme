@@ -1,16 +1,19 @@
 Spree::BaseHelper.class_eval do
   def flash_messages
-    [:notice, :error].map do |msg_type|
-      cls  = msg_type=="notice" ? "alert-info" : "alert-block alert-error"
-      if flash[msg_type]
-        content_tag :div , :class => "alert #{cls}" do
-          content_tag(:a, "x", :class => "close", "data-dismiss" => "alert") +
-          content_tag(:p, flash[msg_type])
+    flash.each do |msg_type, text|
+      unless text.blank?
+        message_block = content_tag(:div, :class => "alert alert-#{msg_type}") do
+          concat(content_tag(:a, "x", :class => "close", "data-dismiss" => "alert"))
+          concat(content_tag(:p, text))
         end
-      else
-        ''
+        concat(message_block)
       end
-    end.join("\n").html_safe
+    end
+    nil
+  end
+
+  def is_active?(controller)
+    "active" if params[:controller] == controller
   end
 
 end

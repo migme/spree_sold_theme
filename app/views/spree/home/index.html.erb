@@ -1,0 +1,68 @@
+
+<div class="container">
+
+  <div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="http://sold.sg.mktg.s3.amazonaws.com/banners/bannersample.jpg" alt="">
+        <!--<div class="carousel-caption">
+          <h4>First banner sample | Brief description / 1 liner only.</h4>
+          <p></p>
+        </div> -->
+      </div>
+      <div class="item">
+        <img src="http://sold.sg.mktg.s3.amazonaws.com/banners/bannersample2.jpg" alt="">
+        <!--<div class="carousel-caption">
+          <h4>Second banner sample | Brief description / 1 liner only.</h4>
+          <p></p>
+        </div>-->
+      </div>
+      <!--<div class="item">
+        <img src="#" alt="">
+        <div class="carousel-caption">
+          <h4>First Thumbnail SAMPLE | Brief description / 1 liner only.</h4>
+          <!--<p></p>
+        </div> -->
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+
+
+</div>
+<br class="clearfix">
+<div class="container">
+
+  <div class="page-head reg"><span class="lighterText">Live </span>Auctions<span class="dashed">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </span></div>
+  <% if @beginner_auctions %>
+    <div id="beginner">
+      <div class="auction-container beginner"></div>
+    </div>
+    <br class="clearfix">
+  <% end %>
+  <div id="auctions"></div>
+  <br class="clearfix" />
+  <a href="/auctions/live">View all auctions</a>
+</div>
+<br class="clearfix" />
+<div class="container">
+  <div class="page-head reg"><span class="lighterText">Flash </span>Sales<span class="dashed">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </span></div>
+
+  <div id="flash_sales" class="parent_sales flashmain"></div>
+
+  <br class="clearfix">
+
+</div>
+<script type="text/javascript">
+  $(function() {
+
+    app.flash_sales.reset( <%= @flash_sales.to_json(Spree::FlashSale::JS_JSON_OPTIONS).html_safe -%>);
+    app.auctions.reset( <%= @auctions.to_json(Spree::Auction::JS_JSON_OPTIONS).html_safe -%>);
+      <% if @beginner_auctions %>
+        app.beginner_auctions.reset( <%= @beginner_auctions.to_json(Spree::Auction::JS_JSON_OPTIONS).html_safe -%>);
+      <% end %>
+    app.start("<%= counter_url %>");
+    view = new SoldSpree.Views.Home.IndexView();
+    view.render();
+  });
+</script>

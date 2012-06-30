@@ -32,14 +32,14 @@
 .alert-success, .alert-success .alert-heading {
   color: $successText;
 }
-.alert-danger, .alert-error {
+.alert-danger, .alert-error, .recaptcha_error {
   background-color: $errorBackground;
   border-color: $errorBorder;
 }
 .alert-danger, .alert-error, .alert-danger .alert-heading, .alert-error .alert-heading {
   color: $errorText;
 }
-.alert-info {
+.alert-info, .alert-notice {
   background-color: $infoBackground;
   border-color: $infoBorder;
 }

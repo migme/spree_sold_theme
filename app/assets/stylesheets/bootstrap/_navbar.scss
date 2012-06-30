@@ -14,10 +14,20 @@
 .navbar-inner {
   padding-left: 20px;
   padding-right: 20px;
-  @include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
+  //@include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
   @include border-radius(4px);
   $shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   @include box-shadow($shadow);
+
+  background: #333333; /* Old browsers */
+  background: -moz-linear-gradient(top,  #333333 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#333333), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #333333 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #333333 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #333333 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(top,  #333333 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
 }
 
 // Navbar button for toggling navbar items in responsive layouts
@@ -65,7 +75,6 @@
     line-height: 1;
     color: $white;
     margin-top: 7px;
-    margin-left: -15px;
     margin-right: 15px;
   }
   // Plain text in topbar
@@ -181,6 +190,7 @@
 }
 .navbar .nav.pull-right {
   float: right; // redeclare due to specificity
+  margin-right: -25px;
 
 }
 .navbar .nav > li {
@@ -217,6 +227,15 @@
   overflow: hidden;
   background-color: $navbarBackground;
   border-right: 1px solid $navbarBackgroundHighlight;
+}
+
+li.divider-vertical.pull-right {
+  height: 50px;
+  width: 1px;
+  overflow: hidden;
+  background-color: #222222;
+  border-right: 1px solid #333333;
+  margin-left:5px;
 }
 
 // Secondary (floated right) nav in topbar
