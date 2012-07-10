@@ -382,9 +382,10 @@ label.radio.tokens {margin-bottom: 20px;}
 }
 div.flashmain {
   width: 950px;
-  margin-left: 25px;
-    .flashmain-left {float: left; margin-bottom: 20px;}
-    .flashmain-right {float: right; margin-right: 10px; width: 420px; padding: 0 10px 10px 20px;}
+  margin-bottom:20px;
+  //margin-left: 25px;
+    .flashmain-left {float: left; padding: 0; width: 445px; height: 335px;margin-right: 60px;}
+    .flashmain-right {float: left; padding: 0;  width: 445px; height: 335px;}
     .flash-img {float:left; margin:0 20px 20px 0;}
     span.strikethrough {text-decoration:line-through;}
 
@@ -421,10 +422,24 @@ div.flashmain {
   @include box-shadow($shadow: 0 1px 5px rgba(0,0,0,.25));
 
       div.flash-bar {height: 70px; width: 440px; margin: 0; padding: 0;
-        background:
-          black;
-        background-color:
-          rgba(0, 0, 0, 0.7)}
+        background: black;
+        background-color:rgba(0, 0, 0, 0.7)}
+
+      div.flash-bar-comp {height: 50px; width: 440px; margin: 0; padding: 0;
+        background:black;
+        background-color: rgba(0, 0, 0, 0.7)}
+
+      div.flash-bar-desc {
+        padding: 2px 5px 2px 5px;
+        color:white;
+        height: 50px;
+        width: 430px;
+        background: #F07B05;
+        background-color:rgba(240, 123, 5, 0.7);
+        position: relative;
+        top: 226px;
+      }
+
       div.fl-pr-name {float: left; height: 40px; width:240px; padding: 5px 0 0 10px;}
         span.flash-name {
           font-size: 16px;
@@ -473,6 +488,9 @@ div.flashmain {
     line-height: 45px;
     font-style: italic;
   }
+
+  span.flashbar-rgt-price {float: right; font-size: 30px; color: #f07b05;}
+  span.flashbar-rgt-rp {text-decoration: line-through; color: #cccccc; float: right;font-size:14px;}
 }
 
 //shopping cart//
@@ -592,11 +610,12 @@ margin: 0;
         .box-prod-rgt {width: 125px; float: left; text-align: center;}
 }
 .auction-container {
+  margin-right: 22px;
   width: 300px;
   height: 188px;
   border: gray thin solid;
   float: left;
-  margin-left: 10px;
+  //margin-left: 10px;
   margin-bottom: 20px;
 
     .auc-bar {
@@ -611,7 +630,7 @@ margin: 0;
       background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
       background: linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-        .auc-prod{color: white; font-size: 14px; width:180px; padding: 2px 0 0 5px; float: left;}
+        .auc-prod a{color: white; font-size: 14px; width:180px; padding: 2px 0 0 5px; float: left;}
         .auc-type {float:right; width: 100px; text-align: right; padding: 5px 3px 0 0 ;}
         .auc-type img {padding: 0 2px;}
     }
@@ -659,8 +678,12 @@ margin: 0;
           margin-bottom: 5px;
         }
     }
-
 }
+
+.auctionmain {width: 950px; padding:0; margin:0}
+.auction-left { margin-right: 22px;}
+.auction-right {margin: 0 !important}
+//.auction-center {float:left; width: 300px;margin: 0 25px;}
 
 .auction-container.beginner{
   background: url('/assets/beginners.jpg') bottom no-repeat;
@@ -679,7 +702,6 @@ margin: 0;
   background-color:whiteSmoke;
   background-image:url("/assets/thematic.jpg");
   float:left;
-  margin-left: 10px;
   margin-bottom: 20px;
 
   .auc-bar {
@@ -764,16 +786,16 @@ margin: 0;
   float: left;
     .adetails-left {float:left;}
     .adetails-rgt {float:right; text-align: right;}
-    .timer {font-size:48px; text-align:center;margin-top: 30px;}
+    .timer {font-size:48px; text-align:center;margin-top: 30px;line-height: 48px;}
     .auc-cta {
       .alert.alert-error.bid {
         width: 250px;
         z-index: 5;
-        position: relative;
+        position: absolute;
         padding: 5px 10px 5px 10px;
         text-align: center;
-        top: -95px;
-        left: 20px;
+        top: 355px;
+        left: 435px;
       }
       text-align:center; border-bottom: #f07b05 thin dashed; margin-top: 30px; padding-bottom: 20px; margin-bottom: 20px;
     }
@@ -1368,13 +1390,17 @@ li.footer-link-title {font-weight: bold; color: #ffffff; padding-bottom: 10px; t
   -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
   box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);}
 
+
+div.product-specs {padding: 0;float:left; margin-bottom:20px;}
 div.product-specs .control-group  .controls {
   padding: 0;
   margin-right: 15px;
 }
-div.product-specs {padding: 0; width: 410px; }
-div.flashmain .product-price-row .product-specs .control-group {float: left;padding: 0;
+div.flashmain .product-price-row .product-specs .control-group {
+  float: left;
+  padding: 0;
   margin: 0;}
 
+div.product-cta {float: right; margin-bottom:20px;}
 
 
