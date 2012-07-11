@@ -384,7 +384,6 @@ div.flashmain {
   width: 950px;
   margin-bottom:20px;
   //margin-left: 25px;
-    .flash-img:nth-child(odd) {margin-right: 60px !important;}
     .flash-img {float:left; margin:0 0px 20px 0;}
     span.strikethrough {text-decoration:line-through;}
 
@@ -409,7 +408,7 @@ div.flashmain {
     padding: 10px;
   }
 }
-.ie8 .flash-img {margin: 0 33px 20px 0 !important;}
+
 .flash-img{
   background-color: #f5f5f5;
   background-image: url("/assets/flashcontainer.jpg") ;
@@ -418,7 +417,6 @@ div.flashmain {
   width: 440px;
   height: 330px;
   display: block;
-  margin-bottom: 20px;
   @include box-shadow($shadow: 0 1px 5px rgba(0,0,0,.25));
 
       div.flash-bar {height: 70px; width: 440px; margin: 0; padding: 0;
@@ -456,8 +454,12 @@ div.flashmain {
       div.product-image {text-align: center;}
       div.flash-time {font-size:14px; color:#f07b05; border: red thin solid;}
       .fl-time2 {font-size: 14px;}
+      div.flash-bar-desc {display:none;bottom:0px}
 }
-
+div.flashmain .flash-img:nth-child(odd) {
+  margin:0 60px 20px 0 !important;
+}
+.ie8 .flash-img { margin: 0 33px 20px 0 !important; }
 .flashbar-left {
   float: left;
   width: 240px;
