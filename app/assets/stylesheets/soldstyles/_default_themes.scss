@@ -1413,5 +1413,18 @@ div.flashmain .product-price-row .product-specs .control-group {
   margin: 0;}
 
 div.product-cta {float: right; margin-bottom:20px;}
+.google-contact-list{
+  height: 200px;
+  overflow-y: scroll;
+}
+.full-width{
+  width: 100%;
+  th{
+    text-align: left;
+  }
+}
 
 
+.black_label{
+  font-size: 11px; color: #333;
+}
