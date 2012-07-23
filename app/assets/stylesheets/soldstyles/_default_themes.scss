@@ -1428,3 +1428,15 @@ div.product-cta {float: right; margin-bottom:20px;}
 .black_label{
   font-size: 11px; color: #333;
 }
+
+.account-basic-information{
+  //width: 500px;
+  dt{
+    width: 30%;
+    vertical-align: top;
+  }
+  dd{
+    width: 350px;
+  }
+  margin-left: 30px;
+}
