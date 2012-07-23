@@ -21,9 +21,9 @@
       </ul>
 
       <ul class="footer-links">
-        <li class="footer-link-title">Auctions</li>
-        <li><a href="/auctions/live"> Live</a></li>
-        <li><a href="/auctions/completed">Completed</a></li>
+        <li class="footer-link-title"><%= link_to 'Auctions', root_url(subdomain: 'auctions') %> </li>
+        <li><%= link_to 'Live', live_auctions_url(subdomain: 'auctions') %> </li>
+        <li><%= link_to 'Completed', completed_auctions_url(subdomain: 'auctions') %></li>
         <li><a href="/rules">Rules</a></li>
         <li><a href="/guides-register">How It Works</a></li>
         <li><a href="http://feedback.sold.sg/forums/73105-product-recommendations" target="_blank">Recommend</a></li>

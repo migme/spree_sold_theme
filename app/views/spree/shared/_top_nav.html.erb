@@ -15,20 +15,20 @@
       <div class="nav-collapse">
         <ul class="nav menu-cover pull-left">
           <li class="divider-vertical"></li>
-          <li class="<%= is_active?("spree/auctions") %> live-auction"><a href="/auctions">Auctions</a></li>
+          <li class="<%= is_active?("spree/auctions") %> live-auction"> <%= link_to 'Auctions', root_url(subdomain: 'auctions') %> </li>
           <li class="divider-vertical"></li>
-          <li class="<%= is_active?("spree/products") %> shop"><a href="/products">Shop</a></li>
+          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
           <li class="divider-vertical"></li>
-          <li class="<%= is_active?("spree/flash_sales") %> sale"><a href="/flash_sales">Sales</a></li>
+          <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'Sale', root_url(subdomain: 'sales') %> </li>
           <li class="divider-vertical"></li>
-          <li class="<%= is_active?("spree/invitations") %> friend"><a href="/invitations">Invite</a></li>
+          <li class="<%= is_active?("spree/invitations") %> friend"><%= link_to 'Invite', invitations_url %></li>
           <li class="divider-vertical"></li>
           <li class="help"><a href="http://feedback.sold.sg/knowledgebase">Help</a></li>
         </ul>
 
         <ul class="nav menu-cover pull-right">
           <% if current_user %>
-              <li class="<%= is_active?("spree/invitations") %> cart"><%= link_to "Cart", cart_url %></li>
+              <li class="<%= is_active?("spree/orders") %> cart"><%= link_to "Cart", cart_url %></li>
               <li class='amount-menu-item'>
                 <a href="/purchase_tokens"><span class='amount' id="user_coin">0</span><span class='menu-label'>Tokens</span></a></li>
               <li class='amount-menu-item'>
