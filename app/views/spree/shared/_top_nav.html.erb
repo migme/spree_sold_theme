@@ -29,7 +29,7 @@
           <% if current_user %>
               <li class="<%= is_active?("spree/orders") %> cart">
                <%= link_to "Cart", cart_url, :id => "cart-count" %>
-                <div id="cart" style="background-color:#F07B05; width:250px; position:absolute; z-index:1; display:none; border:2px solid;border-radius:5px;"></div>
+                <div id="cart" style="background:white;color:black;position:absolute; z-index:20;left:-210px; display:none; border:2px solid;border-radius:5px;"></div>
               </li>
               <li class='amount-menu-item'>
                 <a href="/purchase_tokens"><span class='amount' id="user_coin">0</span><span class='menu-label'>Tokens</span></a></li>
@@ -46,7 +46,7 @@
                   <li class="divider"></li>
                   <li><%= link_to(t(:purchase_tokens), spree.purchase_tokens_path(:subdomain => false)) %></li>
                   <li class="divider"></li>
-                  <li><%= link_to t(:logout), spree.destroy_user_session_url(:subdomain => false) %></li>
+                  <li><%= link_to t(:logout), spree.destroy_user_session_path(:subdomain => false), :method => :delete %></li>
                 </ul>
           <% else %>
               <%= form_for :user, :url => spree.user_session_url(:subdomain => false) do |f| %>
