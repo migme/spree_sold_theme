@@ -28,7 +28,7 @@ p {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-weight: bold;
+  //font-weight: bold;
   color: $grayDark;
   text-rendering: optimizelegibility; // Fix the character spacing for headings
   small {
@@ -44,6 +44,7 @@ h1 {
   }
 }
 h2 {
+  font-weight: normal;
   font-size: 24px;
   line-height: $baseLineHeight * 2;
   small {
@@ -131,7 +132,7 @@ dd {
 
 // Horizontal rules
 hr {
-  margin: $baseLineHeight 0;
+  margin: 10px 0;
   border: 0;
   border-top: 1px solid $hrBorder;
   border-bottom: 1px solid $white;

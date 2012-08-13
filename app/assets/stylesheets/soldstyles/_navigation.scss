@@ -1,10 +1,16 @@
 #sold_top_navbar{
+
     //border-bottom: 3px solid #f07b05;
-    width: $pageWith;
+    width: 940px; //$pageWith;
+
    //margin-bottom: 20px;
    .navbar-inner{
      @include border-radius(0);
-      padding-top: 0;
+     padding:0;
+     margin: 0;
+     height:83px;
+     width: 940px;
+     @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
    }
     //box-shadow: 0 0 5px #888888;
 }
@@ -13,43 +19,61 @@
 .navbar .menu-cover{
     //margin-top: 2px;
     & > li > a {
-       padding: 10px 10px 3px;
+       padding: 8px 0 0 0;
+       font-size: 14px;
+
     }
     li.home {
-      @include menu-item('auction1.png', 'auction1.png');  //*'auctions_icon_hover.png');//
-      //width:60px;
-    }
-    li.live-auction{
-      @include menu-item('auction1.png', 'auction1.png');  //*'auctions_icon_hover.png');//
-      //width:60px;
+
+      margin-top: 5px;
+      @include menu-item('auction1.png', 'auction1_hover.png');
       text-align: center;
+      width: 55px;
+      margin-left: 15px;
+    }
+    li.shop{
+      margin-top: 5px;
+      @include menu-item('shop1.png', 'shop1_hover.png');
+      text-align: center;
+      width: 55px;
+      margin-left: 30px;
     }
     li.sale{
-       @include menu-item('sales1.png', 'sales1.png'); //*'sale_icon_hover.png');   //
-       width:60px;
-       text-align: center;
+      margin-top: 5px;
+      @include menu-item('sale1.png', 'sale1_hover.png');
+      text-align: center;
+      width: 55px;
+      margin-left: 30px;
+    }
+    li.fb-like {margin: 0 10px;}
+
+    li.cart{
+     @include menu-item('cart1.png', 'cart1_hover.png');
+     width: 30px;
+     height: 30px;
+     margin: 0 10px;
     }
 
-    li.shop{
-      @include menu-item('shop1.png', 'shop1.png');
-      width:60px;
-      text-align: center;
-   }
+    li.mail {
+      @include menu-item('mail.png', 'mail_hover.png');
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
+    }
 
     li.friend{
-       @include menu-item('invite1.png', 'invite1.png'); //*'friend_icon_hover.png');   //
-      width:60px;
-      text-align: center;
+      @include menu-item('friend.png', 'friend_hover.png');
+      width: 30px;
+      height: 30px;
+      margin: 0 10px;
     }
     li.help{
-     @include menu-item('help1.png', 'help1.png'); //*'help_icon_hover.png');    //
-      width:60px;
-      text-align: center;
+      @include menu-item('help.png', 'help_hover.png');
+      width: 30px;
+      height: 30px;
     }
-    li.cart{
-     @include menu-item('cart1.png', 'cart1.png');  //*'cart_icon_hover.png');  //
-     background-position-y: 5px;
-    }
+
+    li.cart a, li.mail a, li.friend a, li.help a {padding-top:30px;}
 
     li.amount-menu-item{
       padding: 5px 10px 0 0;
@@ -84,6 +108,57 @@
     }
 
 
+}
+
+
+.nav-wrap{
+  position: fixed;
+  z-index: 10000;
+}
+
+.navbar .nav.pull-right {margin: 8px 25px 0 0;}
+
+.nav.menu-cover.pull-right.cta {
+  padding: 0 0 0 35px;
+  margin: 10px 25px 0 1px;
+}
+
+.badge-cart {
+  position: absolute;
+  top: -3px;
+  left: 20px;
+  padding: 0px 7px 0px 6px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 10px;
+  background-color: #FF3333;
+  color: $white;
+  font-size: 12px;
+  border: white 1px solid;
+}
+
+ul.dropdown-menu.login {width: 280px;
+  padding: 10px 10px;}
+
+ul.reg-cta {list-style: none;margin: 0 0 0 20px;}
+
+
+// fb button //
+li.fb-login{
+  padding: 0;
+  margin: 0;
+  width: 145px;}
+
+li.fb-login a{
+  padding: 0;
+  margin: 0;height: 25px;}
+
+li.fb-login a:hover{
+  padding: 0;
+  margin: 0;
+  color: transparent;
+  border-radius: 8px;
+  height: 25px;
 }
 
 //* guest navigation //
@@ -137,7 +212,7 @@ input, textarea, select, .uneditable-input {
   display: inline-block;
   width: 210px;
   height: 18px;
-  padding: 2px;
+  padding: 5px;
   font-size: 12px;
   line-height: 18px;
   color: #555555;

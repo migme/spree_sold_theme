@@ -6,6 +6,7 @@
 
 // Container (centered, fixed-width layouts)
 .container {
+  width: 940px;
   @include container-fixed();
 }
 

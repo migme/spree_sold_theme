@@ -8,7 +8,7 @@
 
 // Make all forms have space below them
 form {
-  margin: 0 0 $baseLineHeight;
+  margin: 0 0 5px;
 }
 
 fieldset {
@@ -49,7 +49,7 @@ input, button, select, textarea {
 label {
   display: block;
   margin-bottom: 5px;
-  color: $grayDark;
+  color: #333;
 }
 
 // Inputs, Textareas, Selects

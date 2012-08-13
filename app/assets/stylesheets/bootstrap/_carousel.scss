@@ -63,14 +63,14 @@
 
 .carousel-control {
   position: absolute;
-  top: 40%;
-  left: 15px;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  font-size: 60px;
+  top: 85%;
+  left: 850px;
+  width: 30px;
+  height: 30px;
+  //margin-top: -20px;
+  font-size: 40px;
   font-weight: 100;
-  line-height: 30px;
+  line-height: 23px;
   color: $white;
   text-align: center;
   background: $grayDarker;
@@ -87,7 +87,7 @@
 
   // Reposition the right one
   &.right {
-    left: auto;
+    left: 890px;
     right: 15px;
   }
 

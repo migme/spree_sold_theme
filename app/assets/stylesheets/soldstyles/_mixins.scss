@@ -1,18 +1,27 @@
 @mixin menu-item($imageName, $hoverImageName){
   background: image-url($imageName) no-repeat center 0;
-  background-position-y: 5px;
-  padding-top: 18px;
-  a {
-    color: $linkOnDarkBg;
-  }
+  a {padding-top: 53px;};       //color: $white;
+
   &:hover, &.active {
     background: image-url($hoverImageName) no-repeat center 0;
-    background-color: $soldOrange;
-    background-position-y: 5px;
+    &.white-active{
+      background-color: white;
+      border-top-left-radius: 2px;
+      border-top-right-radius: 2px;
+    }
+    //&.white-active a {padding-top:28px;}
+    //background-position-y: 5px;
+
     a, & > a:hover {
       //* color: $linkColorHover !important;    //
       background: transparent;
+
+
     }
+  }
+  &.dropdown.open .white-active{
+    background: image-url($hoverImageName) no-repeat center 0 #fff;
+    border-top-left-radius: 2px;
   }
 }
 
@@ -36,3 +45,18 @@
     vertical-align: top;
   }
 }
+
+
+
+.navbar .menu-cover li.home a:hover {
+  color: #f07b05;
+}
+
+.navbar .menu-cover li.shop a:hover {
+  color: #77d4ff;
+}
+
+.navbar .menu-cover li.sale a:hover {
+  color: #ff3000;
+}
+

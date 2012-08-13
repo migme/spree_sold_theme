@@ -29,7 +29,7 @@
   position: relative;
   float: left;
   margin-left: -1px;
-  @include border-radius(0);
+  @include border-radius(4);
 }
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group .btn:first-child {
@@ -91,6 +91,7 @@
   @include box-shadow($shadow);
   *padding-top: 5px;
   *padding-bottom: 5px;
+
 }
 
 .btn-group.open {

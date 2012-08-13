@@ -115,7 +115,9 @@
 // Set the backgrounds
 // -------------------------
 .btn-primary {
-  @include buttonBackground($primaryButtonBackground, adjust-hue($primaryButtonBackground, 20));
+  @include buttonBackground(lighten($orange, 15%), $orange);
+  //@include buttonBackground($primaryButtonBackground, adjust-hue($primaryButtonBackground, 20));
+
 }
 // Warning appears are orange
 .btn-warning {
