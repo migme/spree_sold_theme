@@ -3,13 +3,17 @@ body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap',
 .clearfix, .clear {clear: both;}
 .blackbg {background-color: black;
   width: 940px;
-  height: 83px;}
+  height: 85px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;}
 
 .on-red {color: #ffffff; font-size: 16px;display: inline-block;margin-right: 10px;}
 .txt-white {color: $white;}
 .txt-orange, .lil-links {color:$soldOrange;}
 .txt-red {color: #ff0000;}
 .txt-green {color:#00CC33;}
+.txt-blue {color:#77d4ff;}
+.txt-black {color:#000000;}
 
 .txt-24 {font-size: 24px;}
 .txt-18 {font-size: 18px;}
@@ -68,11 +72,12 @@ body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap',
 .top-space {margin-top: 7px;}
 .banner-ad {width: 940px; height: 130px; border: gray 1px solid; margin: 10px 0 20px 0;}
 .square-ad {width: 210px; height:172px; border: gray 1px solid; margin: 25px 0 15px 15px;}
+.vert-ad {width: 220px; height: 600px;  border: gray 1px solid; margin-bottom: 20px; background-color: #fff; &.small{height: 250px;}}
 
 //---------toolbars---------//
 
 .toolbar {
-  @include box-shadow($shadow: 0 1px 3px rgba(0,0,0,.25));
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
   @include border-radius($radius: 5px 5px 5px 5px);
   padding: 3px 0 5px 0;
   margin: 20px 0;
@@ -88,7 +93,7 @@ body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap',
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 //toolbar-auction//
-.toolbar-reg {margin: 0; padding: 0; color: #fff;}
+.toolbar-reg, .toolbar-sale {margin: 0; padding: 0; color: #fff;}
 .toolbar-reg li, .toolbar-shop-cat li {display: block; float:left; margin-right: 10px;}
 .toolbar-notif {
   padding-left: 5px;
@@ -116,6 +121,9 @@ a.mytip, a.mytop {text-align: center; color: #ffffff;}
 //toolbar-shop//
 .toolbar-shop-cat {padding: 13px; margin: 0;}
 .toolbar-shop-cat li a {color: #ffffff; font-size: 16px; margin-right: 5px;}
+
+//toolbar-sale//
+.toolbar-sale li {list-style: none;margin-right: 20px; padding:10px;}
 
 
 //---------------------mother of homepages---------------------//
@@ -268,7 +276,7 @@ padding: 10px;
 
 .btn-bid {padding: 5px 30px 5px 30px;margin-top: 5px;}
 .btn-bid-small {padding: 3px 15px 3px 15px; margin: 8px 1px 0 0;}
-.btn-bid:hover, .btn-bid-small:hover, .giant-btn:hover {background: #ff3300;}
+.btn-bid:hover, .btn-bid-small:hover, .giant-btn:hover, .btn-shopadd:hover {background: #ff3300;}
 
 .auction-main-pagination li {
   color: #ffffff;
@@ -340,6 +348,7 @@ a.top-prod {font-size: 14px;white-space: normal;}
   padding: 10px 10px;
   background-color: #ffffff;
   border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
 }
 .sm-widgets  {margin-top: 5px;margin-bottom: 25px;}
 .auc-prod-big {width:700px;}
@@ -400,6 +409,147 @@ a.top-prod {font-size: 14px;white-space: normal;}
 
 
 //---------------------shop main---------------------//
+
+.shop {
+  @include border-radius($radius: 5px);
+}
+.shop-offers {border: gray thin solid; height:30px;text-align: center;}
+.shop-details {width: 500px; margin-left: 10px; padding: 10px;}
+.shop-details ul,{list-style: none;margin: 10px 0 35px 0; padding: 0;}
+.shop-details ul li.pull-left {
+  padding-top: 5px;
+  display: block;
+  margin-right: 20px;
+}
+.shop-short-desc {
+    ul {width: 200px;margin-bottom: 20px;}
+    ul.shop-tags li{display:block; float: left; margin-right: 10px;}
+}
+.shop-variation{line-height: 25px;}
+#shop-quantity {width: 50px; height: 20px;}
+.shop-cta {float: right;}
+.btn-shopadd {
+  margin: 0;
+
+  &.small {padding: 0 20px 0 20px;};
+  div {margin: 0 5px 0 0;float: left;};
+
+}
+
+
+
+.shop-box {
+  width: 220px;
+  height: 300px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+
+  div.bottom {margin: 0 10px;}
+  div.price {margin-top: 10px;}
+  &.right {margin:0;}
+
+  &.persona {
+    height: 315px;
+    div.persona-wrap {
+      background-color:#9999CC;
+      color:white;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      padding: 2px 5px 2px;
+    }
+  }
+}
+
+.shop-box:hover, .shop-small:hover {
+  -webkit-box-shadow: 0px 3px 20px rgba(119, 212, 255, 1);
+  -moz-box-shadow: 0px 3px 20px rgba(119, 212, 255, 1);;
+  box-shadow: 0px 3px 20px rgba(119, 212, 255, 1)
+}
+
+.shop-prod{font-weight: bold; margin: 5px 5px 15px 5px;}
+.shop-image {border-top: #dcdcdc thin solid; border-bottom: #dcdcdc thin solid; margin: 35px 0 10px 0;}
+
+//categories//
+.view-cat {
+  height: 500px;
+  width: 220px;
+  background-color: white;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  margin-bottom: 20px;
+}
+.cat-left {width: 700px; float:left;}
+.cat-right {width:225px; margin: 0; padding: 0; float: right;}
+.cat-content {padding: 10px;}
+
+
+
+
+
+//old shop//
+
+.shop-main {width: 950px; margin: 0 auto; margin-bottom: 20px;}
+.shop-products {
+  float: left;
+  margin-left: 45px;
+  width: 180px;
+  padding-top: 10px;
+
+  a {color:#333333; font-weight: bold; font-size: 14px; line-height: 10px;}
+}
+
+//.shop-img {border: gray thin solid; margin-bottom: 10px; width: 180px; height: 135px;}
+
+.shop-prev {
+  padding: 15px 0 5px 0;
+  width:1020px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+  -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
+  box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);}
+
+
+div.product-specs {padding: 0;float:left; margin-bottom:20px;}
+div.product-specs .control-group  .controls {
+  padding: 0;
+  margin-right: 15px;
+}
+div.flashmain .product-price-row .product-specs .control-group {
+  float: left;
+  padding: 0;
+  margin: 0;}
+
+div.product-cta {float: right; margin-bottom:20px;}
+.google-contact-list{
+  height: 200px;
+  overflow-y: scroll;
+}
+.full-width{
+  width: 100%;
+  th{
+    text-align: left;
+  }
+}
+.black_label{
+  font-size: 11px; color: #333;
+}
+
+.account-basic-information{
+  //width: 500px;
+  dt{
+    width: 30%;
+    vertical-align: top;
+  }
+  dd{
+    width: 350px;
+  }
+  margin-left: 30px;
+}
 
 
 
@@ -667,319 +817,7 @@ margin: 0;
        max-height: 100%;
     }
   }
-//auction//
-.auc-prev {
-  height:145px;
-  width:1020px;
-  margin-bottom: 10px;
-  -webkit-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
-  -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
-  box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
 
-      //.auc-box{width: 232px; height: 135px; border-right: gray thin dotted; float: left; padding-left:20px;}
-      .auc-box-4 {width: 232px; height: 135px; float: left; padding-left:20px;}
-        .box-prod{width:230px; margin-bottom: 10px;}
-        .box-prod-left {width: 100px; float: left;}
-        .auc-icon-s{width: 100px; height: 20px; margin-bottom: 10px;}
-        .img-s {width: 80px; height: 60px; margin: 0 10px;}
-        .box-prod-rgt {width: 125px; float: left; text-align: center;}
-}
-.container-auctions .auction-container:nth-child(3n+0) {
-  margin : 0px !important;
-}
-#beginner .auction-container:nth-child(2) {
-  margin : 0px !important;
-}
-.ie8 .auction-container{
-  margin : 18px !important;
-}
-.auction-container {
-  margin-right: 22px;
-  width: 300px;
-  height: 188px;
-  border: gray thin solid;
-  float: left;
-  //margin-left: 10px;
-  margin-bottom: 20px;
-
-    .auc-bar {
-      width: 300px;
-      height: 42px;
-      margin-bottom: 2px;
-      background: rgb(69,72,77); /* Old browsers */
-      background: -moz-linear-gradient(top,  rgba(69,72,77,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(69,72,77,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
-      background: -webkit-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
-      background: -o-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
-      background: -ms-linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
-      background: linear-gradient(top,  rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%); /* W3C */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
-        .auc-prod a{color: white; font-size: 14px; width:180px; padding: 2px 0 0 5px; float: left;}
-        .auc-type {float:right; width: 100px; text-align: right; padding: 5px 3px 0 0 ;}
-        .auc-type img {padding: 0 2px;}
-    }
-
-    .auc-img {
-      width: 180px;
-      height: 135px;
-      float: left;
-        img{
-          max-width: 100%;
-          max-height: 100%;
-        }
-    }
-    .auc-box {
-      width: 115px;
-      height: 125px;
-      float: right;
-      text-align: center;
-      padding-top:10px;
-
-        .a-timer {
-          color: red;
-          font-size: 22px;
-        }
-
-        .a-bid {
-          color: $soldOrange;
-          font-size: 18px;
-        }
-
-        .a-user {
-          font-size: 12px;
-          height: 12px;
-        }
-    }
-    .alert.alert-error.bid {
-      width: 100px;
-      z-index: 20;
-      position: relative;
-      left: 185px;
-      top: -55px;
-      padding: 5px 10px 0px 10px;
-      text-align: center;
-        a{
-          margin-bottom: 5px;
-        }
-    }
-}
-
-.auctionmain {width: 950px; padding:0; margin:0}
-//.auction-center {float:left; width: 300px;margin: 0 25px;}
-
-.auction-container.beginner{
-  background: url('/assets/beginners.jpg') bottom no-repeat;
-  border: 0px !important;
-}
-
-.blank-auction{
-  background: url('/assets/auctioncontainer.jpg') bottom no-repeat;
-}
-
-
-//special auctions//
-.auction-container-special {
-  width: 304px;
-  height: 192px;
-  background-color:whiteSmoke;
-  background-image:url("/assets/thematic.jpg");
-  float:left;
-  margin-bottom: 20px;
-
-  .auc-bar {
-    margin: 2px 0 2px 2px;
-    width: 300px;
-    height: 42px;
-    margin-bottom: 2px;
-    .auc-prod{color: white; font-size: 14px; width:180px; padding: 2px 0 0 5px; float: left;}
-    .auc-type {float:right; width: 100px; text-align: right; padding: 5px 3px 0 0 ;}
-    .auc-type img {padding: 0 2px;}
-  }
-
-  .auc-img {
-    padding: 5px 0 0 5px;
-    width: 180px;
-    height: 135px;
-    float: left;
-    img{
-      max-width: 100%;
-      max-height: 100%;
-      margin: 2px 0 0 2px;
-    }
-  }
-  .auc-box {
-    width: 115px;
-    height: 125px;
-    float: right;
-    text-align: center;
-    padding-top:10px;
-
-    .a-timer {
-      color: red;
-      font-size: 22px;
-
-    }
-
-    .a-bid {
-      color: $soldOrange;
-      font-size: 18px;
-    }
-
-    .a-user {
-      font-size: 12px;
-      height: 12px;
-    }
-  }
-  .alert.alert-error.bid {
-    width: 100px;
-    z-index: 20;
-    position: relative;
-    left: 185px;
-    top: -55px;
-    padding: 5px 10px 0px 10px;
-    text-align: center;
-    a{
-      margin-bottom: 5px;
-    }
-  }
-
-
-}
-
-
-
-//auction-product//
-.auctionmain-left {float: left; padding-top: 10px;}
-.auctionmain-right {
-  float: right;
-  margin-right: 10px;
-  width: 520px;
-  padding: 0 10px 10px 10px;
-      .prod-name{width: 420px; float: left;}
-      .product-description-row {margin-top: 10px;}
-      h2.product-title {font-size: 24px; line-height: 28px; color: #333;}
-}
-.auctionmain-right ul li{list-style: none; display: inline; float: right; padding: 10px 2px 5px 2px;}
-
-#auction_details {
-  padding: 10px;
-  width: 300px;
-  border-right: #f07b05 thin dashed;
-  float: left;
-    .adetails-left {float:left;}
-    .adetails-rgt {float:right; text-align: right;}
-    .timer {font-size:48px; text-align:center;margin-top: 30px;line-height: 48px;}
-    .auc-cta {
-      .alert.alert-error.bid {
-        width: 250px;
-        z-index: 5;
-        position: absolute;
-        padding: 5px 10px 5px 10px;
-        text-align: center;
-        top: 355px;
-        left: 435px;
-      }
-      text-align:center; border-bottom: #f07b05 thin dashed; margin-top: 30px; padding-bottom: 20px; margin-bottom: 20px;
-    }
-    .auc-note {font-size: 11px;line-height: 12px;}
-}
-
-.auc-other .alert.alert-error.bid {
-  width: 100px;
-  z-index: 3;
-  position: relative;
-  left: 100px;
-  top: -75px;
-  padding: 5px 10px 5px 10px;
-  text-align: center;
-}
-.autobidder_container {
-  width:190px;
-  height: 115px;
-  border-bottom: #f07b05 thin dashed;
-  float: right;
-  overflow: auto;
-  .alert.alert-error.bid {
-    width: 150px;
-    z-index: 3;
-    position: relative;
-    left: 10px;
-    top: -75px;
-    padding: 5px 10px 5px 10px;
-    text-align: center;
-  }
-}
-
-.input-small {width: 45px; padding:0 2px;}
-.auctionmain-right ul.auto-details {display: inline;text-align: center; font-size: 10px;}
-.auctionmain-right ul.auto-details li { padding: 0; width: 50px;line-height: 11px; float: left; margin-left: 8px; }
-form.auto-well.form-inline {width: 177px;margin-left: 8px; margin-top: 5px; margin-bottom: 5px;}
-.autobidder_container .input-small {width: 45px; margin-right: 6px;}
-.auto-help {float:left; margin-left: 8px;}
-.auto-enter {float: right; margin-right: 7px;}
-// {width: 50px; margin-right: 3px;}
-.bid-his {height: 115px;  width:190px; overflow: scroll;
-  border-bottom: #f07b05 thin dashed;
-  float: right;
-  padding-top: 10px;}
-ul.history li {float: left;}
-.invite {width:190px; float: right; text-align:center; margin-top: 20px;}
-.full-desc {width: 910px; border-top: #f07b05 thin dashed; padding: 20px 20px; }
-
-//auction information//
-
-.table-watch thead th {text-align: center; line-height: 12px;}
-.table-watch thead tr {font-size: 10px;}
-.table-watch tr {border-bottom: 1px dotted #CCC;}
-.table-watch thead tr th {
-  padding: 5px 10px;
-  vertical-align: middle;
-}
-      .tab-cl {width: 30px;}
-      .tab-img {width:100px;}
-      .tab-prod {width:400px;}
-      .tab-prod-large {width: 500px;}
-      .tab-bdr {width:100px;}
-      .tab-time {width: 70px;}
-      .tab-disc {width: 50px;}
-      .tab-btn {width: 75px;}
-
-      .tab-type {width:700px;text-align: left;}
-      .tab-amt  {width:70px;}
-      .tab-exp  {width:95px;}
-
-      .tab-date {width: 100px;}
-      .tab-price {width:150px;}
-
-.td-centered {text-align: center;}
-.cta-notif {text-align: center;
-
-    div.info-cta {
-      position: absolute;
-      top: 65px;
-    }
-
-    div.alert.alert-error.bid {
-      width: 70px;
-      z-index: 20;
-      position: relative;
-      top: 0px;
-      padding: 5px 10px 5px 10px;
-
-}
-
-
-}
-
-.watch-time {font-size: 14px; font-weight: bold;}
-.orangetype {color: $soldOrange;}
-
-.table-auto {width: 825px;border: red thin solid;}
-
-
-
-.collapse-head {font-size: 18px; color: #333333;}
-a.accordion-toggle {text-decoration: none;}
 
 
 //account information//
@@ -1370,7 +1208,7 @@ a.btn.btn-small.btn-inverse.disabled.sold {
 
   @include box-shadow($shadow: 0 1px 3px rgba(0,0,0,.55))}
 
-ul.subfooter, .prod-bid ul {list-style: none;margin: 0;padding: 0;}
+ul.subfooter, .prod-bid ul,{list-style: none;margin: 0;padding: 0;}
 ul.subfooter li {font-size: 11px; font-weight: normal; }
 ul.subfooter li a{ float:left;
   display: block;
@@ -1450,64 +1288,3 @@ li.footer-link-title {font-weight: bold; color: #ffffff; padding-bottom: 10px; t
 .footer-links li a {color:#ccc;}
 
 
-//shop//
-
-.shop-main {width: 950px; margin: 0 auto; margin-bottom: 20px;}
-.shop-products {
-  float: left;
-  margin-left: 45px;
-  width: 180px;
-  padding-top: 10px;
-
-      a {color:#333333; font-weight: bold; font-size: 14px; line-height: 10px;}
-}
-
-.shop-img {border: gray thin solid; margin-bottom: 10px; width: 180px; height: 135px;}
-
-.shop-prev {
-  padding: 15px 0 5px 0;
-  width:1020px;
-  margin-bottom: 20px;
-  -webkit-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
-  -moz-box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);
-  box-shadow: 0 4px 4px -2px rgba(0,0,0,.25);}
-
-
-div.product-specs {padding: 0;float:left; margin-bottom:20px;}
-div.product-specs .control-group  .controls {
-  padding: 0;
-  margin-right: 15px;
-}
-div.flashmain .product-price-row .product-specs .control-group {
-  float: left;
-  padding: 0;
-  margin: 0;}
-
-div.product-cta {float: right; margin-bottom:20px;}
-.google-contact-list{
-  height: 200px;
-  overflow-y: scroll;
-}
-.full-width{
-  width: 100%;
-  th{
-    text-align: left;
-  }
-}
-
-
-.black_label{
-  font-size: 11px; color: #333;
-}
-
-.account-basic-information{
-  //width: 500px;
-  dt{
-    width: 30%;
-    vertical-align: top;
-  }
-  dd{
-    width: 350px;
-  }
-  margin-left: 30px;
-}
