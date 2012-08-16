@@ -1,0 +1,31 @@
+<div class="nav menu-cover pull-right cta">
+  <% if current_user %>
+      <a href="#account_db" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"> </i><span class="drop-username"> <%= current_user.email %></span>
+        <b class="caret"></b>
+      </a>
+  <% else %>
+      <div class="btn-group">
+        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">LOGIN <i class="icon-chevron-down"></i></button>
+        <ul class="dropdown-menu login">
+          <%= form_for :user, :url => spree.user_session_url(:subdomain => false) do |f| %>
+              <%= f.email_field :email, :class => 'input-xlarge', :placeholder => "EMAIL ADDRESS" %>
+              <%= f.password_field :password, :class => 'input-xlarge', :placeholder => "PASSWORD" %>
+              <hr>
+              <li class="pull-left"><%= f.submit "LOGIN", :class => 'btn btn-primary' %></li>
+              <li class="midbtn pull-left"> or </li>
+              <li class="fb-login pull-left"><a href="users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a></li>
+              <!-- Remember me commented -->
+              <% if false %>
+                  <label class="checkbox">
+                    <%= f.check_box :remember_me %><span class="guestnav-check">Remember me</span>
+                    <a href="#" class="guestnav-forget">Forget Password?</a>
+                  </label>
+              <% end %>
+          <% end %>
+          <br class="clearfix">
+        </ul>
+        <button data-toggle="modal" href="#myRegistration" class="btn btn-small">JOIN US</button>
+        <%= render :partial => 'spree/shared/register_modal' %>
+  <% end %>
+  </div>
+</div>
