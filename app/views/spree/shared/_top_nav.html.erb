@@ -13,24 +13,15 @@
 
       <div class="nav-collapse">
         <ul class="nav menu-cover pull-left">
-          <li class="divider-vertical"></li>
           <li class="<%= is_active?("spree/auctions") %> home"> <%= link_to 'Auctions', root_url(subdomain: 'auctions') %> </li>
-          <li class="divider-vertical"></li>
           <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
-          <li class="divider-vertical"></li>
           <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
 
         </ul>
 
         <ul class="nav menu-cover pull-right">
           <li class="fb-like"><a href="#"><img src="/assets/fb-like-sample.png"> </a></li>
-          <li class="cart white-active dropdown">
-            <!--badge-->
-            <span class="badge-cart">3</span>
-            <a href="#" class="dropdown-toggle white-active" data-toggle="dropdown"></a>
-
-            <%= render :partial => 'spree/shared/mini_cart' %>
-          </li>
+          <li class="cart white-active dropdown" id="mini_cart"></li>
           <li class="<%= is_active?("spree/invitations") %> friend"><%= link_to '', invitations_url %></li>
           <li class="help"><a href="http://feedback.sold.sg/knowledgebase"></a></li>
         </ul>
@@ -52,3 +43,6 @@
 <div id="notifications" class="notifications notification-top">
   <%= flash_messages %>
 </div>
+<% if content_for?(:after_notifications) %>
+    <%= yield :after_notifications %>
+<% end %>
