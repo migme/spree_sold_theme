@@ -148,6 +148,7 @@ div#myCarousel.carousel.slide {
 .main-box {
   background-color: #ffffff;
   width: 300px;
+  height: 1100px;
   float: left;
   margin-right: 20px;
   padding-bottom: 10px;
@@ -219,7 +220,9 @@ div#myRegistration.modal.hide.fade {
   margin: 0 5px;}
 
 //shopping cart preview//
-.btn-space {margin-right: 5px;}
+.btn-space {margin-right: 5px; }
+
+
 .empty-cart {border: gray 1px solid;
   padding: 10px;
   text-align: center;
@@ -243,6 +246,10 @@ a.cart-product-title{white-space: normal; color: black;
 
 .cart-price-small {line-height: 25px;
   margin-left: 35px;}
+
+a.btn.btn-mini.btn-inverse.edit {padding: 2px 5px; border: red thin solid;}
+
+
 
 
 //---------------------auctions---------------------//
@@ -287,20 +294,41 @@ padding: 10px;
     a.circle:hover, a.circle.active {background:#f07b05;}
 }
 
-.auc-box {
+.auc-box, .sale-box, .upsale-box{
   width: 220px;
   height: 310px;
   background-color: #ffffff;
   margin-bottom: 20px;
   margin-right: 20px;
     @include border-radius($radius: 5px);
+    @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
 
   div.bottom {padding: 5px 10px; text-align: center};
   div.auction-price {margin-top: 10px;};
   div.auction-closed {text-align: center;
     width: 95px;
     padding: 0;
-    line-height: 15px;}
+    line-height: 15px;};
+
+
+  div.time-wrap {
+      background-color:#000000;
+      color:white;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      padding: 5px 5px 2px;
+      height: 20px;
+    }
+
+  div.soldout {text-align: center; font-size: 24px; font-weight: bold;line-height: 20px;}
+  div.sale-img {margin: 10px 0 10px 0;}
+  div.bottom-sale {margin: 0 10px;}
+  &.right {margin:0;}
+
+
+
 }
 .auc-box.right, .auc-box-small.right {margin: 0;}
 .auc-box:hover, .auc-box-small:hover {
@@ -313,7 +341,7 @@ padding: 10px;
 .star {margin: 5px 5px 5px 0; background: url("/assets/star_02.png"); width: 31px; height:30px;}
 .star:hover {background: url("/assets/star_01.png"); width: 31px; height:30px;}
 .auc-icons {margin: 0 0 0 5px;}
-a.top-prod {font-size: 14px;white-space: normal;}
+a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 .completed {border-top-right-radius: 0px;}
 
 .auc-bot-left{width: 100px;line-height: 28px;}
@@ -433,10 +461,7 @@ a.top-prod {font-size: 14px;white-space: normal;}
 
   &.small {padding: 0 20px 0 20px;};
   div {margin: 0 5px 0 0;float: left;};
-
 }
-
-
 
 .shop-box {
   width: 220px;
@@ -472,7 +497,7 @@ a.top-prod {font-size: 14px;white-space: normal;}
 }
 
 .shop-prod{font-weight: bold; margin: 5px 5px 15px 5px;}
-.shop-image {border-top: #dcdcdc thin solid; border-bottom: #dcdcdc thin solid; margin: 35px 0 10px 0;}
+.shop-image {border-top: #dcdcdc thin solid; border-bottom: #dcdcdc thin solid; margin: 20px 0 20px 0; width:220px; height:165px; }
 
 //categories//
 .view-cat {
@@ -487,7 +512,32 @@ a.top-prod {font-size: 14px;white-space: normal;}
 .cat-right {width:225px; margin: 0; padding: 0; float: right;}
 .cat-content {padding: 10px;}
 
+//--------------------sale main---------------------//
 
+.sale-box:hover{
+  -webkit-box-shadow: 0px 3px 20px rgba(255, 51, 0, 1);
+  -moz-box-shadow: 0px 3px 20px rgba(255, 51, 0, 1);;
+  box-shadow: 0px 3px 20px rgba(255, 51, 0, 1)
+}
+
+.upsale-box {
+  width: 220px;
+  height: 260px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+
+    div.start {text-align: left;}
+}
+
+.sale-image {width:220px; height:165px; margin: 10px 0 10px 0;}
+.sale-disabled {width: 220px;
+  height: 165px;
+  background-color: black;
+  opacity: 0.50;
+  position: absolute;}
 
 
 
