@@ -1,5 +1,13 @@
 
-    <div id="myCarousel" class="carousel slide">
-
-    </div>
-    <br class="clearfix">
+<div id="myCarousel" class="carousel slide">
+  <% if  params[:controller] == "spree/products"  %>
+      <%= render :partial => 'spree/zones/shop' %>
+  <% elsif  params[:controller] == "spree/auctions"  %>
+      <%= render :partial => 'spree/zones/auctions' %>
+  <% elsif  params[:controller] == "spree/flash_sales"  %>
+      <%= render :partial => 'spree/zones/sale' %>
+  <% else %>
+      <%= render :partial => 'spree/zones/home' %>
+  <% end %>
+</div>
+<br class="clearfix">
