@@ -34,8 +34,10 @@
 </div>
 <% if content_for?(:banner) %>
     <%= yield :banner %>
-<% else %>
+<% elsif show_banner? %>
 <%= render :partial => 'spree/shared/banner' %>
+<% else %>
+    <div class="blackbg"></div>
 <% end %>
 <% if content_for?(:below_nav) %>
     <%= yield :below_nav %>
@@ -43,6 +45,4 @@
 <div id="notifications" class="notifications notification-top">
   <%= flash_messages %>
 </div>
-<% if content_for?(:after_notifications) %>
-    <%= yield :after_notifications %>
-<% end %>
+

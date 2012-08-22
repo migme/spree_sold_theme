@@ -1,34 +1,27 @@
 <div id="myRegistration" class="modal hide fade">
   <div class="modal-header">
-    <p class="close" data-dismiss="modal">×</button>
+    <p class="close" data-dismiss="modal">×</p>
+
     <h2>Create a Sold.sg account</h2>
   </div>
-  <div class="modal-body">
-    <form>
-      <ul class="no-list">
-        <li><input type="text" class="input-xlarge" placeholder="EMAIL ADDRESS"></li>
-        <li><input type="text" class="input-xlarge" placeholder="PASSWORD"></li>
-        <li><input type="text" class="input-xlarge" placeholder="RE-ENTER PASSWORD"></li>
-        <!--captcha -->
-        <li><img src="/assets/captcha-sample.jpg"> </li>
-        <li>
-          <div class="controls">
-            <label class="checkbox">
-              <input type="checkbox" id="optionsCheckbox" value="option1">
-              I have read the <a href="#" class="lil-links">terms</a> of use and <a href="#" class="lil-links">privacy policy</a> for Sold.sg and I understand and accept its terms.
-            </label>
-          </div>
-        </li>
-      </ul>
-    </form>
-    <hr>
-  </div>
-  <div class="modal-footer">
-    <ul class="reg-cta">
-      <li class="pull-left"><button href="#" class="btn btn-primary">SIGN ME UP!</button></li>
-      <li class="midbtn pull-left"> or </li>
-      <li class="fb-login pull-left"><a href="users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a></li>
-      <br class="clearfix">
-    </ul>
-  </div>
+  <%= simple_form_for (@user||Spree::User.new), :url => user_registration_path(@user||Spree::User.new), :wrapper => :no_label, :html => {:class => 'form-horizontal', :id => 'registration_form'} do |f| %>
+      <div class="modal-body">
+
+        <%= render :partial => 'spree/shared/user_form', :locals => {:f => f} %>
+
+        <hr>
+      </div>
+      <div class="modal-footer">
+        <ul class="reg-cta">
+          <li class="pull-left">
+            <input class="btn btn-primary" name="commit" type="submit" value="SIGN ME UP!">
+          </li>
+          <li class="midbtn pull-left"> or</li>
+          <li class="fb-login pull-left">
+            <a href="users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a>
+          </li>
+          <br class="clearfix">
+        </ul>
+      </div>
+  <% end %>
 </div>

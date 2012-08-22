@@ -16,4 +16,11 @@ Spree::BaseHelper.class_eval do
     "active" if params[:controller] == controller
   end
 
+  def show_banner?
+    true if params[:action] == "index"
+  end
+
+  def body_class
+    "auction-bg" if params[:controller] == 'spree/auctions'
+  end
 end
