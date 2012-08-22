@@ -6,9 +6,7 @@
   </div>
   <%= simple_form_for (@user||Spree::User.new), :url => user_registration_path(@user||Spree::User.new), :wrapper => :no_label, :html => {:class => 'form-horizontal', :id => 'registration_form'} do |f| %>
       <div class="modal-body">
-
         <%= render :partial => 'spree/shared/user_form', :locals => {:f => f} %>
-
         <hr>
       </div>
       <div class="modal-footer">
@@ -18,10 +16,16 @@
           </li>
           <li class="midbtn pull-left"> or</li>
           <li class="fb-login pull-left">
-            <a href="users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a>
+            <a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a>
           </li>
           <br class="clearfix">
         </ul>
       </div>
   <% end %>
 </div>
+
+<% if @show_registration_model %>
+    <%= javascript_tag do %>
+        $('#myRegistration').modal('show');
+    <% end %>
+<% end %>

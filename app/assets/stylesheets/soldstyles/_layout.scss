@@ -23,15 +23,27 @@ h1.page_header {
   @include page-header-with-dashed(24px);
 }
 
-#recaptcha_widget_div {
-
-}
-
-.greeting-message{
-  h3{
+.greeting-message {
+  h3 {
     font-size: $sectionHeadFontSize;
     color: $textColor;
   }
 }
 
+.two-column-input-groups {
+  margin: 0;
+  padding: 0;
+  .column-input {
+    width: 45%;
+    input {
+      width: 100%;
+    }
+    &.left-input{
+      float: left;
+    }
+    &.right-input{
+      float: right;
+    }
+  }
+}
 
