@@ -302,6 +302,10 @@ li.divider-vertical.pull-right {
     left: auto;
     right: 13px;
   }
+  &.myaccount { border: none;right: -1px;
+    top: 25px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;}
   &.login {right: -25px;top: 25px; border: none;}
   &.cart-preview {
     border: none;
