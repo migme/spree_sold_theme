@@ -10,9 +10,8 @@
         </ul>
 
       </div>
-
-<% else %>
-      <div class="btn-group">
+  <% else %>
+      <div class="btn-group" id="login_box">
         <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">LOGIN <i class="icon-chevron-down"></i></button>
         <ul class="dropdown-menu login">
           <%= form_for :user, :url => spree.user_session_url(:subdomain => false) do |f| %>

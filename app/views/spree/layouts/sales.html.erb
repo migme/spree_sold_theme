@@ -1,0 +1,7 @@
+<% content_for :content do %>
+    <div class="container">
+      <%= render :partial => 'spree/toolbars/sales' %>
+      <%= yield %>
+    </div>
+<% end %>
+<%= render :template => 'spree/layouts/spree_application' %>

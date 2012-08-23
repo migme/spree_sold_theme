@@ -18,12 +18,7 @@
 
 <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 <%= render :partial => 'spree/shared/top_nav' %>
-<% if content_for?(:auctions) %>
-      <%= yield :auctions %>
-<% else %>
-      <%= yield %>
-<% end %>
-
+<%= content_for?(:content) ? yield(:content) : yield %>
 
 <%= render :partial => 'spree/shared/footer' %>
 <%= render :partial => 'spree/shared/google_analytics' %>
