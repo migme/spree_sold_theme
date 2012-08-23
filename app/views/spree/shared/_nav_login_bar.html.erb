@@ -8,8 +8,10 @@
             <li><hr></li>
             <li><%= link_to "Logout", spree.destroy_user_session_path(:subdomain => false) %></li>
         </ul>
+
       </div>
-  <% else %>
+
+<% else %>
       <div class="btn-group">
         <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">LOGIN <i class="icon-chevron-down"></i></button>
         <ul class="dropdown-menu login">
@@ -34,4 +36,6 @@
         <%= render :partial => 'spree/shared/register_modal' %>
   <% end %>
   </div>
+
+
 </div>

@@ -1,6 +1,6 @@
 body {background: url("/assets/rough_diagonal.png"); font-family: 'Asap', sans-serif;}
 body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap', sans-serif;}
-.clear {clear: both;}
+.clearfix, .clear {clear: both;}
 .blackbg {background-color: black;
   width: 940px;
   height: 85px;
@@ -131,7 +131,8 @@ a.page.circle {
 }
 .tb-mypage {background-image: url("/assets/wrench.png"); background-repeat: no-repeat; background-position: top center;padding-top: 24px}
 .tb-myauctions, .tb-mytokens {width: 70px; text-align: center; padding-top: 3px;}
-.tb-topup {background-image: url("/assets/topup.png"); background-repeat: no-repeat; background-position: top center;padding-top: 24px;width: 60px; text-align: center;}
+.tb-topup {background-image: url("/assets/buytokens.png"); background-repeat: no-repeat; background-position: top center;width: 61px;
+  height: 40px; text-align: center;}
 .tb-tips {width: 70px; text-align: center; padding-top: 5px;}
 a.mypage{padding: 10px 5px 5px 10px; color: #ffffff;}
 a.mytip, a.mytop {text-align: center; color: #ffffff;}
@@ -232,10 +233,13 @@ div#myCarousel.carousel.slide {
 .cta-seemore {margin-right: 10px; font-size: 14px; margin-top:40px;}
 
 //registration modal//
+.modal-txt {font-size: 10px; color: gray; font-style: italic; margin-top: -5px;
+  margin-bottom: 5px;}
+
 div#myRegistration.modal.hide.fade {
   display: none;
   padding: 10px 20px 10px 10px;
-  width: 350px;}
+  width: 450px;}
 
 
 .midbtn {line-height: 28px;
@@ -283,13 +287,13 @@ a.btn-edit:hover {color: blue; text-decoration: none;}
 //auction registration//
 div#myAuctions.modal.hide.fade {
   display: none;
-  padding: 10px 10px;
+  padding: 10px 10px 20px 10px;
   width: 450px;
-  height: 600px;
+  //height: 600px;
 
-    div.impt-reminder {padding: 0 10px 0 20px;}
+
 }
-
+div.impt-reminder {padding: 0 20px 0 20px;}
 
 div#myValidation.modal.hide.fade {
 padding: 10px;
@@ -354,7 +358,7 @@ padding: 10px;
 
 }
 
-.container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0){
+.container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0){
   margin:0 !important;
 }
 
@@ -389,7 +393,13 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
   div.on-lil-auc {position: relative; top: -65px;}
 }
 
-.lil-auction-details {text-align: center; width: 130px; padding: 4px;}
+.lil-auction-details {
+  text-align: center;
+  width: 130px;
+  padding: 4px;
+      div.user {font-size: 14px; height:15px}
+
+}
 
 .prod-top {
   width: 930px;
@@ -457,11 +467,77 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 .rev-btn {padding: 5px 10px 5px 10px;}
 .auto-btn {padding: 5px 29px 5px 29px;}
 
+table.auto-settings {
+  width: 230px;
+  color: white;
+    th, td, thead {text-align: center; }
+    thead {background-color: rgba(0, 0, 0, 0.0);}
+}
+
+.table tbody tr:hover td,
+.table tbody tr:hover th {
+  background-color: inherit;
+}
+
+
 .auto-table {
   width: 240px;
   margin-bottom:10px;
       thead tr th, td {text-align: left; padding: 0 0 0 5px;}
 }
+
+//auction-mypage//
+.mypage-main {
+  width: 760px;
+  background-color: white;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  margin: 0;
+
+    h1 {margin: 10px 0 0 10px;}
+    span {margin-left: 10px; margin-right: 20px;}
+    ul {list-style: none;}
+    ul li {line-height: 36px;}
+    ul li span {display: inline-block; margin-top: -26px;}
+
+  .sms-alert {background-color: #f5f5f5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 10px 10px 10px 25px;
+
+      .note {margin-left: 18px;}
+  }
+
+}
+
+.mypage-fixright {
+  width: 165px;
+  ul li a{line-height: 16px}
+}
+
+.mypage-summary {
+  padding-bottom: 10px;
+  width:160px;
+  background-color:#ffffff;
+  margin-bottom: 20px;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+
+  div.gray {
+    background-color: #666666; height: 20px;
+    color: white;
+    padding: 2px 5px 0 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  ul {list-style: none; margin: 0; padding: 10px 5px 0 5px;}
+  ul li {line-height: 24px;}
+  li.active {color: #f07b05}
+
+
+}
+
 
 
 //---------------------shop main---------------------//
@@ -482,7 +558,7 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
     ul.shop-tags li{display:block; float: left; margin-right: 10px;}
 }
 .shop-variation{line-height: 25px;}
-#shop-quantity {width: 50px; height: 20px;}
+#shop-quantity {width: 50px; height: 25px;}
 .shop-cta {float: right;}
 .btn-shopadd {
   margin: 0;
@@ -574,30 +650,42 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 
 .shopping-main {
   padding: 20px 0 0 0;
-  width: 740px;
+  width: 760px;
   background-color: white;
   @include border-radius($radius: 5px);
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
   margin: 0;
 
-    img {margin-left: 10px;}
-
-    .cart-total {background-color: gainsboro;
+    .cart-total {background-color: whiteSmoke;
       margin: 10px 0 0 0;
       padding: 20px;
-      width: 700px;
+      width: 720px;
       height: 120px;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
 
+      a {color: #f07b05}
+      p {color: #666666;}
+
+
+
     }
+    div.order {height:100px;}
     ul, ul.total {list-style: none; margin: 0; padding: 0;}
     ul.total {width:300px;padding-left: 20px;
       border-left: #666666 thin solid;}
+
+  ul.address {margin: 20px;}
+
+    h1 {margin-left: 10px;}
+
+    label.check-option {margin-right: 20px;
+      margin-top: 10px;}
 }
 
 .cart-details {
-  width: 645px;
+  width: 620px;
+  margin-left: 25px;
     ul {
       list-style: none;
       margin:0;
@@ -605,15 +693,17 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
     ul li {margin-left:10px;}
 
   .cart-prod-name {font-size: 14px; font-weight: bold; width: 500px;}
-  .cart-img {width:80px; height: 60px;margin-right: 10px;}
+
   .cart-specs {width: 400px;margin-bottom: 10px;}
   .cart-timer {font-size: 14px; color: red; margin-right: 10px;margin-top: 5px;}
 }
-
+.cart-img {width:80px; height: 60px; margin-left: 10px;}
 .remove a, .remove a:hover {color: gray; font-size: 10px;}
 
+.shopping-fixright  {width: 165px;}
+
 .shopping-summary {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   width:160px;
   background-color:#ffffff;
   margin-bottom: 20px;
@@ -646,6 +736,8 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 }
 
 .container-footer {width:940px; margin: 0 auto;}
+select.ship-address {width: 380px; height: 30px;}
+
 
 .foot-links {width: 455px;
   padding-right: 20px;
@@ -728,23 +820,6 @@ div.product-cta {float: right; margin-bottom:20px;}
   }
   margin-left: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //token purchase//
 
@@ -1300,4 +1375,3 @@ a.btn.btn-small.btn-inverse.disabled.sold {
   border: none;
   opacity: 1;
 }
-
