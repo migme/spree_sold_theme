@@ -1,17 +1,13 @@
 <div class="nav menu-cover pull-right cta">
   <% if current_user %>
-      <a href="#account_db" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user icon-white"> </i><span class="drop-username"> <%= current_user.email %></span>
-        <b class="caret"></b>
-      </a>
-  <div id="account_db" class="dropdown">
-  <ul class="dropdown-menu">
-               <li><a href="/auction_informations">Auction Information</a></li>
-               <li><%=link_to(t(:account_information),account_path(:subdomain => false) )%></li>
-               <li class="divider"></li>
-               <li><%= link_to(t(:purchase_tokens), spree.purchase_tokens_path(:subdomain => false)) %></li>
-               <li class="divider"></li>
-               <li><%= link_to t(:logout), spree.destroy_user_session_path(:subdomain => false) %></li>
-             </ul>
+      <div class="btn-group">
+        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><%= current_user.email %> <i class="icon-chevron-down"></i></button>
+        <ul class="dropdown-menu myaccount">
+            <li><%=link_to("Account Settings",account_path(:subdomain => false) )%></li>
+            <li><a href="#">Payment History</a></li>
+            <li><hr></li>
+            <li><%= link_to "Logout", spree.destroy_user_session_path(:subdomain => false) %></li>
+        </ul>
       </div>
   <% else %>
       <div class="btn-group">
