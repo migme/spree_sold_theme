@@ -19,7 +19,7 @@
 <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 <%= render :partial => 'spree/shared/top_nav' %>
 <%= content_for?(:content) ? yield(:content) : yield %>
-
+<br /><br />
 <%= render :partial => 'spree/shared/footer' %>
 <%= render :partial => 'spree/shared/google_analytics' %>
 <%= render :partial => 'spree/shared/facebook_init' %>

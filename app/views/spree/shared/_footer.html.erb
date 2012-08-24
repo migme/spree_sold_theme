@@ -1,93 +1,81 @@
-<footer id="newfooter">
-  <div class="container">
-    <div class="footer-left">
-      <span class="boldtype" style="font-size: 14px;">Singapore’s Best Online Entertainment Shopping</span> <br><br>
-      <span>Sold.sg is a premium online entertainment shopping website that offers you the latest, brand new products and services! A great variety of deals are put up for sale daily. These deals include PS3, iPads, iPhones, Wii, digital cameras, tv sets, airline tickets to popular destinations, hotel and spa vouchers and many more at amazing sale prices! </span>  <br><br>
-      <span>How does it work? You start by purchasing Tokens from our site and each Token costs S$0.75. Choose your desired item and use your Tokens to bid. Each bid uses 1 Token and are not refundable. Every time you bid, the bid price increases by S$0.01, S$0.05 or S$0.15 while the auction time increases by 20 seconds. Wait no more and starting bidding now!</span> <br><br>
-      <span>Sounds tough? Bidding on our site isn’t all that complicated once you get the hang of it. Take your time to explore the website and get yourself familiarized with the process.</span>   <br>  <br>
-      <span>Why us? If you’re looking for great sales in town, look no more because only we offer you the most amazing deals for bidding! Secure your best deals with us and rest assured that you would get your best online shopping experience. It’s a sale like no other so what you waiting for? Start bidding on Sold.sg now!  </span>
+<footer id="neo_footer">
+  <div class="container-footer">
+    <div class="pull-left foot-seo">
+      <% if content_for?(:seo_footer) %>
+          <%= yield(:seo_footer) %>
+      <% else %>
+          <ul>
+                  <li><strong>Singapore’s Best Online Entertainment Shopping</strong></li>
+                  <li>Sold.sg is a premium online entertainment shopping website that offers you the latest, brand new products and services! A great variety of deals are put up for sale daily. These deals include PS3, iPads, iPhones, Wii, digital cameras, tv sets, airline tickets to popular destinations, hotel and spa vouchers and many more at amazing sale prices!	</li><br>
+                  <li>Sounds tough? Bidding on our site isn’t all that complicated once you get the hang of it. Take your time to explore the website and get yourself familiarized with the process.	</li><br>
+                  <li>Why us? If you’re looking for great sales in town, look no more because only we offer you the most amazing deals for bidding! Secure your best deals with us and rest assured that you would get your best online shopping experience. It’s a sale like no other so what you waiting for? Start bidding on Sold.sg now!	</li><br>
+                </ul>
+      <% end %>
+
+
     </div>
 
-    <div class="divider-footer"></div>
 
-    <div class="footer-right">
-      <ul class="footer-links">
-        <li class="footer-link-title">About Us</li>
-        <li><a href="/about-us"> About Solg.sg</a></li>
-        <li><a href="/testimonials" target="_blank">Testimonials</a></li>
+    <div class="pull-right foot-links">
+      <ul class="pull-left no-list">
+        <li class="foot-title"><strong>ABOUT US</strong></li>
+        <li><a href="#" target="_blank"> Behind The Scenes</a></li>
+        <li><a href="#" target="_blank">News & Paparazzi</a></li>
+        <li><a href="#" target="_blank">Mis-mitment</a></li>
+        <li><a href="#" target="_blank">Contact Us Maybe?</a></li>
+        <li><a href="#" target="_blank">Work With Us</a></li>
+        <li><a href="#" target="_blank">Happy Soldgers</a></li>
+        <li><a href="#" target="_blank">H.E.L.P!</a></li>
+      </ul>
+
+      <ul class="pull-left no-list">
+        <li class="foot-title"><strong>OUR SITES</strong></li>
+        <li><%= link_to 'Auction', root_url(subdomain: 'auctions') %></li>
+        <li><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
+        <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
         <li><a href="http://thesoldgers.wordpress.com/" target="_blank">Blog</a></li>
-        <li><a href="/our-commitment">Commitment</a></li>
-        <li><a href="/contact-us">Contact Us</a></li>
+        <li><a href="#" target="_blank">Perks</a></li>
       </ul>
 
-      <ul class="footer-links">
-        <li class="footer-link-title"><%= link_to 'Auctions', root_url(subdomain: 'auctions') %> </li>
-        <li><%= link_to 'Live', live_auctions_url(subdomain: 'auctions') %> </li>
-        <li><%= link_to 'Completed', completed_auctions_url(subdomain: 'auctions') %></li>
-        <li><a href="/rules">Rules</a></li>
-        <li><a href="/guides-register">How It Works</a></li>
-        <li><a href="http://feedback.sold.sg/forums/73105-product-recommendations" target="_blank">Recommend</a></li>
+      <%=  yield(:sub_footer) if content_for?(:sub_footer) %>
+
+      <ul class="pull-left no-list inline">
+        <li class="foot-title"><strong>FOLLOW US</strong></li> <br>
+        <li><a href="http://www.facebook.com/soldsg" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
+        <li><a href="http://www.twitter.com/solddotsg " target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
+        <li> <a href="http://thesoldgers.wordpress.com/" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li>
+      </ul>
+      <br class="clear">
+      <br class="clear">
+      <hr>
+      <br class="clear">
+
+      <ul class="pull-left no-list inline">
+        <li class="foot-title"><strong>PAYMENT</strong></li> <br>
+        <li><a href="#" target="_blank"> <img src="/assets/foot-pay1.jpg" alt=""></a> </li>
+        <li><a href="#" target="_blank"> <img src="/assets/foot-pay2.jpg" alt=""></a></li>
       </ul>
 
-      <ul class="footer-links">
-        <li class="footer-link-title">Flash Sale</li>
-        <li><a href="/about_sales">About Sales</a></li>
-        <li><a href="/why_register">Why Register?</a></li> <br />
-        <li class="footer-link-title">Guides</li>
-        <li><a href="/guides-register" target="_blank">Beginner's Guide</a></li>
-        <li><a href="/autobidder-intro" target="_blank">Auto-Bidder Guide</a></li>
-        <li><a href="http://feedback.sold.sg/knowledgebase" target="_blank">Help</a></li>
+      <ul class="pull-left no-list inline">
+        <li class="foot-title"><strong>SECURED BY</strong></li> <br>
+        <li><a href="#" target="_blank"> <img src="/assets/foot-norton.jpg" alt=""></a> </li>
       </ul>
 
-      <ul class="footer-links-inline">
-            <li class="footer-link-title">Follow Us</li> <br><br>
-            <li><a href="http://www.facebook.com/soldsg" target="_blank"> <img src="/assets/footer-icon1.jpg" alt=""></a> </li>
-            <li><a href="http://www.twitter.com/solddotsg " target="_blank"> <img src="/assets/footer-icon2.jpg" alt=""></a></li>
-            <li> <a href="http://thesoldgers.wordpress.com/" target="_blank"> <img src="/assets/footer-icon3.jpg" alt=""></a></li>
-      </ul>
-
-      <div class="divider-footer-hor"></div>
-
-      <ul class="footer-links-inline">
-        <li class="footer-link-title">Payment</li>  <br> <br>
-        <li> <img src="/assets/footer-pay1.jpg" alt=""></li>
-        <li> <img src="/assets/footer-pay2.jpg" alt=""></li>
-      </ul>
-
-      <ul class="footer-links-inline">
-        <li class="footer-link-title">Secured by</li>  <br> <br>
-        <li> <a href="#" target="_blank"> <img src="/assets/footer-verisign.png" alt=""></a>  </li>
-      </ul>
-
-      <ul class="footer-links-inline">
-        <li class="footer-link-title">Accredited by</li> <br>  <br>
-        <li><a style="padding-right:20px;"> <img src="/assets/footer-consumertrust.png" alt="">  </a></li>
-        <li><a> <img src="/assets/footer-trustsg.jpg" alt=""></a></li>
+      <ul class="pull-left no-list inline">
+        <li class="foot-title"><strong>ACCREDITED BY</strong></li> <br>
+        <li><a href="#" target="_blank"> <img src="/assets/foot-ct.jpg" alt=""></a> </li>
+        <li><a href="#" target="_blank"> <img src="/assets/foot-trustsg.jpg" alt=""></a> </li>
       </ul>
 
     </div>
 
-    <br class="clearfix"/>
-
+    <br class="clear">
+    <ul class="no-list inline subfooter" style="margin: 0;">
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#" class="no-border">Information Security</a></li>
+      <li class="pull-right">© 2012 Soldgers. All Rights Reserved.</li>
+    </ul>
+    <br class="clear">
   </div>
-</footer>
-
-
-
-
-
-
-<footer class="subfooter">
-  <div class="subfootbar">
-    <div class="container">
-      <ul class="subfooter">
-        <li class="noborder"><a href="/terms">Terms of Use</a></li>
-        <li><a href="/privacy-policy">Privacy Policy</a></li>
-        <li><a href="/security">Information Security</a></li>
-        <li><a href="/responsible-bidding">Responsible Bidding</a></li>
-        <li class="copyright">Copyright © 2012 Soldgers Private Limited. All Rights Reserved. </li>
-      </ul>
-    </div>
-  </div>
-
 </footer>

@@ -4,4 +4,11 @@
       <%= yield %>
     </div>
 <% end %>
+<% content_for :sub_footer do %>
+    <ul class="pull-left no-list">
+      <li class="foot-title"><strong>Sale</strong></li>
+      <li><a href="#">About Sales</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+<% end %>
 <%= render :template => 'spree/layouts/spree_application' %>

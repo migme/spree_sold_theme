@@ -4,4 +4,14 @@
       <%= yield %>
     </div>
 <% end %>
+<% content_for :sub_footer do %>
+    <ul class="pull-left no-list">
+      <li class="foot-title"><strong>Auction</strong></li>
+      <li><%= link_to 'Completed', completed_auctions_url(subdomain: 'auctions') %></li>
+      <li><a href="#" target="_blank">Essential Rules</a></li>
+      <li><a href="#" target="_blank">How It Works</a></li>
+      <li><a href="#" target="_blank">FAQ</a></li>
+    </ul>
+<% end %>
+
 <%= render :template => 'spree/layouts/spree_application' %>
