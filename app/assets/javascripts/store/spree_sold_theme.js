@@ -12,3 +12,16 @@
 //= require store/spree_promo
 //= require bootstrap
 //= require bootstrap_init
+
+
+// Drop down fix for bootstrap
+
+$(function() {
+  // Setup drop down menu
+  // Drop down fix for bootstrap
+   menu = $('.dropdown-menu').find('*');
+  menu.click(function(e) {
+      e.stopPropagation();
+  });
+
+});
