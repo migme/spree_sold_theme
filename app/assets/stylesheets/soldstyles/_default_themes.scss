@@ -870,8 +870,10 @@ ul.subfooter li a {margin-right: 20px; color: gray;
 
 
     h3 {width: 250px;margin-right: 10px;}
-    p {width: 700px;margin-right: 10px;}
-    ul.guide-links {border-left: gray thin solid;
+    .guide-title {border-right: gray thin solid;
+      width: 700px;
+      padding-right: 20px;}
+    ul.guide-links {
       width: 180px;
       padding-left: 35px;
       margin: 0;
@@ -879,6 +881,15 @@ ul.subfooter li a {margin-right: 20px; color: gray;
           a:hover {text-decoration: none; color: gray;}
     }
     .guide-content {width:650px; padding-bottom: 10px;}
+    .guide-wrap-big {
+      width:650px;
+          p {font-size:12px;}
+          a {color: #f07b05}
+          .auto {margin-bottom: 10px; margin-top:10px;}
+          .auto-types {width: 500px;
+            margin-left: 20px;}
+    }
+
     .guide-wrap {
       width: 370px;
       margin-right: 10px;
@@ -890,14 +901,248 @@ ul.subfooter li a {margin-right: 20px; color: gray;
         span.bid {width: 200px;
           margin-top: 10px;
           margin-bottom: 30px;}
+        span.type-auc {width: 300px;
+          margin-left: 15px; margin-bottom: 10px;}
+        .types {margin: 10px;}
+
     }
-    .type1 {width: 190px; border: red thin solid;}
+    .type1 {width: 190px;}
     .small {width: 230px;
       margin: 0 0 0 50px;
         ol{margin-left: 65px;}
     }
     .right {margin-right: 0; padding-top: 0}
 }
+
+//my page//
+
+.mypage-main {
+  width: 940px;
+  background-color: white;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  margin: 0 0 20px 0;
+}
+
+
+
+/*
+	HUNGTN
+*/
+
+
+/* CLEARFIX */
+.clearfix_:before, .clearfix_:after { content: ""; display: table; }
+.clearfix_:after { clear: both; }
+.clearfix_ { zoom: 1; }
+
+/* COLOR */
+$txt-gray: #979797;
+.txt-gray{color: #979797; }
+
+/* BORDER AND RADIUS */
+
+@mixin rounded($side, $radius: 10px) {
+  border-#{$side}-radius: $radius;
+  -moz-border-radius-#{$side}: $radius;
+  -webkit-border-#{$side}-radius: $radius;
+}
+@mixin border_radius($radius: 10px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
+
+/* CONTAINTER */
+
+.white_content{
+  background-color: white;
+  padding:26px 0;
+
+  @include border_radius(5px);
+  .content_padding{
+    padding: 0 26px;
+  }
+  .break_line{
+    background-color:lighten($txt-gray, 25%);
+    height:1px;
+    width:100%;
+    margin:20px 0;
+  }
+  h1{font-weight:bold !important;}
+} /* white_content */
+
+.auto_bid{
+  .left_col{
+    width:104px;
+
+    p{
+      margin:0;
+      text-align:center;
+
+      &.current_label ,&.price_label{
+        color:$txt-gray;
+        font-size:12px;
+        margin:10px 0 0;
+      }
+      &.current_name, &.price{
+        font-weight:bold;
+      }
+    }
+    .timming{
+      text-align:center;
+      font-size:22px;
+      font-weight:bold;
+      margin-top:15px;
+    }
+  } /* left_col */
+  .right_col{
+    width:750px;
+
+    h3{
+      border-bottom:1px solid lighten($txt-gray, 25%);
+    }
+    .first_table{
+      margin:10px 0;
+      tr{border:none;}
+      th{
+        text-align:center;
+        label{font-size:12px; color:$txt-gray;}
+      }
+      td{text-align:center;font-weight:bold;
+        &.edit{text-align:right;font-weight:100;}
+      }
+    }
+
+    .set_bid{
+      background-color:lighten($txt-gray, 35%);
+      border:1px solid lighten($txt-gray, 25%);
+      @include border_radius(5px);
+      padding:15px 5px 0 15px;
+
+      .seond_table{
+        margin-top:10px;
+        tr{border:none;}
+        th{
+          padding-left:10px;
+          label{
+            text-align:center;
+            font-size:12px;}
+        }
+        input{
+          width:100%;
+        }
+        td{padding-top:0;
+          &.button{text-align:right; button{ margin-bottom:5px;}}
+        }
+
+      }
+    } /* set_bid */
+  } /* right_col */
+} /* auto_bid */
+
+/* MY TOKENS */
+.token_table{
+  th{
+    text-align:center;
+    label{font-size:12px; color:$txt-gray;}
+  }
+  td{
+    text-align:center;
+    p{font-weight:bold;font-size:12px;margin-bottom:0;}
+    span{padding:0 2px; font-weight:bold;}
+  }
+  tr{border:none;
+    &.gray_bg{background-color:lighten($txt-gray, 36%)}
+  }
+} /* token_table */
+
+.gray_content{
+  background-color: lighten($txt-gray, 35%);
+  padding:10px;
+  .total_content{margin:10px 0 0;}
+  p.total{font-size:18px;font-weight:bold;margin-botto:20px;
+    &.pull-left{margin-left:30px;}
+    &.pull-right{margin-right:30px;}
+  }
+  p a{font-size:12px; margin-top:10px;}
+  @include rounded(bottom-left,5px);
+  @include rounded(bottom-right,5px);
+}
+
+.white_content.mytoken{padding-bottom:0;}
+
+/* WON_AUCTION_TABLE */
+.white_content.mywon{padding-top:0;padding-bottom:0;}
+.white_content{
+  .tab{
+    margin:0;
+    li{
+      list-style:none;
+      float:left;
+      width:470px;
+      height:76px;
+      a{
+        width:470px;
+        height:76px;
+        font-size:32px;
+        font-weight:bold;
+        display:block;
+        text-align:center;
+        line-height:76px;
+        text-decoration:none;
+        background-color:lighten($txt-gray, 30%);
+        color:$txt-gray;
+        &.current_tab, &:hover{
+          background-color:white;
+          color:#000;
+        }
+      }
+
+    }
+  } /* tab */
+
+  ul.center{text-align:center;width:200px;margin:10px auto 0;
+    .circle{background-color:#FFF;border:1px solid lighten($txt-gray, 10%)}
+    .circle.active{border:none;}
+  }
+}
+
+.won_auction_table{
+  .download_ico{
+    a{
+      background:url(/assets/my_page/download_sprite.png) no-repeat;
+      background-position:0 0;
+      width:74px;
+      height:54px;
+      display:block;
+      &:hover{background-position:0 -54px;}
+    }
+  }
+  td{
+    text-align:center;
+    p{font-weight:bold;font-size:12px;margin-bottom:0;}
+    span{padding:0 2px; font-weight:bold;}
+
+    p{
+      &.product_name{
+        font-size:18px;
+      }
+      &.end_time, &.win{font-size:12px; font-weight:normal; color:lighten($txt-gray, 10%);}
+      &.date{font-weight:normal; span{font-weight:normal;font-size:14px;}}
+      &.win_price{color:#18a09c;}
+      &.old_price{color:lighten($txt-gray, 15%); text-decoration:line-through;font-weight:100;}
+    }
+
+  }
+
+  tr{border:none;
+    height:80px;
+    &.gray_bg{background-color:lighten($txt-gray, 36%)}
+  }
+}
+
 //--------------------------------------------------------------OLD CODES [please moves your codes above this line]--------------------------------------------------------------//
 
 //old shop//
