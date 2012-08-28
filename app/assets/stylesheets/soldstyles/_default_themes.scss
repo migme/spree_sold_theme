@@ -7,11 +7,7 @@ body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap',
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;}
 
-iframe {height: 0px;
-  width: 0px;
-  visibility: hidden;
-  border: none;
-  position: absolute;}
+
 
 .on-red {color: #ffffff; font-size: 16px;display: inline-block;margin-right: 10px;}
 .txt-white {color: $white;}
@@ -968,7 +964,22 @@ ul.subfooter li a {margin-right: 20px; color: gray;
 }
 
 //contact us//
-.contact-wrap {width: 900px;margin: 0 auto;padding-top: 20px;}
+.contact-wrap {
+  width: 900px;
+  margin: 0 auto;
+  padding-top:20px;
+    ul.contact {width: 400px;margin-left: 55px;}
+    img {margin-left: 20px; margin-right:10px;}
+    .contact-form {width: 600px; padding-bottom: 20px; border-right: #CCCccc thin solid;}
+    .contact-tel {width: 280px;}
+    .contact-icon {height: 100px;}
+
+    .sample-prod {
+      margin: 20px auto;
+      width: 720px;}
+
+
+}
 
 /*
 	HUNGTN
@@ -1121,12 +1132,11 @@ $txt-gray: #979797;
 .white_content.mywon{padding-top:0;padding-bottom:0;}
 .white_content{
   p {
-    font-size: 12px;
-    width: 900px;
-    margin: 0 auto;
+        font-size: 12px;
+        margin: 0 auto;
 
-  }
-  p.space {padding-bottom: 30px;}
+      }
+    p.space {padding-bottom: 30px;}
   .tab{
     margin:0;
     li{
