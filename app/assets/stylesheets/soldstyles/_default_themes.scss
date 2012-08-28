@@ -198,25 +198,32 @@ div#myCarousel.carousel.slide {
 .main-box {
   background-color: #ffffff;
   width: 300px;
-  height: 1100px;
+  height: 1000px;
   float: left;
   margin-right: 20px;
   padding-bottom: 10px;
     @include border-radius($radius: 15px);
     @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+    &.right {margin:0;}
 }
 .main-title {
+  width: 300px;
   text-align: center;
   margin-top: 20px;
-  font-size: 24px;
-  font-weight: bold;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#000));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+      a {  font-size: 24px;
+        font-weight: bold;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#000));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;}
  }
 
 .main-divider {
-  margin: 20px 0 20px 20px;
+  margin-top:5px;
+  width: 300px;
+  height: 8px;
+    &.auction {background-image: url("/assets/main-auction-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
+    &.shop {background-image: url("/assets/main-shop-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
+    &.onsale {background-image: url("/assets/main-onsale-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
 }
 
 .main-prod-name {
@@ -224,15 +231,18 @@ div#myCarousel.carousel.slide {
   font-size: 16px;
   padding: 0 10px 0 10px;
   height: 35px;
-  display: table-cell;
-  vertical-align: bottom;
+  margin-bottom: 5px;
+  //display: table-cell;
+  //vertical-align: bottom;
 }
 
 .main-prod-img {
-  margin: 25px 0 20px 0;
+  margin: 0 0 20px 0;
   position: relative;
   width: 300px;
-  height: 225px;
+  height: 240px;
+  background-image: url("/assets/main-divider.jpg"); background-position: bottom center; background-repeat: no-repeat;
+
 }
 .main-top-bar  {
   width: 290px;
@@ -260,7 +270,7 @@ div#myCarousel.carousel.slide {
 .main-prod-img:hover .main-top-bar {display : block;}
 .main-prod-img:hover .main-bottom-bar{display : block;}
 
-.cta-seemore {margin-right: 10px; font-size: 14px; margin-top:40px;}
+.cta-seemore {margin-right: 10px; font-size: 14px;}
 
 //registration modal//
 .modal-txt {font-size: 10px; color: gray; font-style: italic; margin-top: -5px;
@@ -440,7 +450,7 @@ padding: 10px;
 .auc-prod{width: 170px; font-weight: bold; margin: 3px 0 0 5px;}
 .star {margin: 5px 5px 5px 0; background: url("/assets/star_02.png"); width: 31px; height:30px;}
 .star:hover {background: url("/assets/star_01.png"); width: 31px; height:30px;}
-.auc-icons {margin: 0 0 0 5px;}
+.auc-icons {margin: 0 0 0 5px; height: 27px;}
 a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 .completed {border-top-right-radius: 0px;}
 
