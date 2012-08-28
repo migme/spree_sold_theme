@@ -23,4 +23,12 @@ Spree::BaseHelper.class_eval do
   def body_class
     "auction-bg" if params[:controller] == 'spree/auctions'
   end
+
+  def populate_notifications
+    ntfs=""
+    @auction_notifications.each do |notification|
+      ntfs += content_tag(:li, notification, class: 'news-item').html_safe
+    end if @auction_notifications
+    ntfs.html_safe
+  end
 end
