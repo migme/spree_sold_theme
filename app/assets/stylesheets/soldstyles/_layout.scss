@@ -34,16 +34,51 @@ h1.page_header {
   margin: 0;
   padding: 0;
   .column-input {
-    width: 45%;
+    width: 48%;
     input {
       width: 100%;
     }
-    &.left-input{
+    &.left-input {
       float: left;
     }
-    &.right-input{
+    &.right-input {
       float: right;
     }
   }
 }
 
+p.input-error {
+  margin: 0;
+  color: $red;
+  font-style: italic;
+  font-size: 11px;
+}
+
+p.input-hint {
+  margin: 0;
+  color: $grayDark;
+  font-style: italic;
+  font-size: 11px;
+}
+
+.no-lbl-inputs .no-label select {
+  height: 30px;
+  font-size: 13px;
+  padding-left: 0;
+  margin-left: 0;
+  &#user_gender {
+    width: 444px;
+  }
+  &.date {
+    width: 146px;
+  }
+}
+.cancel-join-auction{
+  color: $grayLight;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.sms-validation{
+  width: 470px;
+}

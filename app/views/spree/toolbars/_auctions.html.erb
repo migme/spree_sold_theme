@@ -3,12 +3,16 @@
         <!--toolbar for registered users -->
         <div class="toolbar">
           <ul class="toolbar-reg">
-            <li class="tb-mypage"><a href="#" class="mypage">MY PAGE</a></li>
-            <li class="toolbar-notif">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Suspendisse turpis risus, consequat ac venenatis a, tincidunt non eros.</li>
-            <li class="tb-myauctions"><span class="txt-24" id="user_ea"></span> <br>AUCTIONS</li>
-            <li class="tb-mytokens"><span class="txt-24" id="user_coin"></span><br>TOKENS</li>
-            <li class="tb-topup"><%= link_to "", purchase_tokens_url(:subdomain => false), :class => "mytop txt-white" %> </li>
-            <li class="tb-tips"><a href="#" class="mytip txt-white">TIPS & TRICKS</a></li>
+            <li><a href="#" class="tb-myfavs"></a></li>
+                <li><a href="#" class="tb-myauto"></a></li>
+                <li class="toolbar-notif">
+                  <ul id="js-news" class="js-hidden">
+                    <%= populate_notifications %>
+                  </ul>
+                </li>
+                <li class="tb-myauctions"><span class="txt-18" id="user_ea">-</span><span class="txt-18">/4</span> <br>AUCTIONS</li>
+                <li class="tb-mytokens"><span class="txt-18" id="user_coin"></span><br>TOKENS</li>
+                <li><%= link_to "", purchase_tokens_url(:subdomain => false), :class => "tb-buy" %> </li>
           </ul>
         </div>
     <% else %>
@@ -104,3 +108,12 @@
         </div>
     <% end %>
 <% end %>
+<script src="/assets/jquery.ticker.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function () {
+     // start the ticker
+    if($('#js-news li').length > 0 ){
+        $('#js-news').ticker();
+    }
+});
+</script>
