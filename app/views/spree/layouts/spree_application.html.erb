@@ -14,6 +14,8 @@
 
 <head data-hook="inside_head" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# soldgers: http://ogp.me/ns/fb/soldgers#">
   <%= render :partial => 'spree/shared/head' %>
+  <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+  <%=javascript_tag "var captchaPublicKey = '#{Recaptcha.configuration.public_key}';"%>
 </head>
 
 <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">

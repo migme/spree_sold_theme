@@ -268,7 +268,7 @@ div#myCarousel.carousel.slide {
 
 div#myRegistration.modal.hide.fade {
   display: none;
-  padding: 10px 20px 10px 10px;
+  padding: 10px 20px;
   width: 450px;}
 
 
@@ -329,8 +329,10 @@ div#myValidation.modal.hide.fade {
 padding: 10px;
 
   div.modal-body {padding: 10px;
-    div {width: 450px;
-      margin: 0 auto;}
+    & > div {
+      width: 450px;
+      margin: 0 auto;
+    }
 
     a.btn.val-sms {
     margin-right: 135px;
