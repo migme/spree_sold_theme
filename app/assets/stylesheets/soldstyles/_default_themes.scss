@@ -434,7 +434,22 @@ padding: 10px;
     @extend .txt-red;
     @extend .pull-right;
   }
-
+  div.auc-error {
+      position: absolute;
+      left: -2px;
+      top: -8px;
+      height: 115px;
+      width: 233px;
+      background-image: url("/assets/Error3.png");
+      background-position: top center;
+      background-repeat: 0;
+        .content {
+          width: 200px;
+          margin: 20px auto;
+          text-align: center;
+              .ok {margin-top: 10px;}
+        }
+    }
 }
 
 #beginner_auctions .auc-box:nth-child(3n+0), .container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0){
@@ -536,7 +551,7 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
   margin: 0 10px 0 10px;
 
     ul, ul.u-save {list-style: none; margin: 0;padding: 0;}
-    div.auc-error2 {
+    div.auc-error {
       position: absolute;
       left: 0;
       top: 100px;
@@ -559,7 +574,7 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
   position:relative;
   width: 240px;
   text-align: center;
-      div.auc-error3 {
+      div.auc-error {
         position: absolute;
         left: 0;
         top: 0;
@@ -592,6 +607,7 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
   margin: 10px 0 25px 0;
   font-size: 24px;}
 
+#auto_bidders{ height:200px}
 .auto-box {
   text-align: center;
   padding: 5px 5px 0 5px;
