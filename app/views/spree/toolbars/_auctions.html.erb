@@ -22,7 +22,7 @@ $(function () {
     <% unless current_user  and current_user.has_role?("auction_user") || current_user.has_role?("admin")   %>
     toolbar = $('div.toolbar').find('a');
     toolbar.attr("href","javascript: void(0)");
-    toolbar.click(function(e) {
+    toolbar.live('click',function(e) {
           e.stopPropagation();
           window.showSignUpBox();
       });
