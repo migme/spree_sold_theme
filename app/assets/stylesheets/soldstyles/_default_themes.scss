@@ -395,6 +395,7 @@ padding: 10px;
 }
 
 .auc-box, .sale-box, .upsale-box{
+  position: relative;
   width: 220px;
   height: 310px;
   background-color: #ffffff;
@@ -464,6 +465,7 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 //auction product page//
 
 .auc-box-small {
+  position: relative;
   width: 220px;
   height: 102px;
   background-color: #ffffff;
@@ -473,6 +475,22 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
     @include border-radius($radius: 5px);
 
   div.on-lil-auc {position: relative; top: -65px;}
+  div.auc-error {
+    position: absolute;
+    left: -2px;
+    top: -8px;
+    height: 115px;
+    width: 233px;
+    background-image: url("/assets/Error3.png");
+    background-position: top center;
+    background-repeat: 0;
+      .content {
+        width: 200px;
+        margin: 20px auto;
+        text-align: center;
+            .ok {margin-top: 10px;}
+      }
+  }
 }
 
 .lil-auction-details {
@@ -512,14 +530,54 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
     img {margin-right: 10px;}
 }
 .prod-bid {
+  position:relative;
   width: 270px;
   text-align: center;
   margin: 0 10px 0 10px;
 
     ul, ul.u-save {list-style: none; margin: 0;padding: 0;}
+    div.auc-error2 {
+      position: absolute;
+      left: 0;
+      top: 100px;
+      height: 174px;
+      width: 281px;
+      background-image: url("/assets/Error2.png");
+      background-position: top center;
+      background-repeat: 0;
+          .content {
+            color: white;
+            margin: 60px 0 0 40px;
+            width: 200px;
+              .ok {margin-top: 10px; }
+          }
+
+    }
 }
 
-.prod-autobid {width: 240px; text-align: center;}
+.prod-autobid {
+  position:relative;
+  width: 240px;
+  text-align: center;
+      div.auc-error3 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 169px;
+        width: 238px;
+        background-image: url("/assets/Error1.png");
+        background-position: top center;
+        background-repeat: 0;
+        .content {
+          color: white;
+          margin: 60px 0 0 23px;
+          width: 200px;
+          .ok {margin-top: 10px; }
+        }
+
+      }
+}
+
 .auc-animation {width: 250px;
   text-align: center;
   margin: 20px auto;
