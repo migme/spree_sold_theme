@@ -1170,7 +1170,13 @@ $txt-gray: #979797;
 .white_content.mytoken{padding-bottom:0;}
 
 /* WON_AUCTION_TABLE */
-.white_content.mywon{padding-top:0;padding-bottom:0;}
+.white_content.mywon{
+  padding-top:0;
+  padding-bottom:0;
+      .page-wrap {width: 940px; text-align: center;}
+
+
+}
 .white_content{
   .about-content {width: 900px;
     margin: 0 auto;}
@@ -1234,10 +1240,13 @@ $txt-gray: #979797;
     }
   } /* tab */
 
-  ul.center{text-align:center;width:200px;margin:10px auto 0;
+  ul.center{text-align:center;margin:10px auto 0; display: inline-block;
     .circle{background-color:#FFF;border:1px solid lighten($txt-gray, 10%)}
     .circle.active{border:none;}
+
+
   }
+
 }
 
 .won_auction_table{
