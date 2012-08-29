@@ -10,8 +10,8 @@
                     <%= populate_notifications %>
                   </ul>
                 </li>
-                <li class="tb-myauctions"><span class="txt-18" id="user_ea">-</span><span class="txt-18">/4</span> <br>AUCTIONS</li>
-                <li class="tb-mytokens"><span class="txt-18" id="user_coin"></span><br>TOKENS</li>
+                <li class="tb-myauctions"><span class="txt-18" id="user_ea">-</span><span class="txt-18">/4</span> <br><%= link_to "AUCTIONS", my_won_auctions_path %></li>
+                <li class="tb-mytokens"><span class="txt-18" id="user_coin"></span><br><%= link_to "TOKENS", my_pack_tokens_path %></li>
                 <li><%= link_to "", purchase_tokens_url(:subdomain => false), :class => "tb-buy" %> </li>
           </ul>
         </div>
