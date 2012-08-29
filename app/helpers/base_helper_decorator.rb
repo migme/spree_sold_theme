@@ -2,9 +2,15 @@ Spree::BaseHelper.class_eval do
   def flash_messages
     flash.each do |msg_type, text|
       unless text.blank?
-        message_block = content_tag(:div, :class => "alert alert-#{msg_type}") do
+        type =  msg_type == :error ? "error" : "success"
+        message_block = content_tag(:div, :class => "alert alert-#{type}") do
           concat(content_tag(:a, "x", :class => "close", "data-dismiss" => "alert"))
-          concat(content_tag(:p, text))
+          if msg_type == :error
+          concat(content_tag(:span, text,:class => "txt-18 txt-red"))
+          else
+            concat(content_tag(:span, text,:class => "txt-18"))
+          end
+
         end
         concat(message_block)
       end
@@ -55,7 +61,16 @@ Spree::BaseHelper.class_eval do
         @auction_notifications <<  " #{link_to("Click here ", purchase_tokens_url(subdomain:false))} to purchase more!"
       end
 
-      @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn Bonus Tokens by Referring a Friend? #{link_to("Click here ", invitations_url(subdomain:false))} for more information!"
+      @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn Bonus Tokens by Referring a Friend?"
+      @auction_notifications << "#{link_to("Click here ", invitations_url(subdomain:false))} for more information!"
+    else
+      if current_user
+      @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! See something you like?"
+      else
+        @auction_notifications <<  "Welcome! See something you like?"
+      end
+
+      @auction_notifications << "<a href='#myRegistration' data-toggle='modal'>Activate</a> your Account to start bidding!"
     end
     ntfs=""
     @auction_notifications.each do |notification|
