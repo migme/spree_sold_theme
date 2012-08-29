@@ -55,7 +55,16 @@ Spree::BaseHelper.class_eval do
         @auction_notifications <<  " #{link_to("Click here ", purchase_tokens_url(subdomain:false))} to purchase more!"
       end
 
-      @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn Bonus Tokens by Referring a Friend? #{link_to("Click here ", invitations_url(subdomain:false))} for more information!"
+      @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn Bonus Tokens by Referring a Friend?"
+      @auction_notifications << "#{link_to("Click here ", invitations_url(subdomain:false))} for more information!"
+    else
+      if current_user
+      @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! See something you like?"
+      else
+        @auction_notifications <<  "Welcome! See something you like?"
+      end
+
+      @auction_notifications << "<a href='#myRegistration' data-toggle='modal'>Activate</a> your Account to start bidding!"
     end
     ntfs=""
     @auction_notifications.each do |notification|
