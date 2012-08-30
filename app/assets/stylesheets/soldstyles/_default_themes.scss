@@ -1058,7 +1058,13 @@ ul.subfooter li a {margin-right: 20px; color: gray;
   padding-top:20px;
     ul.contact {width: 400px;margin-left: 55px;}
     img {margin-left: 20px; margin-right:10px;}
-    .contact-form {width: 600px; padding-bottom: 20px; border-right: #CCCccc thin solid;}
+    .contact-form {
+      width: 600px;
+      padding-bottom: 20px;
+      border-right: #CCCccc thin solid;
+        .txt {height: 75px;}
+        a {margin-right: 10px}
+    }
     .contact-tel {width: 280px;}
     .contact-icon {height: 100px;}
 
