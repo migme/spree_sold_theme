@@ -2,15 +2,15 @@
         <!--toolbar for registered users -->
         <div class="toolbar">
           <ul class="toolbar-reg">
-            <li><a href="#" class="tb-myfavs"></a></li>
+            <li><%= link_to "", favourites_auctions_path, :class => "tb-myfavs" %></li>
                 <li><a href="#" class="tb-myauto"></a></li>
                 <li class="toolbar-notif">
                   <ul id="js-news" class="js-hidden">
                     <%= populate_notifications %>
                   </ul>
                 </li>
-                <li class="tb-myauctions"><span class="txt-18" id="user_ea">0</span><span class="txt-18">/4</span> <br><%= link_to "AUCTIONS", my_won_auctions_path %></li>
-                <li class="tb-mytokens"><span class="txt-18" id="user_coin">0</span><br><%= link_to "TOKENS", my_pack_tokens_path %></li>
+                <li class="tb-myauctions"><span class="txt-18" id="user_ea">0</span><span class="txt-18">/4</span> <br><%= link_to "AUCTIONS", my_won_auctions_path, :class => "txt-white"  %></li>
+                <li class="tb-mytokens"><span class="txt-18" id="user_coin">0</span><br><%= link_to "TOKENS", my_pack_tokens_path, :class => "txt-white" %></li>
                 <li><%= link_to "", purchase_tokens_url(:subdomain => false), :class => "tb-buy" %> </li>
           </ul>
         </div>
