@@ -25,11 +25,9 @@
           </div>
           <script type="text/javascript">
               $(document).ready(function(){
-                  $('#myRegistration').show();
+                  $('#myRegistration').modal('show');
               });
           </script>
-
-
       <% end %>
   <% else %>
       <div class="btn-group" id="login_box">
@@ -43,7 +41,7 @@
               <li class="pull-left"><%= f.submit "LOGIN", :class => 'btn btn-primary' %></li>
               <li class="midbtn pull-left"> or</li>
               <li class="fb-login pull-left">
-                <a href="users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a>
+                <a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a>
               </li>
               <!-- Remember me commented -->
               <% if false %>
