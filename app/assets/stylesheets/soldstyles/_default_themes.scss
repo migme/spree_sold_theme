@@ -436,18 +436,19 @@ padding: 10px;
   }
   div.auc-error {
       position: absolute;
-      left: -2px;
-      top: -8px;
-      height: 115px;
-      width: 233px;
-      background-image: url("/assets/Error3.png");
+      left: -30px;
+      bottom: -44px;
+      height: 174px;
+      width: 281px;
+      background-image: url("/assets/Error4.png");
       background-position: top center;
       background-repeat: 0;
         .content {
+          color: white;
           width: 200px;
-          margin: 20px auto;
+          margin: 58px auto;
           text-align: center;
-              .ok {margin-top: 10px;}
+              .ok {margin-top: 5px;}
         }
     }
 }
