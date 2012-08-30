@@ -1,9 +1,10 @@
 body {background: url("/assets/rough_diagonal.png"); font-family: 'Asap', sans-serif;}
 body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap', sans-serif;}
 .clearfix, .clear {clear: both;}
-.blackbg {background-color: black;
+.blackbg {
+  background-color: white;
   width: 940px;
-  height: 85px;
+  height: 83px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;}
 

@@ -93,6 +93,21 @@
   .btn-group .btn {
     margin-top: 0; // then undo the margin here so we don't accidentally double it
 
+    &#navi_soldger {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+      margin-top: -5px;
+        .arrow-down {margin: 10px 0 0 0; border-top: 5px solid black;}
+
+        span {margin: 5px 5px 0 5px;
+          text-transform: uppercase;
+          color: black;
+          font-weight: bold;}
+
+        &:hover, &:active, &.active {background: white;}
+    }
+
     &#navi_login { width:110px;
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
@@ -110,8 +125,9 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       color: gray;
-      font-weight: bold;}
-
+      font-weight: bold;
+          &:hover, &:active, &.active {background: white;}
+    }
   }
 }
 
@@ -328,11 +344,22 @@ li.divider-vertical.pull-right {
   }
 
   &.myaccount  {
-    right: 0px;
-    top: 24px;
+    width: 99%;
+    right: 1px;
+    top: 25px;
     border: none;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+    text-align: right;
+        li {margin-bottom: 5px;}
+        li.accnt-set {height: 24px; background-image: url("/assets/settingsdefault.png"); background-position: 5px; background-repeat: no-repeat;}
+        li.accnt-set >a:hover {background-image: url("/assets/settingsselect.png"); background-position: 5px; background-repeat: no-repeat;}
+
+        li.pay-his {height: 24px; background-image: url("/assets/historydefault.png"); background-position: 5px; background-repeat: no-repeat;}
+        li.pay-his >a:hover {background-image: url("/assets/historyselect.png"); background-position: 5px; background-repeat: no-repeat;}
+
+        li.go-away {height: 24px; background-image: url("/assets/exitdefault.png"); background-position: 5px; background-repeat: no-repeat;}
+        li.go-away >a:hover {background-image: url("/assets/exitselect.png"); background-position: 5px; background-repeat: no-repeat;}
   }
 
   &.login {right: 0;
