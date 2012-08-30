@@ -1,6 +1,7 @@
 <div class="nav menu-cover pull-right cta">
+  <div class="pull-left fb-main"><span class='st_fblike_hcount'></span> </div>
   <% if current_user %>
-      <div class="btn-group">
+      <div class="pull-right btn-group">
          
         <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><%= current_user.email %>
           <i class="icon-chevron-down"></i></button>
@@ -30,30 +31,25 @@
           </script>
       <% end %>
   <% else %>
-      <div class="btn-group" id="login_box">
-        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">LOGIN <i class="icon-chevron-down"></i>
-        </button>
-        <ul class="dropdown-menu login">
+      <div class="pull-right btn-group" id="login_box">
+        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" id="navi_login"><span class="pull-left">LOGIN</span>  <div class="pull-right arrow-down"></div></button>
+        <div class="dropdown-menu login">
           <%= form_for :user, :url => spree.user_session_url(:subdomain => false) do |f| %>
-              <%= f.email_field :email, :class => 'input-xlarge', :placeholder => "EMAIL ADDRESS" %>
-              <%= f.password_field :password, :class => 'input-xlarge', :placeholder => "PASSWORD" %>
-              <hr>
-              <li class="pull-left"><%= f.submit "LOGIN", :class => 'btn btn-primary' %></li>
-              <li class="midbtn pull-left"> or</li>
-              <li class="fb-login pull-left">
-                <a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a>
-              </li>
-              <!-- Remember me commented -->
-              <% if false %>
-                  <label class="checkbox">
-                    <%= f.check_box :remember_me %><span class="guestnav-check">Remember me</span>
-                    <a href="#" class="guestnav-forget">Forget Password?</a>
-                  </label>
-              <% end %>
+              <ul class="no-list" >
+                <li><%= f.email_field :email, :class => 'span8', :placeholder => "EMAIL ADDRESS" %></li>
+                <li><%= f.password_field :password, :class => 'span8', :placeholder => "PASSWORD" %></li>
+                <li class="pull-right"><%= f.submit "LOGIN", :class => 'btn btn-primary' %></li>
+                <li class="pull-left"><label class="checkbox">
+                  <%= f.check_box :remember_me %> Keep me logged in
+                </label></li>
+                <br class="clear">
+                <hr>
+                <div class="fb-login pull-left"><a href="users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a></div>
+                <br class="clear">
+              </ul>
           <% end %>
-          <br class="clearfix">
-        </ul>
-        <button data-toggle="modal" href="#myRegistration" class="btn btn-small">JOIN US</button>
+        </div>
+        <button data-toggle="modal" href="#myRegistration" class="btn btn-small" id="navi_join">JOIN US</button>
         <%= render :partial => 'spree/shared/register_modal', :locals => {:user => (@user || Spree::User.new)} %>
   <% end %>
   </div>
