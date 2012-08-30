@@ -20,10 +20,13 @@
            
         </ul>
       </div>
+      <% unless current_user.has_role?("auction_user") %>
+      <div id="myRegistration" class="modal hide fade">
+        <%= render :partial => "spree/shared/registration/join_auction", :locals => {:user => current_user} %>
+      </div>
+      <% end %>
       <% if @continue_registration %>
-          <div id="myRegistration" class="modal hide fade">
-            <%= render :partial => "spree/shared/registration/join_auction", :locals => {:user => current_user} %>
-          </div>
+
           <script type="text/javascript">
               $(document).ready(function(){
                   $('#myRegistration').modal('show');
