@@ -21,10 +21,20 @@
     & > li > a {
        padding: 8px 0 0 0;
        font-size: 14px;
-
+       color:white;
     }
-    li.home {
 
+    li.nav-divider {width: 1px;
+      border-left: #CCC thin solid;
+      height: 30px;
+      margin: 20px 0 0 15px;}
+
+    li.nav-divider2 {width: 1px;
+      border-left: #CCC thin solid;
+      height: 30px;
+      margin: 0 0 0 15px;}
+
+    li.home {
       margin-top: 5px;
       @include menu-item('auction1.png', 'auction1_hover.png');
       text-align: center;
@@ -36,14 +46,14 @@
       @include menu-item('shop1.png', 'shop1_hover.png');
       text-align: center;
       width: 55px;
-      margin-left: 30px;
+      margin-left: 15px;
     }
     li.sale{
       margin-top: 5px;
       @include menu-item('sale1.png', 'sale1_hover.png');
       text-align: center;
       width: 55px;
-      margin-left: 30px;
+      margin-left: 15px;
     }
     li.fb-like {margin: 0 10px;}
 
@@ -51,7 +61,7 @@
      @include menu-item('cart1.png', 'cart1_hover.png');
      width: 30px;
      height: 30px;
-     margin: 0 10px;
+      margin: 0 20px;
     }
 
     li.mail {
@@ -65,12 +75,14 @@
       @include menu-item('friend.png', 'friend_hover.png');
       width: 30px;
       height: 30px;
-      margin: 0 10px;
+      margin-left: 20px;
+      margin-right: 5px;
     }
     li.help{
       @include menu-item('help.png', 'help_hover.png');
       width: 30px;
       height: 30px;
+      margin-left: 20px;
     }
 
     li.cart a, li.mail a, li.friend a, li.help a {padding-top:30px;}
@@ -116,18 +128,27 @@
   z-index: 10000;
 }
 
-.navbar .nav.pull-right {margin: 8px 25px 0 0;}
+.navbar .nav.pull-right {margin: 8px 20px 0 0;}
 
 .nav.menu-cover.pull-right.cta {
-  padding: 0 0 0 35px;
-  margin: 10px 25px 0 1px;
+  margin: 12px 0 0 0;
+  //width: 250px;
+
 }
+
+.fb-main {width: 100px;
+  margin: 5px 0 0 0;}
+
+//login//
+.btn-group.open .dropdown-toggle {
+  background: white;}
+
 
 .badge-cart {
   position: absolute;
-  top: -3px;
-  left: 20px;
-  padding: 0px 7px 0px 6px;
+  top: 5px;
+  left: 25px;
+  padding: 1px 8px 1px 8px;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 10px;

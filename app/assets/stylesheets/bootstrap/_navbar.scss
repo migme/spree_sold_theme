@@ -18,8 +18,9 @@
   //@include border-radius(4px);
   //$shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1);
   //@include box-shadow($shadow);
+  height:90px;
   width: 954px;
-  background: url("/assets/navi-bground.png");
+  background: url('/assets/header.png');
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
@@ -69,7 +70,7 @@
     font-weight: 200;
     line-height: 1;
     color: $white;
-    margin-top: 8px;
+    //margin-top: 8px;
     margin-right: 15px;
   }
   // Plain text in topbar
@@ -85,9 +86,32 @@
   // Buttons in navbar
   .btn, .btn-group {
     margin-top: 5px; // make buttons vertically centered in navbar
+
+
+
   }
   .btn-group .btn {
     margin-top: 0; // then undo the margin here so we don't accidentally double it
+
+    &#navi_login { width:110px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+        .arrow-down {margin: 5px 20px 0 0px;
+          border-top: 5px solid gray;}
+        span {margin-left: 20px;
+          color: gray;
+          font-weight: bold;}
+
+        &:hover, &:active, &.active {background: white;}
+
+    }
+
+    &#navi_join {width: 110px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      color: gray;
+      font-weight: bold;}
+
   }
 }
 
@@ -311,7 +335,15 @@ li.divider-vertical.pull-right {
     border-top-right-radius: 0px;
   }
 
-  &.login {right: -25px;top: 25px; border: none;}
+  &.login {right: 0;
+    top: 23px;
+    border: none;
+    padding: 10px;
+    border-top-right-radius: 0px;
+      ul {margin: 0;}
+  }
+
+
   &.cart-preview {
     border: none;
     right: 0px;
