@@ -32,6 +32,7 @@ Spree::BaseHelper.class_eval do
 
   def populate_notifications
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
+        @auction_notifications ||= []
       if current_user.beginner?
         @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to Sold.sg? #{link_to("Click here ", "/faq")} for our FAQs!"
 
@@ -64,12 +65,7 @@ Spree::BaseHelper.class_eval do
       @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn Bonus Tokens by Referring a Friend?"
       @auction_notifications << "#{link_to("Click here ", invitations_url(subdomain:false))} for more information!"
     else
-      if current_user
-      @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! See something you like?"
-      else
-        @auction_notifications <<  "Welcome! See something you like?"
-      end
-
+      @auction_notifications <<  "Welcome! See something you like?"
       @auction_notifications << "<a href='#myRegistration' data-toggle='modal'>Activate</a> your Account to start bidding!"
     end
     ntfs=""
