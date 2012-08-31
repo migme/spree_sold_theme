@@ -3,7 +3,7 @@
         <div class="toolbar">
           <ul class="toolbar-reg">
             <li><%= link_to "", favourites_auctions_path, :class => "tb-myfavs" %></li>
-                <li><a href="#" class="tb-myauto"></a></li>
+                <li><%= link_to "", my_auto_bidders_auctions_path, :class => "tb-myauto" %></li>
                 <li class="toolbar-notif">
                   <ul id="js-news" class="js-hidden">
                     <%= populate_notifications %>
