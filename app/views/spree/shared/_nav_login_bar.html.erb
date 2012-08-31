@@ -1,23 +1,17 @@
 <div class="nav menu-cover pull-right cta">
   <div class="pull-left fb-main"><span class='st_fblike_hcount'></span> </div>
   <% if current_user %>
-      <div class="pull-right btn-group">
-         
-        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><%= current_user.email %>
-          <i class="icon-chevron-down"></i></button>
-         
+      <div class="pull-right btn-group account-cta">
+        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" id="navi_soldger">
+          <img src="/assets/user.png" alt="" class="pull-left">
+          <div class="pull-right arrow-down"></div>
+          <span class="pull-right"><%= full_name(current_user) %></span>
+        </button> 
         <ul class="dropdown-menu myaccount">
-               
-          <li><%= link_to("Account Settings", account_path(:subdomain => false)) %></li>
-               
-          <li><a href="#">Payment History</a></li>
-               
-          <li>
-            <hr>
-          </li>
-               
-          <li><%= link_to "Logout", spree.destroy_user_session_path(:subdomain => false) %></li>
-           
+          <li class="accnt-set"><%= link_to("Account Settings", account_path(:subdomain => false)) %></li>
+          <li class="pay-his"><%= link_to("Payment History", purchased_products_account_path(:subdomain => false)) %></li>
+          <li><hr></li>
+          <li class="go-away"><%= link_to "Logout", spree.destroy_user_session_path(:subdomain => false) %></li>        
         </ul>
       </div>
       <% unless current_user.has_role?("auction_user") %>

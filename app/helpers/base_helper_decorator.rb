@@ -30,6 +30,14 @@ Spree::BaseHelper.class_eval do
     "auction-bg" if params[:controller] == 'spree/auctions'
   end
 
+  def full_name(user)
+    if user.first_name && user.last_name
+      return  "#{user.first_name.capitalize}   #{user.last_name.capitalize}"
+    else
+       return user.email
+    end
+  end
+
   def populate_notifications
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
         @auction_notifications ||= []
