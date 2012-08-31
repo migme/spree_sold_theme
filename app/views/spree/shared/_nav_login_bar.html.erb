@@ -6,18 +6,18 @@
           <img src="/assets/user.png" alt="" class="pull-left">
           <div class="pull-right arrow-down"></div>
           <span class="pull-right"><%= full_name(current_user) %></span>
-        </button> 
+        </button>
         <ul class="dropdown-menu myaccount">
           <li class="accnt-set"><%= link_to("Account Settings", account_path(:subdomain => false)) %></li>
           <li class="pay-his"><%= link_to("Payment History", purchased_products_account_path(:subdomain => false)) %></li>
           <li><hr></li>
-          <li class="go-away"><%= link_to "Logout", spree.destroy_user_session_path(:subdomain => false) %></li>        
+          <li class="go-away"><%= link_to "Logout", spree.destroy_user_session_path(:subdomain => false) %></li>
         </ul>
       </div>
       <% unless current_user.has_role?("auction_user") %>
-      <div id="myRegistration" class="modal hide fade">
-        <%= render :partial => "spree/shared/registration/join_auction", :locals => {:user => current_user} %>
-      </div>
+          <div id="myRegistration" class="modal hide fade">
+            <%= render :partial => "spree/shared/registration/join_auction", :locals => {:user => current_user} %>
+          </div>
       <% end %>
       <% if @continue_registration %>
 
