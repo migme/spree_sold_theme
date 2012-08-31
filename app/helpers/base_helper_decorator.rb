@@ -23,11 +23,12 @@ Spree::BaseHelper.class_eval do
   end
 
   def show_banner?
-    true if params[:action] == "index"
+    true if (params[:action] == "index" and ["spree/home","spree/auctions","spree/products","spree/flash_sales"].include?(params[:controller])) or (params[:action] == "show" and params[:controller]=="spree/taxons") or (params[:action] == "list_sold_like" and params[:controller]=="spree/products")
   end
 
   def body_class
-    "auction-bg" if params[:controller] == 'spree/auctions'
+   @auction_body_class || ''
+
   end
 
   def full_name(user)
