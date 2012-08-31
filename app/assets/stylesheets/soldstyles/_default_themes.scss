@@ -1,5 +1,5 @@
 body {background: url("/assets/rough_diagonal.png"); font-family: 'Asap', sans-serif;}
-body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap', sans-serif;}
+body.auction-bg {background: url("/assets/auction-bground.png"); font-family: 'Asap', sans-serif;}
 .clearfix, .clear {clear: both;}
 .blackbg {
   background-color: white;
@@ -26,6 +26,14 @@ body.auction-bg {background: url("/assets/auction-bg.png"); font-family: 'Asap',
 .no-list {list-style: none;}
 .form-inline {margin-bottom: 10px;}
 .field-space {margin-right: 5px;}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid gray;
+}
 
 .arrow-right {
   width: 0px;
@@ -960,7 +968,7 @@ ul.subfooter li a {margin-right: 20px; color: gray;
 
 //--------------------terms, privacy, info-security---------------------//
 .term-main {
-  width: 940px;
+  width: 900px;
   background-color: white;
   @include border-radius($radius: 5px);
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
@@ -970,22 +978,36 @@ ul.subfooter li a {margin-right: 20px; color: gray;
       ul {width: 850px;}
       span.italic {font-style: italic;}
       p {font-size: 12px;}
+      .table {width: 350px;}
+      .table th {width: 120px;}
+      .table tbody tr, table tfoot tr {border: none;}
 }
 
 //--------------------guides---------------------//
 
 .guides-main {
-  width: 940px;
+  width: 900px;
   background-color: white;
   @include border-radius($radius: 5px);
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
   padding: 10px 20px 20px 20px;
   margin-bottom: 20px;
 
+    .return2top {
+      width: 85px;
+          a.return {
+            color: gray;
+          }
+          .arrow-up {margin: 5px 0 0 0;}
+    }
 
-    h3 {width: 250px;margin-right: 10px;}
+    a.no-effect:hover {text-decoration: none; color: #333;}
+
+
+
+    h3 {width: 200px;margin-right: 10px;}
     .guide-title {border-right: gray thin solid;
-      width: 700px;
+      width: 650px;
       padding-right: 20px;}
     ul.guide-links {
       width: 180px;
@@ -1154,6 +1176,8 @@ $txt-gray: #979797;
 .white_content{
   background-color: white;
   padding:26px 0;
+
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
 
   @include border_radius(5px);
   .content_padding{
