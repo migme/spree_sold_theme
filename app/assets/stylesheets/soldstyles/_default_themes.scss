@@ -356,41 +356,17 @@ padding: 10px;
     }
   }
 }
-.bid.login {width: 27px;
-  span.l-1 {
-    display: none;
-  }
-  span.l-2 {
-    display: block;
-  }
-}
-.bid.login:hover {
-  background: red;
-  padding-left: 20px;
-  padding-right: 40px;
-  span.l-1{
-    display: block;
-  }
-  span.l-2 {
-    display: none;
-  }
-}
+
 
 //auction homepage//
 
 .btn-bid {padding: 5px 30px 5px 30px;margin-top: 5px;}
-.btn-bid-small {padding: 3px 15px 3px 15px; margin: 8px 1px 0 0;}
+.btn-bid-small {
+  width: 60px;
+  padding: 3px 15px 3px 15px;
+  margin: 8px 1px 0 0;
+}
 .btn-bid:hover, .btn-bid-small:hover, .giant-btn:hover, .btn-shopadd:hover {background: #ff3300;}
-
-.bid.login {width: 50px;
-  span.l-1 {display: none;}
-  span.l-2 {display: block;}
-}
-.bid.login:hover {
-  background: red;
-    span.l-1 {display: block;}
-    span.l-2 {display: none;}
-}
 
 .auction-main-pagination li {
   color: #ffffff;
@@ -458,6 +434,19 @@ padding: 10px;
               .ok {margin-top: 5px;}
         }
     }
+
+  .bid.login {width:90px;
+    padding:5px;
+    span.l-1 {display: none;}
+    span.l-2 {display: block;}
+  }
+  .bid.login:hover { width:90px;
+    padding:5px;
+    background: red;
+    span.l-1 {display: block;}
+    span.l-2 {display: none;}
+  }
+
 }
 
 #beginner_auctions .auc-box:nth-child(3n+0), .container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0){
@@ -475,7 +464,7 @@ padding: 10px;
   box-shadow: 0px 3px 20px rgba(240, 123, 5, 1)
 }
 
-.auc-prod{width: 170px; font-weight: bold; margin: 3px 0 0 5px;}
+.auc-prod{width: 170px; font-weight: bold; margin: 3px 0 0 5px; height: 35px; overflow: hidden;}
 .star {margin: 5px 5px 5px 0; background: url("/assets/star_02.png"); width: 31px; height:30px;}
 .star:hover {background: url("/assets/star_01.png"); width: 31px; height:30px;}
 .auc-icons {margin: 0 0 0 5px; height: 27px;}
@@ -521,6 +510,17 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
   width: 130px;
   padding: 4px;
       div.user {font-size: 14px; height:15px}
+
+      .bid.login {width: 50px;
+        padding: 4px;
+        span.l-1 {display: none;}
+        span.l-2 {display: block;}
+      }
+      .bid.login:hover { width: 50px;
+        padding: 4px;
+        span.l-1 {display: block;}
+        span.l-2 {display: none;}
+      }
 
 }
 
@@ -575,6 +575,19 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
               .ok {margin-top: 10px; }
           }
 
+    }
+
+    .bid.login {width: 200px;
+      padding: 5px 25px 5px 25px;
+      span.l-1 {display: none;}
+      span.l-2 {display: block;}
+    }
+    .bid.login:hover {width: 200px;
+      padding: 5px 25px 5px 25px;
+      text-align: center;
+      background: red;
+        span.l-1 {display: block;}
+        span.l-2 {display: none;}
     }
 }
 

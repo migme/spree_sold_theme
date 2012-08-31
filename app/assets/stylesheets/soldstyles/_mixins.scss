@@ -6,10 +6,10 @@
 
   &:hover, &.active {
     background: image-url($hoverImageName) no-repeat center 0;
-    &.white-active{
-      background-color: white;
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px;
+    &.white-active.open {
+      border-radius: 2px;
+      width: 30px;
+      height: 30px;
     }
     //&.white-active a {padding-top:28px;}
     //background-position-y: 5px;
@@ -24,6 +24,9 @@
   &.dropdown.open .white-active{
     background: image-url($hoverImageName) no-repeat center 0 #fff;
     border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background-image: url("/assets/cart1_select.png");
+
   }
 }
 
