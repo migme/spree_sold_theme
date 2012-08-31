@@ -20,13 +20,13 @@
     <div class="pull-right foot-links">
       <ul class="pull-left no-list">
         <li class="foot-title"><strong>ABOUT US</strong></li>
-        <li><a href="#" target="_blank"> Behind The Scenes</a></li>
-        <li><a href="#" target="_blank">News & Paparazzi</a></li>
-        <li><a href="#" target="_blank">Mis-mitment</a></li>
+        <li><a href="/about-us" target="_blank"> Behind The Scenes</a></li>
+        <!--<li><a href="#" target="_blank">News & Paparazzi</a></li>-->
+        <!--<li><a href="#" target="_blank">Mis-mitment</a></li>-->
         <li><a href="#" target="_blank">Contact Us Maybe?</a></li>
-        <li><a href="#" target="_blank">Work With Us</a></li>
-        <li><a href="#" target="_blank">Happy Soldgers</a></li>
-        <li><a href="#" target="_blank">H.E.L.P!</a></li>
+        <li><a href="/work-with-us" target="_blank">Work With Us</a></li>
+        <!--<li><a href="#" target="_blank">Happy Soldgers</a></li> -->
+        <li><a href="http://feedback.sold.sg/knowledgebase" target="_blank">H.E.L.P!</a></li>
       </ul>
 
       <ul class="pull-left no-list">
@@ -35,7 +35,7 @@
         <li><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
         <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
         <li><a href="http://thesoldgers.wordpress.com/" target="_blank">Blog</a></li>
-        <li><a href="#" target="_blank">Perks</a></li>
+        <!--<li><a href="#" target="_blank">Perks</a></li>-->
       </ul>
 
       <%=  yield(:sub_footer) if content_for?(:sub_footer) %>
@@ -59,7 +59,13 @@
 
       <ul class="pull-left no-list inline">
         <li class="foot-title"><strong>SECURED BY</strong></li> <br>
-        <li><a href="#" target="_blank"> <img src="/assets/foot-norton.jpg" alt=""></a> </li>
+        <li><div width="135" align="center" valign="top">
+          <script src="https://seal.verisign.com/getseal?host_name=www.sold.sg&amp;size=M&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><a href="javascript:vrsn_splash()" tabindex="-1"><img name="seal" border="true" src="https://seal.verisign.com/getseal?at=0&amp;sealid=1&amp;dn=www.sold.sg&amp;lang=en" oncontextmenu="return false;" alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security"></a>
+          <br>
+          <a href="http://www.verisign.com.sg/ssl-certificate/" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">
+            ABOUT SSL CERTIFICATES
+          </a>
+        </div></li>
       </ul>
 
       <ul class="pull-left no-list inline">
