@@ -3,15 +3,23 @@
         <div class="toolbar">
           <ul class="toolbar-reg">
             <li><%= link_to "", favourites_auctions_url(subdomain: "auctions"), :class => "tb-myfavs" %></li>
-                <li><%= link_to "", my_auto_bidders_auctions_url(subdomain: "auctions"), :class => "tb-myauto" %></li>
-                <li class="toolbar-notif">
-                  <ul id="js-news" class="js-hidden">
-                    <%= populate_notifications %>
-                  </ul>
-                </li>
-                <li class="tb-myauctions"><span class="txt-18" id="user_ea">0</span><span class="txt-18">/4</span> <br><%= link_to "AUCTIONS", my_won_auctions_url(subdomain: "auctions"), :class => "txt-white"  %></li>
-                <li class="tb-mytokens"><span class="txt-18" id="user_coin">0</span><br><%= link_to "TOKENS", my_pack_tokens_url(subdomain: "auctions"), :class => "txt-white" %></li>
-                <li><%= link_to "", purchase_tokens_url(subdomain: "auctions"), :class => "tb-buy" %> </li>
+            <li><%= link_to "", my_auto_bidders_auctions_url(subdomain: "auctions"), :class => "tb-myauto" %></li>
+            <li class="toolbar-notif">
+              <ul id="js-news" class="js-hidden">
+                <%= populate_notifications %>
+              </ul>
+            </li>
+            <li class="tb-myauctions">
+              <%= link_to my_won_auctions_url(subdomain: "auctions"), :class => "txt-white"  do %>
+                  <span class="txt-18" id="user_ea">0</span><span class="txt-18">/4</span><br>AUCTIONS
+              <% end %>
+            </li>
+            <li class="tb-mytokens">
+              <%= link_to  my_pack_tokens_url(subdomain: "auctions"), :class => "txt-white" do %>
+                  <span class="txt-18" id="user_coin">0</span><br>TOKENS
+              <% end %>
+            </li>
+            <li><%= link_to "", purchase_tokens_url(subdomain: "auctions"), :class => "tb-buy" %> </li>
           </ul>
         </div>
 

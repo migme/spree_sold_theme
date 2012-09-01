@@ -362,7 +362,7 @@ padding: 10px;
 
 .btn-bid {padding: 5px 30px 5px 30px;margin-top: 5px;}
 .btn-bid-small {
-  width: 60px;
+  width: 25px;
   padding: 3px 15px 3px 15px;
   margin: 8px 1px 0 0;
 }
@@ -548,6 +548,14 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 }
 .sm-widgets  {margin-top: 5px;margin-bottom: 25px;}
 .auc-prod-big {width:700px;}
+.prod-image.big.auction{
+  #main-image{margin-top : 0px !important;width: 380px; height: 285px;}
+  .prod-thumbs {
+    margin-top: 20px;
+      li  {margin: 0 10px 0 0 !important; border : 0px !important;width :80px; height : 60px;}
+      img {margin-right: 0px;margin:0 auto; }
+  }
+}
 .prod-thumbs {
   margin-top: 20px;
     img {margin-right: 10px;}
@@ -614,13 +622,15 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
       }
 }
 
-.auc-animation {width: 250px;
+.auc-animation {width: 270px;
   text-align: center;
   margin: 20px auto;
   padding-top: 15px;
-  background-color: black;
   height: 30px;
   color: whiteSmoke;}
+.auc-animation.hurry-up{
+  background: url('/assets/ending-soon.gif');
+}
 
 .giant-timer {font-size: 58px; margin-bottom: 20px;}
 .giant-btn {
@@ -650,12 +660,15 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 .auto-label {line-height: 12px;font-size: 12px;margin-top: 5px;}
 .rev-btn {padding: 5px 10px 5px 10px;}
 .auto-btn {padding: 5px 29px 5px 29px;}
-
-table.auto-settings {
-  width: 230px;
-  color: white;
+div.auto-over{
+  max-height:150px;
+  overflow-y:scroll;
+  table.auto-settings {
+    width: 220px;
+    color: white;
     th, td, thead {text-align: center; }
     thead {background-color: rgba(0, 0, 0, 0.0);}
+  }
 }
 
 .table tbody tr:hover td,
@@ -1269,6 +1282,18 @@ $txt-gray: #979797;
           &.button{text-align:right; button{ margin-bottom:5px;}}
         }
 
+      }
+      div.auc-error {
+        position: absolute;
+        height: 169px;
+        width: 238px;
+        background: url("/assets/Error1.png") top no-repeat;
+        .content {
+          color: white;
+          margin: 60px 0 0 23px;
+          width: 200px;
+          .ok {margin-top: 10px; }
+        }
       }
     } /* set_bid */
   } /* right_col */
