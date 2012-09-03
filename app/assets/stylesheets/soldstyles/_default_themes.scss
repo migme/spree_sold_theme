@@ -1,6 +1,15 @@
 body {background: url("/assets/rough_diagonal.png"); font-family: 'Asap', sans-serif;}
 body.auction-bg {background: url("/assets/auction-bground.png"); font-family: 'Asap', sans-serif;}
-.clearfix, .clear {clear: both;}
+.clearfix, .clear {
+  display:inline-block;
+}
+.clearfix, .clear:after {
+  display:block;
+  visibility:hidden;
+  clear:both;
+  height:0;
+  content: ".";
+}
 .blackbg {
   background-color: white;
   width: 940px;
@@ -744,7 +753,7 @@ div.auto-over{
         .mydetail {width: 100px;}
   }
   ul.personal li {padding: 0; line-height: 2;}
-  a.btn-update {
+  .btn-update {
     margin: 0 35px 10px 0;
     padding: 5px 25px 5px 25px;}
 }
