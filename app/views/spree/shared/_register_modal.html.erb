@@ -1,3 +1,14 @@
 <div id="myRegistration" class="modal hide fade">
-     <%= render :partial => "spree/shared/registration/pending", :locals => {:user => user} %>
+  <% if 'validate_sms' == params[:t] %>
+
+      <%= render :partial => "spree/shared/registration/sms_validating" %>
+
+      <script type="text/javascript">
+          $(function () {
+              $('#myRegistration').modal({ keyboard:false, backdrop:'static', show:true })
+          });
+      </script>
+  <% else %>
+      <%= render :partial => "spree/shared/registration/pending", :locals => {:user => user} %>
+  <% end %>
 </div>
