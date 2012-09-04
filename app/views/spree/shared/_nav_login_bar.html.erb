@@ -31,7 +31,7 @@
       <div class="pull-right btn-group" id="login_box">
         <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" id="navi_login"><span class="pull-left">LOGIN</span>  <div class="pull-right arrow-down"></div></button>
         <div class="dropdown-menu login">
-          <%= form_for :user, :url => spree.user_session_url(:subdomain => false) do |f| %>
+          <%= form_for :user, :url => spree.user_session_path do |f| %>
               <ul class="no-list" >
                 <li><%= f.email_field :email, :class => 'span8', :placeholder => "EMAIL ADDRESS" %></li>
                 <li><%= f.password_field :password, :class => 'span8', :placeholder => "PASSWORD" %></li>
