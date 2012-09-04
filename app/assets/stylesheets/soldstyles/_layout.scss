@@ -61,12 +61,20 @@ p.input-hint {
   font-style: italic;
   font-size: 11px;
 }
-
+#join-auction-modal-box .control-group{
+  margin-bottom: 5px;
+}
+#myRegistration .no-label{
+  input.input-xxlarge{
+    width: 430px;
+  }
+}
 .no-lbl-inputs .no-label select {
   height: 30px;
   font-size: 13px;
   padding-left: 0;
   margin-left: 0;
+
   &#user_gender {
     width: 444px;
   }
