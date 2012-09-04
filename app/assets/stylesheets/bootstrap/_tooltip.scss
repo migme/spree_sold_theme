@@ -27,9 +27,11 @@
   text-decoration: none;
   background-color: $black;
   @include border-radius(4px);
+
 }
 .tooltip-arrow {
   position: absolute;
   width: 0;
   height: 0;
+  border: transparent thin solid;
 }
