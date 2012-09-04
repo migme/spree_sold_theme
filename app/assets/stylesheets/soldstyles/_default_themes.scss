@@ -132,7 +132,6 @@ a.page.circle {
 //toolbar-auction//
 .toolbar-reg, .toolbar-sale {margin: 0; padding: 0; color: #fff;}
 .toolbar-reg li {display: block; float:left; }
-.toolbar-shop-cat li {display: block; float:left; margin-right: 10px;}
 
 .tb-mypage {background-image: url("/assets/wrench.png"); background-repeat: no-repeat; background-position: top center;padding-top: 24px}
 .tb-myauctions, .tb-mytokens {
@@ -189,8 +188,14 @@ a.tb-buy {
 
 
 //toolbar-shop//
-.toolbar-shop-cat {padding: 13px; margin: 0;}
-.toolbar-shop-cat li a {color: #ffffff; font-size: 16px; margin-right: 5px;}
+.toolbar-shop-cat {
+  padding: 13px;
+  margin: 0;
+      li {display: block; float:left;}
+}
+
+//.toolbar-shop-cat li {display: block; float:left;}
+//.toolbar-shop-cat li a {color: #ffffff; font-size: 16px;}
 
 //toolbar-sale//
 .toolbar-sale li {list-style: none;margin-right: 20px; padding:10px;}
@@ -311,7 +316,7 @@ div#myRegistration.modal.hide.fade {
 
 //shopping cart preview//
 .btn-space {margin-right: 5px; }
-.empty-cart {border: gray 1px solid;
+.empty-cart {
   padding: 10px;
   text-align: center;
   margin-bottom: 10px;}
@@ -817,7 +822,7 @@ div.auto-over{
 
 .shop-box {
   width: 220px;
-  height: 300px;
+  height: 270px;
   background-color: #ffffff;
   margin-bottom: 20px;
   margin-right: 20px;
@@ -829,7 +834,7 @@ div.auto-over{
   &.right {margin:0;}
 
   &.persona {
-    height: 315px;
+    height: 290px;
     div.persona-wrap {
       background-color:#9999CC;
       color:white;
@@ -850,8 +855,9 @@ div.auto-over{
   box-shadow: 0px 3px 20px rgba(119, 212, 255, 1)
 }
 
-.shop-prod{font-weight: bold; margin: 5px 5px 15px 5px;}
-.shop-image {border-top: #dcdcdc thin solid; border-bottom: #dcdcdc thin solid; margin: 20px 0 20px 0; width:220px; height:165px; }
+.shop-prod{font-weight: bold; margin: 5px; height: 35px;
+  overflow: hidden;}
+.shop-image {margin: 10px 0 10px 0; width:220px; height:165px; }
 
 //categories//
 .view-cat {
