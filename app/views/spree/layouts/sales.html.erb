@@ -1,5 +1,6 @@
 <% content_for :content do %>
     <% @sale_body_class = "sale-bg"  %>
+    <% @fav_tag = 'favicon_sale.ico' %>
     <div class="container">
       <%= render :partial => 'spree/toolbars/sales' %>
       <%= yield %>
