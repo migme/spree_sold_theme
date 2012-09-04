@@ -1,4 +1,5 @@
 <% content_for :content do %>
+    <% @sale_body_class = "sale-bg"  %>
     <div class="container">
       <%= render :partial => 'spree/toolbars/sales' %>
       <%= yield %>

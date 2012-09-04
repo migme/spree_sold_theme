@@ -27,7 +27,7 @@ Spree::BaseHelper.class_eval do
   end
 
   def body_class
-   @auction_body_class || ''
+   @auction_body_class || @sale_body_class || ''
 
   end
 
