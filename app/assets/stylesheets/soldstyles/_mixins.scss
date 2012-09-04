@@ -54,17 +54,17 @@
 
 
 
-.navbar .menu-cover li.home a:hover, .home.active {
+.navbar .menu-cover li.home a:hover, .home.active a{
   color: #f07b05;
   text-shadow: 1px 1px 3px black;
 }
 
-.navbar .menu-cover li.shop a:hover, .shop.active {
+.navbar .menu-cover li.shop a:hover, .shop.active a{
   color: #77d4ff;
   text-shadow: 1px 1px 3px black;
 }
 
-.navbar .menu-cover li.sale a:hover, .sale.active {
+.navbar .menu-cover li.sale a:hover, .sale.active a{
   color: #ff3000;
   text-shadow: 1px 1px 3px black;
 }
