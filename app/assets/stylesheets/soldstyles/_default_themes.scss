@@ -754,11 +754,13 @@ div.auto-over{
 
 //auction-mypage//
 .mypage-main, .account-main, {
-  width: 760px;
+  width: 940px;
   background-color: white;
   @include border-radius($radius: 5px);
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
   margin: 0 0 20px 0;
+  padding-bottom: 10px;
+
 
   h1 {margin: 10px 0 0 10px;}
     span {margin-left: 10px; margin-right: 20px;}
