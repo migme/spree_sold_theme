@@ -418,7 +418,7 @@ a.btn-edit:hover {color: blue; text-decoration: none;}
 
 
 //---------------------auctions---------------------//
-
+#iconModal {width: 450px; padding: 0 20px 20px 20px;}
 
 //auction registration//
 div#myAuctions.modal.hide.fade {
@@ -433,8 +433,6 @@ div#myAuctions.modal.hide.fade {
       border-top-right-radius: 4px;
       .modal-header h2 {color: white;}
     }
-
-
 }
 div.impt-reminder {padding: 0 20px 0 20px;}
 
@@ -570,7 +568,13 @@ a.top-prod:hover {text-decoration: none;}
 .completed {border-top-right-radius: 0px;}
 
 .auc-bot-left{width: 100px;line-height: 28px;}
-.auc-bot-right {}
+
+.icon-help {
+  width:20px; height:20px;
+  background-image: url("/assets/help_icon_hover.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: 5px;}
 
 //auction product page//
 
@@ -642,7 +646,7 @@ a.top-prod:hover {text-decoration: none;}
   span.status-2{
     @extend .txt-red;
   }
-
+    .star {margin:0;}
 }
 .sm-widgets  {margin-top: 5px;margin-bottom: 25px;}
 .auc-prod-big {width:700px;}
@@ -724,7 +728,7 @@ a.top-prod:hover {text-decoration: none;}
   text-align: center;
   margin: 20px auto;
   padding-top: 15px;
-  height: 30px;
+  height: 25px;
   color: whiteSmoke;}
 .auc-animation.hurry-up{
   background: url('/assets/ending-soon.gif');
