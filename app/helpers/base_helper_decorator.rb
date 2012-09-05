@@ -28,7 +28,10 @@ Spree::BaseHelper.class_eval do
 
   def body_class
    @auction_body_class || @sale_body_class || ''
+  end
 
+  def fav_icon_for
+     @fav_tag || 'favicon_home.ico'
   end
 
   def full_name(user)

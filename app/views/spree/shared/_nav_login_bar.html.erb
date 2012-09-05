@@ -11,7 +11,7 @@
           <li class="accnt-set"><%= link_to("Account Settings", account_path(:subdomain => false)) %></li>
           <li class="pay-his"><%= link_to("Payment History", purchased_products_account_path(:subdomain => false)) %></li>
           <li><hr></li>
-          <li class="go-away"><%= link_to "Logout", spree.destroy_user_session_path(:subdomain => false) %></li>
+          <li class="go-away"><%= link_to "Logout", spree.destroy_user_session_path %></li>
         </ul>
       </div>
       <% unless current_user.has_role?("auction_user") %>
