@@ -418,7 +418,18 @@ a.btn-edit:hover {color: blue; text-decoration: none;}
 
 
 //---------------------auctions---------------------//
-#iconModal {width: 450px; padding: 0 20px 20px 20px;}
+#iconModal {
+  width: 450px;
+  padding: 0 20px 10px 20px;
+  .types {
+    margin: 10px;}
+  span.type-auc {
+    width: 350px;
+    margin-left: 20px;
+    margin-bottom: 10px;}
+  .modal-body {
+    padding: 5px 0 0 0;}
+}
 
 //auction registration//
 div#myAuctions.modal.hide.fade {
@@ -574,7 +585,7 @@ a.top-prod:hover {text-decoration: none;}
   background-image: url("/assets/help_icon_hover.png");
   background-repeat: no-repeat;
   background-position: top;
-  margin: 5px;}
+  margin: 7px;}
 
 //auction product page//
 
