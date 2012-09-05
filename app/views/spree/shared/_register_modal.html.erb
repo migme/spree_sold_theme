@@ -9,6 +9,6 @@
           });
       </script>
   <% else %>
-      <%= render :partial => "spree/shared/registration/pending", :locals => {:user => user} %>
+      <%= render :partial => "spree/shared/registration/sms_validating", :locals => {:user => user} %>
   <% end %>
 </div>
