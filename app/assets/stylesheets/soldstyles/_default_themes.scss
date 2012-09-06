@@ -25,7 +25,7 @@ br.clearfix, br.clear:after {
 .txt-orange, .lil-links {color:$soldOrange;}
 .txt-red {color: #ff0000;}
 .txt-green {color:#00CC33;}
-.txt-blue {color:#77d4ff;}
+.txt-blue {color:#416df1;}
 .txt-black {color:#000000;}
 .txt-36 {font-size: 36px;}
 .txt-24 {font-size: 24px;}
@@ -95,7 +95,7 @@ a.page.circle {
 //ads//
 .top-space {margin-top: 7px;}
 .banner-ad {width: 940px; height: 130px; border: gray 1px solid; margin: 10px 0 20px 0;}
-.square-ad {width: 210px; height:172px; border: gray 1px solid; margin: 25px 0 15px 15px;}
+.square-ad {width: 210px; height:172px; margin: 25px 0 15px 15px;}
 .vert-ad {width: 220px; height: 600px;  border: gray 1px solid; margin-bottom: 20px; background-color: #fff; &.small{height: 250px;}}
 
 
@@ -289,6 +289,7 @@ div#myCarousel.carousel.slide {
   margin-bottom: 5px;
   //display: table-cell;
   //vertical-align: bottom;
+    a:hover {text-decoration: none;}
 }
 
 .main-prod-img {
@@ -512,7 +513,7 @@ padding: 10px;
     }
 
   div.soldout {text-align: center; font-size: 24px; font-weight: bold;line-height: 20px;}
-  div.sale-img {margin: 10px 0 10px 0;height: 165px;
+  div.sale-img {margin: 10px 0 20px 0;height: 165px;
     width: 220px;}
   div.bottom-sale {margin: 0 10px;}
   span.status-1{
@@ -751,7 +752,10 @@ a.top-prod:hover {text-decoration: none;}
   margin: 10px 0 25px 0;
   font-size: 24px;}
 
-#auto_bidders{ height:200px}
+#auto_bidders{
+  height:200px;
+    th, td {border-top: none;}
+}
 .auto-box {
   text-align: center;
   padding: 5px 5px 0 5px;
@@ -771,7 +775,8 @@ a.top-prod:hover {text-decoration: none;}
 }
 .auto-info{margin-top: 10px;}
 .auto-label {line-height: 12px;font-size: 12px;margin-top: 5px;}
-.rev-btn {padding: 5px 10px 5px 10px;}
+.rev-btn {padding: 5px 10px 5px 10px; margin-bottom: 5px;
+  margin-top: 5px;}
 .auto-btn {padding: 5px 29px 5px 29px;}
 div.auto-over{
   max-height:150px;
@@ -779,7 +784,7 @@ div.auto-over{
   table.auto-settings {
     width: 220px;
     color: white;
-    th, td, thead {text-align: center; }
+    th, td, thead {text-align: center; border: none; padding: 5px;}
     thead {background-color: rgba(0, 0, 0, 0.0);}
   }
 }
@@ -920,9 +925,9 @@ div.auto-over{
 }
 
 .shop-box:hover, .shop-small:hover {
-  -webkit-box-shadow: 0px 3px 20px rgba(119, 212, 255, 1);
-  -moz-box-shadow: 0px 3px 20px rgba(119, 212, 255, 1);;
-  box-shadow: 0px 3px 20px rgba(119, 212, 255, 1)
+  -webkit-box-shadow: 0px 3px 20px rgba(65, 109, 241, 1);
+  -moz-box-shadow: 0px 3px 20px rgba(65, 109, 241, 1);;
+  box-shadow: 0px 3px 20px rgba(65, 109, 241, 1)
 }
 
 .shop-prod{font-weight: bold; margin: 5px; height: 35px;
@@ -1044,6 +1049,22 @@ div.auto-over{
 
     ul {list-style: none; padding: 10px; margin: 0;}
     p {margin-top: 5px;}
+    ul.promo-code {
+      border-bottom: #ccc thin dashed;
+      padding:7px 10px 0 10px;
+      input, textarea, select, .uneditable-input {font-size: 10px;}
+      p.input-error {
+        margin-top: -8px;
+        color: #9D261D;
+        font-style: italic;
+        font-size: 10px;
+        margin-bottom: 5px;
+      }
+      .icon-ok {margin-right: 5px;}
+    }
+    li.code {
+      input.span2 {width: 75px;}
+    }
 
 }
 
@@ -1213,6 +1234,7 @@ ul.subfooter li a {margin-right: 20px; color: gray;
         margin: 0 auto;
         padding-top: 70px;
             ol li {line-height: 30px;}
+            p {margin-top: 5px;}
       }
 }
 
