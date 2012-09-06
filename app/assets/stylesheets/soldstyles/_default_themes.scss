@@ -751,7 +751,10 @@ a.top-prod:hover {text-decoration: none;}
   margin: 10px 0 25px 0;
   font-size: 24px;}
 
-#auto_bidders{ height:200px}
+#auto_bidders{
+  height:200px;
+    th, td {border-top: none;}
+}
 .auto-box {
   text-align: center;
   padding: 5px 5px 0 5px;
@@ -771,7 +774,7 @@ a.top-prod:hover {text-decoration: none;}
 }
 .auto-info{margin-top: 10px;}
 .auto-label {line-height: 12px;font-size: 12px;margin-top: 5px;}
-.rev-btn {padding: 5px 10px 5px 10px;}
+.rev-btn {padding: 5px 10px 5px 10px;margin-bottom: 10px;}
 .auto-btn {padding: 5px 29px 5px 29px;}
 div.auto-over{
   max-height:150px;
