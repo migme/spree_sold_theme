@@ -1049,6 +1049,22 @@ div.auto-over{
 
     ul {list-style: none; padding: 10px; margin: 0;}
     p {margin-top: 5px;}
+    ul.promo-code {
+      border-bottom: #ccc thin dashed;
+      padding:7px 10px 0 10px;
+      input, textarea, select, .uneditable-input {font-size: 10px;}
+      p.input-error {
+        margin-top: -8px;
+        color: #9D261D;
+        font-style: italic;
+        font-size: 10px;
+        margin-bottom: 5px;
+      }
+      .icon-ok {margin-right: 5px;}
+    }
+    li.code {
+      input.span2 {width: 75px;}
+    }
 
 }
 
