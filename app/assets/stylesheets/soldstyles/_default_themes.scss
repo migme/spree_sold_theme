@@ -512,7 +512,7 @@ padding: 10px;
     }
 
   div.soldout {text-align: center; font-size: 24px; font-weight: bold;line-height: 20px;}
-  div.sale-img {margin: 10px 0 10px 0;height: 165px;
+  div.sale-img {margin: 10px 0 20px 0;height: 165px;
     width: 220px;}
   div.bottom-sale {margin: 0 10px;}
   span.status-1{
@@ -774,7 +774,8 @@ a.top-prod:hover {text-decoration: none;}
 }
 .auto-info{margin-top: 10px;}
 .auto-label {line-height: 12px;font-size: 12px;margin-top: 5px;}
-.rev-btn {padding: 5px 10px 5px 10px;margin-bottom: 10px;}
+.rev-btn {padding: 5px 10px 5px 10px; margin-bottom: 5px;
+  margin-top: 5px;}
 .auto-btn {padding: 5px 29px 5px 29px;}
 div.auto-over{
   max-height:150px;
@@ -782,7 +783,7 @@ div.auto-over{
   table.auto-settings {
     width: 220px;
     color: white;
-    th, td, thead {text-align: center; }
+    th, td, thead {text-align: center; border: none; padding: 5px;}
     thead {background-color: rgba(0, 0, 0, 0.0);}
   }
 }
