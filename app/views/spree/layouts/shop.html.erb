@@ -3,6 +3,7 @@
     <%= render :partial => 'spree/toolbars/shop' %>
     <%= yield %>
 <% end %>
+
 <% content_for :sub_footer do %>
     <ul class="pull-left no-list">
       <li class="foot-title"><strong>Shop</strong></li>
@@ -11,5 +12,6 @@
       <li><a href="http://feedback.sold.sg/knowledgebase" target="_blank">FAQ</a></li>
     </ul>
 <% end %>
+
 
 <%= render :template => 'spree/layouts/spree_application' %>

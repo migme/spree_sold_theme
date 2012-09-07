@@ -18,13 +18,12 @@
           <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
           <li class="nav-divider"></li>
           <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
-
         </ul>
 
         <ul class="nav menu-cover pull-right">
           <li class="cart white-active dropdown" id="mini_cart"></li>
           <li class="nav-divider2"></li>
-          <li class="<%= is_active?("spree/invite_friends") %> friend"><%= link_to '', invite_friends_url(subdomain:false),"rel" => "tooltip", "data-placement" => "bottom", "data-original-title" => "Invite Friends" %></li>
+          <li class="<%= is_active?("spree/invite_friends") %> friend"><%= link_to '', invite_friends_url,"rel" => "tooltip", "data-placement" => "bottom", "data-original-title" => "Invite Friends" %></li>
           <li class="nav-divider2"></li>
           <li class="help"><a href="http://feedback.sold.sg/knowledgebase" title="Help" rel="tooltip" data-placement="bottom" data-original-title="Knowledge Base"></a></li>
         </ul>
