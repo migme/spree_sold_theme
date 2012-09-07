@@ -1087,6 +1087,7 @@ div.auto-over{
   margin: 10px;
   padding-right: 20px;
       ul{list-style: none; margin: 0;}
+      a {color: #f07b05; &:hover {color: #333; text-decoration: none;}}
 
 }
 
@@ -1114,6 +1115,8 @@ ul.subfooter li a {margin-right: 20px; color: gray;
   padding-right: 20px;
     &.no-border {border: none;  }
 }
+
+.f-trustsg {padding-bottom: 35px;}
 
 
 //--------------------purchase history---------------------//

@@ -34,7 +34,7 @@
           <%= yield(:seo_footer) %>
       <% else %>
           <ul>
-                  <li><a href="http://www.sold.sg">Sold.sg</a> is Singapore’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li>
+                  <li><a href="http://www.sold.sg">Sold.sg</a> is Singapore’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
                   <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="http://shop.sold.sg">Sold.sg Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="http://auctions.sold.sg">Sold.sg Auctions</a>. We also have daily sales on our Sales site – these limited quantity items are awesome deals, often heavily discounted, and sell very quickly – so don’t miss out! </li><br>
                   <li><a href="http://www.sold.sg">Sold.sg</a> have an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
 
@@ -67,24 +67,25 @@
 
       <%=  yield(request.subdomain.to_sym) %>
 
-      <ul class="pull-right no-list inline">
+      <ul class="pull-left no-list inline">
         <li class="foot-title"><strong>FOLLOW US</strong></li> <br>
-        <li><a href="http://www.facebook.com/soldsg"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
-        <li><a href="http://www.twitter.com/solddotsg"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
-        <li> <a href="http://thesoldgers.wordpress.com/"> <img src="/assets/foot-blog.jpg" alt=""></a></li>
+        <li><a href="http://www.facebook.com/soldsg" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
+        <li><a href="http://www.twitter.com/solddotsg " target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
+        <li> <a href="http://thesoldgers.wordpress.com/" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li> <br><br>
+        <li class="foot-title"><strong>PAYMENT</strong></li> <br>
+        <li><a href="#" target="_blank"> <img src="/assets/foot-pay1.jpg" alt=""></a> </li>
+        <li><a href="#" target="_blank"> <img src="/assets/foot-pay2.jpg" alt=""></a></li>
       </ul>
-      <br class="clear">
-      <div class="fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div>
       <br class="clear">
       <br class="clear">
       <hr>
       <br class="clear">
 
-      <ul class="pull-left no-list inline">
-        <li class="foot-title"><strong>PAYMENT</strong></li> <br>
-        <li><img src="/assets/foot-pay1.jpg" alt=""> </li>
-        <li><img src="/assets/foot-pay2.jpg" alt=""></li>
-      </ul>
+      <!--<ul class="pull-left no-list inline">-->
+        <!--<li class="foot-title"><strong>PAYMENT</strong></li> <br>-->
+        <!--<li><img src="/assets/foot-pay1.jpg" alt=""> </li>-->
+        <!--<li><img src="/assets/foot-pay2.jpg" alt=""></li>-->
+      <!--</ul>-->
 
       <!--<ul class="pull-left no-list inline">-->
         <!--<li class="foot-title"><strong>SECURED BY</strong></li> <br>-->
@@ -102,6 +103,10 @@
         <li class="foot-title"><strong>ACCREDITED BY</strong></li> <br>
         <li><a href="http://www.cnsg.com.sg/accreditation/Soldgers.pdf" target="_blank"> <img src="/assets/f-trus-b2c.gif" width="90px" alt=""></a> </li>
         <li class="f-trustsg"><img src="/assets/f-trustsg.gif" width="90px" alt=""> </li>
+      </ul>
+
+      <ul class="pull-left no-list">
+        <li><div class="fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div></li>
       </ul>
 
     </div>
