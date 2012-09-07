@@ -582,7 +582,7 @@ a.top-prod:hover {text-decoration: none;}
 .auc-bot-left{width: 100px;line-height: 28px;}
 
 .icon-help {
-  width:20px; height:20px;
+  width:22px; height:20px;
   background-image: url("/assets/help_icon_hover.png");
   background-repeat: no-repeat;
   background-position: top;
@@ -1765,6 +1765,34 @@ $txt-gray: #979797;
       li.no-border {border: none;}
       a {  text-shadow: 1px 1px 3px #999; color:#333; &:hover {font-weight: bold; color: black;}}
     }
+}
+
+//shipping and returns//
+.ship-main {  width: 900px;
+  background-color: white;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 20px;
+    a {color: #f07b05; &:hover{text-decoration:none;}}
+    ol li {margin-bottom: 20px;}
+}
+
+//our products//
+.our-products {width: 940px;
+  background-color: white;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  padding: 10px 0 20px 0;
+  margin-bottom: 20px;
+    h1 {margin-left: 20px; margin-bottom: 5px;}
+    hr {width: 900px; margin: 0 auto;}
+    .dark-bg {background-color: #333;
+      width: 760px;
+      padding: 20px 80px 0 100px;
+      color: #ffffff;}
+    p {text-align: center;}
+    .txt-24 {font-size: 21px;}
 }
 
 //--------------------------------------------------------------OLD CODES [please moves your codes above this line]--------------------------------------------------------------//
