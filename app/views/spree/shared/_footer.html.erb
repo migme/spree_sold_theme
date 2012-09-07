@@ -1,3 +1,29 @@
+<% content_for :sales do %>
+    <ul class="pull-left no-list">
+      <li class="foot-title"><strong>Sale</strong></li>
+      <li><a href="#">About Sales</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+<% end %>
+<% content_for :shop do %>
+    <ul class="pull-left no-list">
+      <li class="foot-title"><strong>Shop</strong></li>
+      <li><%= link_to 'Our Products', products_url(subdomain: 'shop') %></li>
+      <li><a href="#">Shipping & Returns</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+<% end %>
+<% content_for :auctions do %>
+    <ul class="pull-left no-list">
+      <li class="foot-title"><strong>AUCTIONS</strong></li>
+      <li><%= link_to 'Completed', completed_auctions_url %></li>
+      <li><a href="/guide-rules" target="_blank">Essential Rules</a></li>
+      <li><a href="/guide-beginner" target="_blank">How It Works</a></li>
+      <li><a href="http://feedback.sold.sg/knowledgebase" target="_blank">FAQ</a></li>
+    </ul>
+<% end %>
+
+
 <footer id="neo_footer">
   <div class="footer-shadow"></div>
   <div class="container-footer">
@@ -37,7 +63,7 @@
         <!--<li><a href="#" target="_blank">Perks</a></li>-->
       </ul>
 
-      <%=  yield(:sub_footer) if content_for?(:sub_footer) %>
+      <%=  yield(request.subdomain.to_sym) %>
 
       <ul class="pull-right no-list inline">
         <li class="foot-title"><strong>FOLLOW US</strong></li> <br>

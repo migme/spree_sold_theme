@@ -27,7 +27,14 @@ Spree::BaseHelper.class_eval do
   end
 
   def body_class
-   @auction_body_class || @sale_body_class || ''
+    case request.subdomain
+      when "auctions"
+        "auction-bg"
+      when "sales"
+        "sale-bg"
+      else
+        ""
+    end
   end
 
   def fav_icon_for
