@@ -1119,9 +1119,11 @@ select.ship-address {width: 380px; height: 30px;}
 }
 
 ul.subfooter{padding-left: 5px;}
-ul.subfooter li a {margin-right: 20px; color: gray;
+ul.subfooter li a {
+  margin-right: 20px; color: gray;
   border-right: gray thin dashed;
   padding-right: 20px;
+    &:hover {color: #f07b05; text-decoration: none;}
     &.no-border {border: none;  }
 }
 
