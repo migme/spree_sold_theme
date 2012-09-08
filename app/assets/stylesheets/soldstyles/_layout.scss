@@ -217,3 +217,10 @@ p.input-hint {
 .facebook-like{
   float: right;clear: right;
 }
+
+input.input-xlarge{
+  &.cart-address{
+    width:390px;
+  }
+
+}
