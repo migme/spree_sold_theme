@@ -96,7 +96,15 @@ a.page.circle {
 .top-space {margin-top: 7px;}
 .banner-ad {width: 940px; height: 130px; border: gray 1px solid; margin: 10px 0 20px 0;}
 .square-ad {width: 210px; height:172px; margin: 25px 0 15px 15px;}
-.vert-ad {width: 220px; height: 600px;  border: gray 1px solid; margin-bottom: 20px; background-color: #fff; &.small{height: 250px;}}
+.vert-ad {
+  width: 220px; 
+  height: 600px;  
+  border: gray 1px solid; 
+  margin-bottom: 20px; 
+  background-image: url("/assets/ThrillSeeker.gif");
+  background-color: #fff; 
+    &.small{height: 250px; background-image: url("/assets/Adspace1_220.jpg");}
+}
 
 
 #rookie {
@@ -110,6 +118,7 @@ a.page.circle {
   width: 220px;
   height: 165px;
   margin: 0 auto;
+  text-align: center;
     &.big {width: 380px; height:285px;}}
 
 
@@ -298,7 +307,7 @@ div#myCarousel.carousel.slide {
   width: 300px;
   height: 240px;
   background-image: url("/assets/main-divider.jpg"); background-position: bottom center; background-repeat: no-repeat;
-
+  text-align: center;
 }
 .main-top-bar  {
   width: 290px;
@@ -741,6 +750,7 @@ a.top-prod:hover {text-decoration: none;}
   margin: 20px auto;
   padding-top: 15px;
   height: 25px;
+  color:red;
   }
 .auc-animation.hurry-up{
   background: url('/assets/ending-soon.gif');
@@ -1087,6 +1097,7 @@ div.auto-over{
   margin: 10px;
   padding-right: 20px;
       ul{list-style: none; margin: 0;}
+      ul li a {color: #f07b05; &:hover {color: #333; text-decoration: none;}}
 
 }
 
@@ -1109,11 +1120,15 @@ select.ship-address {width: 380px; height: 30px;}
 }
 
 ul.subfooter{padding-left: 5px;}
-ul.subfooter li a {margin-right: 20px; color: gray;
+ul.subfooter li a {
+  margin-right: 20px; color: gray;
   border-right: gray thin dashed;
   padding-right: 20px;
+    &:hover {color: #f07b05; text-decoration: none;}
     &.no-border {border: none;  }
 }
+
+.f-trustsg {padding-bottom: 35px;}
 
 
 //--------------------purchase history---------------------//
