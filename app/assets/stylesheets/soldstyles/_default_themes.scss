@@ -493,6 +493,7 @@ padding: 10px;
 }
 
 .auc-box, .sale-box, .upsale-box{
+  cursor: pointer;
   position: relative;
   width: 220px;
   height: 310px;
@@ -906,6 +907,7 @@ div.auto-over{
 }
 
 .shop-box {
+  cursor: pointer;
   width: 220px;
   height: 270px;
   background-color: #ffffff;
