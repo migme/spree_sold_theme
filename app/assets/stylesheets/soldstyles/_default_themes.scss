@@ -121,6 +121,31 @@ a.page.circle {
   text-align: center;
     &.big {width: 380px; height:285px;}}
 
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+//---------scrollbars---------//
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 7px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(255,0,0,0.4);
+}
+
 
 
 //---------toolbars---------//
@@ -580,7 +605,7 @@ padding: 10px;
   -moz-box-shadow: 0px 3px 20px rgba(240, 123, 5, 1);;
   box-shadow: 0px 3px 20px rgba(240, 123, 5, 1)
 }
-
+.auc-icons-big {text-align: left;}
 .auc-prod{width: 170px; font-weight: bold; margin: 3px 0 0 5px; height: 38px; overflow: hidden;}
 .star {margin: 5px 5px 5px 0; background: url("/assets/star_02.png"); width: 31px; height:30px;}
 .star:hover {background: url("/assets/star_01.png"); width: 31px; height:30px;}
@@ -786,8 +811,7 @@ a.top-prod:hover {text-decoration: none;}
 }
 .auto-info{margin-top: 10px;}
 .auto-label {line-height: 12px;font-size: 12px;margin-top: 5px;}
-.rev-btn {padding: 5px 10px 5px 10px; margin-bottom: 5px;
-  margin-top: 5px;}
+.rev-btn {padding: 5px 10px 5px 10px; margin-bottom: 5px;}
 .auto-btn {padding: 5px 29px 5px 29px;}
 div.auto-over{
   max-height:150px;
@@ -988,6 +1012,8 @@ div.auto-over{
 
 
 //--------------------shopping cart---------------------//
+
+.line_item_quantity {width: 35px;}
 
 .shopping-main {
   padding: 20px 0 0 0;
