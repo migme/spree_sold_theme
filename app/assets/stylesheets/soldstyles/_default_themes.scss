@@ -34,7 +34,7 @@ br.clearfix, br.clear:after {
 .txt-14 {font-size: 14px;}
 .txt-12 {font-size: 12px;}
 
-.dark-link {color: $soldOrange;}
+.dark-link {color: $soldOrange; &:hover {text-decoration: none;}}
 .no-list {list-style: none;}
 .form-inline {margin-bottom: 10px;}
 .field-space {margin-right: 5px;}
