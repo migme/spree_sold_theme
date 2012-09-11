@@ -119,7 +119,9 @@ a.page.circle {
   height: 165px;
   margin: 0 auto;
   text-align: center;
-    &.big {width: 380px; height:285px;}}
+    &.big {width: 380px;}
+    span#main-image {height: 285px;}
+}
 
 ::-webkit-scrollbar {
   width: 5px;
