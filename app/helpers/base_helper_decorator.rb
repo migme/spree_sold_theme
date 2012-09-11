@@ -51,7 +51,7 @@ Spree::BaseHelper.class_eval do
 
   def populate_notifications
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
-        @auction_notifications ||= []
+      @auction_notifications ||= []
       if current_user.beginner?
         @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to Sold.sg? #{link_to("Click here ", "http://feedback.sold.sg/knowledgebase/topics/3851-auction")} for our FAQs!"
 
@@ -70,10 +70,14 @@ Spree::BaseHelper.class_eval do
         @auction_notifications << " Currently selling at #{auction.saving_rate_for_winner}% off! #{link_to("Bid now!",show_auction_url(auction.permalink,auction.id,:subdomain => "auctions"))} to take it home!"
       end
 
-      if current_user.eligible_auctions == 0
-        @auction_notifications << "Hi #{current_user.first_name.capitalize} - you are currently participating in 4 Auctions!"
-        @auction_notifications << " 4 Auctions is the limit so kick back and enjoy!"
-        @auction_notifications << " You can start bidding when one of these Auctions ends!"
+      won_count = current_user.won_auctions.joins(:variant).joins("INNER JOIN spree_products on spree_variants.product_id= spree_products.id").where("spree_products.token_pack = false and spree_auctions.free=false").joins("INNER JOIN spree_auction_limits on spree_auction_limits.auction_id = spree_auctions.id").count
+      if won_count >= 4
+        al = current_user.auction_limits.first
+        unless al.nil?
+          @auction_notifications << "Hi #{current_user.first_name.capitalize} - you are currently participating in 4 Auctions!"
+          @auction_notifications << " 4 Auctions is the limit so kick back and enjoy!"
+          @auction_notifications << " You can start bidding on #{(al.created_at +14.days).strftime("%Y-%m-%d")}"
+        end
       end
 
       if current_user.coin < 20
@@ -92,5 +96,7 @@ Spree::BaseHelper.class_eval do
       ntfs += content_tag(:li, notification.html_safe, class: 'news-item').html_safe
     end if @auction_notifications
     ntfs.html_safe
+  rescue
+    ""
   end
 end
