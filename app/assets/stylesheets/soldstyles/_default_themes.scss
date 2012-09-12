@@ -909,6 +909,8 @@ div.auto-over{
 
 //---------------------shop main---------------------//
 
+.shop-fix {width: 380px; text-align: center;}
+
 .shop {
   @include border-radius($radius: 5px);
 }
