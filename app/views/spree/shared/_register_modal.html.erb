@@ -2,8 +2,9 @@
   <% if 'validate_sms' == params[:t] %>
 
       <%= render :partial => "spree/shared/registration/sms_validating" %>
-
+       
       <script type="text/javascript">
+          _kmq.push(['record', "Joined Auction"]);
           $(function () {
               $('#myRegistration').modal({ keyboard:false, backdrop:'static', show:true })
           });
