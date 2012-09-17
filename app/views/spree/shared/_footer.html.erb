@@ -1,25 +1,27 @@
 <% content_for :sales do %>
     <ul class="pull-left no-list">
-      <li class="foot-title"><strong>Sale</strong></li>
-      <li><a href="#">About Sales</a></li>
-      <li><a href="#">FAQ</a></li>
+      <li class="foot-title"><strong>SALE</strong></li>
+      <li><a href="/about-sales">About Sales</a></li>
+      <li><a href="http://feedback.sold.sg/knowledgebase/topics/18990-sales" target="_blank">FAQ</a></li>
     </ul>
 <% end %>
 <% content_for :shop do %>
     <ul class="pull-left no-list">
-      <li class="foot-title"><strong>Shop</strong></li>
-      <li><%= link_to 'Our Products', products_url(subdomain: 'shop') %></li>
-      <li><a href="#">Shipping & Returns</a></li>
-      <li><a href="#">FAQ</a></li>
+      <li class="foot-title"><strong>SHOP</strong></li>
+      <li><a href="/our-products">Our Products</a></li>
+      <li><a href="/shipping">Shipping/Returns</a></li>
+      <li><a href="http://feedback.sold.sg/knowledgebase/topics/18929-shop" target="_blank">FAQ</a></li>
     </ul>
 <% end %>
+
+
 <% content_for :auctions do %>
     <ul class="pull-left no-list">
       <li class="foot-title"><strong>AUCTIONS</strong></li>
-      <li><%= link_to 'Completed', completed_auctions_url %></li>
-      <li><a href="/guide-rules" target="_blank">Essential Rules</a></li>
-      <li><a href="/guide-beginner" target="_blank">How It Works</a></li>
-      <li><a href="http://feedback.sold.sg/knowledgebase" target="_blank">FAQ</a></li>
+      <li><%= link_to 'Completed', completed_auctions_url(subdomain: 'auctions') %></li>
+      <li><a href="/guide-rules">Essential Rules</a></li>
+      <li><a href="/guide-beginner">How It Works</a></li>
+      <li><a href="http://feedback.sold.sg/knowledgebase/topics/3851-auction" target="_blank">FAQ</a></li>
     </ul>
 <% end %>
 
@@ -32,11 +34,11 @@
           <%= yield(:seo_footer) %>
       <% else %>
           <ul>
-                  <li><strong>Singapore’s Best Online Entertainment Shopping</strong></li>
-                  <li>Sold.sg is a premium online entertainment shopping website that offers you the latest, brand new products and services! A great variety of deals are put up for sale daily. These deals include PS3, iPads, iPhones, Wii, digital cameras, tv sets, airline tickets to popular destinations, hotel and spa vouchers and many more at amazing sale prices!	</li><br>
-                  <li>Sounds tough? Bidding on our site isn’t all that complicated once you get the hang of it. Take your time to explore the website and get yourself familiarized with the process.	</li><br>
-                  <li>Why us? If you’re looking for great sales in town, look no more because only we offer you the most amazing deals for bidding! Secure your best deals with us and rest assured that you would get your best online shopping experience. It’s a sale like no other so what you waiting for? Start bidding on Sold.sg now!	</li><br>
-                </ul>
+                  <li><a href="http://www.sold.sg">Sold.sg</a> is Singapore’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
+                  <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="http://shop.sold.sg">Sold.sg Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="http://auctions.sold.sg">Sold.sg Auctions</a>. We also have daily sales on our Sales site – these limited quantity items are awesome deals, often heavily discounted, and sell very quickly – so don’t miss out! </li><br>
+                  <li><a href="http://www.sold.sg">Sold.sg</a> is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
+
+          </ul>
       <% end %>
 
 
@@ -51,7 +53,7 @@
         <li><%= link_to 'Contact Us Maybe?', "/contact-us" %></li>
         <li><a href="/work-with-us">Work With Us</a></li>
         <!--<li><a href="#" target="_blank">Happy Soldgers</a></li> -->
-        <li><a href="http://feedback.sold.sg/knowledgebase">H.E.L.P!</a></li>
+        <li><a href="http://feedback.sold.sg/knowledgebase" target="_blank">H.E.L.P!</a></li>
       </ul>
 
       <ul class="pull-left no-list">
@@ -67,37 +69,45 @@
 
       <ul class="pull-right no-list inline">
         <li class="foot-title"><strong>FOLLOW US</strong></li> <br>
-        <li><a href="http://www.facebook.com/soldsg"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
-        <li><a href="http://www.twitter.com/solddotsg"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
-        <li> <a href="http://thesoldgers.wordpress.com/"> <img src="/assets/foot-blog.jpg" alt=""></a></li>
+        <li><a href="http://www.facebook.com/soldsg" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
+        <li><a href="http://www.twitter.com/solddotsg " target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
+        <li> <a href="http://thesoldgers.wordpress.com/" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li> <br><br>
+        <li class="foot-title"><strong>PAYMENT</strong></li> <br>
+        <li><img src="/assets/foot-pay1.jpg" alt=""></li>
+        <li><img src="/assets/foot-pay2.jpg" alt=""></li>
       </ul>
       <br class="clear">
+
       <br class="clear">
       <hr>
       <br class="clear">
 
-      <ul class="pull-left no-list inline">
-        <li class="foot-title"><strong>PAYMENT</strong></li> <br>
-        <li><a href="#"> <img src="/assets/foot-pay1.jpg" alt=""></a> </li>
-        <li><a href="#"> <img src="/assets/foot-pay2.jpg" alt=""></a></li>
-      </ul>
+      <!--<ul class="pull-left no-list inline">-->
+        <!--<li class="foot-title"><strong>PAYMENT</strong></li> <br>-->
+        <!--<li><img src="/assets/foot-pay1.jpg" alt=""> </li>-->
+        <!--<li><img src="/assets/foot-pay2.jpg" alt=""></li>-->
+      <!--</ul>-->
 
-      <ul class="pull-left no-list inline">
-        <li class="foot-title"><strong>SECURED BY</strong></li> <br>
-        <li><div width="135" align="center" valign="top">
-          <script src="https://seal.verisign.com/getseal?host_name=www.sold.sg&amp;size=M&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><a href="javascript:vrsn_splash()" tabindex="-1"><img name="seal" border="true" src="https://seal.verisign.com/getseal?at=0&amp;sealid=1&amp;dn=www.sold.sg&amp;lang=en" oncontextmenu="return false;" alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security"></a>
-          <br>
-          <a href="http://www.verisign.com.sg/ssl-certificate/" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">
-            ABOUT SSL CERTIFICATES
-          </a>
-        </div>
-        </li>
-      </ul>
+      <!--<ul class="pull-left no-list inline">-->
+        <!--<li class="foot-title"><strong>SECURED BY</strong></li> <br>-->
+        <!--<li><div width="135" align="center" valign="top">-->
+          <!--<script src="https://seal.verisign.com/getseal?host_name=www.sold.sg&amp;size=M&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><a href="javascript:vrsn_splash()" tabindex="-1"><img name="seal" border="true" src="https://seal.verisign.com/getseal?at=0&amp;sealid=1&amp;dn=www.sold.sg&amp;lang=en" oncontextmenu="return false;" alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security"></a>-->
+          <!--<br>-->
+          <!--<a href="http://www.verisign.com.sg/ssl-certificate/" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">-->
+            <!--ABOUT SSL CERTIFICATES-->
+          <!--</a>-->
+        <!--</div>-->
+        <!--</li>-->
+      <!--</ul>-->
 
-      <ul class="pull-left no-list inline">
+      <ul class="pull-right no-list inline">
         <li class="foot-title"><strong>ACCREDITED BY</strong></li> <br>
-        <li><a href="#"> <img src="/assets/foot-ct.jpg" alt=""></a> </li>
-        <li><a href="#"> <img src="/assets/foot-trustsg.jpg" alt=""></a> </li>
+        <li><a href="http://www.cnsg.com.sg/accreditation/Soldgers.pdf" target="_blank"> <img src="/assets/f-trus-b2c.gif" width="90px" alt=""></a> </li>
+        <li><img src="/assets/f-trustsg.gif" width="90px" alt="" class="f-trustsg" style="padding-bottom: 35px;"> </li>
+      </ul>
+
+      <ul class="pull-left no-list" style="margin: 0;">
+        <li><div class="fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div></li>
       </ul>
 
     </div>
@@ -105,8 +115,8 @@
     <br class="clear">
     <ul class="no-list inline subfooter" style="margin: 0;">
       <li><a href="/terms">Terms of Use</a></li>
-      <li><a href="/privacy">Privacy Policy</a></li>
-      <li><a href="/info-security" class="no-border">Information Security</a></li>
+      <li><a href="/privacy" class="no-border">Privacy Policy</a></li>
+      <!--<li><a href="/info-security" class="no-border">Information Security</a></li>-->
       <li class="pull-right">© 2012 Soldgers. All Rights Reserved.</li>
     </ul>
     <br class="clear">

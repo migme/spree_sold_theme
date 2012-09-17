@@ -61,14 +61,17 @@ p.input-hint {
   font-style: italic;
   font-size: 11px;
 }
-#join-auction-modal-box .control-group{
+
+#join-auction-modal-box .control-group {
   margin-bottom: 5px;
 }
-#myRegistration .no-label{
-  input.input-xxlarge{
+
+#myRegistration .no-label {
+  input.input-xxlarge {
     width: 430px;
   }
 }
+
 .no-lbl-inputs .no-label select {
   height: 30px;
   font-size: 13px;
@@ -212,4 +215,27 @@ p.input-hint {
     padding: 0;
     margin: 0 0 9px 0;
   }
+}
+
+.facebook-like {
+  float: right;
+  clear: right;
+}
+
+input.input-xlarge {
+  &.cart-address {
+    width: 390px;
+  }
+
+}
+
+.simple_form .personal > .control-group {
+  .no-label input{
+    margin-bottom: 0;
+  }
+  margin-bottom: 3px;
+}
+
+.out-of-stock{
+  color: red;
 }
