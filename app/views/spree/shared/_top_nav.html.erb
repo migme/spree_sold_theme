@@ -21,7 +21,17 @@
         </ul>
 
         <ul class="nav menu-cover pull-right">
-          <li class="cart white-active dropdown" id="mini_cart"></li>
+          <li class="credits">
+            <% if current_user && current_user.credit > 0 %>
+                <span class="badge-cred">S<%=number_to_currency current_user.credit %></span>
+            <% end %>
+            <a rel="tooltip" data-placement="left" data-original-title="Credits"></a>
+          </li>
+          <% if current_user %>
+              <li class="cart white-active dropdown" id="mini_cart"></li>
+          <% else %>
+              <li class="cart white-active dropdown" id="mini_cart"><a href="#myRegistration" data-toggle="modal"></a></li>
+          <% end %>
           <li class="nav-divider2"></li>
           <li class="<%= is_active?("spree/invite_friends") %> friend"><%= link_to '', invite_friends_url,"rel" => "tooltip", "data-placement" => "bottom", "data-original-title" => "Invite Friends" %></li>
           <li class="nav-divider2"></li>
