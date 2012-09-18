@@ -57,6 +57,15 @@
     }
     li.fb-like {margin: 0 10px;}
 
+    li.credits {
+      @include menu-item('credits1.png', 'credits1_hover.png');
+      width: 30px;
+      height: 30px;
+      margin-left: 20px;
+      margin-right: 9px;
+      position: relative;
+    }
+
     li.cart{
      @include menu-item('cart1.png', 'cart1_hover.png');
      width: 30px;
@@ -75,14 +84,14 @@
       @include menu-item('friend.png', 'friend_hover.png');
       width: 30px;
       height: 30px;
-      margin-left: 20px;
+      margin-left: 15px;
       margin-right: 5px;
     }
     li.help{
       @include menu-item('help.png', 'help_hover.png');
       width: 30px;
       height: 30px;
-      margin-left: 20px;
+      margin-left: 5px;
     }
 
     li.cart a, li.mail a, li.friend a, li.help a {padding-top:30px;}
@@ -131,7 +140,7 @@
   //z-index: 10000;
 }
 
-.navbar .nav.pull-right {margin: 8px 20px 0 0;}
+.navbar .nav.pull-right {margin: 8px 15px 0 0;}
 
 .nav.menu-cover.pull-right.cta {
   margin: 11px 0 0 0;
@@ -146,6 +155,20 @@
 .btn-group.open .dropdown-toggle {
   background: white;}
 
+.badge-cred {
+  position: absolute;
+  top: 3px;
+  left: 20px;
+  padding: 2px 5px 0px 5px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 13px;
+  background-color: #33CC00;
+  color: $white;
+  font-size: 13px;
+  font-weight: bold;
+  border: white 2px solid;
+}
 
 .badge-cart {
   position: absolute;
