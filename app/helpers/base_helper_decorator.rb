@@ -1,7 +1,7 @@
 Spree::BaseHelper.class_eval do
   def flash_messages
     flash.each do |msg_type, text|
-      unless text.blank?
+      unless text.blank? || (text == true)
         type =  msg_type == :error ? "error" : "success"
         message_block = content_tag(:div, :class => "alert alert-#{type}") do
           concat(content_tag(:a, "x", :class => "close", "data-dismiss" => "alert"))
