@@ -23,7 +23,7 @@
         <ul class="nav menu-cover pull-right">
           <li class="credits">
             <% if current_user && current_user.credit > 0 %>
-                <span class="badge-cred">$<%= current_user.credit %></span>
+                <span class="badge-cred">$<%= current_user.credit.to_i %></span>
             <% end %>
             <a rel="tooltip" data-placement="left" data-original-title="Credits"></a>
           </li>
