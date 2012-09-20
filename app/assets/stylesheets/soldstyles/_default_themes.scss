@@ -34,7 +34,7 @@ br.clearfix, br.clear:after {
 .txt-14 {font-size: 14px;}
 .txt-12 {font-size: 12px;}
 hr.dashed {border-top: 1px dashed #CCC;
-  margin-bottom: 15px;}
+  margin-bottom: 15px; margin-top: 15px;}
 .dark-link {color: $soldOrange; &:hover {text-decoration: none;}}
 .no-list {list-style: none;}
 .form-inline {margin-bottom: 10px;}
@@ -913,7 +913,7 @@ div.auto-over{
 }
 .shop-offers {border: gray thin solid; height:30px;text-align: center;}
 .shop-details {width: 500px; margin-left: 10px; padding: 0 10px;}
-.shop-details ul,{list-style: none;margin: 0px 0 35px 0; padding: 0;}
+.shop-details ul{list-style: none; margin:0; padding: 0;}
 .shop-details ul li.pull-left {
   padding-top: 5px;
   display: block;
