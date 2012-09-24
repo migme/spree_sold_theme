@@ -125,32 +125,6 @@ a.page.circle {
     span#main-image {height: 285px;}
 }
 
-::-webkit-scrollbar {
-  width: 5px;
-  border-radius: 10px;
-}
-
-//---------scrollbars---------//
-/* Track */
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background-color: rgba(0,0,0,0.3);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 7px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-}
-::-webkit-scrollbar-thumb:window-inactive {
-  background: rgba(255,0,0,0.4);
-}
-
-
 
 //---------toolbars---------//
 
@@ -809,6 +783,31 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
   background: linear-gradient(to bottom,  #666666 0%,#000000 50%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#000000',GradientType=0 ); /* IE6-8 */
     @include border-radius($radius: 5px);
+
+  //---------scrollbars---------//
+  ::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 10px;
+  }
+
+/* Track */
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.3);
+  }
+
+/* Handle */
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 7px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,0,0,0.4);
+  }
 }
 .auto-info{margin-top: 10px;}
 .auto-label {line-height: 12px;font-size: 12px;margin-top: 5px;}
@@ -1852,6 +1851,29 @@ $txt-gray: #979797;
     p {text-align: center;}
     .txt-24 {font-size: 21px;}
 }
+
+//bid-history download//
+.bidhis-main {
+  background-color: #ffffff;
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+    .bidhistory {border: black 3px solid; padding: 10px;}
+    .bidhis-head {background-image: url("/assets/auctions-sold.jpg");
+      background-position: top center;
+      background-repeat: no-repeat;
+      width: 770px;
+      height: 38px;}
+    ul { margin: 0; padding: 0;
+      font-size: 14px;
+      display: block;
+        li {margin-right: 10px; font-size: 18px;}
+    }
+    table thead {background-color: transparent;}
+    .table thead th, .table td {text-align: center; padding: 3px;}
+
+}
+
 
 //--------------------------------------------------------------OLD CODES [please moves your codes above this line]--------------------------------------------------------------//
 
