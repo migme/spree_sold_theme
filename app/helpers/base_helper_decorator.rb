@@ -106,7 +106,7 @@ Spree::BaseHelper.class_eval do
 
     if object.kind_of?(ActiveRecord::Base)
       fb_meta[:title] = object.name if object[:name].present?
-      #fb_meta[:description] = object.description if object[:description].present?
+      fb_meta[:description] = object.description if object[:description].present?
       fb_meta[:url] = url_for(:only_path => false)
       begin
         if object.respond_to?(:image_url)
