@@ -99,4 +99,28 @@ Spree::BaseHelper.class_eval do
   rescue
     ""
   end
+
+  def meta_fb_data_tags
+    object = instance_variable_get('@'+controller_name.singularize)
+    fb_meta = { }
+
+    if object.kind_of?(ActiveRecord::Base)
+      fb_meta[:title] = object.name if object[:name].present?
+      #fb_meta[:description] = object.description if object[:description].present?
+      fb_meta[:url] = url_for(:only_path => false)
+      begin
+        if object.respond_to?(:image_url)
+          fb_meta[:image] = object.image_url
+        else
+
+          fb_meta[:image] = object.images.first.attachment.url unless object.images.empty?
+        end
+      rescue => e
+      end
+    end
+
+    fb_meta.map do |name, content|
+      tag('meta', :property => "og:#{name}", :content => content)
+    end.join("\n")
+  end
 end
