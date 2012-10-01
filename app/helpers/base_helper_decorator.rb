@@ -72,7 +72,7 @@ Spree::BaseHelper.class_eval do
 
       won_count = current_user.won_auctions.joins(:variant).joins("INNER JOIN spree_products on spree_variants.product_id= spree_products.id").where("spree_products.token_pack = false and spree_auctions.free=false").joins("INNER JOIN spree_auction_limits on spree_auction_limits.auction_id = spree_auctions.id").count
       if won_count >= 4
-        al = current_user.auction_limits.first
+        al = current_user.auction_limits.where("status=2").first       # status = WON_AUCTION
         unless al.nil?
           @auction_notifications << "Hi #{current_user.first_name.capitalize} - you are currently participating in 4 Auctions!"
           @auction_notifications << " 4 Auctions is the limit so kick back and enjoy!"
