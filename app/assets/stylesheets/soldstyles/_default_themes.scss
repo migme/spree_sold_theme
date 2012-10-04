@@ -1043,13 +1043,17 @@ div.auto-over{
       margin: 10px 0 0 0;
       padding: 20px;
       width: 720px;
-      height: 120px;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
 
       a {color: #f07b05}
       p {color: #666666;}
 
+      .shop-credits {
+        img {margin-right: 10px}
+        span.creds {line-height: 20px;}
+
+      }
 
 
     }
