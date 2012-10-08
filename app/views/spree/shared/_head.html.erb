@@ -6,7 +6,17 @@
 <title><%= title %></title>
 
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-<meta name="viewport" content="width=device-width, initial-scale=0.50, maximum-scale=1, user-scalable=yes">
+<meta id="viewport" name='viewport'>
+<script>
+    (function(doc) {
+        var viewport = document.getElementById('viewport');
+        if ( navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i)) {
+            doc.getElementById("viewport").setAttribute("content", "initial-scale=0.3");
+        } else if ( navigator.userAgent.match(/iPad/i) ) {
+            doc.getElementById("viewport").setAttribute("content", "initial-scale=0.7");
+        }
+    }(document));
+</script>
 
 <%== meta_data_tags %>
 
