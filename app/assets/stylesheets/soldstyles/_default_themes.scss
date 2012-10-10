@@ -97,7 +97,7 @@ a.page.circle {
 //ads//
 .top-space {margin-top: 7px;}
 .banner-ad {width: 940px; height: 130px; border: gray 1px solid; margin: 10px 0 20px 0;}
-.square-ad {width: 210px; height:172px; margin: 25px 0 15px 15px;}
+.square-ad {width: 210px; height:172px; margin: 25px 0 0 15px;}
 .vert-ad {
   width: 220px; 
   height: 600px;  
@@ -286,7 +286,8 @@ div#myCarousel{
         font-weight: bold;
         background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#000));
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;}
+        -webkit-text-fill-color: transparent;
+        -webkit-appearance: none;}
  }
 
 .main-divider {
@@ -678,7 +679,7 @@ a.top-prod:hover {text-decoration: none;}
   }
     .star {margin:0;}
 }
-.sm-widgets  {margin-top: 5px;margin-bottom: 25px;}
+.sm-widgets  {margin-top: 5px;margin-bottom: 15px;}
 .auc-prod-big {width:700px;}
 .prod-image.big.auction{
   #main-image{margin-top : 0px !important;width: 380px; height: 285px;}
