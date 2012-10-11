@@ -1894,6 +1894,22 @@ $txt-gray: #979797;
 
 }
 
+//testimonial//
+.testi-main {
+  width: 900px;
+  background-color: white;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  padding: 10px 20px 20px 20px;
+  margin-bottom: 20px;
+
+  ul {margin-bottom: 10px}
+  li.test-img {width:210px; height:205px; background-color: gray; margin: 0 25px}
+  li.test-content {width:600px;font-size: 14px;
+    line-height: 25px;
+  }
+}
+
 
 
 //--------------------------------------------------------------OLD CODES [please moves your codes above this line]--------------------------------------------------------------//
