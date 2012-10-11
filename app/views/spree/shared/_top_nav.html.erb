@@ -24,12 +24,6 @@
         </ul>
 
         <ul class="nav menu-cover pull-right">
-          <li class="credits">
-            <% if current_user && current_user.credit > 0 %>
-                <span class="badge-cred">$<%= current_user.credit.to_i %></span>
-            <% end %>
-            <a rel="tooltip" data-placement="left" data-original-title="Credits"></a>
-          </li>
           <% if current_user %>
               <li class="cart white-active dropdown" id="mini_cart"></li>
           <% else %>
