@@ -47,16 +47,7 @@
         </div>
         <button data-toggle="modal" href="#myRegistration" class="btn btn-small" id="navi_join">JOIN US</button>
         <%= render :partial => 'spree/shared/register_modal', :locals => {:user => (@user || Spree::User.new)} %>
+      </div>
   <% end %>
-  </div>
-
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
   <div class="pull-right fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" layout="button_count" style="margin-top: 8px; margin-right: 15px;"></div>
 </div>
