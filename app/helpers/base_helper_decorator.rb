@@ -91,6 +91,21 @@ Spree::BaseHelper.class_eval do
       @auction_notifications <<  "Welcome! See something you like?"
       @auction_notifications << "<a href='#myRegistration' data-toggle='modal'>Activate</a> your Account to start bidding!"
     end
+
+    #adding new sales
+    new_sale = Spree::FlashSale.recent
+    if new_sale.size > 0
+      random_new_sale = new_sale[rand(new_sale.size)]
+      @auction_notifications << "New Sale: #{link_to(random_new_sale.name, show_flash_sale_url(random_new_sale.permalink,random_new_sale.id,:subdomain => "sales") )} for #{random_new_sale.discount}% off!"
+    end
+
+    #adding last day sales
+    last_sale = Spree::FlashSale.last_day
+    if last_sale.size > 0
+      random_last_sale = last_sale[rand(last_sale.size)]
+      @auction_notifications << "Sale ending soon: #{link_to(random_last_sale.name,show_flash_sale_url(random_last_sale.permalink,random_last_sale.id,:subdomain => "sales") )} for #{random_last_sale.discount}% off!"
+    end
+
     ntfs=""
     @auction_notifications.each do |notification|
       ntfs += content_tag(:li, notification.html_safe, class: 'news-item').html_safe
@@ -98,7 +113,8 @@ Spree::BaseHelper.class_eval do
     ntfs.html_safe
   rescue
     ""
-  end
+    end
+
 
   def meta_fb_data_tags
     object = instance_variable_get('@'+controller_name.singularize)
