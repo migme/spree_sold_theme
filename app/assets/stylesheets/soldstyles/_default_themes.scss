@@ -580,7 +580,7 @@ padding: 10px;
 }
 #beginner_auctions .auc-box .star { display:none; }
 .beginner_fabio{
-  background: url("/assets/beginner_fabio.png");width: 220px; height:310px;
+  background: url("/assets/beginner_fabio.png");width: 220px; height:301px;
   @extend .pull-left,.auc-box;
 }
 .auc-box.right, .auc-box-small.right {margin: 0;}
@@ -1903,7 +1903,9 @@ $txt-gray: #979797;
   padding: 10px 20px 20px 20px;
   margin-bottom: 20px;
 
-  ul {margin-bottom: 10px}
+  ul {padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-bottom: gray thin dashed;}
   li.test-img {width:210px; height:205px; background-color: gray; margin: 0 25px}
   li.test-content {width:600px;font-size: 14px;
     line-height: 25px;
