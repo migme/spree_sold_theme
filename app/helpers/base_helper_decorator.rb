@@ -53,12 +53,12 @@ Spree::BaseHelper.class_eval do
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
       @auction_notifications ||= []
       if current_user.beginner?
-        @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to Sold.sg? #{link_to("Click here ", "http://feedback.sold.sg/knowledgebase/topics/3851-auction")} for our FAQs!"
+        @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to Sold.sg? #{link_to("Click here", "http://feedback.sold.sg/knowledgebase/topics/3851-auction")} for our FAQs!"
 
-        @auction_notifications <<  "#{link_to("Click here ", "http://feedback.sold.sg/knowledgebase/articles/112887-tips-and-strategies-basic-bidding-strategies")} for Bidding Tips & Strategies! "
+        @auction_notifications <<  "#{link_to("Click here", "http://feedback.sold.sg/knowledgebase/articles/112887-tips-and-strategies-basic-bidding-strategies")} for Bidding Tips & Strategies! "
       end
 
-      @auction_notifications <<  "#{link_to("Click here ", completed_auctions_url(subdomain: 'auctions'))} to see what  you have missed!"
+      @auction_notifications <<  "#{link_to("Click here", completed_auctions_url(subdomain: 'auctions'))} to see what  you have missed!"
 
 
       @auction_notifications <<  "Hi #{current_user.first_name.capitalize}! Did you know we are certified by <a target='_blank' href='http://www.cnsg.com.sg/accreditation/Soldgers.pdf'>TrustSg</a>" # and <a href='javascript:vrsn_splash()' tabindex='-1'>Verisign</a>"
