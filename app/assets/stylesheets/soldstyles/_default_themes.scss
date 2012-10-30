@@ -246,13 +246,15 @@ a.tb-buy {
         border: none;
         max-width:160px;
         li { padding: 0; margin:0; width: 158px;}
-        a { padding-left: 25px;
+        a { padding-left: 30px;
           text-align: left;
-          color: #f5f5f5;
+          color: whiteSmoke;
           font-size: 12px;
           display: block;
-          height: 9px;
-          min-width: 125px;
+          height: 3px;
+          min-width: 120px;
+          padding-top: 3px;
+
         }
         li.sub-arrow { background: url("/assets/categoryarrow.png") no-repeat 15px center;}
         li.sub-arrow >a:hover {background: url("/assets/categoryarrowselect.png") no-repeat 15px center; background-color: #ededed;color: #333; }
