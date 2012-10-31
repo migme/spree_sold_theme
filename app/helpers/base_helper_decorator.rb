@@ -58,10 +58,14 @@ Spree::BaseHelper.class_eval do
         @auction_notifications <<  "#{link_to("Click here", "http://feedback.sold.sg/knowledgebase/articles/112887-tips-and-strategies-basic-bidding-strategies")} for Bidding Tips & Strategies! "
       end
 
+
       @auction_notifications <<  "#{link_to("Click here", completed_auctions_url(subdomain: 'auctions'))} to see what  you have missed!"
 
 
       @auction_notifications <<  "Hi #{current_user.first_name.capitalize}! Did you know we are certified by <a target='_blank' href='http://www.cnsg.com.sg/accreditation/Soldgers.pdf'>TrustSg</a>" # and <a href='javascript:vrsn_splash()' tabindex='-1'>Verisign</a>"
+
+      @auction_notifications << "Free Shipping applies to purchases of $150 or more (excl.Token Packs)."
+
 
       auctions = Spree::Auction.by_state('live').where(["remaining_time < ?", 10.minutes.from_now.utc.to_i]).order('remaining_time')
       if !auctions.blank? and auctions.count > 0
