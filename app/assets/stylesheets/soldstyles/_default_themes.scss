@@ -1122,6 +1122,30 @@ div.auto-over{
       border-top-right-radius: 5px;
     }
 
+    div.red {
+      background-color: #990002; height: 20px;
+      color: white;
+      padding: 2px 5px 0 5px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+    }
+
+    div.gift-bubble {
+      background-image:url("/assets/christmas_bubble.png");
+      height: 76px;
+      width: 144px;
+      margin: 10px auto 0px;
+          img {margin: 20px 3px 0 15px;}
+          p {margin: 0;
+            font-size: 12px;
+            margin-top: 25px;}
+    }
+
+    label.checkbox {padding: 5px 0 0 15px;
+      line-height: 15px;width: 115px;
+      margin: 0 auto;}
+
+
     ul {list-style: none; padding: 10px; margin: 0;}
     p {margin-top: 5px;}
     ul.promo-code {
@@ -1140,6 +1164,7 @@ div.auto-over{
     li.code {
       input.span2 {width: 75px;}
     }
+
 
 }
 
