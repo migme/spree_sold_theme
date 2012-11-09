@@ -589,7 +589,7 @@ padding: 10px;
 
 }
 
-#beginner_auctions .auc-box:nth-child(3n+0), .container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0){
+#beginner_auctions .auc-box:nth-child(3n+0), .container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0), .container-perk .perk-box:nth-child(3n+0){
   margin:0 !important;
 }
 #beginner_auctions .auc-box .star { display:none; }
@@ -1951,133 +1951,129 @@ $txt-gray: #979797;
   }
 }
 
+//perk//
+.perk-main {
+  width: 900px;
+  background-color: white;
+  @include border-radius($radius: 5px);
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  padding: 10px 20px 20px 20px;
+      .perk-detail {
+          width: 500px;
+              ul {margin: 0; padding: 0;}
+              ul.tc {color: gray;}
+      }
+      .dash {border-top: gray thin dashed; margin-top: 10px;}
+}
+
+.perk-box{
+  position:relative;
+  width: 250px;
+  height: 188px;
+  background-color: white;
+  text-align: center;
+  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  margin-right: 95px;
+  margin-bottom: 50px;
+
+      &:hover {  -webkit-box-shadow: 0px 3px 20px rgba(240, 123, 5, 1);
+        -moz-box-shadow: 0px 3px 20px rgba(240, 123, 5, 1);;
+        box-shadow: 0px 3px 20px rgba(240, 123, 5, 1)}
+
+      a:hover {text-decoration: none;}
+      p {padding-top: 60px; color: gray; font-size: 12px;}
+
+      .bar {
+        position: absolute;
+        background-color: #666;
+        width: 240px;
+        height: 40px;
+        text-align: left;
+        padding: 5px 5px 0 5px;
+        bottom: 0;
+      }
+}
+
+.wannabe {
+  border-top: gray thin dashed;
+  width: 940px;
+  padding-top: 40px;
+      p {color: #666; line-height: 25px;}
+      a {color: #f07b05;}
+      a:hover {text-decoration: none; color: gray;}
+
+      .back2top {
+        background:url(/assets/scrollup.png) no-repeat right top;
+        width: 100px;
+        height: 65px;
+        width: 100px;
+        text-align: center;
+        line-height: 15px;
+            p {
+              padding: 0;
+              margin: 20px 0 0 0;
+              width: 45px;
+              line-height: 15px;}
+      }
+}
+
+.RibbonWrap {
+  position: relative;
+  left: 29px;
+  bottom: 0;
+  margin:10px 0 20px 0;
+
+}
+.Ribbon {
+  background:url(/assets/perk-fabio.png) #ffcc66 no-repeat right top;
+  position: relative;
+  width: 500px;
+  height: 80px;
+  z-index: 5;
+    @include box-shadow($shadow: -3px 3px 7px rgba(0, 0, 0, 0.25));
+      -webkit-box-shadow:(-3px 3px 7px rgba(0, 0, 0, 0.25));
+      -moz-box-shadow:(-3px 3px 7px rgba(0, 0, 0, 0.25));
+      box-shadow:(-3px 3px 7px rgba(0, 0, 0, 0.25));
+  padding: 20px 0 0 20px;
+
+}
+.triangle {
+  border-width: 5px;
+  border-color: #FF9900 #FF9900 transparent transparent;
+  border-style: solid;
+  position: absolute;
+  z-index: 4;
+  bottom: -9px;
+  right: 0;
+  height: 0;
+  width: 0;
+  @include rotate($degrees: -90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.perkprint-main {  background-color: #ffffff;
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+    .perk-txt {
+      width: 600px;
+      margin: 0 auto;
+        h3 {margin:20px 10px 0 0; font-weight: normal;}
+        p, ul {border-bottom: gray thin dashed; padding-bottom: 20px;}
+        ul {margin: 0 0 20px 0; font-size: 14px; }
+        ul.tc {padding-left: 30px; border: none;font-size: 12px;
+          color: gray;}
+        span {font-size: 12px;color: gray;margin-bottom: 30px;}
+        .perk-footer {text-align: center; font-size: 12px;color: gray; border: none;}
+    }
+}
+
+
 
 
 //--------------------------------------------------------------OLD CODES [please moves your codes above this line]--------------------------------------------------------------//
-
-
-//token purchase//
-#token_packs {
-  border-top: gray thin dashed;
-  border-bottom: gray thin dashed;
-  margin: 10px 0 0 0;
-  padding: 10px 0 30px 40px;
-}
-
-.table-tokens thead {background-color: #ffffff;}
-
-.tok-ch {width:20px;}
-.tok-pack {width:130px;}
-.tok-price {width:100px;}
-
-label.radio.tokens {margin-bottom: 20px;}
-.tp {color: #f07b05; font-size: 16px;line-height: 20px;}
-.tprice {color: #333333; font-size: 16px;line-height: 20px;}
-
-#token_confirm {
-  border-top: gray thin dashed;
-  border-bottom: gray thin dashed;
-  margin: 10px 0 20px 0;
-  padding: 20px 0 10px 0;
-}
-
-
-
-
-
-// temporary fix for home page
-.product-image {
-    height : 135px;
-    width : 180px;
-
-    img{
-       max-width: 100%;
-       max-height: 100%;
-    }
-  }
-
-
-
-
-//Bid History
-table#history td {font-size: 0.8em !important;}
-
-//testimonials//
-
-#win-gallery{
-  float: left;
-  width: 470px;
-  margin-right: 10px;
-}
-#win-form {
-  float:left;
-  width:450px;
-}
-.win-img {
-  float:left;
-  margin:0 0 20px 20px;
-  width:200px;
-  height:150px;
-  border: gray thin solid;
-}
-.form-horizontal.testimonial {
-  margin: 20px 0 10px 0;
-  padding: 20px 0 20px 0;
-  border-top: gray thin dashed;
-  border-bottom: gray thin dashed;
-}
-
-.test-img {
-  width:380px;
-  height:285px;
-  float:left;
-}
-.test-copy {
-  width:350px;
-  float:left;
-  margin: 20px 0 10px 20px;
-  border-bottom: gray thin dashed;
-  padding-bottom: 10px;
-  font-style: italic;
-}
-.test-copy-win {
-  width:350px;
-  float:left;
-  margin-left: 20px;
-}
-.modal.testimonial {
-  position: fixed;
-  top: 50%;
-  left: 43%;
-  z-index: 1050;
-  width: 800px;
-  margin: -250px 0 0 -280px;
-  overflow: auto;
-  background-color: white;
-  border: 1px solid #999;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box;
-}
-.test-prod{
-  float:left;
-  width: 250px;
-  padding-top: 10px;
-}
-.test-prod-img{
-  float:left;
-  width: 100px;
-}
-
-//refer a friend table//
-.table.refer {width: 450px; margin-top:20px;}
-.table.refer td {text-align: center;}
-
 
