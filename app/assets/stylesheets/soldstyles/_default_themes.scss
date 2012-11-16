@@ -610,7 +610,11 @@ padding: 10px;
 .auc-icons {margin: 0 0 0 5px; height: 27px;}
 a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 a.top-prod:hover {text-decoration: none;}
-.completed {border-top-right-radius: 0px; height: 310px;}
+.completed {
+  border-top-right-radius: 0px;
+  height: 301px;
+    div.top-space {margin-top: 0;}
+}
 
 .auc-bot-left{width: 100px;line-height: 28px;}
 
