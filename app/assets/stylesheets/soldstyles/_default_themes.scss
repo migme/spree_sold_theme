@@ -1147,7 +1147,9 @@ div.auto-over{
 
     label.checkbox {padding: 5px 0 0 15px;
       line-height: 15px;width: 115px;
-      margin: 0 auto;}
+      margin: 0 auto;
+        span {white-space: nowrap;}
+    }
 
 
     ul {list-style: none; padding: 10px; margin: 0;}
