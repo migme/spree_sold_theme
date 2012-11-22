@@ -1,7 +1,10 @@
 <% if Rails.env.production? %>
 <script type="text/javascript">
-
+    <% if current_user %>
+    var uvOptions = {sso : '<%= CGI.escape(current_user.user_voice_token) %>'};
+    <% else  %>
     var uvOptions = {};
+    <% end  %>
     (function() {
         var uv = document.createElement('script');
         uv.type = 'text/javascript';
