@@ -1,11 +1,11 @@
-//body {background: url("/assets/rough_diagonal.png"); font-family: 'Asap', sans-serif;}
-//body.auction-bg {background: url("/assets/auction-bground.png"); font-family: 'Asap', sans-serif;}
-//body.sale-bg {background: url("/assets/sale_bground.png"); font-family: 'Asap', sans-serif;}
+body {background: url("/assets/rough_diagonal.png"); font-family: 'Asap', sans-serif;}
+body.auction-bg {background: url("/assets/auction-bground.png"); font-family: 'Asap', sans-serif;}
+body.sale-bg {background: url("/assets/sale_bground.png"); font-family: 'Asap', sans-serif;}
 
 //christmas backgrounds//
-body {background: url("/assets/2012xmasbg-shop.jpg") #e1ebf4 no-repeat; font-family: 'Asap', sans-serif;}
-body.auction-bg {background: url("/assets/2012xmasbg-auction.jpg")#000000 no-repeat; font-family: 'Asap', sans-serif;}
-body.sale-bg {background: url("/assets/2012xmasbg-sale.jpg") #ffffff no-repeat; font-family: 'Asap', sans-serif;}
+//body {background: url("/assets/2012xmasbg-shop.jpg") #e1ebf4 no-repeat; font-family: 'Asap', sans-serif;}
+//body.auction-bg {background: url("/assets/2012xmasbg-auction.jpg")#000000 no-repeat; font-family: 'Asap', sans-serif;}
+//body.sale-bg {background: url("/assets/2012xmasbg-sale.jpg") #ffffff no-repeat; font-family: 'Asap', sans-serif;}
 
 
 
@@ -230,7 +230,7 @@ a.tb-buy {
         margin: 0 5px;
         padding: 10px 10px 17px 10px;}
       a {color: white;
-        padding: 10px 10px 16px 10px;
+        padding: 10px 6px 16px 6px;
         &:hover {text-decoration: none; color: #f5f5f5; }
         }
       li.tb-credit {
