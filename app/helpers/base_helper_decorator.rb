@@ -51,7 +51,7 @@ Spree::BaseHelper.class_eval do
 
   def populate_notifications
     @auction_notifications ||= []
-    @auction_notifications << "Merry Christmas! Need gift ideas? Check out our <a href='shop.sold.sg'>Shop</a> and <a href='sales.sold.sg'>Sales</a>!"
+    @auction_notifications << "Merry Christmas! Need gift ideas? Check out our <a href='http://shop.sold.sg'>Shop</a> and <a href='http://sales.sold.sg'>Sales</a>!"
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
 
       if current_user.beginner?
