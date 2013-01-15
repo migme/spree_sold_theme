@@ -571,12 +571,12 @@ padding: 10px;
         }
     }
 
-  .bid.login {width:80px;
+  .btn-bid.login {width:80px;
     padding:5px;
     span.l-1 {display: none;}
     span.l-2 {display: block;}
   }
-  .bid.login:hover { width:80px;
+  .btn-bid.login:hover { width:80px;
     padding:5px;
     background: red;
     span.l-1 {display: block;}
@@ -658,7 +658,7 @@ a.top-prod:hover {text-decoration: none;}
   background-position: top;
   margin: 7px;}
 
-#binModal {
+.binModal {
   width: 620px;
   border-radius: 5px;
   .close {padding: 0; margin-top:5px;}
