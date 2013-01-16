@@ -571,12 +571,12 @@ padding: 10px;
         }
     }
 
-  .btn-bid.login {width:80px;
+  .btn.login {width:80px;
     padding:5px;
     span.l-1 {display: none;}
     span.l-2 {display: block;}
   }
-  .btn-bid.login:hover { width:80px;
+  .btn.login:hover { width:80px;
     padding:5px;
     background: red;
     span.l-1 {display: block;}
@@ -662,7 +662,7 @@ a.top-prod:hover {text-decoration: none;}
   width: 620px;
   border-radius: 5px;
   .close {padding: 0; margin-top:5px;}
-  .modal-header {
+  div.modal-header {
     border-bottom:gray thin solid;
     padding-bottom: 10px;
     margin: 15px;
@@ -673,7 +673,7 @@ a.top-prod:hover {text-decoration: none;}
     }
     .more:hover {text-decoration: none;}
   }
-  .modal-body {
+  div.modal-body {
     margin: 15px;
     text-align: center;
     .bin-prod {margin-bottom: 10px;}
@@ -688,13 +688,13 @@ a.top-prod:hover {text-decoration: none;}
       font-size: 14px;
       li {margin-top: 3px;}
     }
-    p {text-align: left;
+    p {text-align: left !important;
       margin: 0;
       padding-bottom: 5px;
       padding-top: 5px;
     }
   }
-  .modal-footer {
+  div.modal-footer {
     padding: 0;
     margin: 0 auto 15px auto;
     width: 250px;
@@ -730,12 +730,12 @@ a.top-prod:hover {text-decoration: none;}
     padding: 5px;
       div.user {font-size: 14px; height:15px}
     }
-    .btn-bid.login {width: 50px;
+    .btn.login {width: 50px;
       padding: 4px;
       span.l-1 {display: none;}
       span.l-2 {display: block;}
     }
-    .btn-bid.login:hover { width: 50px;
+    .btn.login:hover { width: 50px;
       padding: 4px;
       span.l-1 {display: block;}
       span.l-2 {display: none;}
@@ -856,12 +856,12 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
           }
     }
 
-    .btn-bid.login {width: 200px;
+    .btn.login {width: 200px;
       padding: 5px 25px 5px 25px;
       span.l-1 {display: none;}
       span.l-2 {display: block;}
     }
-    .btn-bid.login:hover {width: 200px;
+    .btn.login:hover {width: 200px;
       padding: 5px 25px 5px 25px;
       text-align: center;
       background: red;
