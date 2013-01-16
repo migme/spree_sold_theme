@@ -730,12 +730,12 @@ a.top-prod:hover {text-decoration: none;}
     padding: 5px;
       div.user {font-size: 14px; height:15px}
     }
-    .bid.login {width: 50px;
+    .btn-bid.login {width: 50px;
       padding: 4px;
       span.l-1 {display: none;}
       span.l-2 {display: block;}
     }
-    .bid.login:hover { width: 50px;
+    .btn-bid.login:hover { width: 50px;
       padding: 4px;
       span.l-1 {display: block;}
       span.l-2 {display: none;}
@@ -856,12 +856,12 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
           }
     }
 
-    .bid.login {width: 200px;
+    .btn-bid.login {width: 200px;
       padding: 5px 25px 5px 25px;
       span.l-1 {display: none;}
       span.l-2 {display: block;}
     }
-    .bid.login:hover {width: 200px;
+    .btn-bid.login:hover {width: 200px;
       padding: 5px 25px 5px 25px;
       text-align: center;
       background: red;
