@@ -662,7 +662,7 @@ a.top-prod:hover {text-decoration: none;}
   width: 620px;
   border-radius: 5px;
   .close {padding: 0; margin-top:5px;}
-  .modal-header {
+  div.modal-header {
     border-bottom:gray thin solid;
     padding-bottom: 10px;
     margin: 15px;
@@ -673,7 +673,7 @@ a.top-prod:hover {text-decoration: none;}
     }
     .more:hover {text-decoration: none;}
   }
-  .modal-body {
+  div.modal-body {
     margin: 15px;
     text-align: center;
     .bin-prod {margin-bottom: 10px;}
@@ -688,13 +688,13 @@ a.top-prod:hover {text-decoration: none;}
       font-size: 14px;
       li {margin-top: 3px;}
     }
-    p {text-align: left;
+    p {text-align: left !important;
       margin: 0;
       padding-bottom: 5px;
       padding-top: 5px;
     }
   }
-  .modal-footer {
+  div.modal-footer {
     padding: 0;
     margin: 0 auto 15px auto;
     width: 250px;
@@ -1212,15 +1212,134 @@ div.auto-over{
 //--------------------shopping cart---------------------//
 
 .line_item_quantity {width: 35px;}
+.zrisk-carticon {width: 26px;
+  height: 22px;
+  background-image:url("/assets/zerorisk-carticon.png");
+  background-repeat: no-repeat;
+}
+.cart-contact {
+  margin:10px 0;
+  color: #3366CC;
+  img {margin-right: 10px;}
+    .cart-mail {margin-left: 20px;}
+    a {color:#3366CC; ;}
+    a:hover {text-decoration: none; color: #416df1;}
+}
+.cart-right {
+  width: 235px;
+  margin-right: 5px;
+    .free-ship {
+      width: 220px;
+      height: 150px;
+      padding-top: 10px;
+      background-color: white;
+      margin-bottom: 20px;
+      @include border-radius($radius: 5px);
+          p {margin-bottom: 5px; font-weight: bold;}
+          .border {width: 190px;
+            padding: 10px;
+            margin: 10px auto;
+            border-top: black 2px solid;
+            border-bottom: black 2px solid;
+          }
+    }
+    .pending-items {
+      width: 220px;
+      position: relative;
+      padding-top: 10px;
+      background-color: white;
+      margin-bottom: 20px;
+      @include border-radius($radius: 5px);
+      @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+          #zero-bar {
+            background-image:url("/assets/titlebar.png");
+            background-repeat: no-repeat;
+            width: 234px;
+            height: 45px;
+            padding: 2px 0 0 10px;
+          }
+          .bin-item {
+            width:200px;
+            margin: 0 auto 20px auto;
+            padding-bottom: 5px;
+            border-bottom: #cccccc thin solid;
+              p.bin-name {font-size: 12px;;
+                width: 190px;
+                height: 16px;
+                margin-bottom: 0;
+                overflow: hidden;
+              }
+              a:hover {text-decoration: none; color:gray;}
+              img { margin: 5px 5px 0 0; width: 80px; height: 60px;}
+              ul.bin-details {
+                width: 110px;
+                margin:5px 0;
+                  a:hover {color:black}
+                  li.price {margin-top:2px;}
+                  li.line {border-top:#ededed 1px solid; margin-top: 5px; padding: 3px 0;}
+                  li.tokenback {background-color:#FFCC33; text-align: center; font-weight: bold; padding: 2px 0;}
+                  li.add {margin-top: 5px;
+                    .arrow-right {
+                      width: 0px;
+                      height: 0px;
+                      border-top: 5px solid transparent;
+                      border-bottom: 5px solid transparent;
+                      border-left: 5px solid black;
+                      margin: 2px 0 0 5px;
+                    }
+                  }
+
+              }
+          }
+
+
+
+    }
+    .cart-faq {width: 200px;
+      padding: 10px;
+      background-color: white;
+      @include border-radius($radius: 5px);
+        a {color:#3366CC;}
+        a:hover {text-decoration: none; color:#416df1;}
+    }
+}
 
 .shopping-main {
-  padding: 20px 0 0 0;
-  width: 760px;
+  width: 440px;
+  height: 400px;
   background-color: white;
   @include border-radius($radius: 5px);
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
-  margin: 0;
+  margin-right: 20px;
+  padding:10px;
 
+    //new
+    .cart-item.checked {background-color: #ededed;}
+    .cart-item {
+      width: 415px;
+      padding: 10px;
+        .cart-prod-name {
+          font-size: 12px;
+          font-weight: bold;
+          width: 410px;
+          height: 20px;
+          overflow: hidden;
+            a:hover {text-decoration: none;color:gray;}
+        }
+        .cart-img {width:80px; height:60px;}
+        ul.cart-details {border:blue thin solid;
+          width:325px;
+          margin-left: 5px;
+            li.price {margin-top: 5px;}
+            li.line {border-top:#ededed 1px solid; padding: 3px 0;}
+            select.quantity {width: 60px;height: 25px; margin: 3px;}
+            .cart-specs {width: 400px;margin-bottom: 10px;height: 50px;overflow: hidden;}
+            .cart-timer {font-size: 14px; color: red; margin-right: 10px;margin-top: 5px;}
+        }
+        .cart-details.empty {margin-left: 10px;}
+    }
+
+    //old
     .cart-total {background-color: whiteSmoke;
       margin: 10px 0 0 0;
       padding: 20px;
@@ -1252,23 +1371,8 @@ div.auto-over{
       margin-top: 10px;}
 }
 
-.cart-details {
-  width: 620px;
-  margin-left: 25px;
-    ul {
-      list-style: none;
-      margin:0;
-      padding: 0;}
-    ul li {margin-left:0px;}
 
-  .cart-prod-name {font-size: 14px; font-weight: bold; width: 500px;}
 
-  .cart-specs {width: 400px;margin-bottom: 10px;height: 50px;overflow: hidden;}
-  .cart-timer {font-size: 14px; color: red; margin-right: 10px;margin-top: 5px;}
-
-}
-.cart-details.empty {margin-left: 10px;}
-.cart-img {width:80px; height: 60px; margin-left: 10px;}
 .remove a, .remove a:hover {color: gray; font-size: 10px;}
 
 .shopping-fixright  {width: 165px;}
@@ -1336,6 +1440,14 @@ div.auto-over{
 
 
 }
+
+//bin
+.order-summary {
+  width: 200px;
+  height:100px;
+  padding: 10px;
+  background-color: #333333;
+  @include border-radius($radius: 5px);}
 
 //--------------------neo footer---------------------//
 #neo_footer {
