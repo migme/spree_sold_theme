@@ -592,7 +592,7 @@ padding: 10px;
     border-top-right-radius: 0px;
     height: 54px;
     margin-top: 5px;
-        p { text-align: center;}
+        p {padding-top: 18px; text-align: center;}
         a.last-sold {
           width: 95px;
           text-align: center;
@@ -661,7 +661,7 @@ a.top-prod:hover {text-decoration: none;}
 .binModal {
   width: 620px;
   border-radius: 5px;
-  .close {padding: 0; margin-top:5px;}
+  .close {padding: 0; margin-top:-10px;}
   div.modal-header {
     border-bottom:gray thin solid;
     padding-bottom: 10px;
