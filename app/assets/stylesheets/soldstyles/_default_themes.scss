@@ -1240,8 +1240,8 @@ div.auto-over{
           .border {width: 190px;
             padding: 10px;
             margin: 10px auto;
-            border-top: black 2px solid;
-            border-bottom: black 2px solid;
+            border-top: #CCC 1px solid;
+            border-bottom: #CCC 1px solid;
           }
     }
     .pending-items {
@@ -1389,6 +1389,7 @@ div.auto-over{
       width:200px;
       margin:0;
         li {margin-bottom: 5px;}
+        li.a-label{width:120px;}
         .btn-block {
           display: block;
           width: 100%;
