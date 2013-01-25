@@ -2225,7 +2225,7 @@ $txt-gray: #979797;
       a:hover {text-decoration: none;}
       p {padding-top: 60px; color: gray; font-size: 12px;}
 
-      .bar {
+      .partner-logo .bar {
         position: absolute;
         background-color: #666;
         width: 240px;
@@ -2233,8 +2233,10 @@ $txt-gray: #979797;
         text-align: left;
         padding: 5px 5px 0 5px;
         bottom: 0;
+        display: none;
       }
 }
+div.partner-logo:hover .bar {display:block ;}
 
 .wannabe {
   width: 940px;
