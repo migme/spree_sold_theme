@@ -723,7 +723,7 @@ a.top-prod:hover {text-decoration: none;}
   float: left;
   @include border-radius($radius: 5px);
 
-    .pull-left {height: 60px;}
+    .pull-left {position:absolute}
     div.auc-prod {line-height: 16px; width: 210px;}
     div.on-lil-auc {position: relative; top: -65px;}
     .lil-auction-img {height: 60px;}
