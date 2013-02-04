@@ -667,13 +667,13 @@ a.top-prod:hover {text-decoration: none;}
   div.modal-header {
     border-bottom:gray thin solid;
     padding-bottom: 10px;
-    margin: 15px;
-    .more {
+    margin: 25px 15px 15px 15px;
+    a.more {
       margin: 6px 0 0 10px;
       font-size: 12px;
       color: #f07b05;
     }
-    .more:hover {text-decoration: none;}
+    a.more:hover {text-decoration: none;}
   }
   div.modal-body {
     margin: 15px;
@@ -791,7 +791,13 @@ a.top-prod:hover {text-decoration: none;}
           font-weight:bold;
         }
     }
-
+  a.more {
+    margin: 6px 0 0 10px;
+    font-size: 12px;
+    color: #f07b05;
+    float: right !important;
+  }
+  a.more:hover {text-decoration: none;}
 }
 
 
@@ -891,7 +897,7 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
       font-weight:bold;
     }
 
-    .txt-fix {letter-spacing: -1px;}
+    .txt-fix {letter-spacing: -1px; display: block;}
 }
 
 .prod-autobid {
