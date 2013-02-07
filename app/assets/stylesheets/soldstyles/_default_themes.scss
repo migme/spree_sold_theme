@@ -647,8 +647,13 @@ a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 a.top-prod:hover {text-decoration: none;}
 .completed {
   border-top-right-radius: 0px;
-  height: 301px;
-    div.top-space {margin-top: 0;}
+  height: 360px;
+    div.top-space {width: 185px;
+      border-top: #ededed thin dashed;
+      margin: 15px auto 0 auto;
+      padding-top: 15px;
+      margin-bottom: 10px;
+      font-size: 12px;}
 }
 
 .auc-bot-left{width: 90px;line-height: 28px;}
