@@ -82,7 +82,7 @@ Spree::BaseHelper.class_eval do
         unless al.nil?
           @auction_notifications << "Hi #{current_user.first_name.capitalize} - you are currently participating in 4 Auctions!"
           @auction_notifications << " 4 Auctions is the limit so kick back and enjoy!"
-          @auction_notifications << " You can start bidding on #{(al.created_at + 14.days).strftime("%d %B")}"
+          @auction_notifications << " You can start bidding on #{(current_user.eligible_for_bidding_again_date).strftime("%d %B")}"
         end
       end
 
