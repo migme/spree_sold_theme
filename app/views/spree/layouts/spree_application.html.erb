@@ -28,7 +28,7 @@
 <%= render :partial => 'spree/shared/footer' %>
 <%= render :partial => 'spree/shared/google_analytics' %>
 <%= render :partial => 'spree/shared/facebook_init' %>
-<%= render :partial => 'spree/shared/pin_it' %>
+<%#= render :partial => 'spree/shared/pin_it' %>
 <%= render :partial => 'spree/shared/user_voice' %>
 
 <% if flash[:validate_phone] %>
@@ -38,7 +38,7 @@
 <% else %>
     <%= yield :google_conversion %>
 <% end %>
-
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 
 </html>
