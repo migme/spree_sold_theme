@@ -828,8 +828,12 @@ a.top-prod:hover {text-decoration: none;}
   }
     .star {margin:0;}
 }
-.sm-widgets  {margin-top: 5px;margin-bottom: 15px;}
-.auc-prod-big {width:700px;}
+.sm-widgets  {
+  margin-top: 5px;
+  margin-bottom: 15px;
+    .pinterest a {margin: 0 !important;}
+}
+.auc-prod-big {width:650px;}
 .prod-image.big.auction{
   #main-image{margin-top : 0px !important;width: 380px; height: 285px;}
   .prod-thumbs {
