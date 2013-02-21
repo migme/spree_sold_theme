@@ -831,8 +831,10 @@ a.top-prod:hover {text-decoration: none;}
 .sm-widgets  {
   margin-top: 5px;
   margin-bottom: 15px;
-    .pinterest a {margin-top: 0 !important;}
-    .pinterest a.pin {margin-top: 0 !important;}
+  position: relative;
+    .pinterest {position: absolute;
+      right: 0;
+      top: -20px;}
 }
 .auc-prod-big {width:650px;}
 .prod-image.big.auction{
