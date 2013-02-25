@@ -649,6 +649,10 @@ padding: 10px;
   background: url("/assets/beginner_fabio_new.png");width: 220px; height:362px;
   @extend .pull-left,.auc-box;
 }
+.premium_fabio{
+  background: url("/assets/premium_fabio.png");width: 220px; height:362px;
+  @extend .pull-left,.auc-box;
+}
 .auc-box.right, .auc-box-small.right {margin: 0;}
 .auc-box:hover, .auc-box-small:hover {
   -webkit-box-shadow: 0px 3px 20px rgba(240, 123, 5, 1);
