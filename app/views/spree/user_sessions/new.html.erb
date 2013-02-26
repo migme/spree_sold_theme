@@ -4,13 +4,14 @@
           <ul class="pull-left no-list">
               <li><%= f.email_field :email, :class => 'title', :tabindex => 1, :placeholder => "EMAIL ADDRESS" %></li>
               <li><%= f.password_field :password, :class => 'title', :tabindex => 2, :placeholder => "PASSWORD" %></li>
-              <li class="pull-right txt-12">
+              <li class="pull-left"><%= f.submit t(:login), :class => 'btn btn-primary' %></li>
+              <li class="pull-left">
                 <label class="checkbox">
                   <%= f.check_box :remember_me %>
                   Remember me
                 </label>
               </li>
-              <li class="pull-left"><%= f.submit t(:login), :class => 'btn btn-primary' %></li> <br>
+
               <br class="clear">
             <hr>
             <li><h3><strong>Not a member yet?</strong></h3></li> <br>
