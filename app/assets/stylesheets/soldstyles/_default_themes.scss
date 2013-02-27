@@ -475,16 +475,16 @@ a.btn-edit:hover {color: blue; text-decoration: none;}
 
 //---------------------auctions---------------------//
 #iconModal {
-  width: 450px;
+  width: 550px;
+  max-height: 500px;
   padding: 0 20px 10px 20px;
   .types {
-    margin: 10px;}
+    margin: 5px 10px;}
   span.type-auc {
-    width: 350px;
+    width: 480px;
     margin-left: 20px;
     margin-bottom: 10px;}
-  .modal-body {
-    padding: 5px 0 0 0;}
+  p.note {border-top:gray thin dashed; padding-top: 5px; font-size: 12px; color: gray;}
 }
 
 //auction registration//
