@@ -17,10 +17,10 @@
 
 
 .navbar .menu-cover{
+    margin-top: 0;
     margin-left: 2px;
     & > li > a {
        font-size: 14px;
-       color:white;
     }
 
     li.nav-divider {
@@ -29,11 +29,6 @@
       height: 30px;
       margin-top: 10px;
     }
-
-    li.nav-divider2 {width: 1px;
-      border-left: #ededed thin solid;
-      height: 30px;
-      margin: 0 0 0 15px;}
 
     li.home {
       background: url(/assets/header_auction1.png) no-repeat 10px 10px;
@@ -93,16 +88,19 @@
 
       }
     }
-    li.fb-like {margin: 0 10px;}
 
-    li.credits {
-      @include menu-item('credits1.png', 'credits1_hover.png');
-      width: 30px;
-      height: 30px;
-      margin-left: 20px;
-      margin-right: 9px;
-      position: relative;
+    li.dropdown.myaccnt {
+      height: 48px;
+      background: url(/assets/user.png) no-repeat 10px center;
+      p {margin-left: 30px; margin-top: 7px}
+      a.dropdown-toggle.username {height: 29px}
+      a.dropdown-toggle.username:hover, a.dropdown-toggle.username:active {background: url(/assets/user.png) #333333  no-repeat 10px 13px;}
     }
+    li.dropdown.myaccnt.open {
+      a.dropdown-toggle.username {background: url(/assets/user.png) #333333  no-repeat 10px 13px;}
+
+    }
+
 
     li.cart{
      @include menu-item('cart1.png', 'cart1_hover.png');
@@ -178,7 +176,7 @@
   //z-index: 10000;
 }
 
-.navbar .nav.pull-right {margin: 8px 15px 0 0;}
+
 
 .nav.menu-cover.pull-right.cta {
   margin: 12px 0 0 0;

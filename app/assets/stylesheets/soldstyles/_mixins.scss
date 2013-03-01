@@ -1,9 +1,6 @@
 @mixin menu-item($imageName, $hoverImageName){
   background: image-url($imageName) no-repeat center 0;
 
-  a {border: red thin solid; height: 40px};   // color: $white
-
-
   &:hover, &.active {
     background: image-url($hoverImageName) no-repeat center 0;
     &.white-active.open {
