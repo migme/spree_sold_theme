@@ -1456,7 +1456,9 @@ div.auto-over{
 //--------------------neo footer---------------------//
 #neo_footer {
   background-color: white;
-  color:gray; width: 100%;
+  color:gray;
+  min-width: 940px;
+  width: 100%;
   left: 0px;
   position: absolute;
   margin-top: 20px;}
