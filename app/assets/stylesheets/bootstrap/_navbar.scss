@@ -290,7 +290,7 @@ li.divider-vertical.pull-right {
 // Menu position and menu carets
 .navbar .dropdown-menu {
   margin-top: 1px;
-  @include border-radius(4px);
+
   &:before {
     content: '';
     display: none; //inline-block;
@@ -334,7 +334,6 @@ li.divider-vertical.pull-right {
 
 // Right aligned menus need alt position
 .navbar .nav.pull-right .dropdown-menu{
-  left: auto;
   right: 65px;
   &:before {
     left: auto;
@@ -346,23 +345,19 @@ li.divider-vertical.pull-right {
     right: 13px;
   }
 
-  &.myaccount  {
-    width: 99%;
-    right: 1px;
-    top: 25px;
-    border: none;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    text-align: right;
-        li {margin-bottom: 5px;}
-        li.accnt-set {height: 24px; background-image: url("/assets/settingsdefault.png"); background-position: 5px; background-repeat: no-repeat;}
-        li.accnt-set >a:hover {background-image: url("/assets/settingsselect.png"); background-position: 5px; background-repeat: no-repeat;}
-
-        li.pay-his {height: 24px; background-image: url("/assets/historydefault.png"); background-position: 5px; background-repeat: no-repeat;}
-        li.pay-his >a:hover {background-image: url("/assets/historyselect.png"); background-position: 5px; background-repeat: no-repeat;}
-
-        li.go-away {height: 24px; background-image: url("/assets/exitdefault.png"); background-position: 5px; background-repeat: no-repeat;}
-        li.go-away >a:hover {background-image: url("/assets/exitselect.png"); background-position: 5px; background-repeat: no-repeat;}
+  &.mymenu {border: none; top: 49px; right: 0;
+    background-color: #333333;
+    padding:0 0 5px 0;
+    li {
+      a {
+        color: #ededed;
+        width: auto;
+        height: 30px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+      a:hover {width: 130px; color: #f07b05}
+    }
   }
 
   &.login {right: 0;
@@ -379,14 +374,13 @@ li.divider-vertical.pull-right {
 
 
   &.cart-preview {
-    border: none;
-    right: -5px;
-    padding: 5px;
-    top: 28px;
+    position: absolute;
+    top: 48px;
+    left: -230px;
+    padding: 10px;
     border-top-right-radius: 0;
-    width: 220px;}
-
-  &.cart-preview a, &.cart-preview a:hover, &.cart-preview a:active {padding: 0;}
+    width: 280px;
+  }
 }
 
 
