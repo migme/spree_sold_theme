@@ -345,7 +345,11 @@ li.divider-vertical.pull-right {
     right: 13px;
   }
 
-  &.mymenu {border: none; top: 49px; right: 0;
+  &.mymenu {
+    border: none;
+    position: absolute;
+    top: 49px;
+    right: 0;
     background-color: #333333;
     padding:0 0 5px 0;
     li {
@@ -375,11 +379,12 @@ li.divider-vertical.pull-right {
 
   &.cart-preview {
     position: absolute;
-    top: 48px;
-    left: -230px;
+    top: 49px;
+    left: -231px;
     padding: 10px;
     border-top-right-radius: 0;
     width: 280px;
+    border-top: none;
   }
 }
 

@@ -90,11 +90,12 @@
     }
 
     li.dropdown.myaccnt {
+      position: relative;
       height: 48px;
       background: url(/assets/user.png) no-repeat 10px center;
       p {margin-left: 30px; margin-top: 7px}
-      a.dropdown-toggle.username {height: 29px}
-      a.dropdown-toggle.username:hover, a.dropdown-toggle.username:active {background: url(/assets/user.png) #333333  no-repeat 10px 13px;}
+      a.dropdown-toggle.username {height: 29px; }
+      a.dropdown-toggle.username:hover, a.dropdown-toggle.username:active {background: url(/assets/user.png) #333333  no-repeat 10px 13px; }
     }
     li.dropdown.myaccnt.open {
       a.dropdown-toggle.username {background: url(/assets/user.png) #333333  no-repeat 10px 13px;}
@@ -111,7 +112,7 @@
         padding: 0;
         height: 48px;
       }
-      a.dropdown-toggle.mini-cart:hover, a.dropdown-toggle.mini-cart:hover:active {background: url(/assets/icon-cart-1.png)  #333333 no-repeat center 10px;}
+      a.dropdown-toggle.mini-cart:hover, a.dropdown-toggle.mini-cart:hover:active {background: url(/assets/icon-cart-0.png)  #ffffff no-repeat center 10px; height: 50px}
       .badge-cart {
         position: absolute;
         top: 3px;
@@ -143,7 +144,17 @@
             padding: 0;
             width: 184px;
             li { margin-bottom: 3px;white-space: normal;}
-            .cart-preview-prod-name {font-weight: bold;line-height: 15px;}
+            li.cart-preview-prod-name {font-weight: bold;line-height: 15px;}
+            li p {
+              background: #fbcf28;
+              color: black;
+              text-align: center;
+              font-size: 12px;
+              height: 30px;
+              padding: 0 15px;
+              display: table-cell;
+              vertical-align: middle;
+            }
           }
         }
 
@@ -175,11 +186,12 @@
           -webkit-font-smoothing: antialiased;
           font-size: 14px;
           font-weight: 500;
-          padding: 5px 15px;
+          padding: 5px 0;
+          width: 275px;
         }
       }
     }
-    li.cart.dropdown.cart.open {background: url(/assets/icon-cart-1.png)  #333333 no-repeat center 10px;}
+    li.cart.dropdown.cart.open {background: url(/assets/icon-cart-0.png)  #ffffff no-repeat center 10px;height: 50px}
 
     li.amount-menu-item{
       padding: 5px 10px 0 0;
