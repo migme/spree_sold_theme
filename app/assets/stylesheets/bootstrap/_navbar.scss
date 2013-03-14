@@ -364,16 +364,21 @@ li.divider-vertical.pull-right {
     }
   }
 
-  &.login {right: 0;
-    top: 26px;
+  &.login {
     border: none;
+    left: -215px;
+    top: 49px;
     padding: 10px;
+    border-top-right-radius: 0px;
+    width: 250px;
     border-top-right-radius: 0px;
       ul {margin: 0;}
       label.checkbox {
-      padding: 2px 0 0 20px;
+      padding: 0 0 0 20px;
       font-size: 12px;
       width: 100px; }
+      .field {width: 235px}
+      .login-btn {margin: 0}
   }
 
 
