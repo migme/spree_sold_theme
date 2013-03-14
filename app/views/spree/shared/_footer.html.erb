@@ -2,7 +2,7 @@
     <ul class="pull-left no-list">
       <li class="foot-title"><strong>SALE</strong></li>
       <li><a href="/about-sales">About Sales</a></li>
-      <li><a href="http://feedback.sold.sg/knowledgebase/topics/18990-sales" target="_blank">FAQ</a></li>
+      <li><a href="<%= feedback_topic_url(Settings.feedback.sales_faq) %>" target="_blank">FAQ</a></li>
     </ul>
 <% end %>
 <% content_for :shop do %>
@@ -10,7 +10,7 @@
       <li class="foot-title"><strong>SHOP</strong></li>
       <li><a href="/our-products">Our Products</a></li>
       <li><a href="/shipping">Shipping/Returns</a></li>
-      <li><a href="http://feedback.sold.sg/knowledgebase/topics/18929-shop" target="_blank">FAQ</a></li>
+      <li><a href="<%= feedback_topic_url(Settings.feedback.shop_faq) %>" target="_blank">FAQ</a></li>
     </ul>
 <% end %>
 
@@ -22,7 +22,7 @@
       <li><a href="/guide-rules">Essential Rules</a></li>
       <li><a href="/guide-beginner">How It Works</a></li>
       <li><a href="/zero-risk-help">Zero Risk Auctions</a></li>
-      <li><a href="http://feedback.sold.sg/knowledgebase/topics/3851-auction" target="_blank">FAQ</a></li>
+      <li><a href="<%= feedback_topic_url(Settings.feedback.auctions_faq) %>" target="_blank">FAQ</a></li>
     </ul>
 <% end %>
 
@@ -35,9 +35,9 @@
           <%= yield(:seo_footer) %>
       <% else %>
           <ul>
-                  <li><a href="http://www.sold.sg">Sold.sg</a> is Singapore’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
-                  <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="http://shop.sold.sg">Sold.sg Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="http://auctions.sold.sg">Sold.sg Auctions</a>. We also have daily sales on <a href="http://sales.sold.sg">Sold.sg Sale</a> – these limited quantity items are awesome deals, often heavily discounted, and sell very quickly – so don’t miss out! </li><br>
-                  <li><a href="http://www.sold.sg">Sold.sg</a> is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
+                  <li><a href="<%= Settings.site_url %>"><%= Settings.site_name %></a> is <%= Settings.country %>’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
+                  <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="<%= Settings.shop_url %>"><%= Settings.site_name %> Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="<%= Settings.auction_url %>"><%= Settings.site_name %> Auctions</a>. We also have daily sales on <a href="<%= Settings.sale_url %>"><%= Settings.site_name %> Sale</a> – these limited quantity items are awesome deals, often heavily discounted, and sell very quickly – so don’t miss out! </li><br>
+                  <li><a href="<%= Settings.site_url %>"><%= Settings.site_name %></a> is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
 
           </ul>
       <% end %>
@@ -54,7 +54,7 @@
         <li><%= link_to 'Contact Us Maybe?', "/contact-us" %></li>
         <li><a href="/work-with-us">Work With Us</a></li>
         <li><a href="/happy-soldgers" target="_blank">Happy Soldgers</a></li>
-        <li><a href="http://feedback.sold.sg/knowledgebase" target="_blank">H.E.L.P!</a></li>
+        <li><a href="<%= Settings.feedback.base_url%>" target="_blank">H.E.L.P!</a></li>
       </ul>
 
       <ul class="pull-left no-list">
@@ -62,17 +62,17 @@
         <li><%= link_to 'Auction', root_url(subdomain: 'auctions') %></li>
         <li><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
         <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
-        <li><a href="http://thesoldgers.wordpress.com/" target="_blank">Blog</a></li>
-        <li><a href="http://sold.sg/perks-home" target="_blank">Perks</a></li>
+        <li><a href="<%= Settings.blog_url %>" target="_blank">Blog</a></li>
+        <li><a href="<%= Settings.site_url %>/perks-home" target="_blank">Perks</a></li>
       </ul>
 
       <%=  yield(request.subdomain.to_sym) %>
 
       <ul class="pull-right no-list inline">
         <li class="foot-title"><strong>FOLLOW US</strong></li> <br>
-        <li><a href="http://www.facebook.com/soldsg" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
-        <li><a href="http://www.twitter.com/solddotsg " target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
-        <li> <a href="http://thesoldgers.wordpress.com/" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li> <br><br>
+        <li><a href="<%= Settings.facebook_url %>" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
+        <li><a href="<%= Settings.twitter_url %>" target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
+        <li> <a href="<%= Settings.blog_url %>" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li> <br><br>
         <li class="foot-title"><strong>PAYMENT</strong></li> <br>
         <li><img src="/assets/foot-pay1.jpg" alt=""></li>
         <li><img src="/assets/foot-pay2.jpg" alt=""></li>
@@ -108,7 +108,7 @@
       </ul>
 
       <ul class="pull-left no-list" style="margin: 0;">
-        <li><div class="fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div></li>
+        <li><div class="fb-like" data-href="<%= Settings.facebook_url %>" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div></li>
       </ul>
 
     </div>
