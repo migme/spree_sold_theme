@@ -35,9 +35,9 @@
           <%= yield(:seo_footer) %>
       <% else %>
           <ul>
-                  <li><a href="<%= Configs.site_url %>"><%= Configs.site_name %></a> is <%= t(:country) %>’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
-                  <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="<%= Configs.shop_url %>"><%= Configs.site_name %> Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="<%= Configs.auction_url %>"><%= Configs.site_name %> Auctions</a>. We also have daily sales on <a href="<%= Configs.sale_url %>"><%= Configs.site_name %> Sale</a> – these limited quantity items are awesome deals, often heavily discounted, and sell very quickly – so don’t miss out! </li><br>
-                  <li><a href="<%= Configs.site_url %>"><%= Configs.site_name %></a> is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
+                  <li><a href="<%= Configs.site.url %>"><%= Configs.site.name %></a> is <%= t(:country) %>’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
+                  <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="<%= Configs.shop.url %>"><%= Configs.site.name %> Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="<%= Configs.auction.url %>"><%= Configs.site.name %> Auctions</a>. We also have daily sales on <a href="<%= Configs.sale.url %>"><%= Configs.site.name %> Sale</a> – these limited quantity items are awesome deals, often heavily discounted, and sell very quickly – so don’t miss out! </li><br>
+                  <li><a href="<%= Configs.site.url %>"><%= Configs.site.name %></a> is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
 
           </ul>
       <% end %>
@@ -62,17 +62,17 @@
         <li><%= link_to 'Auction', root_url(subdomain: 'auctions') %></li>
         <li><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
         <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
-        <li><a href="<%= Configs.blog_url %>" target="_blank">Blog</a></li>
-        <li><a href="<%= Configs.site_url %>/perks-home" target="_blank">Perks</a></li>
+        <li><a href="<%= Configs.blog.url %>" target="_blank">Blog</a></li>
+        <li><a href="<%= Configs.site.url %>/perks-home" target="_blank">Perks</a></li>
       </ul>
 
       <%=  yield(request.subdomain.to_sym) %>
 
       <ul class="pull-right no-list inline">
         <li class="foot-title"><strong>FOLLOW US</strong></li> <br>
-        <li><a href="<%= Configs.facebook_url %>" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
-        <li><a href="<%= Configs.twitter_url %>" target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
-        <li> <a href="<%= Configs.blog_url %>" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li> <br><br>
+        <li><a href="<%= Configs.facebook.url %>" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
+        <li><a href="<%= Configs.twitter.url %>" target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
+        <li> <a href="<%= Configs.blog.url %>" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li> <br><br>
         <li class="foot-title"><strong>PAYMENT</strong></li> <br>
         <li><img src="/assets/foot-pay1.jpg" alt=""></li>
         <li><img src="/assets/foot-pay2.jpg" alt=""></li>
@@ -108,7 +108,7 @@
       </ul>
 
       <ul class="pull-left no-list" style="margin: 0;">
-        <li><div class="fb-like" data-href="<%= Configs.facebook_url %>" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div></li>
+        <li><div class="fb-like" data-href="<%= Configs.facebook.url %>" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div></li>
       </ul>
 
     </div>
