@@ -27,7 +27,7 @@
           <p>If you have forgotten your password, click <%= link_to "<strong>here</strong>".html_safe, spree.new_user_password_path, :class => "txt-orange" %>  to receive an email on how to reset your password.</p>
           <br>
           <p><strong>I have entered the correct email and password, but I still can’t log in!</strong></p>
-          <p>Have you validated your account? Our system will automatically close accounts that are not activated within 24 hours. If you have not validated your account within 24 hours, you may send us an <a href="mailto:info@sold.sg?Subject=Hello" class="txt-orange">
+          <p>Have you validated your account? Our system will automatically close accounts that are not activated within 24 hours. If you have not validated your account within 24 hours, you may send us an <a href="mailto:<%= Configs.email.info %>?Subject=Hello" class="txt-orange">
             <strong>email</strong></a> or call our <a href="/contact-us" class="txt-orange"><strong>Customer Service Hotline.</strong></a></p>
 
 
