@@ -1,9 +1,6 @@
 @mixin menu-item($imageName, $hoverImageName){
   background: image-url($imageName) no-repeat center 0;
 
-  a {padding-top: 58px;};   // color: $white
-
-
   &:hover, &.active {
     background: image-url($hoverImageName) no-repeat center 0;
     &.white-active.open {
@@ -55,7 +52,7 @@
 
 
 .navbar .menu-cover li.home a:hover, .navbar .menu-cover li.home.active > a{
-  color: #f07b05;
+  color: white;
   text-shadow: 1px 1px 3px black;
 }
 
