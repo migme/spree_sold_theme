@@ -239,7 +239,7 @@
 // Links
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 10px 11px;
+  padding: 24px 10px 24px;
   line-height: 19px;
   color: $navbarLinkColor;
 }

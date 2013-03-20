@@ -243,6 +243,11 @@
   line-height: 19px;
   color: $navbarLinkColor;
 }
+
+.navbar .nav > li > a#myRegistration {
+  padding: 24px 10px 24px;
+}
+
 // Hover
 .navbar .nav > li > a:hover {
   background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from :active
