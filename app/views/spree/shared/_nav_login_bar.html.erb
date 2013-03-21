@@ -1,51 +1,53 @@
-<div class="nav menu-cover pull-right cta">
-  <% if current_user %>
-      <div class="pull-right btn-group account-cta">
-        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" id="navi_soldger">
-          <img src="/assets/user.png" alt="" class="pull-left">
-          <div class="pull-right arrow-down"></div>
-          <span class="pull-right"><%= full_name(current_user) %></span>
-        </button>
-        <ul class="dropdown-menu myaccount">
-          <li class="accnt-set"><%= link_to("Account Settings", account_path(:subdomain => false)) %></li>
-          <li class="pay-his"><%= link_to("Payment History", payment_history_account_path(:subdomain => false)) %></li>
-          <li><hr></li>
-          <li class="go-away"><%= link_to "Logout", spree.destroy_user_session_path %></li>
-        </ul>
-      </div>
-      <% unless current_user.has_role?("auction_user") %>
-          <div id="myRegistration" class="modal hide fade">
-            <%= render :partial => "spree/shared/registration/join_auction", :locals => {:user => current_user} %>
-          </div>
-      <% end %>
-      <% if @continue_registration %>
+<% if current_user %>
 
-          <script type="text/javascript">
-              $(document).ready(function(){
-                  $('#myRegistration').modal('show');
-              });
-          </script>
-      <% end %>
-  <% else %>
-      <div class="pull-right btn-group" id="login_box">
-        <button class="btn btn-small dropdown-toggle" data-toggle="dropdown" id="navi_login"><span class="pull-left">LOGIN</span>  <div class="pull-right arrow-down"></div></button>
-        <div class="dropdown-menu login">
-          <%= form_for :user, :url => spree.user_session_path do |f| %>
-              <ul class="no-list" >
-                <li><%= f.email_field :email, :class => 'span8', :placeholder => "EMAIL ADDRESS" %></li>
-                <li><%= f.password_field :password, :class => 'span8', :placeholder => "PASSWORD" %></li>
-                <li class="pull-right"><%= f.submit "LOGIN", :class => 'btn btn-primary' %></li>
-                <li class="pull-left"><label class="checkbox">
-                  <%= f.check_box :remember_me %> Keep me logged in
-                </label></li>
-                <br class="clear">
-                <!--<div class="fb-login pull-left"><a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a></div>-->
-              </ul>
-          <% end %>
-        </div>
-        <button data-toggle="modal" href="#myRegistration" class="btn btn-small" id="navi_join">JOIN US</button>
-        <%= render :partial => 'spree/shared/register_modal', :locals => {:user => (@user || Spree::User.new)} %>
+    <li class="dropdown myaccnt">
+      <a class="dropdown-toggle username" data-toggle="dropdown" href="#"><p class="pull-left"><%= full_name(current_user) %></p></a>
+      <ul class="dropdown-menu mymenu">
+        <li><%= link_to("Account Settings", account_path(:subdomain => false)) %></li>
+        <li><%= link_to("Payment History", payment_history_account_path(:subdomain => false)) %></li>
+        <li class="friend"><%= link_to 'Invite Friends', invite_friends_url%></li>
+        <li><%= link_to "Logout", spree.destroy_user_session_path %></li>
+      </ul>
+    </li>
+
+  <% unless current_user.has_role?("auction_user") %>
+      <div id="myRegistration" class="modal hide fade">
+        <%= render :partial => "spree/shared/registration/join_auction", :locals => {:user => current_user} %>
       </div>
   <% end %>
-  <div class="pull-right fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" layout="button_count" style="margin-top: 8px; margin-right: 15px;"></div>
-</div>
+  <% if @continue_registration %>
+
+      <script type="text/javascript">
+          $(document).ready(function(){
+              $('#myRegistration').modal('show');
+          });
+      </script>
+  <% end %>
+<% else %>
+    <li class="reg">
+      <a data-toggle="modal" href="#myRegistration" id="navi_join" class="signup">Register</a>
+      <%= render :partial => 'spree/shared/register_modal', :locals => {:user => (@user || Spree::User.new)} %>
+    </li>
+    <li class="nav-divider"></li>
+    <li class="dropdown mylogin">
+      <a class="pull-left dropdown-toggle userlogin" data-toggle="dropdown" id="navi_login" data-target="#">Login </a>
+      <br class="clear">
+      <div class="dropdown-menu login">
+        <%= form_for :user, :url => spree.user_session_path do |f| %>
+            <ul class="no-list" >
+              <li><%= f.email_field :email, :class => 'field', :placeholder => "EMAIL ADDRESS" %></li>
+              <li><%= f.password_field :password, :class => 'field', :placeholder => "PASSWORD" %></li>
+              <li class="pull-right"><%= f.submit "LOGIN", :class => 'btn btn-primary login-btn' %></li>
+              <li class="pull-left"><label class="checkbox">
+                <%= f.check_box :remember_me %> Keep me logged in
+              </label></li>
+
+              <!--<div class="fb-login pull-left"><a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a></div>-->
+            </ul>
+        <% end %>
+
+      </div>
+    </li>
+
+<% end %>
+

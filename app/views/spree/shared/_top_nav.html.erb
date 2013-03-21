@@ -1,50 +1,53 @@
-<!-- This line can be removed. It is just to test Webistrano build -->
-
-<div class="nav-wrap">
-<nav class="navbar" id='sold_top_navbar'>
+<div class="navbar navbar-inverse" style="position: static;">
   <div class="navbar-inner">
     <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".subnav-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
+      <%= link_to image_tag('header_logo.png', :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
 
-      <%= link_to image_tag('singapore-shopping-online.png', :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
-
-      <div class="nav-collapse">
-        <ul class="nav menu-cover pull-left">
-          <li class="<%= is_active?("spree/auctions") %> home"> <%= link_to 'Auction', root_url(subdomain: 'auctions') %> </li>
+      <div class="nav-collapse subnav-collapse">
+        <ul class="nav menu-cover">
           <li class="nav-divider"></li>
-          <li><span class="badge-shop">NEW</span> </li>
-          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
+          <li class="<%= is_active?("spree/auctions") %> home"><%= link_to 'Auction', root_url(subdomain: 'auctions') %></li>
           <li class="nav-divider"></li>
-          <li><span class="badge-sale">NEW</span> </li>
-          <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
+          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
+          <li class="nav-divider"></li>
+          <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
+          <li class="nav-divider"></li>
         </ul>
 
         <ul class="nav menu-cover pull-right">
+          <%= render :partial => 'spree/shared/nav_login_bar' %>
+
+          <li class="nav-divider"></li>
+
           <% if current_user %>
               <li class="cart white-active dropdown" id="mini_cart"></li>
           <% else %>
-              <li class="cart white-active dropdown" id="mini_cart"><a href="#myRegistration" data-toggle="modal"></a></li>
+              <li class="cart white-active dropdown" id="mini_cart"><a href="#myRegistration" data-toggle="modal" style="height: 27px;"></a></li>
           <% end %>
-          <li class="<%= is_active?("spree/invite_friends") %> friend"><%= link_to '', invite_friends_url,"rel" => "tooltip", "data-placement" => "bottom", "data-original-title" => "Invite Friends" %></li>
-          <li class="help"><a href="http://feedback.sold.sg/knowledgebase" target="_blank" title="Help" rel="tooltip" data-placement="bottom" data-original-title="Knowledge Base"></a></li>
+
+
+
         </ul>
-        <%= render :partial => 'spree/shared/nav_login_bar' %>
       </div>
     </div>
   </div>
-</nav>
-
 </div>
+
+<div style="width: 940px; height: 36px;margin: auto;">
+  <span class="pull-right fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" layout="button_count" style="margin-top: 8px; margin-right: 15px;">&nbsp</span>
+</div>
+
 <% if content_for?(:banner) %>
     <%= yield :banner %>
 <% elsif show_banner? %>
 <%= render :partial => 'spree/shared/banner' %>
 <% else %>
-    <div class="blackbg"></div>
+    <!--<div class="blackbg"></div>-->
 <% end %>
 <% if content_for?(:below_nav) %>
     <%= yield :below_nav %>

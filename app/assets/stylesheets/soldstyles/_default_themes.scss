@@ -296,7 +296,7 @@ div#myCarousel{
   height:350px;
   width: 940px;
   background-color: #ffffff;
-  margin:0;
+  margin:auto;
     @include border-radius($radius: 0 0 10px 10px);
     @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
 
@@ -414,52 +414,11 @@ div#myRegistration.modal.hide.fade {
   margin: 0 5px;}
 
 //shopping cart preview//
-.btn-space {margin-right: 5px; }
-.empty-cart {
-  padding: 10px;
-  text-align: center;
-  margin-bottom: 10px;}
 
-.full-cart {
-  padding: 5px;
-  margin: 0;
-    &.cta {color: red;}
-}
-
-.small-cart {
-  border-bottom: #cccccc thin solid;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-}
-.cart-preview {
-
-      li.cta a {
-        color: #f07b05; margin-left: 5px; margin-top:5px;
-        &:hover {color: #f07b05; text-decoration: underline;}
-      }
-      li.check a {
-        color: white;
-        border-radius: 4px;
-        margin: -1px 0 5px 20px;
-        padding: 5px 10px 5px 10px !important;
-        background-color: #f07b05 !important;
-
-          &:hover {background-color: red !important;}
-      }
-}
-
-
-.cart-preview-prod-name {
-  width: 150px;
-  overflow: hidden;
-  height: 30px;
-    a, a:hover {color: black;}
-}
 .cart-preview-auc-name {width: 100px; margin-top: 10px;}
 
 .cart-preview-icon {width: 22px;}
-.cart-preview-detail {font-size: 12px; color: gray;width: 120px;
-  margin-top: 5px;}
+
 a.cart-product-title{white-space: normal; color: black;
   line-height: 16px; font-weight: bold;}
 

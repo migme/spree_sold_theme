@@ -239,15 +239,10 @@
 // Links
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 10px 11px;
+  padding: 24px 10px 24px;
   line-height: 19px;
   color: $navbarLinkColor;
 }
-
-.navbar .nav > li > a#myRegistration {
-  padding: 24px 10px 24px;
-}
-
 // Hover
 .navbar .nav > li > a:hover {
   background-color: $navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from :active
@@ -381,9 +376,13 @@ li.divider-vertical.pull-right {
       label.checkbox {
       padding: 0 0 0 20px;
       font-size: 12px;
+<<<<<<< HEAD
+      width: 150px; }
+=======
       width: 100px; }
       .field {width: 235px}
       .login-btn {margin: 0}
+>>>>>>> headerv2
   }
 
 
