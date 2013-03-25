@@ -480,6 +480,22 @@ padding: 10px;
 
 //auction homepage//
 
+.bid:hover, .btn-bid:hover, .btn-bid-small:hover, {
+  font-weight:bold;
+  background-color: hsl(0, 65%, 40%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53d3d", endColorstr="#a82323");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#d53d3d), to(#a82323));
+  background-image: -moz-linear-gradient(top, #d53d3d, #a82323);
+  background-image: -ms-linear-gradient(top, #d53d3d, #a82323);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53d3d), color-stop(100%, #a82323));
+  background-image: -webkit-linear-gradient(top, #d53d3d, #a82323);
+  background-image: -o-linear-gradient(top, #d53d3d, #a82323);
+  background-image: linear-gradient(#d53d3d, #a82323);
+  border-color: #a82323 #a82323 hsl(0, 65%, 36.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
+  -webkit-font-smoothing: antialiased;}
 .btn-bid {padding: 5px 30px 5px 30px;margin-top: 5px;}
 .btn-bid-small {
   width: 25px;
@@ -597,6 +613,33 @@ padding: 10px;
           -webkit-font-smoothing: antialiased;
           font-weight:bold;
         }
+        .btn-onsale  {
+          margin-top: 12px;
+          font-weight:bold;
+          background-color: hsl(0, 65%, 40%) !important;
+          background-repeat: repeat-x;
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53d3d", endColorstr="#a82323");
+          background-image: -khtml-gradient(linear, left top, left bottom, from(#d53d3d), to(#a82323));
+          background-image: -moz-linear-gradient(top, #d53d3d, #a82323);
+          background-image: -ms-linear-gradient(top, #d53d3d, #a82323);
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53d3d), color-stop(100%, #a82323));
+          background-image: -webkit-linear-gradient(top, #d53d3d, #a82323);
+          background-image: -o-linear-gradient(top, #d53d3d, #a82323);
+          background-image: linear-gradient(#d53d3d, #a82323);
+          border-color: #a82323 #a82323 hsl(0, 65%, 36.5%);
+          color: #fff !important;
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
+          -webkit-font-smoothing: antialiased;
+        }
+        .onsale-wrap {
+          width: 110px;
+          text-align: center;
+          margin: 10px 0 0 5px;
+          line-height: 16px;
+        }
+        .no-sale {padding: 0; font-size: 12px; line-height: 16px}
+        .os-retail {text-decoration: line-through; color: #999999}
+        .os-saleprice {color: #d53d3d; font-size: 12px;font-weight: bold; }
   }
 }
 
@@ -775,6 +818,12 @@ a.top-prod:hover {text-decoration: none;}
           -webkit-font-smoothing: antialiased;
           font-weight:bold;
         }
+        .no-sale {
+          width: 135px;
+          margin: 10px;
+          padding: 0;
+          font-size: 12px;
+          line-height: 15px;}
     }
   a.more {
     margin: 6px 0 0 10px;
@@ -981,7 +1030,7 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
 .auto-info{margin-top: 10px;}
 .auto-label {line-height: 12px;font-size: 12px;margin-top: 5px;}
 .rev-btn {padding: 5px 10px 5px 10px; margin-bottom: 5px;}
-.auto-btn {padding: 5px 29px 5px 29px;}
+.auto-btn {padding: 5px 25px 5px 25px;}
 div.auto-over{
   max-height:150px;
   overflow-y:scroll;
