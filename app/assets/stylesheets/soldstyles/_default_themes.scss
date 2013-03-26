@@ -594,7 +594,7 @@ padding: 10px;
           line-height: 16px;
         }
         a.last-sold:hover {text-decoration: none; color:#333333;}
-        .pull-right {padding-right:10px;}
+        .pull-right {padding-right:12px;}
         .btn-bin {
           margin-top: 12px;
           background-color: hsl(213, 44%, 23%) !important;
@@ -728,7 +728,7 @@ a.top-prod:hover {text-decoration: none;}
     padding: 0;
     margin: 0 auto 15px auto;
     width: 250px;
-    .btn-block {
+    .btn-block{
       display: block;
       width: 100%;
       padding-right: 0;
@@ -736,7 +736,11 @@ a.top-prod:hover {text-decoration: none;}
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-
+     .btn-block:hover {
+       -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+     }
     }
   }
 }
@@ -818,6 +822,27 @@ a.top-prod:hover {text-decoration: none;}
           -webkit-font-smoothing: antialiased;
           font-weight:bold;
         }
+        .btn-onsale  {
+          margin: 4px 6px 0 0;
+          font-weight:bold;
+          background-color: hsl(0, 65%, 40%) !important;
+          background-repeat: repeat-x;
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53d3d", endColorstr="#a82323");
+          background-image: -khtml-gradient(linear, left top, left bottom, from(#d53d3d), to(#a82323));
+          background-image: -moz-linear-gradient(top, #d53d3d, #a82323);
+          background-image: -ms-linear-gradient(top, #d53d3d, #a82323);
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53d3d), color-stop(100%, #a82323));
+          background-image: -webkit-linear-gradient(top, #d53d3d, #a82323);
+          background-image: -o-linear-gradient(top, #d53d3d, #a82323);
+          background-image: linear-gradient(#d53d3d, #a82323);
+          border-color: #a82323 #a82323 hsl(0, 65%, 36.5%);
+          color: #fff !important;
+          text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
+          -webkit-font-smoothing: antialiased;
+        }
+        .sale-price {margin: 7px 0 0 5px}
+        .sp {font-weight: bold; font-size: 14px}
+        .rp {text-decoration: line-through;}
         .no-sale {
           width: 135px;
           margin: 10px;
@@ -2451,12 +2476,11 @@ div.partner-logo:hover .bar {display:block ;}
 }
 .modal.rookie {
   //background-color: rgba(255, 127, 0,0.25);
-  background: url("/assets/Auctions-rookie.png") no-repeat center center fixed;
+  background: url("/assets/rookiepage-web.png") no-repeat center center fixed;
   width: 1020px !important;
-  height: 868px;
+  height: 973px;
   margin: -355px 0 0 -515px;
   position: fixed;
-  overflow: scroll;
 
   img {width: 1020px; height: 868px; border: red thin solid}
 }
