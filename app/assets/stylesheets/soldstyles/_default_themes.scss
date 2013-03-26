@@ -480,28 +480,7 @@ padding: 10px;
 
 //auction homepage//
 
-.bid:hover, .btn-bid:hover, .btn-bid-small:hover, {
-  font-weight:bold;
-  background-color: hsl(0, 65%, 40%) !important;
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53d3d", endColorstr="#a82323");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#d53d3d), to(#a82323));
-  background-image: -moz-linear-gradient(top, #d53d3d, #a82323);
-  background-image: -ms-linear-gradient(top, #d53d3d, #a82323);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53d3d), color-stop(100%, #a82323));
-  background-image: -webkit-linear-gradient(top, #d53d3d, #a82323);
-  background-image: -o-linear-gradient(top, #d53d3d, #a82323);
-  background-image: linear-gradient(#d53d3d, #a82323);
-  border-color: #a82323 #a82323 hsl(0, 65%, 36.5%);
-  color: #fff !important;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
-  -webkit-font-smoothing: antialiased;}
-.btn-bid {padding: 5px 30px 5px 30px;margin-top: 5px;}
-.btn-bid-small {
-  width: 25px;
-  padding: 3px 15px 3px 15px;
-  margin: 8px 1px 0 0;
-}
+
 
 .auction-main-pagination li {
   color: #ffffff;
@@ -525,7 +504,7 @@ padding: 10px;
 
   div.bottom {
       .pull-left {padding-left: 10px;}
-      .pull-right {padding-right: 10px;}
+      .pull-right {padding-right: 8px;}
     text-align: center;
     height: 60px;
     margin-top: 10px;
@@ -562,15 +541,29 @@ padding: 10px;
               .ok {margin-top: 5px;}
         }
     }
-
-  .btn.login {width:80px;
-    padding:5px;
+  .btn-bid {width: 70px; margin-top: 5px;}
+  .login {width: 70px}
+  .login:hover {
+    font-weight:bold;
+    background-color: hsl(0, 65%, 40%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53d3d", endColorstr="#a82323");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#d53d3d), to(#a82323));
+    background-image: -moz-linear-gradient(top, #d53d3d, #a82323);
+    background-image: -ms-linear-gradient(top, #d53d3d, #a82323);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53d3d), color-stop(100%, #a82323));
+    background-image: -webkit-linear-gradient(top, #d53d3d, #a82323);
+    background-image: -o-linear-gradient(top, #d53d3d, #a82323);
+    background-image: linear-gradient(#d53d3d, #a82323);
+    border-color: #a82323 #a82323 hsl(0, 65%, 36.5%);
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
+    -webkit-font-smoothing: antialiased;}
+  .btn.login {
     span.l-1 {display: none;}
     span.l-2 {display: block;}
   }
-  .btn.login:hover { width:80px;
-    padding:5px;
-    background: red;
+  .btn.login:hover {
     span.l-1 {display: block;}
     span.l-2 {display: none;}
   }
@@ -595,6 +588,7 @@ padding: 10px;
         a.last-sold:hover {text-decoration: none; color:#333333;}
         .pull-right {padding-right:12px;}
         .btn-bin {
+          width: 70px;
           margin-top: 12px;
           background-color: hsl(213, 44%, 23%) !important;
           background-repeat: repeat-x;
@@ -728,6 +722,7 @@ a.top-prod:hover {text-decoration: none;}
     margin: 0 auto 15px auto;
     width: 250px;
     .btn-block{
+      font-size: 14px !important;
       display: block;
       width: 100%;
       padding-right: 0;
@@ -765,13 +760,35 @@ a.top-prod:hover {text-decoration: none;}
     padding: 5px;
       div.user {font-size: 14px; height:15px}
     }
-    .btn.login {width: 50px;
-      padding: 4px;
+
+
+    .btn-bid {margin: 5px 0 0 0}
+
+    .login, .btn-bid  {width: 35px;
+      font-size: 12px;
+    }
+    .login:hover {
+      font-weight:bold;
+      background-color: hsl(0, 65%, 40%) !important;
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53d3d", endColorstr="#a82323");
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#d53d3d), to(#a82323));
+      background-image: -moz-linear-gradient(top, #d53d3d, #a82323);
+      background-image: -ms-linear-gradient(top, #d53d3d, #a82323);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53d3d), color-stop(100%, #a82323));
+      background-image: -webkit-linear-gradient(top, #d53d3d, #a82323);
+      background-image: -o-linear-gradient(top, #d53d3d, #a82323);
+      background-image: linear-gradient(#d53d3d, #a82323);
+      border-color: #a82323 #a82323 hsl(0, 65%, 36.5%);
+      color: #fff !important;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
+      -webkit-font-smoothing: antialiased;
+    }
+    .btn.login {
       span.l-1 {display: none;}
       span.l-2 {display: block;}
     }
-    .btn.login:hover { width: 50px;
-      padding: 4px;
+    .btn.login:hover {
       span.l-1 {display: block;}
       span.l-2 {display: none;}
     }
@@ -803,7 +820,7 @@ a.top-prod:hover {text-decoration: none;}
         p {text-align: center; padding-top: 10px;}
         a.last-sold {margin: 10px 5px; color: #333;}
         a.last-sold:hover {text-decoration: none; color: #333;}
-        a.btn-bin {
+        a.btn-bin {  font-size: 12px; width: 35px;
           margin:5px;
           background-color: hsl(213, 44%, 23%) !important;
           background-repeat: repeat-x;
@@ -822,6 +839,7 @@ a.top-prod:hover {text-decoration: none;}
           font-weight:bold;
         }
         .btn-onsale  {
+          font-size: 12px;
           margin: 4px 6px 0 0;
           font-weight:bold;
           background-color: hsl(0, 65%, 40%) !important;
@@ -839,8 +857,8 @@ a.top-prod:hover {text-decoration: none;}
           text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
           -webkit-font-smoothing: antialiased;
         }
-        .sale-price {margin: 7px 0 0 5px}
-        .sp {font-weight: bold; font-size: 14px}
+        .sale-price {margin: 10px 0 0 10px;}
+        .sp {font-weight: bold; font-size: 14px; color:#d53d3d;margin-right: 10px;}
         .rp {text-decoration: line-through;}
         .no-sale {
           width: 135px;
