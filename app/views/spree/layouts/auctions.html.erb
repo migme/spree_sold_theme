@@ -4,6 +4,13 @@
       <%= render :partial => 'spree/toolbars/auctions' %>
       <%= yield %>
     </div>
+
+    <!--ROOKIE BUTTON-->
+    <!-- Button to trigger modal -->
+    <a href="#meRookie" role="button" class="btn btn-large btn-inverse rookie-btn" data-toggle="modal">I'M A ROOKIE!</a>
+
+    <!-- Modal -->
+    <div id="meRookie" class="modal hide fade rookie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
 <% end %>
 
 <% content_for :sub_footer do %>
@@ -15,9 +22,7 @@
       <li><a href="http://feedback.sold.sg/knowledgebase/topics/3851-auction" target="_blank">FAQ</a></li>
     </ul>
 
-    <!--ROOKIE BUTTON-->
-    <!-- Button to trigger modal -->
-    <a href="#noob" role="button" class="btn btn-large btn-inverse noob-btn" data-toggle="modal">I'M A ROOKIE!</a>
+
 
 <% end %>
 
