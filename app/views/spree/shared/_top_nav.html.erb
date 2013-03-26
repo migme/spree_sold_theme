@@ -8,17 +8,17 @@
       </a>
       <%= link_to image_tag('header_logo.png', :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
 
-      <%= link_to image_tag(s3_url(Configs.image.logo), :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
+      <%= link_to image_tag(s3_url(SiteConfig.image.logo), :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
 
       <div class="nav-collapse">
         <ul class="nav menu-cover pull-left">
           <li class="<%= is_active?("spree/auctions") %> home"> <%= link_to 'Auction', root_url(subdomain: 'auctions') %> </li>
-          <% if Configs.shop.enabled %>
+          <% if SiteConfig.shop.enabled %>
             <li class="nav-divider"></li>
             <li><span class="badge-shop">NEW</span> </li>
             <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
           <% end %>
-          <% if Configs.sale.enabled %>
+          <% if SiteConfig.sale.enabled %>
             <li class="nav-divider"></li>
             <li><span class="badge-sale">NEW</span> </li>
             <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
