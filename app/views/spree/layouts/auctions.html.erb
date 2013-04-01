@@ -7,7 +7,9 @@
 
     <!--ROOKIE BUTTON-->
     <!-- Button to trigger modal -->
-    <a href="#meRookie" role="button" class="btn btn-large btn-inverse rookie-btn" data-toggle="modal">I'M A ROOKIE!</a>
+    <% cssClass = "btn btn-large btn-inverse rookie-btn" + ((current_user and !current_user.beginner?) ? "" : " btn-imrookie") %>
+
+        <a href="#meRookie" role="button" class="<%= cssClass %>" data-toggle="modal">I'M A ROOKIE!</a>
 
     <!-- Modal -->
     <div id="meRookie" class="modal hide fade rookie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
