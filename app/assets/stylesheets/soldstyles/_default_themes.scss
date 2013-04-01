@@ -100,7 +100,7 @@ a.page.circle {
   font-weight: bold;
 }
 
-.noclick; .noclick:hover {
+.noclick, .noclick:hover {
   background-color: hsl(0, 0%, 91%) !important;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8e8e8", endColorstr="#e8e8e8");
