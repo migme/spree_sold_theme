@@ -957,7 +957,21 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
     .btn.login:hover {width: 200px;
       padding: 5px 25px 5px 25px;
       text-align: center;
-      background: red;
+      font-weight:bold;
+      background-color: hsl(0, 65%, 40%) !important;
+      background-repeat: repeat-x;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d53d3d", endColorstr="#a82323");
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#d53d3d), to(#a82323));
+      background-image: -moz-linear-gradient(top, #d53d3d, #a82323);
+      background-image: -ms-linear-gradient(top, #d53d3d, #a82323);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d53d3d), color-stop(100%, #a82323));
+      background-image: -webkit-linear-gradient(top, #d53d3d, #a82323);
+      background-image: -o-linear-gradient(top, #d53d3d, #a82323);
+      background-image: linear-gradient(#d53d3d, #a82323);
+      border-color: #a82323 #a82323 hsl(0, 65%, 36.5%);
+      color: #fff !important;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
+      -webkit-font-smoothing: antialiased;
         span.l-1 {display: block;}
         span.l-2 {display: none;}
     }
