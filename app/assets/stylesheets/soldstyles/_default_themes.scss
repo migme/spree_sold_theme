@@ -2508,12 +2508,13 @@ div.partner-logo:hover .bar {display:block ;}
 .modal.rookie {
   //background-color: rgba(255, 127, 0,0.25);
   background: url("/assets/rookiepage-web.png") no-repeat center center fixed;
-  width: 1020px !important;
+  width: 1020px;
   height: 973px;
-  margin: -355px 0 0 -515px;
+  margin: -400px 0 0 -515px;
   position: fixed;
+  overflow: scroll;
 
-  img {width: 1020px; height: 868px; border: red thin solid}
+  img {width: 1020px; height: 868px;}
 }
 
 .btn-imrookie {
