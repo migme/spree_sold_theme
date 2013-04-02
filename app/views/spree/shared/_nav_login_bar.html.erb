@@ -29,7 +29,7 @@
       <%= render :partial => 'spree/shared/register_modal', :locals => {:user => (@user || Spree::User.new)} %>
     </li>
     <li class="nav-divider"></li>
-    <li class="dropdown mylogin">
+    <li class="dropdown mylogin" id="login_box">
       <a class="pull-left dropdown-toggle userlogin" data-toggle="dropdown" id="navi_login" data-target="#">Login </a>
       <div class="dropdown-menu login">
         <%= form_for :user, :url => spree.user_session_path do |f| %>
