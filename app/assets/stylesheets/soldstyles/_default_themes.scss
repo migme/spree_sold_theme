@@ -2500,8 +2500,10 @@ div.partner-logo:hover .bar {display:block ;}
   right: -50px;
   top: 65px;
   margin-top: 50px;
+  -o-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -2511,12 +2513,10 @@ div.partner-logo:hover .bar {display:block ;}
   //background: url("/assets/rookiepage-web.png") no-repeat center center fixed;
   background-color: #000000;
   width: 1020px;
-  max-height: 900px;
+  height: 985px;
   margin: 0 0 0 -515px;
-  overflow: scroll;
   position: absolute;
 
-  //img {width: 1020px; height: 973px;}
 }
 
 .btn-imrookie {
