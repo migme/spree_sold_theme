@@ -10,8 +10,8 @@
               </ul>
             </li>
             <li class="tb-myauctions">
-              <%= link_to my_participated_auctions_url(subdomain: "auctions"), {:class => "txt-white",  'rel' => 'tooltip', 'data-placement' => 'bottom',  'data-original-title' => "You can only participate and win 4 auctions in any 14 day period."} do %>
-                  <span class="txt-18" id="user_ea">0</span><span class="txt-18">/4</span><br>AUCTIONS
+              <%= link_to my_participated_auctions_url(subdomain: "auctions"), {:class => "txt-white",  'rel' => 'tooltip', 'data-placement' => 'bottom',  'data-original-title' => "You can only participate and win #{Spree::AuctionLimit::LIMIT_ENTRY_COUNT} auctions in any 14 day period."} do %>
+                  <span class="txt-18" id="user_ea">0</span><span class="txt-18">/<%= Spree::AuctionLimit::LIMIT_ENTRY_COUNT %></span><br>AUCTIONS
               <% end %>
             </li>
             <li class="tb-mytokens">
