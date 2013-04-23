@@ -1030,7 +1030,7 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
   color:red;
   }
 .auc-animation.hurry-up{
-  background: url('/assets/ending-soon.gif');
+  background: url($s3_url + '/assets/ending-soon.gif');
 }
 
 .giant-timer {font-size: 58px; margin-bottom: 20px;line-height: 50px;}
@@ -2132,7 +2132,7 @@ $txt-gray: #979797;
   display: block;
 }
 .ticker-controls li.jnt-play-pause {
-  background-image: url('/assets/controls.png');
+  background-image: url($s3_url + '/assets/controls.png');
   background-position: 32px 16px;
 }
 .ticker-controls li.jnt-play-pause.over {
@@ -2142,7 +2142,7 @@ $txt-gray: #979797;
   background-position: 32px 0px;
 }
 .ticker-controls li.jnt-play-pause.paused {
-  background-image: url('/assets/controls.png');
+  background-image: url($s3_url + '/assets/controls.png');
   background-position: 48px 16px;
 }
 .ticker-controls li.jnt-play-pause.paused.over {
@@ -2152,7 +2152,7 @@ $txt-gray: #979797;
   background-position: 48px 0px;
 }
 .ticker-controls li.jnt-prev {
-  background-image: url('/assets/controls.png');
+  background-image: url($s3_url + '/assets/controls.png');
   background-position: 0px 16px;
 }
 .ticker-controls li.jnt-prev.over {
@@ -2162,7 +2162,7 @@ $txt-gray: #979797;
   background-position: 0px 0px;
 }
 .ticker-controls li.jnt-next {
-  background-image: url('/assets/controls.png');
+  background-image: url($s3_url + '/assets/controls.png');
   background-position: 16px 16px;
 }
 .ticker-controls li.jnt-next.over {
