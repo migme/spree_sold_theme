@@ -91,7 +91,7 @@ Spree::BaseHelper.class_eval do
         @auction_notifications <<  " #{link_to("Click here", purchase_tokens_url(subdomain:false))} to purchase more!"
       end
 
-      @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn Credits by Referring Friends?"
+      @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn #{Spree::FreeCoinPack::FIRST_BOUGHT} Tokens by Referring Friends?"
       @auction_notifications << "#{link_to("Click here", invite_friends_url(subdomain:false))} for more information!"
     else
       @auction_notifications <<  "Welcome! See something you like?"
