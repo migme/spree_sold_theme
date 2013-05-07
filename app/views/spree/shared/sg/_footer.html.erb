@@ -63,16 +63,16 @@
         <li><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
         <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
         <li><a href="<%= SiteConfig.blog.url %>" target="_blank">Blog</a></li>
-        <li><a href="<%= SiteConfig.site.url %>/perks-home" target="_blank">Perks</a></li>
+        <li><a href="http://sold.sg/perks-home" target="_blank">Perks</a></li>
       </ul>
 
       <%=  yield(request.subdomain.to_sym) %>
 
       <ul class="pull-right no-list inline">
         <li class="foot-title"><strong>FOLLOW US</strong></li> <br>
-        <li><a href="<%= SiteConfig.facebook.url %>" target="_blank"> <img src="<%= s3_url('spree_sold_theme/foot-fb.jpg')%>" alt=""></a> </li>
-        <li><a href="<%= SiteConfig.twitter.url %>" target="_blank"> <img src="<%= s3_url('spree_sold_theme/foot-twitter.jpg')%>" alt=""></a></li>
-        <li> <a href="<%= SiteConfig.blog.url %>" target="_blank"> <img src="<%= s3_url('spree_sold_theme/foot-blog.jpg')%>" alt=""></a></li> <br><br>
+        <li><a href="<%= SiteConfig.facebook.url %>" target="_blank"> <img src="/assets/foot-fb.jpg" alt=""></a> </li>
+        <li><a href="<%= SiteConfig.twitter.url %>" target="_blank"> <img src="/assets/foot-twitter.jpg" alt=""></a></li>
+        <li> <a href="<%= SiteConfig.blog.url %>" target="_blank"> <img src="/assets/foot-blog.jpg" alt=""></a></li> <br><br>
         <li class="foot-title"><strong>PAYMENT</strong></li> <br>
         <li><img src="<%= s3_url('spree_sold_theme/foot-pay1.jpg')%>" alt=""></li>
         <li><img src="<%= s3_url('spree_sold_theme/foot-pay2.jpg')%>" alt=""></li>
@@ -107,7 +107,7 @@
         <li><img src="<%= s3_url('spree_sold_theme/f-trustsg.gif') %>" width="90px" alt="" class="f-trustsg" style="padding-bottom: 35px;"> </li>
       </ul>
 
-      <ul class="pull-left no-list" style="margin: 0;">
+      <ul class="pull-left no-list" style="margin: 0;">=
         <li><div class="fb-like" data-href="<%= SiteConfig.facebook.url %>" data-send="false" data-width="80" data-show-faces="false" data-colorscheme="light" data-font="lucida grande"></div></li>
       </ul>
 
