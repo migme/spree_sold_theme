@@ -25,7 +25,7 @@
 <%= content_for?(:content) ? yield(:content) : yield %>
 
 <br/><br/>
-<%= render :partial => 'spree/shared/footer' %>
+<%= render :partial => "spree/shared/#{SoldSpree::Application::SITE}/footer" %>
 <%= render :partial => 'spree/shared/google_analytics' %>
 <%= render :partial => 'spree/shared/facebook_init' %>
 <%#= render :partial => 'spree/shared/pin_it' %>
