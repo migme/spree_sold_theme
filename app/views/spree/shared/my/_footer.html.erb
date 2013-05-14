@@ -61,7 +61,9 @@
         <li class="foot-title"><strong>OUR SITES</strong></li>
         <li><%= link_to 'Auction', root_url(subdomain: 'auctions') %></li>
         <li><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
-        <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
+        <% if SiteConfig.sale.enabled %>
+            <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
+        <% end %>
         <li><a href="<%= SiteConfig.blog.url %>" target="_blank">Blog</a></li>
       </ul>
 
