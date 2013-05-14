@@ -29,9 +29,9 @@
 
 <%= csrf_meta_tags %>
 <script type="text/javascript">
-  window.currency_for_format = "<%= SiteConfig.currency %>";
   var siteConfig = {
-      'name': '<%= SiteConfig.site.name %>'
+      'currency' :  "<%= SiteConfig.currency %>"
+    , 'name': '<%= SiteConfig.site.name %>'
     , 'country': '<%= SiteConfig.site.country %>'
     , 'facebook_url': '<%= SiteConfig.facebook.url %>'
   };
