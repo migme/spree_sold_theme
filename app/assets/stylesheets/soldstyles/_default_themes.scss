@@ -1,4 +1,4 @@
-$s3_url: "https://s3-ap-southeast-1.amazonaws.com/sold.shared/";
+$s3_url: "https://s3-ap-southeast-1.amazonaws.com/sold.shared/spree_sold_theme/";
 
 body {background: url($s3_url  + "rough_diagonal.png"); font-family: 'Droid Sans', sans-serif; position: relative}
 body.auction-bg {background: url($s3_url  + "auction-bground.png"); font-family: 'Droid Sans', sans-serif;}
@@ -1030,7 +1030,7 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
   color:red;
   }
 .auc-animation.hurry-up{
-  background: url($s3_url + '/assets/ending-soon.gif');
+  background: url($s3_url + 'ending-soon.gif');
 }
 
 .giant-timer {font-size: 58px; margin-bottom: 20px;line-height: 50px;}
@@ -2025,7 +2025,7 @@ $txt-gray: #979797;
 .won_auction_table{
   .download_ico{
     a{
-      background:url(/assets/my_page/download_sprite.png) no-repeat;
+      background:url($s3_url + 'my_page/download_sprite.png') no-repeat;
       background-position:0 0;
       width:74px;
       height:54px;
@@ -2132,7 +2132,7 @@ $txt-gray: #979797;
   display: block;
 }
 .ticker-controls li.jnt-play-pause {
-  background-image: url($s3_url + '/assets/controls.png');
+  background-image: url($s3_url + 'controls.png');
   background-position: 32px 16px;
 }
 .ticker-controls li.jnt-play-pause.over {
@@ -2142,7 +2142,7 @@ $txt-gray: #979797;
   background-position: 32px 0px;
 }
 .ticker-controls li.jnt-play-pause.paused {
-  background-image: url($s3_url + '/assets/controls.png');
+  background-image: url($s3_url + 'controls.png');
   background-position: 48px 16px;
 }
 .ticker-controls li.jnt-play-pause.paused.over {
@@ -2152,7 +2152,7 @@ $txt-gray: #979797;
   background-position: 48px 0px;
 }
 .ticker-controls li.jnt-prev {
-  background-image: url($s3_url + '/assets/controls.png');
+  background-image: url($s3_url + 'controls.png');
   background-position: 0px 16px;
 }
 .ticker-controls li.jnt-prev.over {

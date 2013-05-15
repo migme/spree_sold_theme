@@ -1,4 +1,4 @@
-$s3_url: "https://s3-ap-southeast-1.amazonaws.com/sold.shared/";
+$s3_url: "https://s3-ap-southeast-1.amazonaws.com/sold.shared/spree_sold_theme/";
 
 @mixin menu-item($imageName, $hoverImageName){
   background: image-url($imageName) no-repeat center 0;
