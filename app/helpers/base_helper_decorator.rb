@@ -106,11 +106,11 @@ Spree::BaseHelper.class_eval do
     # end
 
     #adding last day sales
-    last_sale = Spree::FlashSale.last_day.includes([:variant])
-    if last_sale.size > 0
-      random_last_sale = last_sale[rand(last_sale.size)]
-      @auction_notifications << "Sale ending soon: #{link_to(random_last_sale.name,show_flash_sale_url(random_last_sale.permalink,random_last_sale.id,:subdomain => "sales") )} for #{random_last_sale.discount}% off!"
-    end
+    # last_sale = Spree::FlashSale.last_day.includes([:variant])
+    # if last_sale.size > 0
+    #   random_last_sale = last_sale[rand(last_sale.size)]
+    #   @auction_notifications << "Sale ending soon: #{link_to(random_last_sale.name,show_flash_sale_url(random_last_sale.permalink,random_last_sale.id,:subdomain => "sales") )} for #{random_last_sale.discount}% off!"
+    # end
 
     ntfs=""
     @auction_notifications.each do |notification|
