@@ -15,8 +15,6 @@
           <li class="nav-divider"></li>
           <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
           <li class="nav-divider"></li>
-          <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
-          <li class="nav-divider"></li>
         </ul>
 
         <ul class="nav menu-cover pull-right">
@@ -29,8 +27,6 @@
           <% else %>
               <li class="cart white-active dropdown" id="mini_cart"><a href="#myRegistration" data-toggle="modal" style="height: 27px;"></a></li>
           <% end %>
-
-
 
         </ul>
       </div>
