@@ -55,7 +55,7 @@ Spree::BaseHelper.class_eval do
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
 
       if current_user.beginner?
-        @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to Sold.sg? #{link_to("Click here", knowledge_url('auctions_faq'))} for our FAQs!"
+        @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to #{SiteConfig.site.name}? #{link_to("Click here", knowledge_url('auctions_faq'))} for our FAQs!"
 
         @auction_notifications <<  "#{link_to("Click here", knowledge_url('bidding_strategy'))} for Bidding Tips & Strategies! "
       end
