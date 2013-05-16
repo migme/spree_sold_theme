@@ -67,7 +67,7 @@ Spree::BaseHelper.class_eval do
         @auction_notifications <<  "Hi #{current_user.first_name.capitalize}! Did you know we are certified by <a target='_blank' href='http://www.cnsg.com.sg/accreditation/Soldgers.pdf'>TrustSg</a>" # and <a href='javascript:vrsn_splash()' tabindex='-1'>Verisign</a>"
       end
 
-      @auction_notifications << "Free Shipping applies to purchases of #{SiteConfig.currency}150 or more (excl.Token Packs)."
+      @auction_notifications << "Free Shipping applies to purchases of #{SiteConfig.currency}#{SiteConfig.shipping.free.threshold} or more (excl.Token Packs)." if SiteConfig.shipping.free.enable
 
 
       auctions = Spree::Auction.by_state('live').where(["remaining_time < ?", 10.minutes.from_now.utc.to_i]).order('remaining_time')
