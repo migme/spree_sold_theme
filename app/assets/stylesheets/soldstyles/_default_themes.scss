@@ -643,7 +643,8 @@ padding: 10px;
 }
 #beginner_auctions .auc-box .star { display:none; }
 .beginner_fabio{
-  background: url($s3_url + "beginner_fabio_new.png");width: 220px; height:362px;
+  /*  background: url($s3_url + "beginner_fabio_new.png");width: 220px; height:362px; */
+  width: 220px; height:362px;
   @extend .pull-left,.auc-box;
 }
 .premium_fabio{
