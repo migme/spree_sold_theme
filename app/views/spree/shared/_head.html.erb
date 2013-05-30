@@ -29,6 +29,7 @@
 
 <%= csrf_meta_tags %>
 <script type="text/javascript">
+    window.currency_for_format = "<%= SiteConfig.currency %>";
   var siteConfig = {
       'currency' :  "<%= SiteConfig.currency %>"
     , 'name': '<%= SiteConfig.site.name %>'
