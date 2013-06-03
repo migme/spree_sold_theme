@@ -1587,6 +1587,7 @@ ul.subfooter li a {
 
 //--------------------terms, privacy, info-security---------------------//
 .term-main {
+  margin: 0 auto;
   width: 900px;
   background-color: white;
   @include border-radius($radius: 5px);
@@ -1605,6 +1606,7 @@ ul.subfooter li a {
 //--------------------guides---------------------//
 
 .guides-main {
+  margin: 0 auto;
   width: 900px;
   background-color: white;
   @include border-radius($radius: 5px);
@@ -2540,5 +2542,12 @@ div.partner-logo:hover .bar {display:block ;}
 
 
 
-//--------------------------------------------------------------OLD CODES [please moves your codes above this line]--------------------------------------------------------------//
+//--------------------------------------------------------------PH CODES HERE--------------------------------------------------------------//
 
+.ph-bg-top {
+  background: url("/assets/ph/bg-top.jpg") top center no-repeat #222222;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
