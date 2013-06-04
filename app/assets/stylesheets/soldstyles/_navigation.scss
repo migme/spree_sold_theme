@@ -100,14 +100,17 @@
 
     li.dropdown.myaccnt {
       position: relative;
-      height: 48px;
-      background: url(/assets/user.png) no-repeat 10px center;
-      p {margin-left: 30px; margin-top: 7px}
-      a.dropdown-toggle.username {height: 29px; }
-      a.dropdown-toggle.username:hover, a.dropdown-toggle.username:active {background: url(/assets/user.png) #333333  no-repeat 10px 13px; }
+      height: 73px;
+      background: url(/assets/user.png) no-repeat 10px 30px;
+      p {margin-left: 30px; margin-top: 26px}
+      a.dropdown-toggle.username {height: 46px; }
+      a.dropdown-toggle.username:hover, a.dropdown-toggle.username:active {
+        background: url(/assets/user.png)#333333 no-repeat 10px 30px;
+        height: 54px
+      }
     }
     li.dropdown.myaccnt.open {
-      a.dropdown-toggle.username {background: url(/assets/user.png) #333333  no-repeat 10px 13px;}
+      a.dropdown-toggle.username {background: url(/assets/user.png) #333333  no-repeat 10px 30px;}
 
     }
 
@@ -149,8 +152,8 @@
       a.dropdown-toggle.mini-cart:hover, a.dropdown-toggle.mini-cart:hover:active {background: url(/assets/icon-cart-0.png)  #ffffff no-repeat center 25px; height: 75px}
       .badge-cart {
         position: absolute;
-        top: 3px;
-        right: 0;
+        top: 15px;
+        right: 2px;
         border-radius: 55%;
         width: 20px;
         height: 20px;
@@ -288,7 +291,6 @@ ul.dropdown-menu.login{width: 280px;
 
 
 
-ul.reg-cta {list-style: none;margin: 0 0 0 20px;}
 
 
 // fb button //

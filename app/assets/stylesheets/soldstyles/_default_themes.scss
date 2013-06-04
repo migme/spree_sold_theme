@@ -217,17 +217,17 @@ a.tb-myauto {
 a.tb-buy {
   display: block;
   width:67px;
-  height:40px;
+  height:45px;
   margin-right: 5px;
-  background-image: url("/assets/buy1.png"); background-position: top center; background-repeat: no-repeat;
+  background-image: url("/assets/ph/toolbar-token.png"); background-position: top center; background-repeat: no-repeat;
 
-  &:hover {background-image: url("/assets/buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
+  //&:hover {background-image: url("/assets/buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
 }
 
 
 //toolbar-shop//
 .toolbar-shop-cat {
-  li.dropdown {padding: 10px 10px 17px 10px;}
+  li.dropdown {padding: 10px 10px 17px 10px; font-size: 14px; font-weight: 100; text-transform: uppercase}
   li.dropdown:hover, li.dropdown.open{
     background-color: #333;
     padding: 10px 10px 17px 10px;
@@ -1525,7 +1525,8 @@ div.auto-over{
   width: 100%;
   left: 0px;
   position: absolute;
-  margin-top: 20px;}
+
+}
 
 .footer-shadow {height: 1px;
   background-color: white;
@@ -2545,7 +2546,22 @@ div.partner-logo:hover .bar {display:block ;}
 //--------------------------------------------------------------PH CODES HERE--------------------------------------------------------------//
 
 .ph-bg-top {
-  background: url("/assets/ph/bg-top.jpg") top center no-repeat #222222;
+background: #222222;
+
+}
+
+.bg-top-wrap {
+  background: url("/assets/ph/bg-top.jpg") top center no-repeat;
+  width: 100%;
+  height: 465px;
+
+
+}
+
+.footer-bg {
+  background: url("/assets/ph/bg-bottom.jpg") top center no-repeat fixed;
+  height: 443px;
+  margin-top: 50px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
