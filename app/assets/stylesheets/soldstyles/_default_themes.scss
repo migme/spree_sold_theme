@@ -139,14 +139,7 @@ a.page.circle {
   right: -43px;
 }
 
-.prod-image {
-  width: 220px;
-  height: 165px;
-  margin: 0 auto;
-  text-align: center;
-    &.big {width: 380px;}
-    span#main-image {height: 285px;}
-}
+
 
 
 //---------toolbars---------//
@@ -898,38 +891,21 @@ a.top-prod:hover {text-decoration: none;}
     @extend .txt-red;
   }
     .star {margin:0;}
-}
-.sm-widgets  {
-  margin-top: 5px;
-  margin-bottom: 15px;
-  position: relative;
-    .pinterest {position: absolute;
-      right: 0;
-      top: -20px;}
-}
-.auc-prod-big {width:650px;}
-.prod-image.big.auction{
-  #main-image{margin-top : 0px !important;width: 380px; height: 285px;}
-  .prod-thumbs {
-    margin-top: 20px;
-      li  {margin: 0 10px 0 0 !important; border : 0px !important;width :80px; height : 60px;}
-      img {margin-right: 0px;margin:0 auto; }
+
+  .prod-image {
+    width: 220px;
+    height: 165px;
+    margin: 0 auto;
+    text-align: center;
+    &.big {width: 380px;height: auto;}
+    span#main-image {height: 285px;}
   }
-}
-.prod-thumbs {
-  margin-top: 20px;
-    img {margin-right: 10px;}
-}
 
-#product-thumbnails {margin-top: 10px; margin-left: 0px !important;}
-//ul#product-thumbnails.thumbnails.inline {margin-left: 5px;}
-ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
-
-.prod-bid {
-  position:relative;
-  width: 270px;
-  text-align: center;
-  margin: 0 10px 0 10px;
+  .prod-bid {
+    position:relative;
+    width: 270px;
+    text-align: center;
+    margin: 0 10px 0 10px;
 
     ul, ul.u-save {list-style: none; margin: 0;padding: 0;}
     div.auc-error {
@@ -941,12 +917,12 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
       background-image: url("/assets/Error2.png");
       background-position: top center;
       background-repeat: 0;
-          .content {
-            color: white;
-            margin: 60px 0 0 40px;
-            width: 200px;
-              .ok {margin-top: 10px; }
-          }
+      .content {
+        color: white;
+        margin: 60px 0 0 40px;
+        width: 200px;
+        .ok {margin-top: 10px; }
+      }
     }
 
     .btn.login {width: 200px;
@@ -972,8 +948,8 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
       color: #fff !important;
       text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.23);
       -webkit-font-smoothing: antialiased;
-        span.l-1 {display: block;}
-        span.l-2 {display: none;}
+      span.l-1 {display: block;}
+      span.l-2 {display: none;}
     }
     a.btn-bin {
       margin:5px;
@@ -993,9 +969,43 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
       -webkit-font-smoothing: antialiased;
       font-weight:bold;
     }
-
     .txt-fix {letter-spacing: -1px; display: block;}
+  }
+  .shop-right {width: 240px}
+  .quantity {height:25px; width: 50px; border: red thin solid}
+  .prod-btn {
+    padding: 0 50px;
+    p {margin: 10px 0; font-size: 18px}
+    img {margin-top: 8px; margin-left: 5px;}
+  }
 }
+.sm-widgets  {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  position: relative;
+    .pinterest {position: absolute;
+      right: 0;
+      top: -20px;}
+}
+.auc-prod-big {width:650px; color: #585858;}
+.prod-image.big.auction{
+  #main-image{margin-top : 0px !important;width: 380px; height: 285px;}
+  .prod-thumbs {
+    margin-top: 20px;
+      li  {margin: 0 10px 0 0 !important; border : 0px !important;width :80px; height : 60px;}
+      img {margin-right: 0px;margin:0 auto; }
+  }
+}
+.prod-thumbs {
+  margin-top: 20px;
+    img {margin-right: 10px;}
+}
+
+#product-thumbnails {margin-top: 10px; margin-left: 0px !important;}
+//ul#product-thumbnails.thumbnails.inline {margin-left: 5px;}
+ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
+
+
 
 .prod-autobid {
   position:relative;
@@ -1194,10 +1204,21 @@ div.auto-over{
   margin-right: 20px;
 }
 .shop-short-desc {
+  text-align: left;
+  margin-top: 20px;
+    ul.shop-ship {width: 265px;}
     ul {width: 200px;margin-bottom: 20px;}
     ul.shop-tags li{display:block; float: left; margin-right: 10px;}
 }
-.shop-variation{line-height: 25px;padding-left: 10px; margin-right: 10px;}
+.shop-variation{
+  margin-top: 10px;
+  width: 200px;
+  label {
+    line-height: 25px;
+    color: #585858;
+    font-size: 12px;
+  }
+}
 #shop-quantity {width: 50px; height: 25px;}
 .shop-cta {float: right;}
 
@@ -2592,6 +2613,7 @@ div.partner-logo:hover .bar {display:block ;}
   -webkit-font-smoothing: antialiased;
   font-weight: bold;
 }
+.ph-btn-y:hover {text-shadow: none}
 
 .ph-bg-top {
 background: #222222;
