@@ -683,12 +683,22 @@ a.top-prod:hover {text-decoration: none;}
 .completed {
   border-top-right-radius: 0px;
   height: 360px;
-    div.top-space {width: 185px;
-      border-top: #ededed thin dashed;
-      margin: 15px auto 0 auto;
-      padding-top: 15px;
-      margin-bottom: 10px;
-      font-size: 12px;}
+    div.top-space {
+      background-color: #d8d8d8;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      margin-top: 0;
+      padding: 20px 0;
+      height: 39px;
+      text-align: center;
+      .a-user {
+        width: 200px;
+        font-size: 20px;
+        margin: 10px auto 0 auto;
+      }
+    }
     div.auc-wrap-top {
       background-color:#d8d8d8;
       color:#333333;
@@ -698,7 +708,15 @@ a.top-prod:hover {text-decoration: none;}
       border-top-right-radius: 5px;
       border-bottom: gray 1px dotted;
     }
-    .auc-icons {border: red thin solid}
+    .auc-icons {margin-top: 5px}
+    .comp-price {
+      background-color: #2e2e2e;
+      text-align: center;
+      line-height: 40px;
+      color: #efb600;
+      font-weight: 100;
+      margin-top: 10px;
+    }
 }
 
 .auc-bot-left{width: 90px;line-height: 28px;}
@@ -1286,6 +1304,8 @@ div.auto-over{
   @include border-radius($radius: 5px);
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
 
+
+
   div.bottom {
     background-color:#2e2e2e;
     border-bottom-left-radius: 3px;
@@ -1296,6 +1316,7 @@ div.auto-over{
     .btn-shopadd {
       padding: 5px 40px 0 40px;
     }
+    p.out {color: white; padding: 9px;};
   }
   div.price {
     width: 200px;
