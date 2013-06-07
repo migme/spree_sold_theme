@@ -6,15 +6,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <%= link_to image_tag('header_logo.png', :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
 
-      <div class="nav-collapse subnav-collapse">
-        <ul class="nav menu-cover">
+      <%= link_to image_tag(s3_url('gamersph-logo.png',true), :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
+
+      <div class="nav-collapse">
+        <ul class="nav menu-cover pull-left">
+          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
           <li class="nav-divider"></li>
-          <li class="<%= is_active?("spree/auctions") %> home"><%= link_to 'Auction', root_url(subdomain: 'auctions') %></li>
-          <li class="nav-divider"></li>
-          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
-          <li class="nav-divider"></li>
+          <li class="<%= is_active?("spree/auctions") %> home"> <%= link_to 'Auction', root_url(subdomain: 'auctions') %> </li>
+          <% if SiteConfig.sale.enabled %>
+            <li class="nav-divider"></li>
+            <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
+          <% end %>
         </ul>
 
         <ul class="nav menu-cover pull-right">
@@ -23,10 +26,12 @@
           <li class="nav-divider"></li>
 
           <% if current_user %>
-              <li class="cart white-active dropdown" id="mini_cart"></li>
+            <li class="cart white-active dropdown" id="mini_cart"></li>
           <% else %>
-              <li class="cart white-active dropdown" id="mini_cart"><a href="#myRegistration" data-toggle="modal" style="height: 27px;"></a></li>
+            <li class="cart white-active dropdown" id="mini_cart"><a href="#myRegistration" data-toggle="modal" style="height: 27px;"></a></li>
           <% end %>
+
+
 
         </ul>
       </div>
@@ -35,18 +40,18 @@
 </div>
 
 <div style="width: 940px; height: 36px;margin: auto;">
-  <span class="pull-right fb-like" data-href="http://www.facebook.com/soldsg" data-send="false" data-width="80" data-show-faces="false" layout="button_count" style="margin-top: 8px; margin-right: 15px;">&nbsp</span>
+  <span class="pull-right fb-like" data-href="<%= SiteConfig.facebook.url %>" data-send="false" data-width="80" data-show-faces="false" layout="button_count" style="margin-top: 8px; margin-right: 15px;">&nbsp</span>
 </div>
 
 <% if content_for?(:banner) %>
-    <%= yield :banner %>
+  <%= yield :banner %>
 <% elsif show_banner? %>
-<%= render :partial => 'spree/shared/banner' %>
+  <%= render :partial => 'spree/shared/banner' %>
 <% else %>
-    <!--<div class="blackbg"></div>-->
+  <!--<div class="blackbg"></div>-->
 <% end %>
 <% if content_for?(:below_nav) %>
-    <%= yield :below_nav %>
+  <%= yield :below_nav %>
 <% end %>
 <div id="notifications" class="notifications notification-top">
   <%= flash_messages %>

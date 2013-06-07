@@ -1,3 +1,5 @@
+$s3_url: "https://s3-ap-southeast-1.amazonaws.com/gamers.ph.bckt/spree_sold_theme/";
+
 @mixin menu-item($imageName, $hoverImageName){
   background: image-url($imageName) no-repeat center 0;
 
@@ -22,7 +24,7 @@
     background: image-url($hoverImageName) no-repeat center 0 #fff;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    background-image: url("/assets/cart1_select.png");
+    background-image: url($s3_url + "/cart1_select.png");
     padding-right: 20px;
     padding-left: 15px;
   }
@@ -52,30 +54,31 @@
 
 
 .navbar .menu-cover li.home a:hover, .navbar .menu-cover li.home.active > a{
-  background: url(/assets/header_auction2.png) #f07b05 no-repeat 10px 10px;
-  height: 24px;
+  background: url($s3_url + "ph/header-auc.png") no-repeat 6px 21px, -moz-linear-gradient(top, #fffd37 0%, #884f00 54%, #dfa600 100%); /* FF3.6+ */
+  background: url($s3_url + "ph/header-auc.png") no-repeat 6px 21px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffd37), color-stop(54%,#884f00), color-stop(100%,#dfa600)); /* Chrome,Safari4+ */
+  background: url($s3_url + "ph/header-auc.png") no-repeat 6px 21px, -webkit-linear-gradient(top, #fffd37 0%,#884f00 54%,#dfa600 100%); /* Chrome10+,Safari5.1+ */
+  background: url($s3_url + "ph/header-auc.png") no-repeat 6px 21px, -ms-linear-gradient(top, #fffd37 0%,#884f00 54%,#dfa600 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffd37', endColorstr='#dfa600',GradientType=0 ); /* IE6-9 */
+  height: 29px;
   color: white;
-  -moz-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
-  -webkit-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
-  box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
 }
 
 .navbar .menu-cover li.shop a:hover, .navbar .menu-cover li.shop.active > a{
-  background: url(/assets/header_shop2.png) #416df1 no-repeat 10px 10px;
-  height: 24px;
+  background: url($s3_url + "ph/header-shop.png") no-repeat 10px 20px, linear-gradient(to bottom, #39b1ff 0%,#000990 54%,#0058df 100%); /* W3C */
+  background: url($s3_url + "ph/header-shop.png") no-repeat 10px 20px, -moz-linear-gradient(top, #39b1ff 0%, #000990 54%, #0058df 100%); /* FF3.6+ */
+  background: url($s3_url + "ph/header-shop.png") no-repeat 10px 20px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#39b1ff), color-stop(54%,#000990), color-stop(100%,#0058df)); /* Chrome,Safari4+ */
+  background: url($s3_url + "ph/header-shop.png") no-repeat 10px 20px, -webkit-linear-gradient(top, #39b1ff 0%,#000990 54%,#0058df 100%); /* Chrome10+,Safari5.1+ */
+  background: url($s3_url + "ph/header-shop.png") no-repeat 10px 20px,  -ms-linear-gradient(top, #39b1ff 0%,#000990 54%,#0058df 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#39b1ff', endColorstr='#0058df',GradientType=0 ); /* IE6-9 */
+  height: 29px;
   color: white;
-  -moz-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
-  -webkit-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
-  box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
 }
 
 .navbar .menu-cover li.sale a:hover, .navbar .menu-cover li.sale.active > a{
-  background: url(/assets/header_sale2.png) #ff3300 no-repeat 10px 10px;
+  background: url($s3_url + "/header-sale.png") #ff3300 no-repeat 10px 10px;
   height: 24px;
   color: white;
   -moz-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
   -webkit-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
   box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
 }
-
-

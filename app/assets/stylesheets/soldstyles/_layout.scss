@@ -1,3 +1,5 @@
+$s3_url: "https://s3-ap-southeast-1.amazonaws.com/gamers.ph.bckt/";
+
 body {
   margin: 0 auto;
   width: 100%;
@@ -19,8 +21,8 @@ body {
   left: -50px;}
 
 .logo {
-  width: 113px;
-  height: 28px;
+  width: 190px;
+  height: 71px;
   border: 0;
   margin-left: 9px;
 }
@@ -129,7 +131,7 @@ p.input-hint {
             vertical-align: middle;
             @each $token-pack in 25, 50, 100, 300, 500, 1000{
               div.token-pack-#{$token-pack}{
-                background: image-url("buy_#{$token-pack}.png") no-repeat center center transparent;
+                background: image-url($s3_url + "buy_#{$token-pack}.png") no-repeat center center transparent;
                 width: 445px;
                 height: 62px;
                 font-size: 22px;
