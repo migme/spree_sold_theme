@@ -14,7 +14,7 @@ type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
       $zopim.livechat.setName('<%= current_user.try(:full_name) || "" %>');
       $zopim.livechat.setEmail('<%= current_user.try(:email) || "" %>');
     });
-    $zopim.livechat.window.show()
+    $zopim.livechat.window.show();
   });
 
 </script>
