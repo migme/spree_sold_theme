@@ -557,7 +557,7 @@ padding: 10px;
   }
 
   div.dd-wrap {
-    background-color:#EDEDED;
+    background-color:#d8d8d8;
     color:#333333;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -618,8 +618,8 @@ padding: 10px;
           line-height: 16px;
         }
         .no-sale {padding: 0; font-size: 12px; line-height: 16px}
-        .os-retail {text-decoration: line-through; color: #999999}
-        .os-saleprice {color: #d53d3d; font-size: 12px;font-weight: bold; }
+        .os-retail {text-decoration: line-through; color: #333333;}
+        .os-saleprice {color: #d53d3d; font-size: 12px;font-weight: bold;letter-spacing: -1px;}
   }
   div.auc-wrap-top {
     background-color:#d8d8d8;
@@ -644,12 +644,14 @@ padding: 10px;
     .btn-bg {background-color: #333333; padding: 4px 6px 8px 12px;
       border-top-left-radius: 5px;}
     .auction-price {
-      width:100px;
+      width: 105px;
+      letter-spacing: -1px;
       line-height: 35px;
       background-color: #333333;
       padding: 0 14px 0 5px;
       position: absolute;
       left: 0px;
+
     }
   }
 }
@@ -856,7 +858,7 @@ a.top-prod:hover {text-decoration: none;}
         }
       }
 
-    div.dd-wrap {background-color:#EDEDED;
+    div.dd-wrap {background-color:#d8d8d8;
       color:#333333;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
@@ -2691,23 +2693,17 @@ div.partner-logo:hover .bar {display:block ;}
 
 .ph-bg-top {
 background: #222222;
-
 }
 
 .bg-top-wrap {
   background: url("/assets/ph/bg-top.jpg") top center no-repeat;
   width: 100%;
   height: 465px;
-
-
 }
 
 .footer-bg {
-  background: url("/assets/ph/bg-bottom.jpg") top center no-repeat fixed;
-  height: 443px;
-  margin-top: 50px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url("/assets/ph/bg-bottom.jpg") bottom center no-repeat;
+  position: relative;
+  bottom: 0;
+  padding-bottom: 50px;
 }
