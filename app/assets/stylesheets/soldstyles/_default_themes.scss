@@ -498,7 +498,6 @@ div#myValidation.modal.hide.fade {
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
 
   div.bottom {
-    .pull-left {padding-left: 10px;}
     .pull-right {padding-right: 8px;}
     text-align: center;
     height: 60px;
@@ -629,6 +628,39 @@ div#myValidation.modal.hide.fade {
     .os-retail {text-decoration: line-through; color: #999999}
     .os-saleprice {color: #d53d3d; font-size: 12px;font-weight: bold; }
   }
+  div.auc-wrap-top {
+    background-color:#d8d8d8;
+    color:#333333;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: gray 1px dotted;
+  }
+  .prod-image {
+    border: #ededed thin solid;
+    margin: 0 auto 10px auto;
+    width:200px;
+    height: 160px;
+    text-align: center;
+  }
+  ul.timer-name {margin-left:0; }
+  .price-cta {
+    margin:0;
+    color: white;
+    .ph-btn-y {width: 67px}
+    .btn-bg {background-color: #333333; padding: 4px 6px 8px 12px;
+      border-top-left-radius: 5px;}
+    .auction-price {
+      width:105px;
+      line-height: 35px;
+      background-color: #333333;
+      padding: 0 14px 0 5px;
+      position: absolute;
+      left: 0px;
+      letter-spacing: -1px;
+    }
+  }
 }
 
 #beginner_auctions .auc-box:nth-child(3n+0), .container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0), .container-perk .perk-box:nth-child(3n+0){
@@ -656,15 +688,44 @@ div#myValidation.modal.hide.fade {
 .auc-icons {margin: 0 0 0 5px; height: 27px;}
 //a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 a.top-prod:hover {text-decoration: none;}
+
 .completed {
   border-top-right-radius: 0px;
   height: 360px;
-  div.top-space {width: 185px;
-    border-top: #ededed thin dashed;
-    margin: 15px auto 0 auto;
-    padding-top: 15px;
-    margin-bottom: 10px;
-    font-size: 12px;}
+  div.top-space {
+    background-color: #d8d8d8;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 0;
+    padding: 20px 0;
+    height: 39px;
+    text-align: center;
+    .a-user {
+      width: 200px;
+      font-size: 20px;
+      margin: 10px auto 0 auto;
+    }
+  }
+  div.auc-wrap-top {
+    background-color:#d8d8d8;
+    color:#333333;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: gray 1px dotted;
+  }
+  .auc-icons {margin-top: 5px}
+  .comp-price {
+    background-color: #2e2e2e;
+    text-align: center;
+    line-height: 40px;
+    color: #efb600;
+    font-weight: 100;
+    margin-top: 10px;
+  }
 }
 
 .auc-bot-left{width: 90px;line-height: 28px;}
@@ -2602,7 +2663,7 @@ div.partner-logo:hover .bar {display:block ;}
 
 //--------------------------------------------------------------PH CODES HERE--------------------------------------------------------------//
 
-.ph-txt-yellow {color: #efb600;}
+.ph-txt-yellow, a.ph-txt-yellow:hover {color: #efb600;}
 .ph-btn-y {
   background-color: #e0a510 !important;
   background-repeat: repeat-x;
