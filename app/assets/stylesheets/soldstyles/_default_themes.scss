@@ -645,6 +645,10 @@ div#myValidation.modal.hide.fade {
     width:200px;
     height: 160px;
     text-align: center;
+
+    img {
+      max-height: 160px;
+    }
   }
   ul.timer-name {margin-left:0; padding: 0 10px;}
   .price-cta {
