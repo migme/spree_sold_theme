@@ -563,7 +563,7 @@ div#myValidation.modal.hide.fade {
   }
 
   div.dd-wrap {
-    background-color:#EDEDED;
+    background-color:#d8d8d8;
     color:#333333;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -625,8 +625,8 @@ div#myValidation.modal.hide.fade {
       line-height: 16px;
     }
     .no-sale {padding: 0; font-size: 12px; line-height: 16px}
-    .os-retail {text-decoration: line-through; color: #999999}
-    .os-saleprice {color: #d53d3d; font-size: 12px;font-weight: bold; }
+    .os-retail {text-decoration: line-through; color: #333333;}
+    .os-saleprice {color: #d53d3d; font-size: 12px;font-weight: bold;letter-spacing: -1px;}
   }
   div.auc-wrap-top {
     background-color:#d8d8d8;
@@ -865,7 +865,8 @@ a.top-prod:hover {text-decoration: none;}
     }
   }
 
-  div.dd-wrap {background-color:#EDEDED;
+  div.dd-wrap {
+    background-color:#d8d8d8;
     color:#333333;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -2712,11 +2713,8 @@ body {
 }
 
 .footer-bg {
-  background: url($s3_url + "ph/bg-bottom.jpg") top center no-repeat fixed;
-  height: 443px;
-  margin-top: 50px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url($s3_url + "ph/bg-bottom.jpg") bottom center no-repeat;
+  position: relative;
+  bottom: 0;
+  padding-bottom: 50px;
 }

@@ -23,9 +23,9 @@
 <body class="ph-bg-top, <%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 <div class="bg-top-wrap">
   <%= render :partial => 'spree/shared/top_nav' %>
-  <%= content_for?(:content) ? yield(:content) : yield %>
-
-  <br/><br/>
+  <div class="footer-bg">
+    <%= content_for?(:content) ? yield(:content) : yield %>
+  </div>
   <%= render :partial => locale_path('spree/shared/footer') %>
   <%= render :partial => 'spree/shared/google_analytics' %>
   <%= render :partial => 'spree/shared/facebook_init' %>
