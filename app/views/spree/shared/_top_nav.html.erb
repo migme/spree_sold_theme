@@ -11,9 +11,9 @@
 
       <div class="nav-collapse">
         <ul class="nav menu-cover pull-left">
-          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
-          <li class="nav-divider"></li>
           <li class="<%= is_active?("spree/auctions") %> home"> <%= link_to 'Auction', root_url(subdomain: 'auctions') %> </li>
+          <li class="nav-divider"></li>
+          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
           <% if SiteConfig.sale.enabled %>
             <li class="nav-divider"></li>
             <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
