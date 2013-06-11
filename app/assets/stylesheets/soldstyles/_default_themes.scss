@@ -2627,8 +2627,7 @@ div.partner-logo:hover .bar {display:block ;}
 .rookie-btn {
   position: absolute;
   right: -50px;
-  top: 65px;
-  margin-top: 50px;
+  top: -275px;
   -o-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -2707,3 +2706,5 @@ background: #222222;
   bottom: 0;
   padding-bottom: 50px;
 }
+
+.footer-space {min-height: 800px}
