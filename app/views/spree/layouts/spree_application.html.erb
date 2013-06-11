@@ -18,7 +18,6 @@
   <%= javascript_tag "var captchaPublicKey = '#{Recaptcha.configuration.public_key}';" %>
   <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'
         xmlns="http://www.w3.org/1999/html">
-  <% 'a' if current_user.respond_to?(:created_at) && current_user.created_at > Time.now - 10.minutes  %>
 </head>
 
 <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
@@ -30,7 +29,7 @@
 <%= render :partial => 'spree/shared/google_analytics' %>
 <%= render :partial => 'spree/shared/facebook_init' %>
 <%#= render :partial => 'spree/shared/pin_it' %>
-<%= render :partial => 'spree/shared/user_voice' %>
+<%#= render :partial => 'spree/shared/user_voice' %>
 
 <% if flash[:validate_phone] %>
     <%= render :partial => 'spree/shared/google_conversions/successful_auction_sign_ups' %>
@@ -39,7 +38,7 @@
 <% else %>
     <%= yield :google_conversion %>
 <% end %>
-  <%= render :partial => 'spree/shared/zopim' %>
+<script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 </body>
 
 </html>
