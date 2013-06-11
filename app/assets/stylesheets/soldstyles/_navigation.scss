@@ -206,19 +206,19 @@ $s3_url: "https://s3-ap-southeast-1.amazonaws.com/gamers.ph.bckt/spree_sold_them
     }
     .btn-scart {
       .btn-viewcart{
-        background-color: hsl(34, 100%, 43%) !important;
+        background-color: #e0a510 !important;
         background-repeat: repeat-x;
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fea42d", endColorstr="#db7c00");
-        background-image: -khtml-gradient(linear, left top, left bottom, from(#fea42d), to(#db7c00));
-        background-image: -moz-linear-gradient(top, #fea42d, #db7c00);
-        background-image: -ms-linear-gradient(top, #fea42d, #db7c00);
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fea42d), color-stop(100%, #db7c00));
-        background-image: -webkit-linear-gradient(top, #fea42d, #db7c00);
-        background-image: -o-linear-gradient(top, #fea42d, #db7c00);
-        background-image: linear-gradient(#fea42d, #db7c00);
-        border-color: #db7c00 #db7c00 hsl(34, 100%, 39%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4ca61", endColorstr="#e0a50f");
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#f4ca61), to(#e0a50f));
+        background-image: -moz-linear-gradient(top, #f4ca61, #e0a50f);
+        background-image: -ms-linear-gradient(top, #f4ca61, #e0a50f);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4ca61), color-stop(100%, #e0a50f));
+        background-image: -webkit-linear-gradient(top, #f4ca61, #e0a50f);
+        background-image: -o-linear-gradient(top, #f4ca61, #e0a50f);
+        background-image: linear-gradient(#f4ca61, #e0a50f);
+        border-color: #e0a50f #e0a50f #c8930e;
         color: #ffffff !important;
-        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.26);
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
         -webkit-font-smoothing: antialiased;
         font-size: 14px;
         font-weight: 500;
