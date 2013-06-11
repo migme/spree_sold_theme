@@ -172,6 +172,8 @@ a.page.circle {
   text-align: center;
   padding-top: 3px;
   a:hover {color: #ff9900; text-decoration: none;}
+  font-weight: 100;
+  line-height: 20px;
 }
 .tb-topup {background-image: url($s3_url + "buytokens.png"); background-repeat: no-repeat; background-position: top center;width: 61px;
   height: 40px; text-align: center;}
@@ -2722,4 +2724,8 @@ body {
   position: relative;
   bottom: 0;
   padding-bottom: 50px;
+}
+
+.front-banner {
+  @include border_radius(5px);
 }
