@@ -1378,7 +1378,12 @@ div.auto-over{
   width:200px;
   height:157px;
   text-align: center;
-  border: #ededed thin solid; }
+  border: #ededed thin solid;
+  .item-image {
+    height:157px;
+  }
+
+}
 
 p.out {color: white; padding: 9px;};
 
