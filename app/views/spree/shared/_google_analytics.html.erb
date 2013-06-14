@@ -13,5 +13,13 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
+    $(function(){
+
+      $('.auction-main-pagination').on('click', function() {
+        ga('send', 'event', 'button', 'click', 'auction-main-pagination');
+      });
+
+    });
+
 </script>
 <% end  %>
