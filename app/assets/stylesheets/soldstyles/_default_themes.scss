@@ -1,7 +1,7 @@
 $s3_url: "https://s3-ap-southeast-1.amazonaws.com/gamers.ph.bckt/spree_sold_theme/";
 
 body {background: url($s3_url + "rough_diagonal.png"); font-family: 'Droid Sans', sans-serif; position: relative}
-body.auction-bg {background: url($s3_url + "auction-bground.png"); font-family: 'Droid Sans', sans-serif;}
+body.auction-bg {font-family: 'Droid Sans', sans-serif;}
 body.sale-bg {background: url($s3_url + "sale_bground.png"); font-family: 'Droid Sans', sans-serif;}
 
 //christmas backgrounds//
