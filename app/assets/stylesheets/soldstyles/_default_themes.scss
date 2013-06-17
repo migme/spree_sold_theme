@@ -218,7 +218,7 @@ a.tb-buy {
   margin-right: 5px;
   background-image: url($s3_url + "ph/toolbar-token.png"); background-position: top center; background-repeat: no-repeat;
 
-  //&:hover {background-image: url($s3_url + "buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
+  &:hover {background-image: url($s3_url + "buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
 }
 
 
