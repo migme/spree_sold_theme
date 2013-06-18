@@ -29,19 +29,7 @@
 
 <%= csrf_meta_tags %>
 
-<script type="text/javascript">
-    window.currency_for_format = "<%= SiteConfig.currency %>";
-    var siteConfig = {
-        'currency' :  "<%= SiteConfig.currency %>"
-        , 'name': '<%= SiteConfig.site.name %>'
-        , 'country': '<%= SiteConfig.site.country %>'
-        , 'facebook_url': '<%= SiteConfig.facebook.url %>'
-        , 'root_url': '<%= root_url%>'
-    };
 
-    var feedbackLinks = <%=raw(SiteConfig.feedback.to_json)%>;
-
-</script>
 
 <%= javascript_include_tag 'store/all' %>
 
