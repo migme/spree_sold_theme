@@ -124,12 +124,12 @@ a.page.circle {
 .banner-ad {width: 940px; height: 130px; border: gray 1px solid; margin: 10px 0 20px 0;}
 .square-ad {width: 210px; height:172px; margin: 25px 0 0 15px;}
 .vert-ad {
+  text-align: center;
   width: 220px; 
   height: 600px;  
-  border: gray 1px solid; 
+  //border: gray 1px solid;
   margin-bottom: 20px; 
-  background-image: url($s3_url  + "ThrillSeeker.gif");
-  background-color: #fff; 
+  //background-image: url($s3_url  + "ThrillSeeker.gif");
     &.small{height: 250px; background-image: url($s3_url + "Adspace1_220.jpg");}
 }
 
