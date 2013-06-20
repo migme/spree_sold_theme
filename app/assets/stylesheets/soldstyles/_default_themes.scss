@@ -1,7 +1,7 @@
 $s3_url: "https://s3-ap-southeast-1.amazonaws.com/gamers.ph.bckt/spree_sold_theme/";
 
 body {background: url($s3_url + "rough_diagonal.png"); font-family: 'Droid Sans', sans-serif; position: relative}
-body.auction-bg {background: url($s3_url + "auction-bground.png"); font-family: 'Droid Sans', sans-serif;}
+body.auction-bg {font-family: 'Droid Sans', sans-serif;}
 body.sale-bg {background: url($s3_url + "sale_bground.png"); font-family: 'Droid Sans', sans-serif;}
 
 //christmas backgrounds//
@@ -218,13 +218,13 @@ a.tb-buy {
   margin-right: 5px;
   background-image: url($s3_url + "ph/toolbar-token.png"); background-position: top center; background-repeat: no-repeat;
 
-  //&:hover {background-image: url($s3_url + "buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
+  &:hover {background-image: url($s3_url + "buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
 }
 
 
 //toolbar-shop//
 .toolbar-shop-cat {
-  li.dropdown {padding: 15px 5px 17px 5px; font-size: 14px; font-weight: 100; text-transform: uppercase}
+  li.dropdown {padding: 15px 5px 17px 5px; font-size: 14px; font-weight: bold; text-transform: uppercase}
   li.dropdown:hover, li.dropdown.open{
     background-color: #333;
     padding: 15px 5px 11px 5px;
@@ -289,14 +289,16 @@ a.tb-buy {
 //---------------------mother of homepages---------------------//
 
 //banner//
-div#myCarousel{
-  height:350px;
+div#myCarousel, {
+  height:365px;
   width: 940px;
-  background-color: #ffffff;
+  //background-color: #ffffff;
   margin:auto;
-  @include border-radius($radius: 10px 10px 10px 10px);
-  @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
-
+  //@include border-radius($radius: 10px 10px 10px 10px);
+  //@include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
+  .slidesjs-container .slidesjs-control img {
+    @include border-radius($radius: 5px);
+  }
 }
 
 //main boxes//
@@ -812,6 +814,7 @@ a.top-prod:hover {text-decoration: none;}
   float: left;
   @include border-radius($radius: 5px);
 
+  .small_img {padding-left: 5px;}
   .pull-left {position:absolute}
   div.auc-prod {line-height: 16px; width: 210px;}
   div.on-lil-auc {position: relative; top: -65px;}
@@ -2139,10 +2142,10 @@ $txt-gray: #979797;
     li{
       list-style:none;
       float:left;
-      width:310px;
+      width:470px;
       height:76px;
       a{
-        width:320px;
+        width:470px;
         height:76px;
         font-size:32px;
         font-weight:bold;
