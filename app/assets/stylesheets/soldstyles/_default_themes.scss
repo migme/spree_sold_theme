@@ -950,7 +950,8 @@ a.top-prod:hover {text-decoration: none;}
 }
 .prod-body {
   width:920px;
-  padding: 10px 10px;
+  padding: 10px 10px 20px 10px;
+  position: relative;
   background-color: #ffffff;
   border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
@@ -2709,7 +2710,18 @@ div.partner-logo:hover .bar {display:block ;}
   font-weight: bold;
 }
 .ph-btn-y:hover {text-shadow: none}
-
+.btn-scroll {
+  position: absolute;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  right: 50px;
+  bottom: 0px;
+  width: 85px;
+  height: 80px;
+  padding: 0px;
+  img {margin-top: 10px}
+  p {color: #ffffff}
+}
 body {
   background: #222222;
 }
