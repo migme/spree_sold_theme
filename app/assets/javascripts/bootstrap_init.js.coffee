@@ -4,6 +4,7 @@ jQuery ->
   $("a[rel=tooltip]").tooltip()
   $('.dropdown-toggle').dropdown()
   $('.carousel').carousel()
+  $('.sticky').stickyBar()
   $(".yes_no:checkbox").iphoneStyle({
         checkedLabel: 'Yes',
         uncheckedLabel: 'No',

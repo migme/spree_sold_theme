@@ -2931,3 +2931,9 @@ div.partner-logo:hover .bar {display:block ;}
 
 //--------------------------------------------------------------OLD CODES [please moves your codes above this line]--------------------------------------------------------------//
 
+.sticky-bar{
+  position:  fixed;
+  top: 0;
+  z-index: 10;
+  margin-top: 0;
+}
