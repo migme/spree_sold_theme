@@ -7,6 +7,15 @@
         <span class="icon-bar"></span>
       </a>
 
+<<<<<<< HEAD
+      <div class="nav-collapse subnav-collapse">
+        <ul class="nav menu-cover">
+          <li class="nav-divider"></li>
+          <li class="<%= is_active?("spree/auctions") %> home"><%= link_to 'Auction', root_url(subdomain: 'auctions') %></li>
+          <li class="nav-divider"></li>
+          <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %></li>
+          <li class="nav-divider"></li>
+=======
       <%= link_to image_tag(s3_url('sold-logo.png',true), :alt => 'Singapore Shopping Online', :class => 'logo'), root_url(:subdomain => false), {:class => "brand"} %>
 
       <div class="nav-collapse">
@@ -20,6 +29,7 @@
             <li class="nav-divider"></li>
             <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
           <% end %>
+>>>>>>> a79ae0c58191dad8837b4120b873d08d9683185c
         </ul>
 
         <ul class="nav menu-cover pull-right">

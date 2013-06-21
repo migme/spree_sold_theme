@@ -20,7 +20,7 @@
 
 <%== meta_data_tags %>
 
-<meta property="fb:app_id" content="202583879872954" />
+<meta property="fb:app_id" content="<%= SiteConfig.facebook.app_id %>" />
 <%== meta_fb_data_tags %>
 
 <%= favicon_link_tag image_path(fav_icon_for) %>
@@ -28,6 +28,19 @@
 <%= stylesheet_link_tag 'store/all', :media => 'screen' %>
 
 <%= csrf_meta_tags %>
+<script type="text/javascript">
+    window.currency_for_format = "<%= SiteConfig.currency %>";
+  var siteConfig = {
+      'currency' :  "<%= SiteConfig.currency %>"
+    , 'name': '<%= SiteConfig.site.name %>'
+    , 'country': '<%= SiteConfig.site.country %>'
+    , 'facebook_url': '<%= SiteConfig.facebook.url %>'
+    , 'root_url': '<%= root_url%>'
+  };
+
+  var feedbackLinks = <%=raw(SiteConfig.feedback.to_json)%>;
+
+</script>
 <%= javascript_include_tag 'store/all' %>
 
 <!--[if lt IE 9]>

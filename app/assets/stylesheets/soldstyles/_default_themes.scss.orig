@@ -1,13 +1,11 @@
-$s3_url: "https://s3-ap-southeast-1.amazonaws.com/sold.shared/spree_sold_theme/";
-
-body {background: url($s3_url  + "rough_diagonal.png"); font-family: 'Droid Sans', sans-serif; position: relative}
-body.auction-bg {background: url($s3_url  + "auction-bground.png"); font-family: 'Droid Sans', sans-serif;}
-body.sale-bg {background: url($s3_url  + "sale_bground.png"); font-family: 'Droid Sans', sans-serif;}
+body {background: url("/assets/rough_diagonal.png"); font-family: 'Droid Sans', sans-serif; position: relative}
+body.auction-bg {background: url("/assets/auction-bground.png"); font-family: 'Droid Sans', sans-serif;}
+body.sale-bg {background: url("/assets/sale_bground.png"); font-family: 'Droid Sans', sans-serif;}
 
 //christmas backgrounds//
-//body {background: url($s3_url + "2012xmasbg-shop.jpg") #e1ebf4 no-repeat; font-family: 'Asap', sans-serif;}
-//body.auction-bg {background: url($s3_url + "2012xmasbg-auction.jpg")#000000 no-repeat; font-family: 'Asap', sans-serif;}
-//body.sale-bg {background: url($s3_url + "2012xmasbg-sale.jpg") #ffffff no-repeat; font-family: 'Asap', sans-serif;}
+//body {background: url("/assets/2012xmasbg-shop.jpg") #e1ebf4 no-repeat; font-family: 'Asap', sans-serif;}
+//body.auction-bg {background: url("/assets/2012xmasbg-auction.jpg")#000000 no-repeat; font-family: 'Asap', sans-serif;}
+//body.sale-bg {background: url("/assets/2012xmasbg-sale.jpg") #ffffff no-repeat; font-family: 'Asap', sans-serif;}
 
 
 
@@ -124,13 +122,13 @@ a.page.circle {
 .banner-ad {width: 940px; height: 130px; border: gray 1px solid; margin: 10px 0 20px 0;}
 .square-ad {width: 210px; height:172px; margin: 25px 0 0 15px;}
 .vert-ad {
-  text-align: center;
   width: 220px; 
   height: 600px;  
-  //border: gray 1px solid;
+  border: gray 1px solid; 
   margin-bottom: 20px; 
-  //background-image: url($s3_url  + "ThrillSeeker.gif");
-    &.small{height: 250px; background-image: url($s3_url + "Adspace1_220.jpg");}
+  background-image: url("/assets/ThrillSeeker.gif");
+  background-color: #fff; 
+    &.small{height: 250px; background-image: url("/assets/Adspace1_220.jpg");}
 }
 
 
@@ -173,14 +171,14 @@ a.page.circle {
 .toolbar-reg, .toolbar-sale {margin: 0; padding: 0; color: #fff;}
 .toolbar-reg li {display: block; float:left; }
 
-.tb-mypage {background-image: url($s3_url + "wrench.png"); background-repeat: no-repeat; background-position: top center;padding-top: 24px}
+.tb-mypage {background-image: url("/assets/wrench.png"); background-repeat: no-repeat; background-position: top center;padding-top: 24px}
 .tb-myauctions, .tb-mytokens {
   width: 70px;
   text-align: center;
   padding-top: 3px;
       a:hover {color: #ff9900; text-decoration: none;}
 }
-.tb-topup {background-image: url($s3_url + "buytokens.png"); background-repeat: no-repeat; background-position: top center;width: 61px;
+.tb-topup {background-image: url("/assets/buytokens.png"); background-repeat: no-repeat; background-position: top center;width: 61px;
   height: 40px; text-align: center;}
 .tb-tips {width: 70px; text-align: center; padding-top: 5px;}
 a.mypage{padding: 10px 5px 5px 10px; color: #ffffff;}
@@ -201,9 +199,9 @@ a.tb-myfavs {
   width:67px;
   height:40px;
   margin: 0 15px;
-  background-image: url($s3_url + "fav1.png"); background-position: top center; background-repeat: no-repeat;
+  background-image: url("/assets/fav1.png"); background-position: top center; background-repeat: no-repeat;
 
-    &:hover {background-image: url($s3_url + "fav_hover.png"); background-position: top center; background-repeat: no-repeat;}
+    &:hover {background-image: url("/assets/fav_hover.png"); background-position: top center; background-repeat: no-repeat;}
 }
 
 a.tb-myauto {
@@ -211,9 +209,9 @@ a.tb-myauto {
   width:67px;
   height:40px;
   margin-right: 10px;
-  background-image: url($s3_url + "auto1.png"); background-position: top center; background-repeat: no-repeat;
+  background-image: url("/assets/auto1.png"); background-position: top center; background-repeat: no-repeat;
 
-  &:hover {background-image: url($s3_url + "auto_hover.png"); background-position: top center; background-repeat: no-repeat;}
+  &:hover {background-image: url("/assets/auto_hover.png"); background-position: top center; background-repeat: no-repeat;}
 }
 
 a.tb-buy {
@@ -221,9 +219,9 @@ a.tb-buy {
   width:67px;
   height:40px;
   margin-right: 5px;
-  background-image: url($s3_url + "buy1.png"); background-position: top center; background-repeat: no-repeat;
+  background-image: url("/assets/buy1.png"); background-position: top center; background-repeat: no-repeat;
 
-  &:hover {background-image: url($s3_url + "buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
+  &:hover {background-image: url("/assets/buy_hover.png"); background-position: top center; background-repeat: no-repeat;}
 }
 
 
@@ -280,8 +278,8 @@ a.tb-buy {
           padding-top: 3px;
 
         }
-        li.sub-arrow { background: url($s3_url + "categoryarrow.png") no-repeat 15px center;}
-        li.sub-arrow >a:hover {background: url($s3_url + "categoryarrowselect.png") no-repeat 15px center; background-color: #ededed;color: #333; }
+        li.sub-arrow { background: url("/assets/categoryarrow.png") no-repeat 15px center;}
+        li.sub-arrow >a:hover {background: url("/assets/categoryarrowselect.png") no-repeat 15px center; background-color: #ededed;color: #333; }
       }
 
 
@@ -332,9 +330,9 @@ div#myCarousel{
   margin-top:5px;
   width: 300px;
   height: 8px;
-    &.auction {background-image: url($s3_url + "main-auction-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
-    &.shop {background-image: url($s3_url + "main-shop-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
-    &.onsale {background-image: url($s3_url + "main-onsale-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
+    &.auction {background-image: url("/assets/main-auction-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
+    &.shop {background-image: url("/assets/main-shop-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
+    &.onsale {background-image: url("/assets/main-onsale-divider.jpg"); background-position: bottom center; background-repeat: no-repeat}
 }
 
 .main-prod-name {
@@ -353,7 +351,7 @@ div#myCarousel{
   position: relative;
   width: 300px;
   height: 240px;
-  background-image: url($s3_url + "main-divider.jpg"); background-position: bottom center; background-repeat: no-repeat;
+  background-image: url("/assets/main-divider.jpg"); background-position: bottom center; background-repeat: no-repeat;
   text-align: center;
 }
 .main-top-bar  {
@@ -532,7 +530,7 @@ padding: 10px;
       bottom: -15px;
       height: 174px;
       width: 281px;
-      background-image: url($s3_url + "Error4.png");
+      background-image: url("/assets/Error4.png");
       background-position: top center;
       background-repeat: 0;
         .content {
@@ -643,12 +641,11 @@ padding: 10px;
 }
 #beginner_auctions .auc-box .star { display:none; }
 .beginner_fabio{
-  /*  background: url($s3_url + "beginner_fabio_new.png");width: 220px; height:362px; */
-  width: 220px; height:362px;
+  background: url("/assets/beginner_fabio_new.png");width: 220px; height:362px;
   @extend .pull-left,.auc-box;
 }
 .premium_fabio{
-  background: url($s3_url + "premium_fabio.png");width: 220px; height:362px;
+  background: url("/assets/premium_fabio.png");width: 220px; height:362px;
   @extend .pull-left,.auc-box;
 }
 .auc-box.right, .auc-box-small.right {margin: 0;}
@@ -659,8 +656,8 @@ padding: 10px;
 }
 .auc-icons-big {text-align: left;}
 .auc-prod{width: 170px; font-weight: bold; margin: 3px 0 0 5px; height: 38px; overflow: hidden;}
-.star {margin: 5px 5px 5px 0; background: url($s3_url + "star_02.png"); width: 31px; height:30px;}
-.star:hover {background: url($s3_url + "star_01.png"); width: 31px; height:30px;}
+.star {margin: 5px 5px 5px 0; background: url("/assets/star_02.png"); width: 31px; height:30px;}
+.star:hover {background: url("/assets/star_01.png"); width: 31px; height:30px;}
 .auc-icons {margin: 0 0 0 5px; height: 27px;}
 a.top-prod, span.top-prod {font-size: 14px;white-space: normal;}
 a.top-prod:hover {text-decoration: none;}
@@ -679,7 +676,7 @@ a.top-prod:hover {text-decoration: none;}
 
 .icon-help {
   width:22px; height:20px;
-  background-image: url($s3_url + "help_icon_hover.png");
+  background-image: url("/assets/help_icon_hover.png");
   background-repeat: no-repeat;
   background-position: top;
   margin: 7px;}
@@ -801,7 +798,7 @@ a.top-prod:hover {text-decoration: none;}
       bottom: -11px;
       height: 158px;
       width: 239px;
-      background-image: url($s3_url + "Error3.png");
+      background-image: url("/assets/Error3.png");
       background-position: top center;
       background-repeat: 0;
         .content {
@@ -941,7 +938,7 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
       top: 100px;
       height: 174px;
       width: 281px;
-      background-image: url($s3_url + "Error2.png");
+      background-image: url("/assets/Error2.png");
       background-position: top center;
       background-repeat: 0;
           .content {
@@ -1010,7 +1007,7 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
         top: 0;
         height: 169px;
         width: 238px;
-        background-image: url($s3_url + "Error1.png");
+        background-image: url("/assets/Error1.png");
         background-position: top center;
         background-repeat: 0;
         .content {
@@ -1031,7 +1028,7 @@ ul#product-thumbnails.thumbnails.inline li {width: 80px; height: 60px}
   color:red;
   }
 .auc-animation.hurry-up{
-  background: url($s3_url + 'ending-soon.gif');
+  background: url('/assets/ending-soon.gif');
 }
 
 .giant-timer {font-size: 58px; margin-bottom: 20px;line-height: 50px;}
@@ -1326,7 +1323,7 @@ div.auto-over{
 .line_item_quantity {width: 35px;}
 .zrisk-carticon {width: 26px;
   height: 22px;
-  background-image:url($s3_url + "zerorisk-carticon.png");
+  background-image:url("/assets/zerorisk-carticon.png");
   background-repeat: no-repeat;
 }
 .cart-contact {
@@ -1364,7 +1361,7 @@ div.auto-over{
       @include border-radius($radius: 5px);
       @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
           #zero-bar {
-            background-image:url($s3_url + "titlebar.png");
+            background-image:url("/assets/titlebar.png");
             background-repeat: no-repeat;
             width: 234px;
             height: 45px;
@@ -1540,7 +1537,11 @@ div.auto-over{
 #themeBackground {
   width: 940px;
   height: 458px;
+<<<<<<< HEAD
   background-image: url('http://sold.sg.bckt.s3.amazonaws.com/footer/theme-bg.png');
+=======
+  background-image: url('http://sold.sg.bckt.s3.amazonaws.com/footer/themebg.png');
+>>>>>>> d5b43f6... updated image urls to sold.sg bucket
   background-repeat: no-repeat;
   background-size: 940px 458px;
   padding: 0px;
@@ -1733,7 +1734,11 @@ ul.subfooter li a {
 .fabio {
   width: 400px;
   height: 610px;
+<<<<<<< HEAD
   background-image: url('http://sold.sg.bckt.s3.amazonaws.com/footer/fabio-bg.png');
+=======
+  background-image: url('http://sold.sg.bckt.s3.amazonaws.com/footer/fabio.png');
+>>>>>>> d5b43f6... updated image urls to sold.sg bucket
   background-repeat: no-repeat;
   background-position: bottom right;
   position: absolute;
@@ -2119,7 +2124,7 @@ ul.subfooter li a {
       .refer-wrap {
         padding: 10px 20px 0 20px;
       }
-      .coming-soon {width: 940px; height:400px;margin-bottom: 10px; background-image: url($s3_url + "Referfriendbanner.jpg")}
+      .coming-soon {width: 940px; height:400px;margin-bottom: 10px; background-image: url("/assets/Referfriendbanner.jpg")}
       .coming-content {text-align: center; width: 800px; margin: 0 auto;}
       ul {margin-bottom: 50px;}
       .emails {height: 60px;}
@@ -2276,7 +2281,7 @@ $txt-gray: #979797;
         position: absolute;
         height: 169px;
         width: 238px;
-        background: url($s3_url + "Error1.png") top no-repeat;
+        background: url("/assets/Error1.png") top no-repeat;
         .content {
           color: white;
           margin: 60px 0 0 23px;
@@ -2412,7 +2417,7 @@ $txt-gray: #979797;
 .won_auction_table{
   .download_ico{
     a{
-      background:url($s3_url + 'my_page/download_sprite.png') no-repeat;
+      background:url(/assets/my_page/download_sprite.png) no-repeat;
       background-position:0 0;
       width:74px;
       height:54px;
@@ -2519,7 +2524,7 @@ $txt-gray: #979797;
   display: block;
 }
 .ticker-controls li.jnt-play-pause {
-  background-image: url($s3_url + 'controls.png');
+  background-image: url('/assets/controls.png');
   background-position: 32px 16px;
 }
 .ticker-controls li.jnt-play-pause.over {
@@ -2529,7 +2534,7 @@ $txt-gray: #979797;
   background-position: 32px 0px;
 }
 .ticker-controls li.jnt-play-pause.paused {
-  background-image: url($s3_url + 'controls.png');
+  background-image: url('/assets/controls.png');
   background-position: 48px 16px;
 }
 .ticker-controls li.jnt-play-pause.paused.over {
@@ -2539,7 +2544,7 @@ $txt-gray: #979797;
   background-position: 48px 0px;
 }
 .ticker-controls li.jnt-prev {
-  background-image: url($s3_url + 'controls.png');
+  background-image: url('/assets/controls.png');
   background-position: 0px 16px;
 }
 .ticker-controls li.jnt-prev.over {
@@ -2549,7 +2554,7 @@ $txt-gray: #979797;
   background-position: 0px 0px;
 }
 .ticker-controls li.jnt-next {
-  background-image: url($s3_url + '/assets/controls.png');
+  background-image: url('/assets/controls.png');
   background-position: 16px 16px;
 }
 .ticker-controls li.jnt-next.over {
@@ -2663,7 +2668,7 @@ $txt-gray: #979797;
   margin: 0 auto;
   padding: 10px;
     .bidhistory {border: black 3px solid; padding: 10px;}
-    .bidhis-head {background-image: url($s3_url + "auctions-sold.my.jpg");
+    .bidhis-head {background-image: url("/assets/auctions-sold.jpg");
       background-position: top center;
       background-repeat: no-repeat;
       width: 770px;
@@ -2900,7 +2905,7 @@ div.partner-logo:hover .bar {display:block ;}
 .modal.fade.in.rookie {top: 0;}
 .modal.rookie {
   //background-color: rgba(255, 127, 0,0.25);
-  //background: url($s3_url + "rookiepage-web.png") no-repeat center center fixed;
+  //background: url("/assets/rookiepage-web.png") no-repeat center center fixed;
   background-color: #000000;
   width: 1020px;
   height: 985px;

@@ -29,9 +29,15 @@
           <%= yield(:seo_footer) %>
       <% else %>
           <ul>
+<<<<<<< HEAD:app/views/spree/shared/_footer.html.erb
                   <li><a href="http://www.sold.sg">Sold.sg</a> is Singapore’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
                   <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="http://shop.sold.sg">Sold.sg Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="http://auctions.sold.sg">Sold.sg Auctions</a>.</li><br>
                   <li><a href="http://www.sold.sg">Sold.sg</a> is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
+=======
+            <li><a href="http://www.sold.sg">Sold.sg</a> is Singapore’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices! </li><br>
+            <li>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at <a href="http://shop.sold.sg">Sold.sg Shop</a>! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at <a href="http://auctions.sold.sg">Sold.sg Auctions</a>.</li><br>
+            <li><a href="http://www.sold.sg">Sold.sg</a> is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</li><br>
+>>>>>>> a79ae0c58191dad8837b4120b873d08d9683185c:app/views/spree/shared/sg/_footer.html.erb
 
           </ul>
       <% end %>
@@ -77,21 +83,21 @@
       <br class="clear">
 
       <!--<ul class="pull-left no-list inline">-->
-        <!--<li class="foot-title"><strong>PAYMENT</strong></li> <br>-->
-        <!--<li><img src="/assets/foot-pay1.jpg" alt=""> </li>-->
-        <!--<li><img src="/assets/foot-pay2.jpg" alt=""></li>-->
+      <!--<li class="foot-title"><strong>PAYMENT</strong></li> <br>-->
+      <!--<li><img src="/assets/foot-pay1.jpg" alt=""> </li>-->
+      <!--<li><img src="/assets/foot-pay2.jpg" alt=""></li>-->
       <!--</ul>-->
 
       <!--<ul class="pull-left no-list inline">-->
-        <!--<li class="foot-title"><strong>SECURED BY</strong></li> <br>-->
-        <!--<li><div width="135" align="center" valign="top">-->
-          <!--<script src="https://seal.verisign.com/getseal?host_name=www.sold.sg&amp;size=M&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><a href="javascript:vrsn_splash()" tabindex="-1"><img name="seal" border="true" src="https://seal.verisign.com/getseal?at=0&amp;sealid=1&amp;dn=www.sold.sg&amp;lang=en" oncontextmenu="return false;" alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security"></a>-->
-          <!--<br>-->
-          <!--<a href="http://www.verisign.com.sg/ssl-certificate/" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">-->
-            <!--ABOUT SSL CERTIFICATES-->
-          <!--</a>-->
-        <!--</div>-->
-        <!--</li>-->
+      <!--<li class="foot-title"><strong>SECURED BY</strong></li> <br>-->
+      <!--<li><div width="135" align="center" valign="top">-->
+      <!--<script src="https://seal.verisign.com/getseal?host_name=www.sold.sg&amp;size=M&amp;use_flash=NO&amp;use_transparent=NO&amp;lang=en"></script><a href="javascript:vrsn_splash()" tabindex="-1"><img name="seal" border="true" src="https://seal.verisign.com/getseal?at=0&amp;sealid=1&amp;dn=www.sold.sg&amp;lang=en" oncontextmenu="return false;" alt="Click to Verify - This site has chosen an SSL Certificate to improve Web site security"></a>-->
+      <!--<br>-->
+      <!--<a href="http://www.verisign.com.sg/ssl-certificate/" target="_blank" style="color:#000000; text-decoration:none; font:bold 7px verdana,sans-serif; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">-->
+      <!--ABOUT SSL CERTIFICATES-->
+      <!--</a>-->
+      <!--</div>-->
+      <!--</li>-->
       <!--</ul>-->
 
       <ul class="pull-right no-list inline">

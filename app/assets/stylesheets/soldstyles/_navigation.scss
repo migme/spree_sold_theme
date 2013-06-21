@@ -1,3 +1,5 @@
+$s3_url: "https://s3-ap-southeast-1.amazonaws.com/sold.shared/spree_sold_theme/";
+
 #sold_top_navbar{
 
     //border-bottom: 3px solid #f07b05;
@@ -31,7 +33,7 @@
     }
 
     li.home {
-      background: url(/assets/header_auction1.png) no-repeat 10px 10px;
+      background: url($s3_url + "header_auction1.png") no-repeat 10px 10px;
       width: 110px;
         a {
           color: #cccccc;
@@ -40,7 +42,7 @@
           height: 22px
         }
         a:hover, a:active {
-          background: url(/assets/header_auction2.png) #f07b05 no-repeat 10px 10px;
+          background: url($s3_url + "header_auction2.png") #f07b05 no-repeat 10px 10px;
           height: 24px;
           color: white;
           -moz-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
@@ -51,7 +53,7 @@
     }
 
     li.shop{
-      background: url(/assets/header_shop1.png) no-repeat 10px 10px;
+      background: url($s3_url + "header_shop1.png") no-repeat 10px 10px;
       width: 110px;
       a {
         color: #cccccc;
@@ -60,7 +62,7 @@
         height: 22px
       }
       a:hover, a:active {
-        background: url(/assets/header_shop2.png) #416df1 no-repeat 10px 10px;
+        background: url($s3_url + "header_shop2.png") #416df1 no-repeat 10px 10px;
         height: 24px;
         color: white;
         -moz-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
@@ -70,7 +72,7 @@
       }
     }
     li.sale{
-      background: url(/assets/header_sale1.png) no-repeat 10px 10px;
+      background: url($s3_url + "header_sale1.png") no-repeat 10px 10px;
       width: 110px;
       a {
         color: #cccccc;
@@ -79,7 +81,7 @@
         height: 22px
       }
       a:hover, a:active {
-        background: url(/assets/header_sale2.png) #ff3300 no-repeat 10px 10px;
+        background: url($s3_url + "header_sale2.png") #ff3300 no-repeat 10px 10px;
         height: 24px;
         color: white;
         -moz-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
@@ -92,13 +94,13 @@
     li.dropdown.myaccnt {
       position: relative;
       height: 48px;
-      background: url(/assets/user.png) no-repeat 10px center;
+      background: url($s3_url + "user.png") no-repeat 10px center;
       p {margin-left: 30px; margin-top: 7px}
       a.dropdown-toggle.username {height: 29px; }
-      a.dropdown-toggle.username:hover, a.dropdown-toggle.username:active {background: url(/assets/user.png) #333333  no-repeat 10px 13px; }
+      a.dropdown-toggle.username:hover, a.dropdown-toggle.username:active {background: url($s3_url + "user.png") #333333  no-repeat 10px 13px; }
     }
     li.dropdown.myaccnt.open {
-      a.dropdown-toggle.username {background: url(/assets/user.png) #333333  no-repeat 10px 13px;}
+      a.dropdown-toggle.username {background: url($s3_url + 'user.png') #333333  no-repeat 10px 13px;}
 
     }
 
@@ -132,7 +134,7 @@
     }
 
     li.cart{
-      background: url(/assets/icon-cart-0.png) no-repeat center 10px;
+      background: url($s3_url + "icon-cart-0.png") no-repeat center 10px;
       width: 70px;
       height: 48px;
       position: relative;
@@ -141,7 +143,7 @@
         padding: 0;
         height: 48px;
       }
-      a.dropdown-toggle.mini-cart:hover, a.dropdown-toggle.mini-cart:hover:active {background: url(/assets/icon-cart-0.png)  #ffffff no-repeat center 10px; height: 50px}
+      a.dropdown-toggle.mini-cart:hover, a.dropdown-toggle.mini-cart:hover:active {background: url($s3_url + "icon-cart-0.png")  #ffffff no-repeat center 10px; height: 50px}
       .badge-cart {
         position: absolute;
         top: 3px;
@@ -220,7 +222,7 @@
         }
       }
     }
-    li.cart.dropdown.cart.open {background: url(/assets/icon-cart-0.png)  #ffffff no-repeat center 10px;height: 50px}
+    li.cart.dropdown.cart.open {background: url($s3_url + "icon-cart-0.png")  #ffffff no-repeat center 10px;height: 50px}
 
 
 }

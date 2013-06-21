@@ -16,8 +16,9 @@
   <%= render :partial => 'spree/shared/head' %>
   <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
   <%= javascript_tag "var captchaPublicKey = '#{Recaptcha.configuration.public_key}';" %>
-  <link href='http://fonts.googleapis.com/css?family=Asap' rel='stylesheet' type='text/css'
-        xmlns="http://www.w3.org/1999/html">
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <!--ADVENUE SCRIPT (ads)-->
+  <script type="text/javascript" src="http://cdn.innity.net/admanager.js"></script>
 </head>
 
 <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
@@ -25,11 +26,11 @@
 <%= content_for?(:content) ? yield(:content) : yield %>
 
 <br/><br/>
-<%= render :partial => 'spree/shared/footer' %>
+<%= render :partial => locale_path('spree/shared/footer') %>
 <%= render :partial => 'spree/shared/google_analytics' %>
 <%= render :partial => 'spree/shared/facebook_init' %>
 <%#= render :partial => 'spree/shared/pin_it' %>
-<%= render :partial => 'spree/shared/user_voice' %>
+<%#= render :partial => 'spree/shared/user_voice' %>
 
 <% if flash[:validate_phone] %>
     <%= render :partial => 'spree/shared/google_conversions/successful_auction_sign_ups' %>
@@ -39,6 +40,7 @@
     <%= yield :google_conversion %>
 <% end %>
 <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
 </body>
 
 </html>
