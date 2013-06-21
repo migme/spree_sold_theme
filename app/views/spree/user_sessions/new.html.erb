@@ -4,7 +4,7 @@
           <ul class="pull-left no-list">
               <li><%= f.email_field :email, :class => 'title', :tabindex => 1, :placeholder => "EMAIL ADDRESS" %></li>
               <li><%= f.password_field :password, :class => 'title', :tabindex => 2, :placeholder => "PASSWORD" %></li>
-              <li class="pull-left"><%= f.submit t(:login), :class => 'btn btn-primary' %></li>
+              <li class="pull-left"><%= f.submit t(:login), :class => 'btn ph-btn-y' %></li>
               <li class="pull-left">
                 <label class="checkbox">
                   <%= f.check_box :remember_me %>
@@ -15,20 +15,20 @@
               <br class="clear">
             <hr>
             <li><h3><strong>Not a member yet?</strong></h3></li> <br>
-            <li class="pull-left"><button data-toggle="modal" href="#myRegistration" class="btn btn-primary">SIGN ME UP</button></li>
+            <li class="pull-left"><button data-toggle="modal" href="#myRegistration" class="btn ph-btn-y">SIGN ME UP</button></li>
             <li class="midbtn pull-left"> </li>
-            <li class="fb-login pull-left"><a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login-small.jpg"></a></li>
+            <!--<li class="fb-login pull-left"><a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login-small.jpg"></a></li>-->
             <br class="clear">
 
           </ul>
     <% end %>
         <div class="pull-right forgot">
           <p><strong>I think I forgot my password.</strong></p>
-          <p>If you have forgotten your password, click <%= link_to "<strong>here</strong>".html_safe, spree.new_user_password_path, :class => "txt-orange" %>  to receive an email on how to reset your password.</p>
+          <p>If you have forgotten your password, click <%= link_to "<strong>here</strong>".html_safe, spree.new_user_password_path, :class => "txt-orange ph-txt-yellow" %>  to receive an email on how to reset your password.</p>
           <br>
           <p><strong>I have entered the correct email and password, but I still can’t log in!</strong></p>
-          <p>Have you validated your account? Our system will automatically close accounts that are not activated within 24 hours. If you have not validated your account within 24 hours, you may send us an <a href="mailto:info@sold.sg?Subject=Hello" class="txt-orange">
-            <strong>email</strong></a> or call our <a href="/contact-us" class="txt-orange"><strong>Customer Service Hotline.</strong></a></p>
+          <p>Have you validated your account? Our system will automatically close accounts that are not activated within 24 hours. If you have not validated your account within 24 hours, you may send us an <a href="mailto:info@sold.sg?Subject=Hello" class="ph-txt-yellow">
+            <strong>email</strong></a> or call our <a href="/contact-us" class="txt-orange ph-txt-yellow"><strong>Customer Service Hotline.</strong></a></p>
 
 
         </div>

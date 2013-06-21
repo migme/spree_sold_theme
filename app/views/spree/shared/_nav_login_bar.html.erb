@@ -36,12 +36,12 @@
             <ul class="no-list" >
               <li><%= f.email_field :email, :class => 'field', :placeholder => "EMAIL ADDRESS" %></li>
               <li><%= f.password_field :password, :class => 'field', :placeholder => "PASSWORD" %></li>
-              <li class="pull-right"><%= f.submit "LOGIN", :class => 'btn btn-primary login-btn' %></li>
+              <li class="pull-right"><%= f.submit "LOGIN", :class => 'btn login-btn ph-btn-y' %></li>
               <li class="pull-left"><label class="checkbox">
                 <%= f.check_box :remember_me %> Keep me logged in
               </label></li>
 
-              <div class="fb-login pull-left"><a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a></div>
+              <!--<div class="fb-login pull-left"><a href="/users/auth/facebook" title="Login with facebook"><img alt="facebook" src="/assets/fb-login.png"></a></div>-->
             </ul>
         <% end %>
 
