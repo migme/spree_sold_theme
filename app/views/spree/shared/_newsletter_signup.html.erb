@@ -1,0 +1,6 @@
+<br/>
+<h3>Subscribe to our newsletter: </h3>
+<%= simple_form_for :newsletter, :url => newsletter_sign_up_path, :html => {:class => 'form-inline'}, :method => 'post' do |f| %>
+    <input type="text" class="input-small" name='email' placeholder="youremail@example.com" style="width: 180px;"/>
+    <button type="submit" class="btn">Subscribe</button>
+<% end %>
