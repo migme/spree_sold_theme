@@ -17,18 +17,6 @@
   <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
   <%= javascript_tag "var captchaPublicKey = '#{Recaptcha.configuration.public_key}';" %>
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-  <!--ADVENUE SCRIPT (ads)-->
-  <script type="text/javascript" src="http://cdn.innity.net/admanager.js"></script>
-  <script type="text/javascript">var p="http",d="static";if(document.location.protocol=="https:"){p+="s";d="engine";}var z=document.createElement("script");z.type="text/javascript";z.async=true;z.src=p+"://"+d+".adzerk.net/ados.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(z,s);</script>
-  <script type="text/javascript">
-      var ados = ados || {};
-      ados.run = ados.run || [];
-      ados.run.push(function() {
-          /* load placement for account: soldgers, site: Soldger, size: 940x350 - 940 x 350*/
-          ados_add_placement(6826, 37682, "azk82704", 1109);
-          ados_load();
-      });</script>
-
 </head>
 
 <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
