@@ -32,6 +32,9 @@
 <%= render :partial => 'spree/shared/facebook_init' %>
 <%#= render :partial => 'spree/shared/pin_it' %>
 <%#= render :partial => 'spree/shared/user_voice' %>
+<script type="text/javascript">
+    app.blind_auction_names = <%=generate_blind_auction_js%>;
+</script>
 
 <% if flash[:validate_phone] %>
     <%= render :partial => 'spree/shared/google_conversions/successful_auction_sign_ups' %>
