@@ -6,8 +6,8 @@ Spree::BaseHelper.class_eval do
     meta = {}
 
     if object.kind_of? ActiveRecord::Base
-      meta[:keywords] = object.meta_keywords if object.try(:meta_keywords).present?
-      meta[:description] = object.meta_description if object.try(:meta_description).present?
+      meta[:keywords] = object.meta_keywords if object.respond_to?(:meta_keywords)
+      meta[:description] = object.meta_description if object.respond_to?(:meta_description)
     end
 
     if meta[:description].blank? && object.kind_of?(Spree::Product)
