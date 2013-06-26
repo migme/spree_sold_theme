@@ -1564,6 +1564,8 @@ p.out {color: white; padding: 9px;};
 }
 
 .shopping-main {
+  position: relative;
+  min-height: 185px;
   width: 440px;
   background-color: white;
   @include border-radius($radius: 5px);
@@ -2747,4 +2749,14 @@ body {
 
 .front-banner {
   @include border_radius(5px);
+}
+
+div #methods {
+  margin-left: 20px;
+  input[type="radio"]{
+    vertical-align: top;
+    position: absolute;
+    top: 62px;
+  }
+  span {padding-left: 20px;}
 }
