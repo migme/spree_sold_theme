@@ -7,7 +7,7 @@
         <li><%= link_to("Payment History", payment_history_account_path(:subdomain => false)) %></li>
         <li class="friend"><%= link_to 'Invite Friends', invite_friends_url%></li>
         <%  if SiteConfig.site.country == "Singapore" %>
-          <li class="friend"><a href="http://auctions.sold.sg/convert-starpoints.html">Convert Starpoints</a></li>
+          <li class="friend"><a href="/star_cruise">Convert Starpoints</a></li>
         <%  end %>
         <li><%= link_to "Logout", spree.destroy_user_session_path %></li>
       </ul>
