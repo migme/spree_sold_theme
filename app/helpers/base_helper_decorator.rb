@@ -1,14 +1,40 @@
 Spree::BaseHelper.class_eval do
+
+
+  # def meta_data_tags
+  #   object = instance_variable_get('@'+controller_name.singularize)
+  #   meta = {}
+
+  #   if object.kind_of? ActiveRecord::Base
+  #     meta[:keywords] = object.meta_keywords if object.respond_to?(:meta_keywords)
+  #     meta[:description] = object.meta_description if object.respond_to?(:meta_description)
+  #   end
+
+  #   if meta[:description].blank? && object.kind_of?(Spree::Product)
+  #     meta[:description] = strip_tags(object.description)
+  #   end
+
+  #   meta.reverse_merge!({
+  #     :keywords => Spree::Config[:default_meta_keywords],
+  #     :description => Spree::Config[:default_meta_description]
+  #   })
+
+  #   meta.map do |name, content|
+  #     tag('meta', :name => name, :content => content)
+  #   end.join("\n")
+
+  # end
+
   def flash_messages
     flash.each do |msg_type, text|
       unless text.blank? || (text == true)
-        type =  msg_type == :error ? "error" : "success"
+        type = msg_type == :error ? "error" : "success"
         message_block = content_tag(:div, :class => "alert alert-#{type}") do
           concat(content_tag(:a, "x", :class => "close", "data-dismiss" => "alert"))
           if msg_type == :error
-          concat(content_tag(:span, text,:class => "txt-18 txt-red"))
+            concat(content_tag(:span, text, :class => "txt-18 txt-red"))
           else
-            concat(content_tag(:span, text,:class => "txt-18"))
+            concat(content_tag(:span, text, :class => "txt-18"))
           end
 
         end
@@ -23,7 +49,7 @@ Spree::BaseHelper.class_eval do
   end
 
   def show_banner?
-    true if (params[:action] == "index" and ["spree/home","spree/auctions","spree/products","spree/flash_sales"].include?(params[:controller])) or (params[:action] == "show" and params[:controller]=="spree/taxons") or (params[:action] == "list_sold_like" and params[:controller]=="spree/products")
+    true if (params[:action] == "index" and ["spree/home", "spree/auctions", "spree/products", "spree/flash_sales"].include?(params[:controller])) or (params[:action] == "show" and params[:controller]=="spree/taxons") or (params[:action] == "list_sold_like" and params[:controller]=="spree/products")
   end
 
   def body_class
@@ -38,14 +64,14 @@ Spree::BaseHelper.class_eval do
   end
 
   def fav_icon_for
-     @fav_tag || 'favicon_home.ico'
+    @fav_tag || 'favicon_home.ico'
   end
 
   def full_name(user)
     if user.first_name && user.last_name
-      return  "#{user.first_name.capitalize}   #{user.last_name.capitalize}"
+      return "#{user.first_name.capitalize}   #{user.last_name.capitalize}"
     else
-       return user.email
+      return user.email
     end
   end
 
@@ -54,17 +80,17 @@ Spree::BaseHelper.class_eval do
 
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
 
-      if current_user.beginner?
-        @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to #{SiteConfig.site.name}? #{link_to("Click here", knowledge_url('auctions_faq'))} for our FAQs!"
+      @auction_notifications << "Welcome #{current_user.first_name.capitalize}! New to #{SiteConfig.site.name}? #{link_to("Click here", knowledge_url('auctions_faq'))} for our FAQs!" if current_user.beginner?
 
-        @auction_notifications <<  "#{link_to("Click here", knowledge_url('bidding_strategy'))} for Bidding Tips & Strategies! "
-      end
+      @auction_notifications << "Starting 27th June, Zero Risk will only refund paid tokens. For more info, #{link_to("click here.", '/zero-risk-help)')}"
+
+      @auction_notifications << "#{link_to("Click here", knowledge_url('bidding_strategy'))} for Bidding Tips & Strategies! " if current_user.beginner?
 
 
-      @auction_notifications <<  "#{link_to("Click here", completed_auctions_url(subdomain: 'auctions'))} to see what  you have missed!"
+      @auction_notifications << "#{link_to("Click here", completed_auctions_url(subdomain: 'auctions'))} to see what  you have missed!"
 
       if SiteConfig.site.domain == "sold.sg"
-        @auction_notifications <<  "Hi #{current_user.first_name.capitalize}! Did you know we are certified by <a target='_blank' href='http://www.cnsg.com.sg/accreditation/Soldgers.pdf'>TrustSg</a>" # and <a href='javascript:vrsn_splash()' tabindex='-1'>Verisign</a>"
+        @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know we are certified by <a target='_blank' href='http://www.cnsg.com.sg/accreditation/Soldgers.pdf'>TrustSg</a>" # and <a href='javascript:vrsn_splash()' tabindex='-1'>Verisign</a>"
       end
 
       @auction_notifications << "Free Shipping applies to purchases of #{SiteConfig.currency}#{SiteConfig.shipping.free.threshold} or more (excl.Token Packs)." if SiteConfig.shipping.free.enable
@@ -73,13 +99,13 @@ Spree::BaseHelper.class_eval do
       auctions = Spree::Auction.by_state('live').where(["remaining_time < ?", 10.minutes.from_now.utc.to_i]).order('remaining_time')
       if !auctions.blank? and auctions.count > 0
         auction = auctions.first
-        @auction_notifications <<  "Don't miss out #{current_user.first_name.capitalize}! The #{link_to(auction.name,show_auction_url(auction.permalink,auction.id,:subdomain => "auctions"))} is about to close!"
-        @auction_notifications << " Currently selling at #{auction.saving_rate_for_winner}% off! #{link_to("Bid now!",show_auction_url(auction.permalink,auction.id,:subdomain => "auctions"))} to take it home!"
+        @auction_notifications << "Don't miss out #{current_user.first_name.capitalize}! The #{link_to(auction.name, show_auction_url(auction.permalink, auction.id, :subdomain => "auctions"))} is about to close!"
+        @auction_notifications << " Currently selling at #{auction.saving_rate_for_winner}% off! #{link_to("Bid now!", show_auction_url(auction.permalink, auction.id, :subdomain => "auctions"))} to take it home!"
       end
 
       won_count = current_user.won_auctions.joins(:variant).joins("INNER JOIN spree_products on spree_variants.product_id= spree_products.id").where("spree_products.token_pack = false and spree_auctions.free=false").joins("INNER JOIN spree_auction_limits on spree_auction_limits.auction_id = spree_auctions.id").count
       if won_count >= 4
-        al = current_user.auction_limits.where("status=2").first       # status = WON_AUCTION
+        al = current_user.auction_limits.where("status=2").first # status = WON_AUCTION
         unless al.nil?
           @auction_notifications << "Hi #{current_user.first_name.capitalize} - you are currently participating in 4 Auctions!"
           @auction_notifications << " 4 Auctions is the limit so kick back and enjoy!"
@@ -89,13 +115,13 @@ Spree::BaseHelper.class_eval do
 
       if current_user.coin < 20
         @auction_notifications << "Hi #{current_user.first_name.capitalize}! You are almost out of Tokens "
-        @auction_notifications <<  " #{link_to("Click here", purchase_tokens_url(subdomain:false))} to purchase more!"
+        @auction_notifications << " #{link_to("Click here", purchase_tokens_url(subdomain: false))} to purchase more!"
       end
 
       @auction_notifications << "Hi #{current_user.first_name.capitalize}! Did you know you can earn #{Spree::FreeCoinPack::FIRST_BOUGHT} Tokens by Referring Friends?"
-      @auction_notifications << "#{link_to("Click here", invite_friends_url(subdomain:false))} for more information!"
+      @auction_notifications << "#{link_to("Click here", invite_friends_url(subdomain: false))} for more information!"
     else
-      @auction_notifications <<  "Welcome! See something you like?"
+      @auction_notifications << "Welcome! See something you like?"
       @auction_notifications << "<a href='#myRegistration' data-toggle='modal'>Activate</a> your Account to start bidding!"
     end
 
@@ -120,12 +146,12 @@ Spree::BaseHelper.class_eval do
     ntfs.html_safe
   rescue
     ""
-    end
+  end
 
 
   def meta_fb_data_tags
     object = instance_variable_get('@'+controller_name.singularize)
-    fb_meta = { }
+    fb_meta = {}
 
     if object.kind_of?(ActiveRecord::Base)
       fb_meta[:title] = object.name if object[:name].present?
