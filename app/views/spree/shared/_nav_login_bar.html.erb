@@ -6,7 +6,7 @@
         <li><%= link_to("Account Settings", account_path(:subdomain => false)) %></li>
         <li><%= link_to("Payment History", payment_history_account_path(:subdomain => false)) %></li>
         <li class="friend"><%= link_to 'Invite Friends', invite_friends_url%></li>
-        <li class="friend"><%= link_to 'Convert Starpoints', star_cruise_conversion_url %></a></li>
+        <li class="friend"><%= link_to 'Convert Starpoints', star_cruise_url %></a></li>
         <li><%= link_to "Logout", spree.destroy_user_session_path %></li>
       </ul>
     </li>
