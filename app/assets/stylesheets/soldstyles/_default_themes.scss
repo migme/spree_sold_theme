@@ -2719,13 +2719,13 @@ div.partner-logo:hover .bar {display:block ;}
   position: absolute;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
-  right: 50px;
+  right: 360px;
   bottom: 0px;
-  width: 85px;
-  height: 80px;
-  padding: 0px;
+  height: 60px;
+  width: 115px;
+  padding: 0px 50px;
   img {margin-top: 10px}
-  p {color: #ffffff}
+  p {color: #ffffff;margin: 20px 0 0 5px;}
 }
 body {
   background: #222222;
