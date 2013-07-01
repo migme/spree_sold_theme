@@ -61,7 +61,7 @@
         <% if SiteConfig.sale.enabled %>
             <li><%= link_to 'On Sale', root_url(subdomain: 'sales') %></li>
         <% end %>
-        <li><a href="<%= SiteConfig.blog.url %>" target="_blank">Blog</a></li>
+        <!--<li><a href="<%= SiteConfig.blog.url %>" target="_blank">Blog</a></li>-->
       </ul>
 
       <%= yield(request.subdomain.to_sym) %>
@@ -70,7 +70,7 @@
         <li class="foot-title"><strong>FOLLOW US</strong></li> <br>
         <li><a href="<%= SiteConfig.facebook.url %>" target="_blank"> <img src="<%= s3_url('spree_sold_theme/foot-fb.jpg') %>" alt=""></a> </li>
         <li><a href="<%= SiteConfig.twitter.url %>" target="_blank"> <img src="<%= s3_url('spree_sold_theme/foot-twitter.jpg') %>" alt=""></a></li>
-        <li> <a href="<%= SiteConfig.blog.url %>" target="_blank"> <img src="<%= s3_url('spree_sold_theme/foot-blog.jpg') %>" alt=""></a></li> <br><br>
+        <!--<li> <a href="<%= SiteConfig.blog.url %>" target="_blank"> <img src="<%= s3_url('spree_sold_theme/foot-blog.jpg') %>" alt=""></a></li> <br><br>-->
       </ul>
       <br class="clear">
 
