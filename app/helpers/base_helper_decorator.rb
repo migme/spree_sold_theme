@@ -1,29 +1,29 @@
 Spree::BaseHelper.class_eval do
 
 
-  # def meta_data_tags
-  #   object = instance_variable_get('@'+controller_name.singularize)
-  #   meta = {}
+  def meta_data_tags
+    object = instance_variable_get('@'+controller_name.singularize)
+    meta = {}
 
-  #   if object.kind_of? ActiveRecord::Base
-  #     meta[:keywords] = object.meta_keywords if object.respond_to?(:meta_keywords)
-  #     meta[:description] = object.meta_description if object.respond_to?(:meta_description)
-  #   end
+    if object.kind_of? ActiveRecord::Base
+      meta[:keywords] = object.meta_keywords if object.respond_to?(:meta_keywords)
+      meta[:description] = object.meta_description if object.respond_to?(:meta_description)
+    end
 
-  #   if meta[:description].blank? && object.kind_of?(Spree::Product)
-  #     meta[:description] = strip_tags(object.description)
-  #   end
+    if meta[:description].blank? && object.kind_of?(Spree::Product)
+      meta[:description] = strip_tags(object.description)
+    end
 
-  #   meta.reverse_merge!({
-  #     :keywords => Spree::Config[:default_meta_keywords],
-  #     :description => Spree::Config[:default_meta_description]
-  #   })
+    meta.reverse_merge!({
+      :keywords => Spree::Config[:default_meta_keywords],
+      :description => Spree::Config[:default_meta_description]
+    })
 
-  #   meta.map do |name, content|
-  #     tag('meta', :name => name, :content => content)
-  #   end.join("\n")
+    meta.map do |name, content|
+      tag('meta', :name => name, :content => content)
+    end.join("\n")
 
-  # end
+  end
 
   def flash_messages
     flash.each do |msg_type, text|
