@@ -2766,3 +2766,107 @@ div #methods {
   }
   span {padding-left: 20px;}
 }
+
+.ph-pre-bg {
+  background: url($s3_url + "pre-registration/Coming-soon-bg.jpg") top center no-repeat;
+  width: 100%;
+  min-height: 700px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  padding-top: 5px;
+
+  .coming-soon {
+    background: url($s3_url + "pre-registration/Coming-soon.png") top center no-repeat;
+    height: 219px;
+    width: 723px;
+    margin: 0 auto;
+
+  }
+  .pre-reg-cta {
+    background: url($s3_url + "pre-registration/Coming-soon-main.png") top center no-repeat;
+    width: 1093px;
+    height: 451px;
+    margin: 0 auto;
+    position: relative;
+
+    a {
+      position: absolute;
+      bottom: 28px;
+      right: 45px;
+    }
+  }
+
+  .pre-reg {
+    background-color: #d7d7d7;
+    width: 750px;
+    margin: 20px auto;
+    padding: 5px 0;
+    @include border-radius($radius: 5px);
+
+    h2 {
+      text-transform: uppercase;
+      color: #565656;
+      font-weight: bold;
+      text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+      margin: 10px auto;
+      text-align: center;
+    }
+    .free {color: black}
+    .form-head {
+      color: black;
+      background-color: #aeaeae;
+      text-align: left;
+      font-weight: bold;
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .control-group {
+      margin: 0 0 10px;
+      text-align: left
+      label {float:left;}
+      .no-label{float:left;}
+
+      p{
+        text-align: left;
+        width: 290px;
+        font-size: 10px;
+        margin: 0 0 0 10px;
+        padding: 5px;
+        float: left;
+        font-size: 10px;
+      }
+    }
+    .control-label {
+      text-align: left;
+      float: left;
+      padding-top: 5px;
+      padding-left: 20px;}
+  }
+
+  .form-inline{
+    label {margin-right: 15px; min-width: 105px}
+    .controls select {
+      height: 25px;
+      width: 100px;
+    }
+
+    .no-lbl-inputs .no-label select#user_gender {
+      width: 100%;
+    }
+  }
+
+  .terms {
+    width: 550px;
+    margin: 20px auto;
+
+    a {text-decoration: none; font-weight: bold}
+    a:hover {color: gray}
+  }
+
+  .reg-cta {
+    text-align: center;
+    margin-bottom: 20px;
+    a {padding-left: 50px;
+      padding-right: 50px;}
+  }
+}
