@@ -52,4 +52,7 @@
         current_nickname = '<%=current_user.nickname%>';
     <% end %>
 <% end %>
+<% if ie? %>
+    <%= javascript_include_tag 'ie/placeholder_for_ie' %>
+<% end %>
 <%= yield :head %>
