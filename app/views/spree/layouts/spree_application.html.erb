@@ -45,6 +45,12 @@
 <% end %>
 <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
 
+<% unless cookies[:view_rockie]%>
+    <script type="text/javascript">
+        jQuery('#meRookie').modal('show');
+        jQuery.get('/viewed_rockie')
+    </script>
+<% end %>
 </body>
 
 </html>
