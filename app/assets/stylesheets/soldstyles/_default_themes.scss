@@ -2887,7 +2887,7 @@ div.partner-logo:hover .bar {display:block ;}
 
 .rookie-btn {
   position: absolute;
-  right: -44px;
+  right: -41px;
   top: 65px;
   margin-top: 50px;
   -o-transform: rotate(90deg);
@@ -2899,6 +2899,13 @@ div.partner-logo:hover .bar {display:block ;}
   border-top-right-radius: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  height: 25px;
+  width: 100px;
+}
+p.new {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 .modal.fade.in.rookie {top: 0;}
 .modal.rookie {
@@ -2916,19 +2923,19 @@ div.partner-logo:hover .bar {display:block ;}
   height: 25px;
   width: 100px;
   font-weight: bold;
-  background-color: hsl(93, 65%, 60%) !important;
+  background-color: #6dbf2a !important;
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#92db56", endColorstr="#92db56");
-  background-image: -khtml-gradient(linear, left top, left bottom, from(#92db56), to(#92db56));
-  background-image: -moz-linear-gradient(top, #92db56, #92db56);
-  background-image: -ms-linear-gradient(top, #92db56, #92db56);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #92db56), color-stop(100%, #92db56));
-  background-image: -webkit-linear-gradient(top, #92db56, #92db56);
-  background-image: -o-linear-gradient(top, #92db56, #92db56);
-  background-image: linear-gradient(#92db56, #92db56);
-  border-color: #92db56 #92db56 hsl(93, 65%, 60%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6dbf2a", endColorstr="#6dbf2a");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#6dbf2a), to(#6dbf2a));
+  background-image: -moz-linear-gradient(top, #6dbf2a, #6dbf2a);
+  background-image: -ms-linear-gradient(top, #6dbf2a, #6dbf2a);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6dbf2a), color-stop(100%, #6dbf2a));
+  background-image: -webkit-linear-gradient(top, #6dbf2a, #6dbf2a);
+  background-image: -o-linear-gradient(top, #6dbf2a, #6dbf2a);
+  background-image: linear-gradient(#6dbf2a, #6dbf2a);
+  border-color: #6dbf2a #6dbf2a #6dbf2a;
   color: #ffffff !important;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.00);
+  text-shadow: 0 1px 1px rgba(255,255,255,0);
   -webkit-font-smoothing: antialiased;
 
 }
