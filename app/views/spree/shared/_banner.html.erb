@@ -1,19 +1,12 @@
 <div id="myCarousel" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-  </ol>
   <div class="carousel-inner">
-    <div class="active item">
-      <a href="<%= SiteConfig.banner.link %>">
-        <img src="<%= s3_url('banners/winner-banner.png', true) %>" alt="">
-      </a>
-    </div>
-    <div class="item">
-      <a href="/purchase_tokens">
-      <img src="<%= s3_url('banners/main-gss.png', true) %>" alt="">
-    </a>
-    </div>
+    <% Spree::Banner.all.each do |banner| %>
+        <div class="item">
+          <a href="<%= banner.url %>">
+            <img src="<%= banner.image.url(:original) %>" alt="">
+          </a>
+        </div>
+    <% end %>
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
