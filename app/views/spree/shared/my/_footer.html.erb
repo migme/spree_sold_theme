@@ -2,9 +2,9 @@
   <div id="upper-footer">
     <div id="themeBackground">
       <div class="contact-title">
-        <br />
+        <br/>
         <strong>GOT QUESTIONS?</strong>
-        <br />
+        <br/>
         <strong><span style="font-size:18px; color: #f07b09;">WE'LL BE THERE FOR YOU!</span></strong>
       </div>
       <div class="contact-info">
@@ -15,28 +15,33 @@
           <li class="email-text">
             <a href="mailto:<%= SiteConfig.email.support %>">EMAIL US</a>
           </li>
-<!--          <li class="chat-text">
-            LIVE CHAT
-          </li>-->
+          <!--<li class="chat-text">-->
+            <!--LIVE CHAT-->
+          <!--</li>-->
           <li class="faq-text">
-            <a href="<%=SiteConfig.feedback.base_url%>" target="_blank">F.A.Q.</a>
+            <a href="<%= SiteConfig.feedback.base_url %>" target="_blank">F.A.Q.</a>
           </li>
         </ul>
       </div>
 
       <div style="clear: both;"></div>
 
-      <div class="foot-seo"  align="justify">
+      <div class="foot-seo" align="justify">
         <% if content_for?(:seo_footer) %>
             <%= yield(:seo_footer) %>
         <% else %>
-            <p>Sold.sg is Singapore’s premium online entertainment shopping website, offering you the latest in technological and lifestyle products and services at the best possible prices!</p>
+            <p>Sold.my is Singapore’s premium online entertainment shopping website, offering you the latest in
+              technological and lifestyle products and services at the best possible prices!</p>
 
-            <p>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you see? Make an instant purchase at Sold.sg Shop! Want the thrill of the chase, that competitive edge or the excitement of bidding? You’ll get that and more at Sold.sg Auctions.</p>
+            <p>A huge variety of gadgets, games, fashion and accessories are placed on sale daily. Like something you
+              see? Make an instant purchase at Sold.my Shop! Want the thrill of the chase, that competitive edge or the
+              excitement of bidding? You’ll get that and more at Sold.my Auctions.</p>
 
-            <p>Sold.sg is an online site to suit all shoppers – so take your time, explore your options and most importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping experience!</p>
+            <p>Sold.my is an online site to suit all shoppers – so take your time, explore your options and most
+              importantly, have fun! Get the best deals at the best prices, and let us give you the best online shopping
+              experience!</p>
         <% end %>
-        <%= render :partial =>  'spree/shared/newsletter_signup'%>
+        <%= render :partial => 'spree/shared/newsletter_signup' %>
       </div>
 
     </div>
@@ -83,8 +88,8 @@
         <div style="clear: both;"></div>
 
         <p class="disclaimer">
-          <a href="/terms" target="_blank">Terms of Use</a>   |   <a href="/privacy" target="_blank">Privacy Policy</a>
-          <br />© 2013 Soldgers. All Rights Reserved.
+          <a href="/terms" target="_blank">Terms of Use</a> | <a href="/privacy" target="_blank">Privacy Policy</a>
+          <br/>© 2013 Soldgers. All Rights Reserved.
         </p>
       </div>
 
@@ -92,12 +97,14 @@
         <p class="footerSignup">
           <a href="#">SIGN UP<br/> &nbsp; &nbsp; &nbsp; TODAY</a>
         </p>
-        <div style="clear:both;" /><br><br><br></div>
+
+        <div style="clear:both;"/>
+        <br><br><br></div>
       <p>
-        <a href="<%= SiteConfig.twitter.url %>" target="_blank"><img class="twitterlink" src="http://sold.shared.s3.amazonaws.com/temp/twitter-sign.png" /></a>
-        <a href="<%= SiteConfig.facebook.url %>"><img class="facebooklink" src="http://sold.shared.s3.amazonaws.com/temp/facebook-sign.png" /></a>
-        <br />
-        <a href="<%= SiteConfig.blog.url %>"><img class="bloglink" src="http://sold.shared.s3.amazonaws.com/temp/blog-sign.png" /></a>
+        <a href="<%= SiteConfig.twitter.url %>" target="_blank"><img class="twitterlink" src="http://sold.shared.s3.amazonaws.com/temp/twitter-sign.png"/></a>
+        <a href="<%= SiteConfig.facebook.url %>"><img class="facebooklink" src="http://sold.shared.s3.amazonaws.com/temp/facebook-sign.png"/></a>
+        <br/>
+        <a href="<%= SiteConfig.blog.url %>"><img class="bloglink" src="http://sold.shared.s3.amazonaws.com/temp/blog-sign.png"/></a>
       </p>
 
       <ul class="accreditations">
