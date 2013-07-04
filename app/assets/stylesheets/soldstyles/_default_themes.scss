@@ -2782,6 +2782,24 @@ div #methods {
     margin: 0 auto;
 
   }
+
+  .pre-reg-complete, .email_confirm {
+    margin: 110px auto;
+    width: 750px;
+    height: 700px;
+
+    p {
+      padding-top: 300px;
+      text-align: center;
+      color: white;
+      font-size: medium;
+    }
+  }
+
+  .pre-reg-complete { background-image: url($s3_url + "pre-registration/prereg-bg.png"); }
+  .email_confirm { background-image: url($s3_url + "pre-registration/verify-bg.png"); }
+
+
   .pre-reg-cta {
     background: url($s3_url + "pre-registration/Coming-soon-main.png") top center no-repeat;
     width: 1093px;
