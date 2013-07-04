@@ -1,7 +1,7 @@
 <div id="myCarousel" class="carousel slide">
   <div class="carousel-inner">
-    <% Spree::Banner.all.each do |banner| %>
-        <div class="item">
+    <% Spree::Banner.all.each_with_index do |banner, index| %>
+        <div class="item <%='active' if index==0%>">
           <a href="<%= banner.url %>">
             <img src="<%= banner.image.url(:original) %>" alt="">
           </a>
