@@ -63,9 +63,6 @@ Spree::BaseHelper.class_eval do
 
       @auction_notifications <<  "#{link_to("Click here", completed_auctions_url(subdomain: 'auctions'))} to see what  you have missed!"
 
-      @auction_notifications << "Free Shipping applies to purchases of Php 3,000.00 or more (excl.Token Packs)."
-
-
       auctions = Spree::Auction.by_state('live').where(["remaining_time < ?", 10.minutes.from_now.utc.to_i]).order('remaining_time')
       if !auctions.blank? and auctions.count > 0
         auction = auctions.first
