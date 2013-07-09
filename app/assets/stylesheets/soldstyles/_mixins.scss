@@ -75,10 +75,12 @@ $s3_url: "https://s3-ap-southeast-1.amazonaws.com/gamers.ph.bckt/spree_sold_them
 }
 
 .navbar .menu-cover li.sale a:hover, .navbar .menu-cover li.sale.active > a{
-  background: url($s3_url + "/header-sale.png") #ff3300 no-repeat 10px 10px;
-  height: 24px;
+  background: url($s3_url + "ph/header-sale.png") no-repeat 9px 20px, linear-gradient(to bottom, #fc3a3a 0%,#770900 54%,#d62700 100%); /* W3C */
+  background: url($s3_url + "ph/header-sale.png") no-repeat 9px 20px, -moz-linear-gradient(top, #fc3a3a 0%, #770900 54%, #d62700 100%); /* FF3.6+ */
+  background: url($s3_url + "ph/header-sale.png") no-repeat 9px 20px, -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fc3a3a), color-stop(54%,#770900), color-stop(100%,#d62700)); /* Chrome,Safari4+ */
+  background: url($s3_url + "ph/header-sale.png") no-repeat 9px 20px, -webkit-linear-gradient(top, #fc3a3a 0%,#770900 54%,#d62700 100%); /* Chrome10+,Safari5.1+ */
+  background: url($s3_url + "ph/header-sale.png") no-repeat 9px 20px, -ms-linear-gradient(top, #fc3a3a 0%,#770900 54%,#d62700 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc3a3a', endColorstr='#d62700',GradientType=0 ); /* IE6-9 */
+  height: 29px;
   color: white;
-  -moz-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
-  -webkit-box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
-  box-shadow:inset 0px 0px 10px 1px rgba(51, 51, 51, 0.5);
 }
