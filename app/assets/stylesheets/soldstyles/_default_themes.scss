@@ -391,7 +391,7 @@ div#myRegistration.modal.hide.fade {
   width: 450px;
   .top-wrap {
     width: 450px;
-    background-color: #f07b05;
+    background-color: #EFB600;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     .modal-header h2 {color: white;}
@@ -453,7 +453,7 @@ div#myAuctions.modal.hide.fade {
   .modal-footer {padding-left: 20px;}
   .top-wrap {
     width: 450px;
-    background-color: #f07b05;
+    background-color: #EFB600;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     .modal-header h2 {color: white;}
@@ -756,7 +756,7 @@ a.top-prod:hover {text-decoration: none;}
     a.more {
       margin: 6px 0 0 10px;
       font-size: 12px;
-      color: #f07b05;
+      color: #EFB600;
     }
     a.more:hover {text-decoration: none;}
   }
@@ -936,7 +936,7 @@ a.top-prod:hover {text-decoration: none;}
   a.more {
     margin: 6px 0 0 10px;
     font-size: 12px;
-    color: #f07b05;
+    color: #EFB600;
     float: right !important;
   }
   a.more:hover {text-decoration: none;}
@@ -1270,7 +1270,7 @@ div.auto-over{
 
   ul {list-style: none; margin: 0; padding: 10px 5px 0 5px;}
   ul li {line-height: 24px;}
-  li.active {color: #f07b05}
+  li.active {color: #EFB600}
 
 
 }
@@ -1608,7 +1608,7 @@ p.out {color: white; padding: 9px;};
       select.quantity {width: 60px;height: 25px; margin: 3px 3px 10px 3px;}
       span.pay {white-space: nowrap; font-size: 12px;}
       .cart-specs {width: 400px;margin-bottom: 10px;height: 50px;overflow: hidden;}
-      .cart-timer {font-size: 12px; color: #f07b05; margin-top: 5px;}
+      .cart-timer {font-size: 12px; color: #EFB600; margin-top: 5px;}
     }
 
   }
@@ -1724,7 +1724,7 @@ ul.subfooter li a {
   margin-right: 20px; color: gray;
   border-right: gray thin dashed;
   padding-right: 20px;
-  &:hover {color: #f07b05; text-decoration: none;}
+  &:hover {color: #EFB600; text-decoration: none;}
   &.no-border {border: none;  }
 }
 
@@ -1793,14 +1793,14 @@ ul.subfooter li a {
     width: 180px;
     padding-left: 35px;
     margin: 0;
-    a {color: #f07b05;}
+    a {color: #EFB600;}
     a:hover {text-decoration: none; color: gray;}
   }
   .guide-content {width:650px; padding-bottom: 10px;}
   .guide-wrap-big {
     width:650px;
     p {font-size:12px;}
-    a {color: #f07b05}
+    a {color: #EFB600}
     .auto {margin-bottom: 10px; margin-top:10px;}
     .auto-types {width: 500px;
       margin-left: 20px;}
@@ -1813,7 +1813,7 @@ ul.subfooter li a {
     padding-left: 10px;
     padding-top: 20px;
 
-    a {color: #f07b05}
+    a {color: #EFB600}
     span.bid {width: 200px;
       margin-top: 10px;
       margin-bottom: 30px;}
@@ -2366,7 +2366,7 @@ $txt-gray: #979797;
   margin-bottom: 20px;
   .content {width: 800px; margin: 0 auto; text-align: center; }
   h1 {font-size: 80px;}
-  a {color: #f07b05;}
+  a {color: #EFB600;}
 }
 
 //thanks for buying!//
@@ -2392,7 +2392,7 @@ $txt-gray: #979797;
     }
   }
 
-  a { margin-top:20px; color: #f07b05; &:hover {text-decoration: none; color: gray;}}
+  a { margin-top:20px; color: #EFB600; &:hover {text-decoration: none; color: gray;}}
   ul { width: 276px;margin: 10px auto;
     li {display: block; float: left; border-left: #ccc thin solid; padding: 0 15px;}
     li.no-border {border: none;}
@@ -2407,7 +2407,7 @@ $txt-gray: #979797;
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
   padding: 10px 20px 20px 20px;
   margin-bottom: 20px;
-  a {color: #f07b05; &:hover{text-decoration:none;}}
+  a {color: #EFB600; &:hover{text-decoration:none;}}
   ol li {margin-bottom: 20px;}
 }
 
@@ -2521,7 +2521,7 @@ div.partner-logo:hover .bar {display:block ;}
   width: 940px;
   padding-top: 40px;
   p {color: #666; line-height: 25px;}
-  a {color: #f07b05;}
+  a {color: #EFB600;}
   a:hover {text-decoration: none; color: gray;}
 
   .back2top {
@@ -2641,7 +2641,7 @@ div.partner-logo:hover .bar {display:block ;}
   opacity: 0;
 }
 .input-switch:checked + label {
-  background-color: #f07b05;
+  background-color: #EFB600;
 }
 .input-switch:checked + label span.grip {
   left: 60px;
