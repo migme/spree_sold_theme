@@ -2763,6 +2763,18 @@ body {
   @include border_radius(5px);
 }
 
+.horizontal-banner {
+  width: 728px;
+  margin: 20px auto;
+}
+
+.vertical-banner {
+  text-align: center;
+  width: 220px;
+  height: 600px;
+  margin-bottom: 20px;
+}
+
 div #methods {
   margin-left: 20px;
   input[type="radio"]{
