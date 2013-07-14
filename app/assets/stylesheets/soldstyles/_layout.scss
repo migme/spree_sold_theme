@@ -129,7 +129,7 @@ p.input-hint {
           padding: 5px;
           td {
             vertical-align: middle;
-            @each $token-pack in 25, 50, 100, 300, 500, 1000{
+            @each $token-pack in 10, 20, 55, 110, 220{
               div.token-pack-#{$token-pack}{
                 background: image-url($s3_url + "buy_#{$token-pack}.png") no-repeat center center transparent;
                 width: 445px;
