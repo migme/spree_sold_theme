@@ -2794,7 +2794,7 @@ div #methods {
   padding-top: 5px;
 
   .coming-soon {
-    background: url($s3_url + "pre-registration/Coming-soon.png") top center no-repeat;
+    background: url($s3_url + "pre-registration/comingsoon-header.png") top center no-repeat;
     height: 219px;
     width: 723px;
     margin: 0 auto;
@@ -2819,16 +2819,18 @@ div #methods {
 
 
   .pre-reg-cta {
-    background: url($s3_url + "pre-registration/Coming-soon-main.png") top center no-repeat;
-    width: 1093px;
+    background: url($s3_url + "pre-registration/comingsoon-main.png") top center no-repeat;
+    //width: 1093px;
     height: 451px;
     margin: 0 auto;
     position: relative;
 
     a {
       position: absolute;
-      bottom: 28px;
-      right: 45px;
+      top: 15px;
+      right: 60px;
+      padding: 10px 65px;
+      font-size: 24px;
     }
   }
 
