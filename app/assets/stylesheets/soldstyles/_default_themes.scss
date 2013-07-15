@@ -2709,7 +2709,7 @@ background: #222222;
 
 .footer-space {min-height: 800px}
 .ph-pre-bg {
-  background: url("http://gamers.ph.bckt.s3.amazonaws.com/pre-registration/Coming-soon-bg.jpg") #212322 top center no-repeat;
+  background: url("http://gamers.ph.bckt.s3.amazonaws.com/spree_sold_theme/pre-registration/comingsoon-bg.jpg") #212322 top center no-repeat;
   width: 100%;
   min-height: 700px;
   margin: 0 auto;
@@ -2717,23 +2717,25 @@ background: #222222;
   padding-top: 5px;
 
   .coming-soon {
-    background: url("http://gamers.ph.bckt.s3.amazonaws.com/pre-registration/Coming-soon.png") top center no-repeat;
+    background: url("http://gamers.ph.bckt.s3.amazonaws.com/spree_sold_theme/pre-registration/comingsoon-header.png") top center no-repeat;
     height: 219px;
     width: 723px;
     margin: 0 auto;
 
   }
   .pre-reg-cta {
-    background: url("http://gamers.ph.bckt.s3.amazonaws.com/pre-registration/Coming-soon-main.png") top center no-repeat;
-    width: 1093px;
-    height: 451px;
+    background: url("http://gamers.ph.bckt.s3.amazonaws.com/spree_sold_theme/pre-registration/comingsoon-main.png") top center no-repeat;
+    width: 1169px;
+    height: 425px;
     margin: 0 auto;
     position: relative;
 
     a {
       position: absolute;
-      bottom: 28px;
-      right: 45px;
+      top: 15px;
+      right: 60px;
+      padding: 10px 65px;
+      font-size: 24px;
     }
   }
 
