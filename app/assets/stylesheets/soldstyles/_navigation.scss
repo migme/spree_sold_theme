@@ -215,11 +215,11 @@ $s3_url: "https://s3-ap-southeast-1.amazonaws.com/gamers.ph.bckt/spree_sold_them
         background-image: -o-linear-gradient(top, #f4ca61, #e0a50f);
         background-image: linear-gradient(#f4ca61, #e0a50f);
         border-color: #e0a50f #e0a50f #c8930e;
-        color: #ffffff !important;
+        color: #333 !important;
         text-shadow: 0 1px 1px rgba(255, 255, 255, 0.33);
         -webkit-font-smoothing: antialiased;
         font-size: 14px;
-        font-weight: 500;
+        font-weight: bold;
         padding: 5px 0;
         width: 275px;
       }
