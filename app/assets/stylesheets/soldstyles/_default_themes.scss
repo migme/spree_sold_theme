@@ -2783,6 +2783,32 @@ div #methods {
   span {padding-left: 20px;}
 }
 
+.ph-pre-bg-v3 {
+  background: url($s3_url + "pre-registration/Gamers-Landing-page-V3-%281%29.jpg") #212322 top center no-repeat;
+  width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  padding-top: 5px;
+  position: relative;
+
+  .pre-reg-cta {
+    width: 1252px;
+    height: 720px;
+    margin: 0 auto;
+    position: relative;
+
+    a {
+      position: absolute;
+      top: 483px;
+      right: 68px;
+      padding: 15px 42px;
+      font-size: 45px;
+    }
+
+  }
+
+}
+
 .ph-pre-bg {
   background: url($s3_url + "pre-registration/Coming-soon-bg.jpg") top center no-repeat;
   width: 1600px;
@@ -2822,14 +2848,6 @@ div #methods {
     height: 451px;
     margin: 0 auto;
     position: relative;
-
-    a {
-      position: absolute;
-      top: 15px;
-      right: 280px;
-      padding: 10px 65px;
-      font-size: 24px;
-    }
   }
 
   .pre-reg {
