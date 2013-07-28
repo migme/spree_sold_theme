@@ -55,9 +55,9 @@ Spree::BaseHelper.class_eval do
     if current_user and current_user.has_role?("auction_user") || current_user.has_role?("admin")
 
       if current_user.beginner?
-        @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to Gamers.ph? #{link_to("Click here", "http://feedback.gamers.ph/knowledgebase/topics/3851-auction")} for our FAQs!"
+        @auction_notifications <<  "Welcome #{current_user.first_name.capitalize}! New to Gamers.ph? #{link_to("Click here", "https://gamersph.zendesk.com/home")} for our FAQs!"
 
-        @auction_notifications <<  "#{link_to("Click here", "http://feedback.gamers.ph/knowledgebase/articles/112887-tips-and-strategies-basic-bidding-strategies")} for Bidding Tips & Strategies! "
+        @auction_notifications <<  "#{link_to("Click here", "https://gamersph.zendesk.com/forums/20895090-Tips-Strategies")} for Bidding Tips & Strategies! "
       end
 
 
