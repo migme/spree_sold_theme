@@ -385,7 +385,7 @@ div#myCarousel, {
 .modal-txt {font-size: 10px; color: gray; font-style: italic; margin-top: -5px;
   margin-bottom: 5px;}
 
-div#myRegistration.modal.hide.fade {
+div#myRegistration.modal.hide {
   display: none;
   padding: 0 10px;
   width: 450px;
@@ -445,7 +445,7 @@ a.btn-edit:hover {color: blue; text-decoration: none;}
 }
 
 //auction registration//
-div#myAuctions.modal.hide.fade {
+div#myAuctions.modal.hide {
   display: none;
   //padding: 10px 10px 20px 10px;
   width: 450px;
@@ -460,7 +460,7 @@ div#myAuctions.modal.hide.fade {
 }
 div.impt-reminder {padding: 0 20px 0 20px;}
 
-div#myValidation.modal.hide.fade {
+div#myValidation.modal.hide {
   padding: 10px;
 
   div.modal-body {padding: 10px;
