@@ -1,6 +1,6 @@
 <% if request.env['HTTP_USER_AGENT']
      if request.env['HTTP_USER_AGENT'] =~ /MSIE 10/
-       default_modal_class = "modal hide"
+       default_modal_class = "modal hide ie10-modal"
      else
        default_modal_class = "modal hide fade"
      end

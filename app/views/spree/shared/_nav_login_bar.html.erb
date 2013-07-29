@@ -11,7 +11,17 @@
     </li>
 
   <% unless current_user.has_role?("auction_user") %>
-      <div id="myRegistration" class="modal hide fade">
+    <% if request.env['HTTP_USER_AGENT']
+       if request.env['HTTP_USER_AGENT'] =~ /MSIE 10/
+           default_modal_class = "modal hide ie10-modal"
+         else
+           default_modal_class = "modal hide fade"
+         end
+       else
+         default_modal_class = "modal hide fade"
+       end
+    %>
+      <div id="myRegistration" class="<%= default_modal_class %>">
         <%= render :partial => "spree/shared/registration/join_auction", :locals => {:user => current_user} %>
       </div>
   <% end %>
