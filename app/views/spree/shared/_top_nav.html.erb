@@ -14,7 +14,7 @@
           <li class="<%= is_active?("spree/auctions") %> home"> <%= link_to 'Auction', root_url(subdomain: 'auctions') %> </li>
           <li class="nav-divider"></li>
           <li class="<%= is_active?("spree/products") %> shop"><%= link_to 'Shop', root_url(subdomain: 'shop') %> </li>
-          <% if SiteConfig.sale.enabled %>
+          <% if SiteConfig.sale.enabled && Spree::FlashSale.has_sale? %>
             <li class="nav-divider"></li>
             <li class="<%= is_active?("spree/flash_sales") %> sale"><%= link_to 'On Sale', root_url(subdomain: 'sales') %> </li>
           <% end %>
