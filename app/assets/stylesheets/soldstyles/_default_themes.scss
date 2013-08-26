@@ -674,7 +674,7 @@ div#myValidation.modal.hide {
   }
 }
 
-#beginner_auctions .auc-box:nth-child(3n+0), .container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(3n+0), .container-sale .upsale-box:nth-child(3n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0), .container-perk .perk-box:nth-child(3n+0){
+#beginner_auctions .auc-box:nth-child(3n+0), .container-auctions .auc-box:nth-child(4n+0), .container-auctions .auc-box-small:nth-child(4n+0), .container-sale .sale-box:nth-child(4n+0), .container-sale .upsale-box:nth-child(4n+0), .container-shop .shop-box:nth-child(4n+0), .container-cat .shop-box:nth-child(3n+0), .container-perk .perk-box:nth-child(3n+0){
   margin:0 !important;
 }
 #beginner_auctions .auc-box .star { display:none; }
@@ -1415,7 +1415,7 @@ p.out {color: white; padding: 9px;};
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
   margin-bottom: 20px;
 }
-.cat-left {width: 700px; float:left; min-height: 600px}
+.cat-left {width: 940px; float:left; min-height: 600px}
 .cat-right {width:225px; margin: 0; padding: 0; float: right;}
 .cat-content {padding: 10px;}
 
