@@ -1434,14 +1434,15 @@ p.out {color: white; padding: 9px;};
 
 
   div.time-wrap {
-    background-color:#000000;
-    color:white;
+    background-color:#ccc;
+    color:#000;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding: 5px 5px 2px;
     height: 20px;
+    font-weight: bold;
   }
 
   div.soldout {text-align: center; font-size: 24px; font-weight: bold;line-height: 20px;}
