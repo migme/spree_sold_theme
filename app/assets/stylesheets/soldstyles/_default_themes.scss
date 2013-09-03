@@ -579,6 +579,12 @@ div#myValidation.modal.hide {
     border-top-right-radius: 0px;
     height: 54px;
     margin-top: 5px;
+    .buy-now {
+      width: 110px;
+      text-align: center;
+      line-height: 16px;
+      margin-top: 15px;
+    }
     p {padding-top: 18px; text-align: center;}
     a.last-sold {
       font-size: 11px;
@@ -887,6 +893,9 @@ a.top-prod:hover {text-decoration: none;}
     border-top-right-radius: 0px;
     height: 36px;
     margin-top: 5px;
+    .buy-now {
+      margin: 10px 0 0 10px;
+    }
     p {text-align: center; padding-top: 10px;}
     a.last-sold {margin: 10px 5px; color: #333;}
     a.last-sold:hover {text-decoration: none; color: #333;}
