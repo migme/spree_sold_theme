@@ -37,6 +37,7 @@
     <li class="reg">
       <a data-toggle="modal" href="#myRegistration" id="navi_join" class="signup">Register</a>
       <%= render :partial => 'spree/shared/register_modal', :locals => {:user => (@user || Spree::User.new)} %>
+      <%= render :partial => 'spree/shared/login_modal', :locals => {:user => (@user || Spree::User.new)} %>
     </li>
     <li class="nav-divider"></li>
     <li class="dropdown mylogin" id="login_box">
