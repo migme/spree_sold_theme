@@ -1474,7 +1474,8 @@ p.out {color: white; padding: 9px;};
   @include box-shadow($shadow: 0 4px 8px rgba(0,0,0,.25));
   margin-bottom: 20px;
 }
-.cat-left {width: 940px; float:left; min-height: 600px}
+.cat-left {width: 700px; float:left; min-height: 600px}
+.sale-left {width: 940px; float:left; min-height: 600px}
 .cat-right {width:225px; margin: 0; padding: 0; float: right;}
 .cat-content {padding: 10px;}
 
