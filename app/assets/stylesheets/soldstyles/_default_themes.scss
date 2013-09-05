@@ -432,14 +432,16 @@ div#myLogin.modal.hide {
     .modal-header h1 {color: white; font-size: 500;}
   }
   .login {
-    width: 280px;
-    height: 400px;
-    border-right: 1px dotted #cccccc;
-    margin-left: 10px;
+    width: 260px;
+    padding-left: 10px;
+    p {margin-top: 10px;}
   }
   .register {
-    width: 280px;
-    margin-left: 10px;
+    border-left: 1px dotted #cccccc;
+    width: 285px;
+    padding-left: 20px;
+    min-height: 400px;
+    padding-bottom: 20px;
   }
 
   .form-horizontal .control-group { margin-bottom: 9px; }
@@ -451,8 +453,6 @@ div#myLogin.modal.hide {
     h2, {font-size: 28px; text-align: left; }
     h3, {font-size: 16px;}
   }
-
-  p {margin-top: 10px;}
 
   .field { width: 240px }
 
