@@ -410,7 +410,7 @@ div#myRegistration.modal.hide {
 
 div#myLogin.modal.hide {
   display: none;
-  width: 592px;
+  width: 692px;
   overflow-x: hidden;
   h2 {
     text-align: center;
@@ -432,7 +432,7 @@ div#myLogin.modal.hide {
     .modal-header h1 {color: white; font-size: 500;}
   }
   .login {
-    width: 255px;
+    width: 300px;
     padding: 0 20px;
     p {
       margin-top: 10px;
@@ -445,7 +445,7 @@ div#myLogin.modal.hide {
   }
   .register {
     border-left: 1px dotted #cccccc;
-    width: 255px;
+    width: 310px;
     padding: 0 20px;
     min-height: 400px;
     padding-bottom: 20px;
@@ -469,7 +469,9 @@ div#myLogin.modal.hide {
     h3, {font-size: 16px;}
   }
 
-  .field { width: 240px }
+  .field { width: 295px }
+  .small-field { width: 134px }
+  .btn {padding: 4px 40px;}
 
 }
 
